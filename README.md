@@ -15,6 +15,7 @@ A static, portable brand foundation for marketing materials based on [annahellmu
 ```
 brand/           Source of truth — tokens, typography, components, voice, assets
 styleguide/      Visual reference (HTML)
+Website/         Static mirror of annahellmuth.com (see Website/README.md)
 projects/
   table/         Emotion table (legacy palette — Phase 2 realign)
   social/        Future social templates
