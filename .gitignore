@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+.tmp-*
+node_modules/
+
+# Optional: uncomment if you add large raw photo exports
+# brand/assets/photos/*.jpg
+# brand/assets/photos/*.png

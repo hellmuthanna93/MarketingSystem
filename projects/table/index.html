@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таблица чувств</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --page-bg: #6d7478;
+        --paper: #f5eee8;
+        --accent: #ff7a21;
+        --line: #6f777a;
+        --text: #101820;
+        --title: #ffffff;
+      }
+
+      body {
+        background: var(--page-bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .emotion-grid {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+      }
+
+      .cell-list li {
+        line-height: 1.16;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <main class="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-4 py-10 sm:px-6 lg:px-8">
+      <header class="mb-8 text-center">
+        <h1 class="text-[clamp(2.3rem,7vw,5rem)] font-light uppercase leading-none tracking-normal text-[var(--title)]">
+          Таблица чувств
+        </h1>
+      </header>
+
+      <section class="overflow-x-auto">
+        <div class="min-w-[780px]">
+          <div class="grid emotion-grid gap-1">
+            <div class="bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold uppercase text-white">Гнев</div>
+            <div class="bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold uppercase text-white">Страх</div>
+            <div class="bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold uppercase text-white">Грусть</div>
+            <div class="bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold uppercase text-white">Радость</div>
+            <div class="bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold uppercase text-white">Любовь</div>
+
+            <article class="min-h-[390px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Бешенство</li>
+                <li>Ярость</li>
+                <li>Ненависть</li>
+                <li>Истерия</li>
+                <li>Злость</li>
+                <li>Раздражение</li>
+                <li>Презрение</li>
+                <li>Негодование</li>
+                <li>Обида</li>
+                <li>Ревность</li>
+                <li>Уязвлённость</li>
+                <li>Досада</li>
+                <li>Зависть</li>
+                <li>Неприязнь</li>
+                <li>Возмущение</li>
+                <li>Отвращение</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[390px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Ужас</li>
+                <li>Отчаяние</li>
+                <li>Испуг</li>
+                <li>Оцепенение</li>
+                <li>Подозрение</li>
+                <li>Тревога</li>
+                <li>Ошарашенность</li>
+                <li>Беспокойство</li>
+                <li>Боязнь</li>
+                <li>Унижение</li>
+                <li>Замешательство</li>
+                <li>Растерянность</li>
+                <li>Вина</li>
+                <li>Стыд</li>
+                <li>Сомнение</li>
+                <li>Застенчивость</li>
+                <li>Опасение</li>
+                <li>Смущение</li>
+                <li>Скованность</li>
+                <li>Подвох</li>
+                <li>Надменность</li>
+                <li>Ощемлённость</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[390px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Горечь</li>
+                <li>Тоска</li>
+                <li>Скорбь</li>
+                <li>Лень</li>
+                <li>Жалость</li>
+                <li>Отрешённость</li>
+                <li>Отчаяние</li>
+                <li>Безнадёжность</li>
+                <li>Душевная боль</li>
+                <li>Безнадёжность</li>
+                <li>Отчуждённость</li>
+                <li>Разочарование</li>
+                <li>Потрясение</li>
+                <li>Сожаление</li>
+                <li>Скука</li>
+                <li>Безысходность</li>
+                <li>Печаль</li>
+                <li>Загнанность</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[390px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Счастье</li>
+                <li>Восторг</li>
+                <li>Ликование</li>
+                <li>Приподнятость</li>
+                <li>Оживление</li>
+                <li>Умиротворение</li>
+                <li>Увлечение</li>
+                <li>Интерес</li>
+                <li>Забота</li>
+                <li>Ожидание</li>
+                <li>Возбуждение</li>
+                <li>Предвкушение</li>
+                <li>Надежда</li>
+                <li>Любопытство</li>
+                <li>Освобождение</li>
+                <li>Принятие</li>
+                <li>Нетерпение</li>
+                <li>Вера</li>
+                <li>Изумление</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[390px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Нежность</li>
+                <li>Теплота</li>
+                <li>Сочувствие</li>
+                <li>Блаженство</li>
+                <li>Доверие</li>
+                <li>Безопасность</li>
+                <li>Благодарность</li>
+                <li>Спокойствие</li>
+                <li>Симпатия</li>
+                <li>Идентичность</li>
+                <li>Гордость</li>
+                <li>Восхищение</li>
+                <li>Уважение</li>
+                <li>Самоценность</li>
+                <li>Влюблённость</li>
+                <li>Любовь к себе</li>
+                <li>Очарованность</li>
+                <li>Смирение</li>
+                <li>Искренность</li>
+                <li>Дружелюбие</li>
+                <li>Доброта</li>
+                <li>Взаимовыручка</li>
+              </ul>
+            </article>
+          </div>
+
+          <h2 class="mt-2 bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold uppercase text-white">
+            Мысли (или состояния) вызванные гаммой чувств
+          </h2>
+
+          <div class="mt-1 grid emotion-grid gap-1">
+            <article class="min-h-[175px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Нервозность</li>
+                <li>Пренебрежение</li>
+                <li>Недовольство</li>
+                <li>Вредность</li>
+                <li>Огорчение</li>
+                <li>Нетерпимость</li>
+                <li>Вседозволенность</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[175px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Раскаяние</li>
+                <li>Безвыходность</li>
+                <li>Превосходство</li>
+                <li>Высокомерие</li>
+                <li>Неполноценность</li>
+                <li>Неудобство</li>
+                <li>Неловкость</li>
+                <li>Апатия</li>
+                <li>Безразличие</li>
+                <li>Неуверенность</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[175px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Тупик</li>
+                <li>Усталость</li>
+                <li>Принуждение</li>
+                <li>Одиночество</li>
+                <li>Отверженность</li>
+                <li>Подавленность</li>
+                <li>Холодность</li>
+                <li>Безучастность</li>
+                <li>Равнодушие</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[175px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Удовлетворение</li>
+                <li>Уверенность</li>
+                <li>Довольство</li>
+                <li>Окрылённость</li>
+                <li>Торжественность</li>
+                <li>Жизнерадостность</li>
+                <li>Облегчение</li>
+                <li>Ободрённость</li>
+                <li>Удивление</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[175px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Сопереживание</li>
+                <li>Сопричастность</li>
+                <li>Уравновешенность</li>
+                <li>Смирение</li>
+                <li>Естественность</li>
+                <li>Жизнелюбие</li>
+                <li>Вдохновение</li>
+                <li>Воодушевление</li>
+              </ul>
+            </article>
+          </div>
+
+          <h2 class="mt-2 bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold uppercase text-white">
+            Страхи
+          </h2>
+
+          <div class="mt-1 grid emotion-grid gap-1">
+            <article class="min-h-[72px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Оценки</li>
+                <li>Ошибки</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[72px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Нового</li>
+                <li>Одиночества</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[72px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Ответственности</li>
+                <li>Темноты</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[72px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Высоты</li>
+                <li>Разочарования</li>
+                <li>В себе</li>
+              </ul>
+            </article>
+
+            <article class="min-h-[72px] bg-[var(--paper)] p-4">
+              <ul class="cell-list text-[13px] font-semibold uppercase">
+                <li>Будущего</li>
+                <li>За свою жизнь</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-8 text-center text-sm font-medium uppercase tracking-normal text-white/85">
+        Зина Шамоян
+      </footer>
+    </main>
+  </body>
+</html>

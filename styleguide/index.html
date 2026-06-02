@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Hellmuth — Brand Styleguide</title>
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <script
+      src="https://use.typekit.net/ik/r0p1MYsmR1L75nvVsqVUB5iMYX6V0yf3aSvQ_zx_uSGfe7SIfFHN4UJLFRbh52jhWDjDwRbtwewoFc9DZRj3FQStwQsqwRsRwy79MkG0jAFu-WsoShFGZAsude80ZkoRdhXCHKoyjamTiY8Djhy8ZYmC-Ao1Oco8if37OcBDOcu8OfG0ZcUzihmkOANRZAUzifXkZRJkO1FUiABkZWF3jAF8OcFzdP37O1FUiABkZWF3jAF8ShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80Zko0ZWbCjAo0jAy8deUliWsGOcFzdPUySkolZPUcdeNaZWJldhF8deNXOQ4cwRJ0SaBujW48Sagyjh90jhNlOeUzjhBC-eNDifUDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlOYiaikoyjamTiY8Djhy8ZYmC-Ao1OcFzdPUaiaS0jAFu-WsoShFGZAsude80Zko0ZWbCiaiaOcB0dcBGZAUCdWmX-foRdhXCiaiaOcBDOcu8OYiaikocdeNaZWJldhF8deNXOQ4cwRJ0SaBujW48Sagyjh90jhNlOYiaikoDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlJ6ol-Ao8S1ZyOAuzZemkdKJbZ148-AiGifuXZWyXOWgkdkG4fO9nIMMjgfMfH6qJceqbMs6IJMJ7fbK6-sMgeMj6MKG4f4TTIMIjgkMfH6qJcAqbMs65JMJ7fbKd-sMgegI6MTMg7H2ET6j.js"
+      async
+    ></script>
+    <script>
+      try {
+        Typekit.load();
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="../brand/tokens.css" />
+    <link rel="stylesheet" href="../brand/typography.css" />
+    <link rel="stylesheet" href="../brand/components.css" />
+    <style>
+      .styleguide-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-md) var(--space-section-x);
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+      }
+      .styleguide-nav a {
+        color: var(--color-text-on-dark);
+        margin-right: var(--space-lg);
+        text-decoration: none;
+        opacity: 0.9;
+      }
+      .styleguide-nav a:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+      .styleguide-hero {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-3xl) var(--space-section-x);
+      }
+      .styleguide-hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        margin: 0 0 var(--space-md);
+      }
+      .styleguide-hero p {
+        font-family: var(--font-body);
+        max-width: 40rem;
+        margin: 0;
+        opacity: 0.95;
+        line-height: 1.6;
+      }
+      .styleguide-section {
+        padding: var(--space-section-y) var(--space-section-x);
+        border-bottom: 1px solid var(--color-border);
+      }
+      .styleguide-section h2 {
+        font-family: var(--font-heading);
+        font-size: var(--text-h2-size);
+        margin: 0 0 var(--space-xl);
+        color: var(--color-text);
+      }
+      .swatch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        gap: var(--space-md);
+      }
+      .type-sample {
+        margin-bottom: var(--space-xl);
+        padding-bottom: var(--space-xl);
+        border-bottom: 1px solid var(--color-border);
+      }
+      .type-sample:last-child {
+        border-bottom: none;
+      }
+      .component-stack > * {
+        margin-bottom: var(--space-lg);
+      }
+      .logo-preview {
+        max-width: 280px;
+        background: var(--color-surface-light);
+        padding: var(--space-xl);
+        border-radius: var(--radius-md);
+      }
+      .logo-preview--dark {
+        background: var(--color-accent);
+      }
+      .spacing-row {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        margin-bottom: var(--space-sm);
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+      }
+      .lang-note {
+        background: hsla(var(--accent-hsl), 0.08);
+        padding: var(--space-lg);
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        font-size: var(--text-body-size);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="styleguide-nav" aria-label="Styleguide sections">
+      <a href="#overview">Overview</a>
+      <a href="#colors">Colors</a>
+      <a href="#typography">Typography</a>
+      <a href="#components">Components</a>
+      <a href="#spacing">Spacing</a>
+      <a href="#logo">Logo</a>
+      <a href="#languages">Languages</a>
+    </nav>
+
+    <header class="styleguide-hero">
+      <div class="container">
+        <h1>Anna Hellmuth — Brand Styleguide</h1>
+        <p>
+          Portable reference extracted from
+          <a href="https://annahellmuth.com/" class="brand-link" style="color: #fff">annahellmuth.com</a>.
+          All sub-projects link to <code>brand/*.css</code> — change tokens there only.
+        </p>
+      </div>
+    </header>
+
+    <section id="overview" class="styleguide-section section--cream">
+      <div class="container container--narrow">
+        <h2>Brand overview</h2>
+        <p class="text-body">
+          Online counseling and coaching for creative and ambitious souls. The visual identity pairs deep
+          burgundy with warm cream surfaces, Libre Baskerville headings, and freight-text-pro body copy —
+          warm, professional, and approachable.
+        </p>
+        <p class="text-body text-muted">
+          Full voice and messaging guidelines:
+          <a class="brand-link" href="../brand/voice.md">brand/voice.md</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="colors" class="styleguide-section section--light">
+      <div class="container">
+        <h2>Color palette</h2>
+        <div class="swatch-grid">
+          <div class="swatch swatch--on-dark" style="background: var(--color-accent)">Accent #64010d</div>
+          <div class="swatch" style="background: var(--color-accent-hover); color: #fff">Accent hover</div>
+          <div class="swatch" style="background: var(--color-text); color: #fff">Text #5c020c</div>
+          <div class="swatch" style="background: var(--color-surface)">Surface #f7eae3</div>
+          <div class="swatch" style="background: var(--color-surface-light)">Surface light</div>
+          <div class="swatch swatch--on-dark" style="background: var(--color-text-on-dark); color: var(--color-text); border: 1px solid var(--color-border)">On-dark text</div>
+        </div>
+        <p class="text-small" style="margin-top: var(--space-xl)">
+          Use <strong>text #5c020c</strong> on cream surfaces; <strong>white</strong> on burgundy. Audit details:
+          <a class="brand-link" href="../brand/AUDIT.md">brand/AUDIT.md</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="typography" class="styleguide-section section--cream">
+      <div class="container">
+        <h2>Typography</h2>
+        <div class="type-sample">
+          <p class="text-small text-muted">Display / H2 — Libre Baskerville 700</p>
+          <p class="text-h2">Shape your future self.</p>
+        </div>
+        <div class="type-sample">
+          <p class="text-small text-muted">H3 — Libre Baskerville 700</p>
+          <p class="text-h3">Psychological counseling</p>
+        </div>
+        <div class="type-sample">
+          <p class="text-small text-muted">Body — freight-text-pro 400</p>
+          <p class="text-body">
+            The thought of a life unlived is a potent call to action, but the internal obstacles to change are
+            often challenging. With the right guidance and dedicated support, those challenges become stepping
+            stones.
+          </p>
+        </div>
+        <div class="type-sample">
+          <p class="text-small text-muted">Small / caption</p>
+          <p class="text-caption">* feedback from clients is posted anonymously to protect their privacy</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="styleguide-section section--cream">
+      <div class="container">
+        <h2>Components</h2>
+        <div class="component-stack">
+          <div>
+            <p class="text-small text-muted">Primary button</p>
+            <a class="btn-primary" href="https://annahellmuth.com/">Schedule your discovery call</a>
+          </div>
+          <div>
+            <p class="text-small text-muted">Secondary button</p>
+            <a class="btn-secondary" href="#">Discover Counseling Services</a>
+          </div>
+          <article class="card-service" style="max-width: 24rem">
+            <h3 class="card-service__title">Life coaching</h3>
+            <p class="card-service__body">Realize your ambitious goals and ascend to new heights</p>
+            <a class="btn-secondary" href="#">Explore Coaching Details</a>
+          </article>
+          <blockquote class="quote-testimonial" style="max-width: 36rem">
+            <p class="quote-testimonial__text">
+              “From the very first session, I experienced a sense of relief, and with each new meeting, things
+              became easier.”
+            </p>
+            <cite class="quote-testimonial__cite">— Former client*</cite>
+          </blockquote>
+          <div class="faq-item" style="max-width: 36rem">
+            <h3 class="faq-item__question">Can I not address my inner issues on my own?</h3>
+            <p class="faq-item__answer">
+              There are times when self-reliance is sufficient, and times when it's not. A skilled specialist
+              can save you years of wasted time and unnecessary struggle.
+            </p>
+          </div>
+          <ol class="steps-list" style="max-width: 28rem">
+            <li class="steps-list__item">Step 1: Schedule a free 30-minute intake call.</li>
+            <li class="steps-list__item">Step 2: During the call, ask any questions and see if we resonate.</li>
+            <li class="steps-list__item">Step 3: If we both agree, we begin your transformation journey.</li>
+          </ol>
+          <ul class="checklist" style="max-width: 32rem">
+            <li class="checklist__item">✔ Get a sense of who I am and determine if I'm the right specialist for you.</li>
+            <li class="checklist__item">✔ Clarify your needs and whether counseling or coaching fits.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="styleguide-section section--burgundy">
+      <div class="container">
+        <h2 class="text-on-dark" style="font-family: var(--font-heading); font-size: var(--text-h2-size)">On burgundy</h2>
+        <p class="text-on-dark" style="font-family: var(--font-body); max-width: 32rem; line-height: 1.6">
+          Navigation and hero sections use the accent background with white type.
+        </p>
+        <p style="margin-top: var(--space-xl)">
+          <a class="btn-primary" href="#" style="background: #fff; color: var(--color-accent); border-color: #fff">Schedule your discovery call</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="spacing" class="styleguide-section section--light">
+      <div class="container">
+        <h2>Spacing scale</h2>
+        <div class="spacing-row"><span>2xs 0.25rem</span><div class="spacing-bar" style="width: 0.25rem"></div></div>
+        <div class="spacing-row"><span>xs 0.5rem</span><div class="spacing-bar" style="width: 0.5rem"></div></div>
+        <div class="spacing-row"><span>sm 0.75rem</span><div class="spacing-bar" style="width: 0.75rem"></div></div>
+        <div class="spacing-row"><span>md 1rem</span><div class="spacing-bar" style="width: 1rem"></div></div>
+        <div class="spacing-row"><span>lg 1.5rem</span><div class="spacing-bar" style="width: 1.5rem"></div></div>
+        <div class="spacing-row"><span>xl 2rem</span><div class="spacing-bar" style="width: 2rem"></div></div>
+        <div class="spacing-row"><span>2xl 3rem</span><div class="spacing-bar" style="width: 3rem"></div></div>
+        <p class="text-small" style="margin-top: var(--space-lg)">Max layout width: 75rem — see <a class="brand-link" href="../brand/layouts.md">brand/layouts.md</a></p>
+      </div>
+    </section>
+
+    <section id="logo" class="styleguide-section section--cream">
+      <div class="container">
+        <h2>Logo</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-xl); align-items: flex-start">
+          <div class="logo-preview">
+            <img src="../brand/assets/logo/logo.png" alt="Anna Hellmuth" width="240" />
+            <p class="text-caption" style="margin-top: var(--space-md)">On light surface</p>
+          </div>
+          <div class="logo-preview logo-preview--dark">
+            <img src="../brand/assets/logo/logo.png" alt="Anna Hellmuth" width="240" />
+            <p class="text-caption text-on-dark" style="margin-top: var(--space-md)">On burgundy (check contrast)</p>
+          </div>
+        </div>
+        <p class="text-body" style="margin-top: var(--space-lg)">
+          Maintain clear space equal to the height of the “A” in Anna around the mark. Do not stretch or recolor the logo.
+        </p>
+      </div>
+    </section>
+
+    <section id="languages" class="styleguide-section section--cream">
+      <div class="container container--narrow">
+        <h2>Languages</h2>
+        <div class="lang-note">
+          <p class="text-body" style="margin-top: 0">
+            Sessions and materials may use <strong>English, German, Ukrainian, or Russian</strong>. The same brand
+            fonts apply; Cyrillic is supported in Libre Baskerville. Test line breaks for longer German compounds
+            in social templates.
+          </p>
+          <p class="text-body" lang="ru" style="margin-bottom: 0">
+            Пример: Онлайн-консультирование и коучинг для творческих и амбициозных людей.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section--burgundy section" style="padding: var(--space-xl) var(--space-section-x)">
+      <div class="container">
+        <p class="text-on-dark text-small" style="margin: 0">
+          Marketing System · Source: annahellmuth.com · contact@annahellmuth.com
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+/**
+ * Typography — matches annahellmuth.com
+ * Requires network for Google Fonts + Adobe Typekit (same kit as live site).
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* freight-text-pro loads via Typekit script in styleguide / project HTML (see brand/assets/fonts/README.md). */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  font-weight: 400;
+  line-height: var(--text-body-line);
+  letter-spacing: var(--letter-spacing-body);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display-size);
+  font-weight: 700;
+  line-height: var(--text-display-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.text-h2,
+h2.brand-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2-size);
+  font-weight: 700;
+  line-height: var(--text-h2-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.text-h3,
+h3.brand-h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3-size);
+  font-weight: 700;
+  line-height: var(--text-h3-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-sm);
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.text-small,
+.text-caption {
+  font-family: var(--font-body);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+  color: var(--color-text);
+}
+
+.text-on-dark {
+  color: var(--color-text-on-dark);
+}
+
+.text-muted {
+  opacity: 0.85;
+}
+
+a.brand-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: color var(--transition-fast);
+}
+
+a.brand-link:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Cyrillic-friendly: Libre Baskerville + freight support extended Latin/Cyrillic in materials */
+[lang="ru"],
+[lang="uk"] {
+  font-feature-settings: "kern" 1;
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "source": "https://annahellmuth.com/",
+    "audited": "2026-06-02",
+    "sync": "Hand-sync with brand/tokens.css when values change"
+  },
+  "color": {
+    "accent": { "value": "#64010d", "comment": "Hero, primary buttons" },
+    "accentHover": { "value": "#4a0202" },
+    "text": { "value": "#5c020c" },
+    "textOnDark": { "value": "#ffffff" },
+    "surface": { "value": "#f7eae3" },
+    "surfaceLight": { "value": "#fdf9f4" }
+  },
+  "font": {
+    "heading": { "value": "Libre Baskerville, Georgia, serif" },
+    "body": { "value": "freight-text-pro, Georgia, serif" }
+  },
+  "radius": {
+    "pill": { "value": "300px" },
+    "md": { "value": "8px" }
+  },
+  "layout": {
+    "maxWidth": { "value": "75rem" }
+  }
+}
