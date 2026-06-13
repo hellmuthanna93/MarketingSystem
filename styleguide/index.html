@@ -4,18 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anna Hellmuth — Brand Styleguide</title>
-    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
-    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
-    <script
-      src="https://use.typekit.net/ik/r0p1MYsmR1L75nvVsqVUB5iMYX6V0yf3aSvQ_zx_uSGfe7SIfFHN4UJLFRbh52jhWDjDwRbtwewoFc9DZRj3FQStwQsqwRsRwy79MkG0jAFu-WsoShFGZAsude80ZkoRdhXCHKoyjamTiY8Djhy8ZYmC-Ao1Oco8if37OcBDOcu8OfG0ZcUzihmkOANRZAUzifXkZRJkO1FUiABkZWF3jAF8OcFzdP37O1FUiABkZWF3jAF8ShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80ZkoRdhXCjAFu-WsoShFGZAsude80Zko0ZWbCjAo0jAy8deUliWsGOcFzdPUySkolZPUcdeNaZWJldhF8deNXOQ4cwRJ0SaBujW48Sagyjh90jhNlOeUzjhBC-eNDifUDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlOYiaikoyjamTiY8Djhy8ZYmC-Ao1OcFzdPUaiaS0jAFu-WsoShFGZAsude80Zko0ZWbCiaiaOcB0dcBGZAUCdWmX-foRdhXCiaiaOcBDOcu8OYiaikocdeNaZWJldhF8deNXOQ4cwRJ0SaBujW48Sagyjh90jhNlOYiaikoDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlJ6ol-Ao8S1ZyOAuzZemkdKJbZ148-AiGifuXZWyXOWgkdkG4fO9nIMMjgfMfH6qJceqbMs6IJMJ7fbK6-sMgeMj6MKG4f4TTIMIjgkMfH6qJcAqbMs65JMJ7fbKd-sMgegI6MTMg7H2ET6j.js"
-      async
-    ></script>
-    <script>
-      try {
-        Typekit.load();
-      } catch (e) {}
-    </script>
-    <link rel="stylesheet" href="../brand/tokens.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="../brand/tokens.css" />
     <link rel="stylesheet" href="../brand/typography.css" />
     <link rel="stylesheet" href="../brand/components.css" />
     <style>
@@ -47,7 +39,7 @@
       .styleguide-hero h1 {
         font-family: var(--font-heading);
         font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 700;
+        font-weight: var(--font-weight-heading);
         margin: 0 0 var(--space-md);
       }
       .styleguide-hero p {
@@ -111,6 +103,10 @@
   </head>
   <body>
     <nav class="styleguide-nav" aria-label="Styleguide sections">
+      <a href="../index.html">Marketing center</a>
+      <a href="../brand/index.html">Brand hub</a>
+      <a href="../design-system/index.html">Design system</a>
+      <a href="marketing-guide.html">Marketing</a>
       <a href="#overview">Overview</a>
       <a href="#colors">Colors</a>
       <a href="#typography">Typography</a>
@@ -136,12 +132,17 @@
         <h2>Brand overview</h2>
         <p class="text-body">
           Online counseling and coaching for creative and ambitious souls. The visual identity pairs deep
-          burgundy with warm cream surfaces, Libre Baskerville headings, and freight-text-pro body copy —
+          burgundy with warm cream surfaces and Source Serif 4 throughout —
           warm, professional, and approachable.
         </p>
         <p class="text-body text-muted">
           Full voice and messaging guidelines:
           <a class="brand-link" href="../brand/voice.md">brand/voice.md</a>
+          ·
+          <a class="brand-link" href="marketing-guide.html">Marketing guide</a>
+          ·
+          <a class="brand-link" href="../brand/index.html">brand/index.html</a>
+          (all guides)
         </p>
       </div>
     </section>
@@ -168,15 +169,15 @@
       <div class="container">
         <h2>Typography</h2>
         <div class="type-sample">
-          <p class="text-small text-muted">Display / H2 — Libre Baskerville 700</p>
+          <p class="text-small text-muted">Display / H2 — Source Serif 4 600</p>
           <p class="text-h2">Shape your future self.</p>
         </div>
         <div class="type-sample">
-          <p class="text-small text-muted">H3 — Libre Baskerville 700</p>
+          <p class="text-small text-muted">H3 — Source Serif 4 600</p>
           <p class="text-h3">Psychological counseling</p>
         </div>
         <div class="type-sample">
-          <p class="text-small text-muted">Body — freight-text-pro 400</p>
+          <p class="text-small text-muted">Body — Source Serif 4 400</p>
           <p class="text-body">
             The thought of a life unlived is a potent call to action, but the internal obstacles to change are
             often challenging. With the right guidance and dedicated support, those challenges become stepping
@@ -285,7 +286,7 @@
         <div class="lang-note">
           <p class="text-body" style="margin-top: 0">
             Sessions and materials may use <strong>English, German, Ukrainian, or Russian</strong>. The same brand
-            fonts apply; Cyrillic is supported in Libre Baskerville. Test line breaks for longer German compounds
+            fonts apply; Cyrillic is supported in Source Serif 4. Test line breaks for longer German compounds
             in social templates.
           </p>
           <p class="text-body" lang="ru" style="margin-bottom: 0">

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Hellmuth — Marketing Center</title>
+    <meta name="description" content="Marketing system hub for annahellmuth.com — brand guides, design system, website mirror, and content templates." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="brand/tokens.css" />
+    <link rel="stylesheet" href="brand/typography.css" />
+    <link rel="stylesheet" href="brand/components.css" />
+    <style>
+      .hub-nav {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-md) var(--space-section-x);
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm) var(--space-lg);
+      }
+      .hub-nav a {
+        color: var(--color-text-on-dark);
+        text-decoration: none;
+        opacity: 0.92;
+      }
+      .hub-nav a:hover { opacity: 1; text-decoration: underline; }
+      .hub-hero {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: clamp(3rem, 8vw, 5rem) var(--space-section-x);
+        text-align: center;
+      }
+      .hub-hero__logo {
+        height: 72px;
+        width: auto;
+        margin: 0 auto var(--space-lg);
+      }
+      .hub-hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        font-weight: var(--font-weight-heading);
+        margin: 0 0 var(--space-md);
+      }
+      .hub-hero__tagline {
+        font-family: var(--font-body);
+        font-size: 1.15rem;
+        font-style: italic;
+        opacity: 0.92;
+        max-width: 36rem;
+        margin: 0 auto var(--space-xl);
+        line-height: 1.6;
+      }
+      .hub-hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-md);
+        justify-content: center;
+      }
+      .hub-hero .btn-light { margin-top: 0; }
+      .hub-section {
+        padding: var(--space-section-y) var(--space-section-x);
+        border-bottom: 1px solid var(--color-border);
+      }
+      .hub-section h2 {
+        font-family: var(--font-heading);
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: var(--color-accent);
+        margin: 0 0 var(--space-sm);
+      }
+      .hub-section__lead {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        opacity: 0.85;
+        max-width: 40rem;
+        margin: 0 0 var(--space-xl);
+        line-height: 1.6;
+      }
+      .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+        gap: var(--space-lg);
+      }
+      .hub-card {
+        display: flex;
+        flex-direction: column;
+        background: hsl(var(--white-hsl));
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: var(--space-xl);
+        text-decoration: none;
+        color: var(--color-text);
+        transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        height: 100%;
+        box-shadow: var(--shadow-card);
+      }
+      .hub-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-soft);
+        border-color: hsla(var(--accent-hsl), 0.3);
+      }
+      .hub-card__tag {
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: var(--space-sm);
+      }
+      .hub-card__title {
+        font-family: var(--font-heading);
+        font-size: 1.15rem;
+        font-weight: var(--font-weight-heading);
+        color: var(--color-accent);
+        margin: 0 0 var(--space-sm);
+      }
+      .hub-card__desc {
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        line-height: 1.55;
+        opacity: 0.88;
+        margin: 0;
+        flex-grow: 1;
+      }
+      .hub-card__arrow {
+        margin-top: var(--space-md);
+        font-size: 0.85rem;
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-accent);
+      }
+      .hub-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm) var(--space-lg);
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+      }
+      .hub-links a {
+        color: var(--color-accent);
+        text-decoration: underline;
+        text-underline-offset: 0.12em;
+      }
+      .hub-footer {
+        padding: var(--space-xl) var(--space-section-x);
+        text-align: center;
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        opacity: 0.85;
+      }
+      .hub-footer a { color: var(--color-accent); }
+      .skip-link {
+        position: absolute;
+        top: -100%;
+        left: 1rem;
+        z-index: 200;
+        padding: 0.75rem 1.25rem;
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        font-weight: var(--font-weight-button);
+        border-radius: 0 0 8px 8px;
+        text-decoration: none;
+      }
+      .skip-link:focus { top: 0; outline: 2px solid var(--color-accent-hover); outline-offset: 2px; }
+      .btn-light {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-family: var(--font-body);
+        font-size: var(--text-button-size);
+        font-weight: var(--font-weight-button);
+        border-radius: var(--radius-pill);
+        border: 2px solid var(--color-text-on-dark);
+        color: var(--color-text-on-dark);
+        background: transparent;
+        text-decoration: none;
+        transition: background var(--transition-base), color var(--transition-base);
+      }
+      .btn-light:hover {
+        background: var(--color-text-on-dark);
+        color: var(--color-accent);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="hub-hero">
+      <img class="hub-hero__logo" src="Website/anna-hellmuth/assets/images/logo.png" alt="Anna Hellmuth" width="200" height="72" />
+      <h1>Marketing Center</h1>
+      <p class="hub-hero__tagline">Online counseling and coaching for creative &amp; ambitious souls — your brand, content, and design in one place.</p>
+      <div class="hub-hero__actions">
+        <a class="btn-primary" href="https://annahellmuth.com/" target="_blank" rel="noopener">Live website</a>
+        <a class="btn-light" href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener">Schedule discovery call</a>
+      </div>
+    </header>
+
+    <nav class="hub-nav" aria-label="Page sections">
+      <a href="#strategy">Strategy</a>
+      <a href="#design">Design</a>
+      <a href="#website">Website</a>
+      <a href="#templates">Templates</a>
+      <a href="#docs">Docs</a>
+    </nav>
+
+    <main id="main">
+      <!-- Strategy & brand -->
+      <section class="hub-section section--cream" id="strategy">
+        <div class="container">
+          <h2>Brand &amp; marketing strategy</h2>
+          <p class="hub-section__lead">Positioning, audience, content guidelines, sales approach, and approved messaging.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="brand/index.html">
+              <span class="hub-card__tag">Hub</span>
+              <h3 class="hub-card__title">Brand &amp; marketing guides</h3>
+              <p class="hub-card__desc">All strategy, voice, positioning, content checklist, and sales docs in one browsable page.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="styleguide/marketing-guide.html">
+              <span class="hub-card__tag">HTML</span>
+              <h3 class="hub-card__title">Marketing guide</h3>
+              <p class="hub-card__desc">Focused reference for content philosophy, post formula, weekly rhythm, and CTAs.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="brand/marketing/positioning.md">
+              <span class="hub-card__tag">Markdown</span>
+              <h3 class="hub-card__title">Positioning</h3>
+              <p class="hub-card__desc">Vision, core principle, guiding principle — sell movement, not process.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="brand/marketing/content.md">
+              <span class="hub-card__tag">Markdown</span>
+              <h3 class="hub-card__title">Content guidelines</h3>
+              <p class="hub-card__desc">Checklist, X→Y→Z formula, weekly topics, do/don't examples.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="brand/marketing/audience.md">
+              <span class="hub-card__tag">Markdown</span>
+              <h3 class="hub-card__title">Ideal audience</h3>
+              <p class="hub-card__desc">Client profile, desires, problems, counseling vs coaching.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="brand/voice.md">
+              <span class="hub-card__tag">Markdown</span>
+              <h3 class="hub-card__title">Voice &amp; CTAs</h3>
+              <p class="hub-card__desc">Tone, taglines, calls to action, multilingual notes.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design -->
+      <section class="hub-section section--light" id="design">
+        <div class="container">
+          <h2>Visual design &amp; components</h2>
+          <p class="hub-section__lead">Colors, typography, UI components — all tied to <code>brand/tokens.css</code>.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="design-system/index.html">
+              <span class="hub-card__tag">HTML</span>
+              <h3 class="hub-card__title">Design system</h3>
+              <p class="hub-card__desc">Full component library — buttons, forms, cards, nav, testimonials, FAQ, footer.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="styleguide/index.html">
+              <span class="hub-card__tag">HTML</span>
+              <h3 class="hub-card__title">Styleguide</h3>
+              <p class="hub-card__desc">Compact visual reference — palette, type scale, buttons, testimonials.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="brand/DESIGN.md">
+              <span class="hub-card__tag">Markdown</span>
+              <h3 class="hub-card__title">DESIGN.md</h3>
+              <p class="hub-card__desc">Quick styling cheat sheet for agents and collaborators.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="brand/layouts.md">
+              <span class="hub-card__tag">Markdown</span>
+              <h3 class="hub-card__title">Layout specs</h3>
+              <p class="hub-card__desc">Social, print, and video dimensions with safe zones.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Website mirror -->
+      <section class="hub-section section--cream" id="website">
+        <div class="container">
+          <h2>Website mirror</h2>
+          <p class="hub-section__lead">Static copy of annahellmuth.com for reference and offline preview.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="Website/anna-hellmuth/index.html">
+              <span class="hub-card__tag">Page</span>
+              <h3 class="hub-card__title">Home</h3>
+              <p class="hub-card__desc">Hero, services, testimonials, intake flow.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="Website/anna-hellmuth/counseling.html">
+              <span class="hub-card__tag">Page</span>
+              <h3 class="hub-card__title">Psychological counseling</h3>
+              <p class="hub-card__desc">Healing, emotional work, pricing.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="Website/anna-hellmuth/lifecoaching.html">
+              <span class="hub-card__tag">Page</span>
+              <h3 class="hub-card__title">Life coaching</h3>
+              <p class="hub-card__desc">Goals, transitions, coaching packages.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="Website/anna-hellmuth/about.html">
+              <span class="hub-card__tag">Page</span>
+              <h3 class="hub-card__title">About</h3>
+              <p class="hub-card__desc">Bio, credentials, approach, personal lens.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="Website/anna-hellmuth/contact.html">
+              <span class="hub-card__tag">Page</span>
+              <h3 class="hub-card__title">Contact</h3>
+              <p class="hub-card__desc">Calendar embed, contact details.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Templates -->
+      <section class="hub-section section--light" id="templates">
+        <div class="container">
+          <h2>Content templates</h2>
+          <p class="hub-section__lead">Ready-to-edit HTML for social posts and print.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="projects/social/templates/post-counseling.html">
+              <span class="hub-card__tag">1080×1080</span>
+              <h3 class="hub-card__title">Counseling post</h3>
+              <p class="hub-card__desc">Cream frame with X→Y→Z content structure.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="projects/social/templates/post-coaching.html">
+              <span class="hub-card__tag">1080×1080</span>
+              <h3 class="hub-card__title">Coaching post</h3>
+              <p class="hub-card__desc">Burgundy frame with movement-first copy.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="projects/social/templates/post-quote.html">
+              <span class="hub-card__tag">1080×1080</span>
+              <h3 class="hub-card__title">Quote card</h3>
+              <p class="hub-card__desc">Testimonial-style social graphic.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="projects/graphics/content-guidelines-one-pager.html">
+              <span class="hub-card__tag">A4 print</span>
+              <h3 class="hub-card__title">Content one-pager</h3>
+              <p class="hub-card__desc">Printable summary of content guidelines.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Docs -->
+      <section class="hub-section section--cream" id="docs">
+        <div class="container">
+          <h2>All markdown sources</h2>
+          <p class="hub-section__lead">Canonical text files — open in editor or preview in GitHub.</p>
+          <div class="hub-links">
+            <a href="brand/marketing/README.md">marketing/</a>
+            <a href="brand/marketing/positioning.md">positioning</a>
+            <a href="brand/marketing/audience.md">audience</a>
+            <a href="brand/marketing/content.md">content</a>
+            <a href="brand/marketing/sales.md">sales</a>
+            <a href="brand/marketing/messaging.md">messaging</a>
+            <a href="brand/voice.md">voice</a>
+            <a href="brand/DESIGN.md">DESIGN</a>
+            <a href="brand/layouts.md">layouts</a>
+            <a href="brand/AUDIT.md">AUDIT</a>
+            <a href="AGENTS.md">AGENTS</a>
+            <a href="README.md">README</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section--burgundy section hub-footer">
+      <div class="container">
+        <p class="text-on-dark" style="margin:0">
+          Anna Hellmuth Marketing System ·
+          <a href="https://annahellmuth.com/" class="brand-link" style="color:var(--color-text-on-dark)">annahellmuth.com</a> ·
+          <a href="mailto:contact@annahellmuth.com" style="color:var(--color-text-on-dark)">contact@annahellmuth.com</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

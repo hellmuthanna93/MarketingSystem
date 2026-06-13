@@ -36,14 +36,14 @@
   display: inline-block;
   font-family: var(--font-body);
   font-size: var(--text-button-size);
-  font-weight: 600;
+  font-weight: var(--font-weight-button);
   letter-spacing: var(--letter-spacing-button);
   line-height: 1.2;
   color: var(--color-text-on-dark);
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-pill);
-  padding: 1.56rem 2.4rem;
+  padding: var(--button-padding-y) var(--button-padding-x);
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -59,11 +59,28 @@
   opacity: 0.95;
 }
 
+/* Header nav CTA — compact; in-page CTAs keep default .btn-primary padding */
+.nav-cta .btn-primary {
+  padding: var(--button-padding-y-nav) var(--button-padding-x-nav);
+  font-size: var(--text-button-size-nav);
+  line-height: 1.35;
+}
+
+.btn-primary--sm {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--text-body-size);
+}
+
+.btn-secondary--sm {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--text-body-size);
+}
+
 .btn-secondary {
   display: inline-block;
   font-family: var(--font-body);
   font-size: var(--text-body-size);
-  font-weight: 600;
+  font-weight: var(--font-weight-button);
   color: var(--color-accent);
   background: transparent;
   border: 2px solid var(--color-accent);
@@ -91,7 +108,7 @@
 .card-service__title {
   font-family: var(--font-heading);
   font-size: var(--text-h3-size);
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   color: var(--color-text);
   margin: 0 0 var(--space-sm);
 }
@@ -99,6 +116,7 @@
 .card-service__body {
   font-family: var(--font-body);
   font-size: var(--text-body-size);
+  font-weight: var(--font-weight-body);
   line-height: var(--text-body-line);
   margin: 0 0 var(--space-lg);
 }
@@ -115,6 +133,7 @@
 .quote-testimonial__text {
   font-family: var(--font-body);
   font-size: var(--text-body-size);
+  font-weight: var(--font-weight-body);
   line-height: var(--text-body-line);
   font-style: italic;
   margin: 0 0 var(--space-md);
@@ -124,6 +143,7 @@
 .quote-testimonial__cite {
   font-family: var(--font-body);
   font-size: var(--text-small-size);
+  font-weight: var(--font-weight-medium);
   font-style: normal;
   opacity: 0.9;
 }
@@ -137,7 +157,7 @@
 .faq-item__question {
   font-family: var(--font-heading);
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   color: var(--color-text);
   margin: 0 0 var(--space-sm);
 }
@@ -145,6 +165,7 @@
 .faq-item__answer {
   font-family: var(--font-body);
   font-size: var(--text-body-size);
+  font-weight: var(--font-weight-body);
   line-height: var(--text-body-line);
   margin: 0;
 }
@@ -159,6 +180,7 @@
 .steps-list__item {
   font-family: var(--font-body);
   font-size: var(--text-body-size);
+  font-weight: var(--font-weight-body);
   line-height: var(--text-body-line);
   padding: var(--space-sm) 0 var(--space-sm) var(--space-xl);
   position: relative;
@@ -185,6 +207,7 @@
 .checklist__item {
   font-family: var(--font-body);
   font-size: var(--text-body-size);
+  font-weight: var(--font-weight-body);
   line-height: var(--text-body-line);
   padding: var(--space-xs) 0;
 }

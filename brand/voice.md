@@ -47,10 +47,18 @@
 
 - Use **you** and direct address; avoid jargon unless explaining a method (CBT, hypnotherapy, etc.)
 - Prefer full sentences and flowing paragraphs on web; bullets OK for steps and benefits
-- Headings: sentence case or title case consistent with site (Libre Baskerville, confident, not shouty)
+- Headings: sentence case or title case consistent with site (Source Serif 4, confident, not shouty)
 - Avoid guilt-based pressure; emphasize choice ("Why not give it a try and find out?")
+
+## Strategic voice
+
+For positioning, content strategy, audience definition, and sales approach, see **[brand/marketing/](marketing/README.md)**.
+
+**Movement-first rule for new content:** Lead with the change the reader wants (relief, clarity, confidence, transformation) — not the process, method, or session format. Credentials and modalities belong on trust pages (about, service pages), not in social hooks.
+
+Quick reference: [content.md](marketing/content.md) · [messaging.md](marketing/messaging.md)
 
 ## Multilingual materials
 
 - **English** is primary for marketing system defaults
-- For DE / UK / RU: keep the same visual brand; allow longer line lengths and test Cyrillic setting in headings and body (Libre Baskerville + freight-text-pro)
+- For DE / UK / RU: keep the same visual brand; allow longer line lengths and test Cyrillic in headings and body (Source Serif 4)

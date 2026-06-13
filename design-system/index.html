@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Hellmuth — Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="../brand/tokens.css" />
+    <link rel="stylesheet" href="../brand/typography.css" />
+    <link rel="stylesheet" href="../brand/components.css" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <a href="#ds-main" class="skip-link">Skip to components</a>
+
+    <div class="ds-layout">
+      <aside class="ds-sidebar" aria-label="Component navigation">
+        <p class="ds-sidebar__title">Design system</p>
+        <nav>
+          <a href="../index.html">Marketing center</a>
+          <a href="#intro">Introduction</a>
+          <a href="#typography">Typography</a>
+          <a href="#colors">Colors</a>
+          <a href="#buttons">Buttons</a>
+          <a href="#links">Links</a>
+          <a href="#forms">Forms</a>
+          <a href="#badges">Badges &amp; alerts</a>
+          <a href="#navigation">Navigation</a>
+          <a href="#hero">Hero</a>
+          <a href="#cards">Cards</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#steps">Steps</a>
+          <a href="#accordion">Accordion</a>
+          <a href="#lists">Lists</a>
+          <a href="#quote">Quote</a>
+          <a href="#footer">Footer</a>
+          <a href="#utilities">Utilities</a>
+        </nav>
+      </aside>
+
+      <div class="ds-main" id="ds-main">
+        <header class="ds-hero" id="intro">
+          <h1>Design system</h1>
+          <p class="text-body">
+            Base components from annahellmuth.com — modern, accessible, token-driven.
+            Import <span class="ds-code">brand/*.css</span> + <span class="ds-code">design-system/css/*</span>.
+          </p>
+          <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-top: 1.5rem">
+            <ol>
+              <li><a href="../brand/index.html">Brand hub</a></li>
+              <li><span aria-current="page">Design system</span></li>
+            </ol>
+          </nav>
+        </header>
+
+        <!-- Typography -->
+        <section class="ds-section section--cream" id="typography">
+          <div class="container">
+            <h2>Typography</h2>
+            <p class="ds-section__lead">Source Serif 4 throughout. Scale from <code>brand/tokens.css</code>.</p>
+            <div class="ds-component">
+              <span class="ds-label">Display / H1</span>
+              <p class="text-display">Shape your future self.</p>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">H2</span>
+              <p class="text-h2">Psychological counseling</p>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">H3</span>
+              <p class="text-h3">Life coaching</p>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">Body</span>
+              <p class="text-body">The thought of a life unlived is a potent call to action, but the internal obstacles to change are often challenging.</p>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">Large body</span>
+              <p class="large" style="font-style: italic; opacity: 0.9">Available wherever you are, in English, German, Ukrainian, Russian, or a mix of them all</p>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">Small / caption</span>
+              <p class="text-caption">* feedback from clients is posted anonymously to protect their privacy</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Colors -->
+        <section class="ds-section section--light" id="colors">
+          <div class="container">
+            <h2>Colors</h2>
+            <p class="ds-section__lead">Semantic tokens — never hardcode hex in components.</p>
+            <div class="swatch-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(9rem,1fr));gap:1rem">
+              <div class="swatch swatch--on-dark" style="background:var(--color-accent)">Accent</div>
+              <div class="swatch" style="background:var(--color-accent-hover);color:var(--color-text-on-dark)">Hover</div>
+              <div class="swatch" style="background:var(--color-text);color:var(--color-text-on-dark)">Text</div>
+              <div class="swatch" style="background:var(--color-surface)">Surface</div>
+              <div class="swatch" style="background:var(--color-surface-light)">Surface light</div>
+            </div>
+            <div class="ds-row" style="margin-top:2rem">
+              <span class="section section--cream" style="padding:1rem 2rem;border-radius:8px">.section--cream</span>
+              <span class="section section--burgundy" style="padding:1rem 2rem;border-radius:8px">.section--burgundy</span>
+              <span class="section section--light" style="padding:1rem 2rem;border-radius:8px">.section--light</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="ds-section section--cream" id="buttons">
+          <div class="container">
+            <h2>Buttons</h2>
+            <div class="ds-component">
+              <span class="ds-label">Primary — .btn-primary</span>
+              <div class="ds-row">
+                <a class="btn-primary" href="#">Schedule your discovery call</a>
+                <a class="btn-primary btn-primary--sm" href="#">Small primary</a>
+                <button class="btn-primary" type="button" disabled>Disabled</button>
+              </div>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">Secondary — .btn-secondary</span>
+              <div class="ds-row">
+                <a class="btn-secondary" href="#">Discover Counseling Services</a>
+                <a class="btn-secondary btn-secondary--sm" href="#">Small secondary</a>
+              </div>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">On dark — .btn-light</span>
+              <div class="bg-dark section" style="padding:2rem;border-radius:12px;display:inline-block">
+                <a class="btn-light" href="#">Explore Coaching Details</a>
+              </div>
+            </div>
+            <div class="ds-component">
+              <span class="ds-label">Ghost — .btn-ghost</span>
+              <button class="btn-ghost" type="button">Learn more about me →</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Links -->
+        <section class="ds-section section--light" id="links">
+          <div class="container container--narrow">
+            <h2>Links</h2>
+            <p class="text-body"><a class="brand-link" href="#">Inline brand link</a> within body copy.</p>
+            <p class="text-body">Nav links use underline animation — see Navigation section.</p>
+          </div>
+        </section>
+
+        <!-- Forms -->
+        <section class="ds-section section--cream" id="forms">
+          <div class="container container--narrow">
+            <h2>Forms</h2>
+            <form action="#" method="get" novalidate>
+              <div class="form-field">
+                <label class="form-label" for="ds-name">Full name</label>
+                <input class="form-input" id="ds-name" name="name" type="text" autocomplete="name" required placeholder="Anna Hellmuth" />
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="ds-email">Email</label>
+                <input class="form-input" id="ds-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+                <p class="form-hint">We'll respond within 2 business days.</p>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="ds-service">Service</label>
+                <select class="form-select" id="ds-service" name="service">
+                  <option>Psychological counseling</option>
+                  <option>Life coaching</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="ds-message">Message</label>
+                <textarea class="form-textarea" id="ds-message" name="message" placeholder="Tell me a little about what brings you here…"></textarea>
+              </div>
+              <label class="form-check">
+                <input type="checkbox" name="privacy" required />
+                <span>I have read the <a class="brand-link" href="#">privacy policy</a>.</span>
+              </label>
+              <p style="margin-top:1.5rem"><button class="btn-primary" type="submit">Send message</button></p>
+            </form>
+          </div>
+        </section>
+
+        <!-- Badges & alerts -->
+        <section class="ds-section section--light" id="badges">
+          <div class="container">
+            <h2>Badges &amp; alerts</h2>
+            <div class="ds-row ds-component">
+              <span class="badge">Recommended</span>
+              <span class="badge badge--on-dark" style="background:var(--color-accent);color:var(--color-text-on-dark)">Best value</span>
+            </div>
+            <div class="ds-grid-2">
+              <div class="alert alert--info" role="status">
+                <p class="alert__title">Free discovery call</p>
+                <p>30 minutes to explore fit — not a therapy session.</p>
+              </div>
+              <div class="alert alert--success" role="status">
+                <p class="alert__title">Cancel policy</p>
+                <p>Free reschedule up to 48 hours before your appointment.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Navigation demo -->
+        <section class="ds-section section--cream" id="navigation">
+          <div class="container">
+            <h2>Navigation</h2>
+            <p class="ds-section__lead">Sticky header + mobile overlay. Resize below 768px to test toggle.</p>
+            <div style="position:relative;border:1px solid var(--color-border);border-radius:12px;overflow:hidden;min-height:28rem;background:var(--color-surface)">
+              <header class="site-header" data-ds-header>
+                <div class="nav-container">
+                  <a href="#" class="logo">
+                    <img src="../Website/anna-hellmuth/assets/images/logo.png" alt="Anna Hellmuth" width="160" height="56" />
+                  </a>
+                  <nav class="nav-links" aria-label="Primary">
+                    <a href="#" aria-current="page">Counseling</a>
+                    <a href="#">Coaching</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                  </nav>
+                  <div class="nav-cta">
+                    <a class="btn-primary btn-primary--sm" href="#">Schedule your discovery call</a>
+                  </div>
+                  <button class="nav-toggle" type="button" data-nav-toggle aria-label="Toggle navigation" aria-expanded="false" aria-controls="ds-mobile-menu">
+                    <span></span><span></span><span></span>
+                  </button>
+                </div>
+              </header>
+              <div class="mobile-menu" id="ds-mobile-menu" data-mobile-menu role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+                <nav class="mobile-menu-links">
+                  <a href="#">Psychological Counseling</a>
+                  <a href="#">Life Coaching</a>
+                  <a href="#">About</a>
+                  <a href="#">Contact</a>
+                </nav>
+                <a class="btn-primary" href="#">Schedule your discovery call</a>
+              </div>
+              <div style="padding:12rem 2rem 4rem;text-align:center">
+                <p class="text-body text-muted">Page content area</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hero -->
+        <section class="ds-section section--light" id="hero">
+          <div class="container">
+            <h2>Hero</h2>
+            <div class="hero" style="min-height:auto;padding:2rem 0">
+              <div class="hero-grid">
+                <div class="hero-content">
+                  <span class="hero-subtitle">Anna Hellmuth</span>
+                  <h1 style="font-size:clamp(1.75rem,4vw,2.5rem);color:var(--color-accent)">Online counseling and coaching for creative &amp; ambitious souls</h1>
+                  <p class="large" style="font-style:italic;opacity:0.85">Shape your future self. Take the first step today.</p>
+                  <a class="btn-primary" href="#">Schedule your discovery call</a>
+                </div>
+                <div class="hero-image">
+                  <div class="hero-image-wrapper">
+                    <img src="../Website/anna-hellmuth/assets/images/1bc23666-cb2a-40a2-8735-5029651e0064.jpg" alt="" width="820" height="1000" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="ds-section section--cream" id="cards">
+          <div class="container">
+            <h2>Cards</h2>
+
+            <span class="ds-label">Service cards — .service-card</span>
+            <div class="services-grid ds-component">
+              <article class="service-card">
+                <div class="service-card-content">
+                  <h3>Psychological Counseling</h3>
+                  <p>Find your power to release emotional burdens and heal your soul.</p>
+                  <a class="btn-primary" href="#">Discover Counseling Services</a>
+                </div>
+              </article>
+              <article class="service-card">
+                <div class="service-card-content">
+                  <h3>Life Coaching</h3>
+                  <p>Realize your ambitious goals and ascend to new heights.</p>
+                  <a class="btn-primary" href="#">Explore Coaching Details</a>
+                </div>
+              </article>
+            </div>
+
+            <span class="ds-label">Feature cards — .about-card</span>
+            <div class="about-grid-6 ds-component">
+              <article class="about-card">
+                <div class="about-card-icon" aria-hidden="true">◆</div>
+                <h4>Integrative</h4>
+                <p>Humanistic foundation with hypnotherapy, psychodynamic, CBT, and systemic constellations.</p>
+              </article>
+              <article class="about-card">
+                <div class="about-card-icon" aria-hidden="true">◇</div>
+                <h4>Personalized</h4>
+                <p>What you need, right here, right now — no rigid templates.</p>
+              </article>
+              <article class="about-card">
+                <div class="about-card-icon" aria-hidden="true">○</div>
+                <h4>Holistic</h4>
+                <p>Medical training brings awareness of body and mind connections.</p>
+              </article>
+            </div>
+
+            <span class="ds-label">Pricing cards — .pricing-card</span>
+            <div class="pricing-grid ds-component">
+              <article class="pricing-card">
+                <h3>Single session</h3>
+                <div class="pricing-price">
+                  <span class="amount">€120</span>
+                  <span class="period"> / 60 min</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>Psychological counseling</li>
+                  <li>Online, confidential</li>
+                </ul>
+                <a class="btn-primary" href="#">Book a session</a>
+              </article>
+              <article class="pricing-card pricing-card--featured">
+                <span class="pricing-badge">Recommended</span>
+                <h3>6-session package</h3>
+                <div class="pricing-price">
+                  <span class="amount">€660</span>
+                  <span class="period"> (€110/session)</span>
+                </div>
+                <ul class="pricing-features">
+                  <li>Deeper therapeutic work</li>
+                  <li>Consistent support</li>
+                  <li>Best for lasting change</li>
+                </ul>
+                <a class="btn-primary" href="#">Book a package</a>
+              </article>
+            </div>
+
+            <span class="ds-label">Contact prompt — .contact-prompt</span>
+            <div class="contact-prompt ds-component" style="max-width:28rem">
+              <h3>Start your journey</h3>
+              <p>Start your journey of transformation today.</p>
+              <a class="btn-primary" href="#">Schedule your discovery call</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="ds-section section--light" id="testimonials">
+          <div class="container">
+            <h2>Testimonials</h2>
+
+            <span class="ds-label">Grid card — .testimonial-card</span>
+            <div class="testimonial-container testimonial-container--2 ds-component">
+              <blockquote class="testimonial-card">
+                <p>"From the very first session, I experienced a sense of relief, and with each new meeting, things became easier."</p>
+                <footer class="client-info">
+                  <img src="../Website/anna-hellmuth/assets/images/user_01a.png" alt="" width="44" height="44" />
+                  <span>— Former client*</span>
+                </footer>
+              </blockquote>
+              <blockquote class="testimonial-card">
+                <p><strong><em>Now, everything in my life is better than I ever expected</em></strong> — my relationship with myself, my family, and my friends.</p>
+                <footer class="client-info">
+                  <img src="../Website/anna-hellmuth/assets/images/user_04c.png" alt="" width="44" height="44" />
+                  <span>— Former client*</span>
+                </footer>
+              </blockquote>
+            </div>
+
+            <span class="ds-label">Inline quote — .quote-testimonial</span>
+            <blockquote class="quote-testimonial ds-component" style="max-width:36rem">
+              <p class="quote-testimonial__text">"I finally felt heard and understood in a non-judgmental space."</p>
+              <cite class="quote-testimonial__cite">— Former client*</cite>
+            </blockquote>
+
+            <span class="ds-label">Slider — [data-slider]</span>
+            <div class="testimonials-slider ds-component" data-slider role="region" aria-label="Testimonial slider" aria-roledescription="carousel">
+              <div class="testimonials-viewport">
+                <div class="testimonials-track" data-slider-track>
+                  <div class="testimonial-slide" data-slider-slide aria-hidden="false">
+                    <p class="testimonial-slide__text">"You explained things in a way that finally made sense to my rational mind."</p>
+                    <p class="testimonial-slide__author">— Former client</p>
+                  </div>
+                  <div class="testimonial-slide" data-slider-slide aria-hidden="true">
+                    <p class="testimonial-slide__text">"With your guidance, I was finally able to work deeply with my inner self."</p>
+                    <p class="testimonial-slide__author">— Former client</p>
+                  </div>
+                  <div class="testimonial-slide" data-slider-slide aria-hidden="true">
+                    <p class="testimonial-slide__text">"I learned to process emotions constructively instead of suppressing them."</p>
+                    <p class="testimonial-slide__author">— Former client</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-btn" type="button" data-slider-prev aria-label="Previous testimonial">←</button>
+                <div class="slider-dots" data-slider-dots role="tablist" aria-label="Choose testimonial"></div>
+                <button class="slider-btn" type="button" data-slider-next aria-label="Next testimonial">→</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Steps -->
+        <section class="ds-section section--burgundy" id="steps">
+          <div class="container">
+            <h2 class="text-on-dark" style="font-family:var(--font-heading);font-size:var(--text-h2-size)">Steps</h2>
+
+            <span class="ds-label text-on-dark" style="opacity:0.9">Journey circles — .step-circle</span>
+            <div class="steps-container ds-component">
+              <div class="step-circle">
+                <h3>Step 1</h3>
+                <p>Schedule a free 30-minute intake call.</p>
+              </div>
+              <div class="step-circle">
+                <h3>Step 2</h3>
+                <p>Ask questions and see if we resonate.</p>
+              </div>
+              <div class="step-circle">
+                <h3>Step 3</h3>
+                <p>If we both agree, we begin your journey.</p>
+              </div>
+            </div>
+
+            <span class="ds-label text-on-dark" style="opacity:0.9;margin-top:2rem">Numbered grid — .steps-grid</span>
+            <div class="steps-grid ds-component" style="margin-top:1rem">
+              <article class="step-card">
+                <span class="step-num">01</span>
+                <h3 class="text-on-dark" style="color:var(--color-text-on-dark)!important">Safe space</h3>
+                <p class="text-on-dark" style="opacity:0.9">A confidential environment for exploration.</p>
+              </article>
+              <article class="step-card">
+                <span class="step-num" style="color:var(--color-text-on-dark)">02</span>
+                <h3 class="text-on-dark" style="color:var(--color-text-on-dark)!important">Guided exploration</h3>
+                <p class="text-on-dark" style="opacity:0.9">Understanding patterns and root causes.</p>
+              </article>
+              <article class="step-card">
+                <span class="step-num" style="color:var(--color-text-on-dark)">03</span>
+                <h3 class="text-on-dark" style="color:var(--color-text-on-dark)!important">Transformation</h3>
+                <p class="text-on-dark" style="opacity:0.9">Integrating insights into daily life.</p>
+              </article>
+              <article class="step-card">
+                <span class="step-num" style="color:var(--color-text-on-dark)">04</span>
+                <h3 class="text-on-dark" style="color:var(--color-text-on-dark)!important">Lasting change</h3>
+                <p class="text-on-dark" style="opacity:0.9">Building resilience for the future.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accordion -->
+        <section class="ds-section section--cream" id="accordion">
+          <div class="container">
+            <h2>Accordion / FAQ</h2>
+            <p class="ds-section__lead">Native <code>&lt;details&gt;</code> with custom +/− icon. Keyboard accessible by default.</p>
+            <div class="accordion-list">
+              <div class="accordion-item">
+                <details>
+                  <summary>
+                    <span class="accordion-title">Can I not address my inner issues on my own?</span>
+                    <span class="accordion-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion-content">
+                    <p>There are times when self-reliance is sufficient, and times when it's not. A skilled specialist can save you years of wasted time and unnecessary struggle.</p>
+                  </div>
+                </details>
+              </div>
+              <div class="accordion-item">
+                <details>
+                  <summary>
+                    <span class="accordion-title">What is the difference between counseling and coaching?</span>
+                    <span class="accordion-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion-content">
+                    <p>Counseling focuses on healing and the past; coaching on goals and the future. The discovery call helps determine which fits you.</p>
+                  </div>
+                </details>
+              </div>
+              <div class="accordion-item">
+                <details>
+                  <summary>
+                    <span class="accordion-title">Do you guarantee results?</span>
+                    <span class="accordion-icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="accordion-content">
+                    <p>No guarantees — the best outcomes come from engaged clients who integrate insights between sessions.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lists -->
+        <section class="ds-section section--light" id="lists">
+          <div class="container">
+            <h2>Lists</h2>
+            <div class="ds-grid-2">
+              <div>
+                <span class="ds-label">Checklist — .checklist</span>
+                <ul class="checklist">
+                  <li class="checklist__item">✔ Get a sense of who I am and whether I'm the right specialist for you.</li>
+                  <li class="checklist__item">✔ Clarify your needs and whether counseling or coaching fits.</li>
+                  <li class="checklist__item">✔ Discuss practical questions in a calm, pressure-free space.</li>
+                </ul>
+              </div>
+              <div>
+                <span class="ds-label">Opportunity — .opportunity-list</span>
+                <div class="opportunity-card">
+                  <ul class="opportunity-list">
+                    <li>
+                      <span class="opportunity-check" aria-hidden="true">✓</span>
+                      <p><strong>Understand</strong> what keeps you stuck.</p>
+                    </li>
+                    <li>
+                      <span class="opportunity-check" aria-hidden="true">✓</span>
+                      <p><strong>See</strong> a possible future that feels authentic.</p>
+                    </li>
+                    <li>
+                      <span class="opportunity-check" aria-hidden="true">✓</span>
+                      <p><strong>Decide</strong> freely whether we're a good fit.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <span class="ds-label" style="margin-top:2rem">Steps list — .steps-list</span>
+            <ol class="steps-list" style="max-width:28rem">
+              <li class="steps-list__item">Schedule a free 30-minute intake call.</li>
+              <li class="steps-list__item">During the call, ask any questions and see if we resonate.</li>
+              <li class="steps-list__item">If we both agree, we begin your transformation journey.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Quote -->
+        <section class="ds-section section--cream" id="quote">
+          <div class="container">
+            <h2>Quote banner</h2>
+            <div class="quote-banner bg-secondary" style="border-radius:12px">
+              <blockquote>
+                <p class="quote-banner__text">"I am not what happened to me, I am what I choose to become."</p>
+                <cite class="quote-author">— Carl Gustav Jung</cite>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="ds-section" id="footer" style="padding:0">
+          <footer class="site-footer">
+            <div class="container">
+              <div class="footer-grid">
+                <div class="footer-info">
+                  <h3>Anna Hellmuth</h3>
+                  <p style="opacity:0.85;margin-bottom:0">Empowering creative &amp; ambitious souls to achieve mental well-being and personal alignment.</p>
+                  <div class="social-links" aria-label="Social media">
+                    <a class="social-icon" href="#" aria-label="Instagram">IG</a>
+                    <a class="social-icon" href="#" aria-label="LinkedIn">in</a>
+                  </div>
+                </div>
+                <div class="footer-links">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="#">Psychological Counseling</a></li>
+                    <li><a href="#">Life Coaching</a></li>
+                    <li><a href="#">About</a></li>
+                  </ul>
+                </div>
+                <div class="footer-contact">
+                  <h4>Contact</h4>
+                  <p style="opacity:0.85"><a href="mailto:contact@annahellmuth.com">contact@annahellmuth.com</a></p>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <p>© Anna Hellmuth Psychological Counseling and Life Coaching</p>
+                <div class="footer-legal-links">
+                  <a href="#">Impressum</a>
+                  <a href="#">Privacy Policy</a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </section>
+
+        <!-- Utilities -->
+        <section class="ds-section section--light" id="utilities">
+          <div class="container container--narrow">
+            <h2>Utilities</h2>
+            <span class="ds-label">Divider</span>
+            <hr class="divider" />
+            <span class="ds-label">Screen reader only — .sr-only</span>
+            <p class="text-body">Next element is visually hidden: <span class="sr-only">Accessible label for icon-only controls</span></p>
+            <span class="ds-label">Section header — .section-header</span>
+            <header class="section-header">
+              <h2>My services</h2>
+              <p>From navigating life's difficulties to striving for greater fulfillment, I provide options designed to support your unique path.</p>
+            </header>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/design-system.js"></script>
+  </body>
+</html>

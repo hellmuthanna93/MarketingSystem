@@ -15,12 +15,18 @@
 
 ## Typography
 
-| Role | Family | Weight | Size (desktop sample) |
-|------|--------|--------|------------------------|
-| Headings | Libre Baskerville (Google) | 700 | H2 ~45px / 58px line-height; H3 ~32px |
-| Body & UI | freight-text-pro (Adobe Typekit) | 400 body, 600 nav/buttons | Body ~13–16px; buttons ~19px |
+**Source Serif 4** (Google Fonts variable font) for all text.
 
-**Typekit kit:** Same script as live site (`use.typekit.net` — site owner kit). Fallbacks: Georgia, serif for headings; system sans if Typekit unavailable.
+| Role | Weight | Token | Size (desktop sample) |
+|------|--------|-------|------------------------|
+| Headings | 600 | `--font-weight-heading` | H2 ~45px / 58px line-height; H3 ~32px |
+| Body prose | 400 | `--font-weight-body` | Paragraphs, FAQ answers, testimonials |
+| Nav links | 400 | `--font-weight-ui` | Uppercase nav |
+| Buttons | 400 | `--font-weight-button` | CTAs |
+| Labels & emphasis | 600 | `--font-weight-semibold` | Hero kickers, client attribution, badges |
+| Pricing & quotes | 500 | `--font-weight-medium` | Price figures, quote bylines |
+
+**Load:** `brand/typography.css` (`@import` from Google Fonts). Fallback: Georgia.
 
 ## Spacing & layout
 
@@ -30,7 +36,7 @@
 
 ## Components (live site)
 
-- **Primary CTA:** Solid burgundy pill, white label, freight-text-pro semibold — “Schedule your discovery call”
+- **Primary CTA:** Solid burgundy pill, white label, Source Serif 4 regular (400) — “Schedule your discovery call”
 - **Service cards:** H3 + short description, secondary CTAs (“Discover Counseling Services”)
 - **Testimonials:** Long quotes, attribution “— Former client*”
 - **FAQ:** Accordion with H3 questions

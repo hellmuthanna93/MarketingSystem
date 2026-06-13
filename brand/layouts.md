@@ -32,7 +32,7 @@ Export HTML templates via browser **Print → Save as PDF** at 100% scale.
 | 9:16 | 1080 × 1920 | Stories, TikTok, Reels |
 | 1:1 | 1080 × 1080 | Square video |
 
-Use burgundy (`--color-accent`) for lower-thirds and cream (`--color-surface`) for title cards. Body font: freight-text-pro; titles: Libre Baskerville.
+Use burgundy (`--color-accent`) for lower-thirds and cream (`--color-surface`) for title cards. Body font: Source Serif 4; titles: Source Serif 4.
 
 ## Tables & educational grids
 

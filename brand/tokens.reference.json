@@ -14,8 +14,13 @@
     "surfaceLight": { "value": "#fdf9f4" }
   },
   "font": {
-    "heading": { "value": "Libre Baskerville, Georgia, serif" },
-    "body": { "value": "freight-text-pro, Georgia, serif" }
+    "heading": { "value": "Source Serif 4, Georgia, serif" },
+    "body": { "value": "Source Serif 4, Georgia, serif" },
+    "weightBody": { "value": "400" },
+    "weightUi": { "value": "400" },
+    "weightMedium": { "value": "500" },
+    "weightButton": { "value": "400" },
+    "weightHeading": { "value": "600" }
   },
   "radius": {
     "pill": { "value": "300px" },

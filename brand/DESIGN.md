@@ -6,8 +6,10 @@
 
 | Path | Role |
 |------|------|
-| `brand/` | Tokens, typography, components, voice, assets |
+| `brand/` | Tokens, typography, components, voice, marketing, assets |
+| `brand/index.html` | **HTML hub** — all brand & marketing guides in one page |
 | `styleguide/` | Visual spec (`index.html`) |
+| `design-system/` | Full component library (`index.html`, `css/`, `js/`) |
 | `website/` | Static site mirror; uses `website/css/site.css` → imports brand |
 | `projects/*` | Sub-projects; link `../../brand/*.css` by depth |
 
@@ -35,12 +37,22 @@
 
 ## Typography
 
-| Role | Font | Weight |
-|------|------|--------|
-| Headings | Libre Baskerville (Google) | 700 |
-| Body, nav, buttons | freight-text-pro (Typekit) | 400 / 600 |
+**Source Serif 4** ([Google Fonts](https://fonts.google.com/specimen/Source+Serif+4)) is used for all text — headings and body (`--font-heading` and `--font-body` both resolve to `--font-family`).
 
-**Load in HTML:** Google Fonts link in `typography.css` + Typekit script from `brand/assets/fonts/README.md` (same kit as live site). Fallback: Georgia.
+| Role | Weight | Token |
+|------|--------|-------|
+| Headings | 600 | `--font-weight-heading` |
+| Body prose | 400 | `--font-weight-body` |
+| Nav links | 400 | `--font-weight-ui` |
+| Buttons | 400 | `--font-weight-button` |
+| Labels, kickers, emphasis | 600 | `--font-weight-semibold` |
+| Pricing, quote attribution | 500 | `--font-weight-medium` |
+
+Source Serif 4 is a **variable font** (200–900) loaded from Google Fonts.
+
+**Use CSS variables** from `brand/tokens.css` — never hardcode weights in `projects/`, `website/`, or `design-system/`.
+
+**Load in HTML:** `tokens.css` + `typography.css` (Google Fonts `@import`). Optional preconnect — see `brand/assets/fonts/README.md`. Fallback: Georgia.
 
 **Scale (desktop):** H2 ~2.8rem · H3 ~2rem · body 1rem · large body / `.sqsrte-large` ~1.2rem · service card body ~1.25rem
 
@@ -68,11 +80,13 @@
 
 ### Header
 - Sticky burgundy bar; logo left; nav: Psychological counseling · Life coaching · About · Contact
-- CTA in nav: **Schedule your discovery call** (pill `.btn-primary`)
+- CTA in nav: **Schedule your discovery call** — compact `.nav-cta .btn-primary` (0.9rem, tight padding)
 - No Blog link in header (blog at `/blog/`)
 
 ### Primary button `.btn-primary`
-- Burgundy fill, white text, pill (`border-radius: 300px`), freight 600, ~1.2rem, generous padding
+- Burgundy fill, white text, pill (`border-radius: 300px`), Source Serif 4 400, ~1.2rem
+- Default padding: `--button-padding-y` / `--button-padding-x` (section CTAs)
+- Nav variant: `--text-button-size-nav` + `--button-padding-*-nav` via `.nav-cta .btn-primary`
 
 ### Service cards `.services-card` + `.services-button`
 - 2-column grid, white card, 20px radius, subtle burgundy border
@@ -85,7 +99,7 @@
 - Quote text `#5a1c1c`; cite **— Former client*** with 40px round avatar
 
 ### FAQ `.faq-details`
-- White/cream section; `<details>` with +/− on summary; Libre Baskerville questions
+- White/cream section; `<details>` with +/− on summary; Source Serif 4 questions
 
 ### Links `.brand-link`
 - Burgundy on light; white on burgundy sections
@@ -104,6 +118,8 @@
 ## HTML boilerplate (new static page)
 
 ```html
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="../../brand/tokens.css" />
 <link rel="stylesheet" href="../../brand/typography.css" />
 <link rel="stylesheet" href="../../brand/components.css" />
@@ -111,7 +127,7 @@
 <link rel="stylesheet" href="../../website/css/site.css" />
 ```
 
-Adjust `../` depth per folder. For freight-text-pro, add Typekit script (see `brand/assets/fonts/README.md`).
+Adjust `../` depth per folder. See `brand/assets/fonts/README.md`.
 
 ---
 

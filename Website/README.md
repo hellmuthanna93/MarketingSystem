@@ -17,7 +17,7 @@ Open [http://localhost:8080/website/anna-hellmuth/](http://localhost:8080/websit
 Pages import the shared brand system:
 
 - `brand/tokens.css`
-- `brand/typography.css` (Libre Baskerville + freight-text-pro via Typekit)
+- `brand/typography.css` (Source Serif 4 via Google Fonts)
 - `brand/components.css`
 
 Site-specific layout and sections: `anna-hellmuth/assets/css/index.css`

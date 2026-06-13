@@ -13,6 +13,7 @@
 
   --font-serif: var(--font-heading);
   --font-sans: var(--font-body);
+  --font-display: var(--font-body);
 
   --transition-smooth: color var(--transition-base),
     background-color var(--transition-base),
@@ -52,6 +53,7 @@ body {
   font-family: var(--font-sans);
   font-size: 1.05rem;
   line-height: 1.7;
+  font-weight: var(--font-weight-body);
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   overflow-x: hidden;
@@ -62,7 +64,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   line-height: 1.3;
   color: var(--color-text-primary);
   text-wrap: balance;
@@ -86,7 +88,7 @@ body:has(header.scrolled) [id] {
   background-color: var(--color-accent);
   color: var(--color-text-on-dark);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-button);
   border-radius: 0 0 8px 8px;
   transition: top 0.2s ease;
 }
@@ -142,13 +144,13 @@ h4 {
 
 p {
   margin-bottom: 1.5rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
 }
 
 p.large {
   font-size: 1.2rem;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
 }
 
 a {
@@ -273,7 +275,7 @@ header.scrolled .nav-container {
 .nav-links a {
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-text-primary);
@@ -299,13 +301,15 @@ header.scrolled .nav-container {
 
 .nav-cta {
   position: absolute;
-  top: 1.7rem;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
   transition: var(--transition-smooth);
 }
 
 header.scrolled .nav-cta {
   position: static;
+  transform: none;
 }
 
 /* --- Buttons (primary/secondary: brand/components.css) --- */
@@ -314,7 +318,7 @@ header.scrolled .nav-cta {
   padding: 1rem 2.25rem;
   font-family: var(--font-body);
   font-size: var(--text-button-size);
-  font-weight: 600;
+  font-weight: var(--font-weight-button);
   letter-spacing: var(--letter-spacing-button);
   border-radius: var(--radius-pill);
   border: 2px solid var(--color-text-on-dark);
@@ -397,7 +401,7 @@ header.scrolled .nav-cta {
   letter-spacing: 0.15em;
   color: var(--color-accent);
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   display: block;
 }
 
@@ -545,7 +549,7 @@ header.scrolled .nav-cta {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--color-accent);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .slider-controls {
@@ -628,7 +632,7 @@ header.scrolled .nav-cta {
   cursor: pointer;
   font-family: var(--font-serif);
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   color: var(--color-text-primary);
   list-style: none; /* Hide default arrow */
 }
@@ -686,7 +690,7 @@ details[open] .accordion-icon::before {
 .accordion-content {
   padding-bottom: 2rem;
   color: var(--color-text-secondary);
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
   line-height: 1.7;
 }
 
@@ -741,7 +745,7 @@ details[open] .accordion-icon::before {
 .step-num {
   font-family: var(--font-display);
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
   color: var(--color-accent);
   line-height: 1;
   margin-bottom: 1rem;
@@ -792,7 +796,7 @@ details[open] .accordion-icon::before {
   font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 1.6;
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   font-style: italic;
 }
 
@@ -801,7 +805,7 @@ details[open] .accordion-icon::before {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 /* --- Instagram Section --- */
@@ -880,7 +884,7 @@ footer {
   letter-spacing: 0.1em;
   color: hsla(var(--white-hsl), 0.6);
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .footer-links ul {
@@ -1013,7 +1017,7 @@ footer {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   border-radius: 50px;
 }
 
@@ -1029,7 +1033,7 @@ footer {
 
 .pricing-price .amount {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
   font-variant-numeric: tabular-nums;
 }
@@ -1062,7 +1066,7 @@ footer {
   margin-bottom: 1rem;
   font-size: 0.95rem;
   color: var(--color-text-secondary);
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
 }
 
 .pricing-features li::before {
@@ -1070,7 +1074,7 @@ footer {
   position: absolute;
   left: 0;
   color: var(--color-accent);
-  font-weight: bold;
+  font-weight: var(--font-weight-semibold);
 }
 
 .pricing-card .btn {
@@ -1222,7 +1226,7 @@ footer {
 .mobile-menu-links a {
   font-family: var(--font-sans);
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -1481,13 +1485,13 @@ footer {
   font-size: 1.15rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
   font-family: var(--font-sans);
 }
 
 .testimonial-card p b, 
 .testimonial-card p strong {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .testimonial-card p i, 
@@ -1504,7 +1508,7 @@ footer {
   margin-top: 10px;
   color: var(--color-text);
   font-size: 1.15rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
   list-style-type: disc;
 }
 
@@ -1523,7 +1527,7 @@ footer {
 }
 
 .client-info span {
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--color-text);
   font-size: 0.95rem;
 }
@@ -1590,7 +1594,7 @@ footer {
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: var(--font-weight-body);
 }
 
 @media (max-width: 768px) {
@@ -1797,7 +1801,7 @@ footer {
   font-family: var(--font-serif);
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-style: italic;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   line-height: 1.5;
   text-align: center;
   color: var(--color-text-light);
@@ -1879,7 +1883,7 @@ footer {
   flex-shrink: 0;
   color: var(--color-accent);
   font-size: 1.35rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
   line-height: 1.5;
   margin-top: 0.05rem;
 }
@@ -1890,11 +1894,11 @@ footer {
   font-size: clamp(1.05rem, 2.2vw, 1.2rem);
   line-height: 1.65;
   color: var(--color-accent);
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }
 
 .opportunity-list p strong {
-  font-weight: 700;
+  font-weight: var(--font-weight-heading);
 }
 
 @media (max-width: 768px) {

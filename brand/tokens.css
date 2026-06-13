@@ -22,9 +22,21 @@
   --light-accent-hsl: 37.5, 80%, 98.04%;
   --dark-accent-hsl: 21, 55.56%, 92.94%;
 
-  /* Typography families (stacks completed in typography.css) */
-  --font-heading: "Libre Baskerville", Georgia, "Times New Roman", serif;
-  --font-body: "freight-text-pro", Georgia, "Times New Roman", serif;
+  /* Typography families — Source Serif 4 (Google Fonts) */
+  --font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-heading: var(--font-family);
+  --font-body: var(--font-family);
+
+  /* Font weights — Source Serif 4 (variable font, 200–900) */
+  --font-weight-light: 300;       /* optional; prefer --font-weight-body (400) */
+  --font-weight-regular: 400;     /* body prose, nav, buttons, default UI */
+  --font-weight-medium: 500;      /* pricing figures, quote attribution */
+  --font-weight-semibold: 600;    /* headings, labels, hero kickers, emphasis */
+  --font-weight-bold: 700;
+  --font-weight-body: var(--font-weight-regular);
+  --font-weight-ui: var(--font-weight-regular);
+  --font-weight-button: var(--font-weight-regular);
+  --font-weight-heading: var(--font-weight-semibold);
 
   /* Type scale */
   --text-display-size: clamp(2rem, 5vw, 2.8rem);
@@ -38,6 +50,11 @@
   --text-small-size: 0.8rem;
   --text-small-line: 1.6;
   --text-button-size: 1.2rem;
+  --text-button-size-nav: 0.9rem;
+  --button-padding-y: 1.1rem;
+  --button-padding-x: 2rem;
+  --button-padding-y-nav: 0.625rem;
+  --button-padding-x-nav: 1.35rem;
   --letter-spacing-body: 0.01em;
   --letter-spacing-button: 0.01em;
 

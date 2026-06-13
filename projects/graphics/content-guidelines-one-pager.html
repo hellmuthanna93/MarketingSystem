@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Content Guidelines — One-Pager (A4)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="../../brand/tokens.css" />
+    <link rel="stylesheet" href="../../brand/typography.css" />
+    <link rel="stylesheet" href="../../brand/components.css" />
+    <style>
+      @page {
+        size: A4 portrait;
+        margin: 20mm;
+      }
+      @media print {
+        body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background: var(--color-surface);
+        line-height: 1.45;
+      }
+      .page {
+        max-width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 20mm;
+        background: var(--color-surface);
+      }
+      .header {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        margin: -20mm -20mm 1.25rem;
+        padding: 1.25rem 20mm;
+      }
+      .header h1 {
+        font-family: var(--font-heading);
+        font-size: 1.35rem;
+        font-weight: var(--font-weight-heading);
+        margin-bottom: 0.35rem;
+      }
+      .header p {
+        font-size: 0.8rem;
+        opacity: 0.92;
+      }
+      h2 {
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        font-weight: var(--font-weight-heading);
+        color: var(--color-accent);
+        margin: 1rem 0 0.4rem;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 0.2rem;
+      }
+      p, li {
+        font-size: 0.78rem;
+        margin-bottom: 0.35rem;
+      }
+      ul {
+        padding-left: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .formula {
+        background: hsla(var(--accent-hsl), 0.08);
+        border-left: 3px solid var(--color-accent);
+        padding: 0.5rem 0.75rem;
+        font-size: 0.78rem;
+        margin: 0.4rem 0;
+      }
+      .cta {
+        margin-top: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        border-radius: var(--radius-pill);
+        font-size: 0.8rem;
+        font-weight: var(--font-weight-semibold);
+        text-align: center;
+      }
+      .footer {
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid var(--color-border);
+        font-size: 0.65rem;
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="page">
+      <header class="header">
+        <h1>Content guidelines — Anna Hellmuth</h1>
+        <p>Sell movement, not process · annahellmuth.com</p>
+      </header>
+
+      <h2>Positioning</h2>
+      <p>
+        Help people create <strong>lasting inner change</strong> — not sell information. People buy movement:
+        relief, hope, clarity, confidence, possibility, transformation.
+      </p>
+      <p>
+        <em>Guiding principle:</em> Become the person whose content makes ideal clients think:
+        "Finally someone understands what I have been experiencing."
+      </p>
+
+      <h2>Ideal client</h2>
+      <p>
+        Highly educated professionals, creatives, entrepreneurs — functioning well externally, stuck internally.
+        Public label: <em>creative &amp; ambitious souls</em>.
+      </p>
+
+      <div class="two-col">
+        <div>
+          <h2>Before posting — checklist</h2>
+          <ul>
+            <li>Relevance — real human experience?</li>
+            <li>Specificity — "That's me"?</li>
+            <li>Authenticity — do I believe this?</li>
+            <li>Emotional connection — feel seen?</li>
+            <li>Depth — beyond common advice?</li>
+            <li>Business value — demonstrates how I think?</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Post formula</h2>
+          <div class="formula">
+            You think X.<br />
+            Actually, Y is happening.<br />
+            That is why Z feels so difficult.
+          </div>
+          <h2>Weekly rhythm</h2>
+          <p><strong>1 counseling + 1 coaching post per week.</strong> Consistency &gt; volume.</p>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h2>Counseling topics</h2>
+          <ul>
+            <li>Emotional regulation, shame, self-worth</li>
+            <li>Attachment, boundaries</li>
+            <li>Childhood conditioning, internal conflicts</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Coaching topics</h2>
+          <ul>
+            <li>Fear and action, purpose, identity</li>
+            <li>Life transitions, authentic success</li>
+            <li>Growth obstacles, self-leadership</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Voice</h2>
+      <p>From experience, as an equal — warm, professional, honest. Avoid academic, detached, or generic self-help tone.</p>
+
+      <p class="cta">Schedule your discovery call · calendar.app.google/ueKb9RbyxWyC6zfK8</p>
+
+      <footer class="footer">
+        Full docs: brand/marketing/ · styleguide/marketing-guide.html · contact@annahellmuth.com
+      </footer>
+    </article>
+  </body>
+</html>

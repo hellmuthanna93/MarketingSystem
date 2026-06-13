@@ -6,10 +6,10 @@ alwaysApply: false
 
 # Marketing brand (Anna Hellmuth)
 
-Before styling or copy changes, read **[brand/DESIGN.md](brand/DESIGN.md)**.
+Before styling or copy changes, read **[brand/DESIGN.md](brand/DESIGN.md)**. For content and copy strategy, read **[brand/marketing/content.md](brand/marketing/content.md)**.
 
 - Edit colors only in `brand/tokens.css`
 - Link `brand/tokens.css`, `typography.css`, `components.css` from sub-projects — never duplicate hex
-- Burgundy `#64010d`, cream `#f7eae3`, text `#5c020c`; headings Libre Baskerville; body freight-text-pro
+- Burgundy `#64010d`, cream `#f7eae3`, text `#5c020c`; Source Serif 4 (headings 600, buttons 400)
 - Primary CTA: **Schedule your discovery call**
 - `projects/table/` is legacy orange palette — not canonical website brand

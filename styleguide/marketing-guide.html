@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Hellmuth — Marketing & Content Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="../brand/tokens.css" />
+    <link rel="stylesheet" href="../brand/typography.css" />
+    <link rel="stylesheet" href="../brand/components.css" />
+    <style>
+      .styleguide-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-md) var(--space-section-x);
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+      }
+      .styleguide-nav a {
+        color: var(--color-text-on-dark);
+        margin-right: var(--space-lg);
+        text-decoration: none;
+        opacity: 0.9;
+      }
+      .styleguide-nav a:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+      .styleguide-hero {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-3xl) var(--space-section-x);
+      }
+      .styleguide-hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: var(--font-weight-heading);
+        margin: 0 0 var(--space-md);
+      }
+      .styleguide-hero p {
+        font-family: var(--font-body);
+        max-width: 42rem;
+        margin: 0;
+        opacity: 0.95;
+        line-height: 1.6;
+      }
+      .styleguide-section {
+        padding: var(--space-section-y) var(--space-section-x);
+        border-bottom: 1px solid var(--color-border);
+      }
+      .styleguide-section h2 {
+        font-family: var(--font-heading);
+        font-size: var(--text-h2-size);
+        margin: 0 0 var(--space-xl);
+        color: var(--color-text);
+      }
+      .styleguide-section h3 {
+        font-family: var(--font-heading);
+        font-size: var(--text-h3-size);
+        margin: var(--space-xl) 0 var(--space-md);
+        color: var(--color-text);
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: var(--space-xl);
+      }
+      .formula-box {
+        background: hsla(var(--accent-hsl), 0.08);
+        border-left: 4px solid var(--color-accent);
+        padding: var(--space-lg) var(--space-xl);
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        line-height: 1.7;
+      }
+      .formula-box em {
+        display: block;
+        margin-bottom: var(--space-sm);
+      }
+      .topic-list {
+        font-family: var(--font-body);
+        line-height: 1.8;
+        padding-left: 1.25rem;
+      }
+      .md-link {
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        margin-top: var(--space-lg);
+      }
+      .service-split {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: var(--space-lg);
+      }
+      .service-split article {
+        background: var(--color-surface-light);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--space-xl);
+      }
+      .service-split h3 {
+        margin-top: 0;
+        color: var(--color-accent);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="styleguide-nav" aria-label="Marketing guide sections">
+      <a href="../index.html">Marketing center</a>
+      <a href="../brand/index.html">Brand hub</a>
+      <a href="index.html">Styleguide</a>
+      <a href="#positioning">Positioning</a>
+      <a href="#audience">Audience</a>
+      <a href="#content">Content</a>
+      <a href="#formula">Formula</a>
+      <a href="#weekly">Weekly plan</a>
+      <a href="#sales">Sales</a>
+      <a href="#sources">MD sources</a>
+    </nav>
+
+    <header class="styleguide-hero">
+      <div class="container">
+        <h1>Marketing &amp; content guide</h1>
+        <p>
+          Strategic reference for annahellmuth.com — positioning, audience, content philosophy, and sales approach.
+          Sell movement, not process. Make ideal clients feel:
+          <em>"Finally someone understands what I have been experiencing."</em>
+        </p>
+      </div>
+    </header>
+
+    <section id="positioning" class="styleguide-section section--cream">
+      <div class="container container--narrow">
+        <h2>Positioning &amp; vision</h2>
+        <p class="text-body">
+          You are not selling information. You help people create <strong>lasting inner change</strong> — combining
+          psychological depth, coaching practicality, pattern recognition, and genuine warmth.
+        </p>
+        <h3>Core marketing principle</h3>
+        <p class="text-body">
+          People do not buy coaching. People buy <strong>movement</strong>: relief, hope, clarity, confidence,
+          possibility, transformation. Always communicate the change — not the process, method, or session itself.
+        </p>
+        <h3>2026 priorities</h3>
+        <ul class="checklist">
+          <li class="checklist__item">Consistent content creation</li>
+          <li class="checklist__item">Growing audience trust</li>
+          <li class="checklist__item">Increasing coaching clients</li>
+          <li class="checklist__item">Refining positioning</li>
+          <li class="checklist__item">Systems that support work-life balance</li>
+          <li class="checklist__item">Personal wellbeing while growing revenue</li>
+        </ul>
+        <p class="md-link">
+          Full doc: <a class="brand-link" href="../brand/marketing/positioning.md">brand/marketing/positioning.md</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="audience" class="styleguide-section section--light">
+      <div class="container">
+        <h2>Ideal audience</h2>
+        <p class="text-body" style="max-width: 42rem">
+          <strong>Primary:</strong> Highly educated professionals, creatives, and entrepreneurs — functioning well
+          externally, stuck internally.
+        </p>
+        <p class="text-body" style="max-width: 42rem">
+          <strong>Public label:</strong> <em>creative &amp; ambitious souls</em> (website tagline)
+        </p>
+        <div class="service-split" style="margin-top: var(--space-xl)">
+          <article>
+            <h3>Psychological counseling</h3>
+            <p class="text-body">Healing, emotional work, processing the past.</p>
+            <p class="text-body"><em>Find your power to release emotional burdens and heal your soul.</em></p>
+          </article>
+          <article>
+            <h3>Life coaching</h3>
+            <p class="text-body">Goals, structure, future direction.</p>
+            <p class="text-body"><em>Realize your ambitious goals and ascend to new heights.</em></p>
+          </article>
+        </div>
+        <p class="md-link">
+          Full doc: <a class="brand-link" href="../brand/marketing/audience.md">brand/marketing/audience.md</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="content" class="styleguide-section section--cream">
+      <div class="container container--narrow">
+        <h2>Content philosophy</h2>
+        <p class="text-body">
+          The goal is not to sound smart. The goal is to make people feel:
+          <em>"She understands exactly what I experience."</em>
+        </p>
+        <h3>Personal content lens</h3>
+        <div class="two-col">
+          <div>
+            <p class="text-small text-muted">Speak</p>
+            <ul class="checklist">
+              <li class="checklist__item">From experience, not from above</li>
+              <li class="checklist__item">As an equal, not as an authority figure</li>
+              <li class="checklist__item">Professionally but warmly</li>
+              <li class="checklist__item">Honestly without oversharing</li>
+              <li class="checklist__item">With conviction without preaching</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-small text-muted">Avoid</p>
+            <ul class="checklist">
+              <li class="checklist__item">Sounding detached or overly academic</li>
+              <li class="checklist__item">Textbook tone</li>
+              <li class="checklist__item">Generic self-help advice</li>
+              <li class="checklist__item">Excessive caution that removes personality</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Content creation checklist</h3>
+        <p class="text-small text-muted">Before posting, ask:</p>
+        <ul class="checklist">
+          <li class="checklist__item"><strong>Relevance</strong> — Does this describe a real human experience?</li>
+          <li class="checklist__item"><strong>Specificity</strong> — Could somebody think: "That's me"?</li>
+          <li class="checklist__item"><strong>Authenticity</strong> — Do I genuinely believe this?</li>
+          <li class="checklist__item"><strong>Emotional connection</strong> — Does it make the reader feel seen?</li>
+          <li class="checklist__item"><strong>Depth</strong> — Does it go beyond common advice?</li>
+          <li class="checklist__item"><strong>Business value</strong> — Would an ideal client want to work with me after reading?</li>
+        </ul>
+        <p class="md-link">
+          Full doc: <a class="brand-link" href="../brand/marketing/content.md">brand/marketing/content.md</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="formula" class="styleguide-section section--burgundy">
+      <div class="container container--narrow">
+        <h2 class="text-on-dark" style="font-family: var(--font-heading); font-size: var(--text-h2-size)">Strong post formula</h2>
+        <div class="formula-box" style="background: rgba(255,255,255,0.95); color: var(--color-text)">
+          <em>You think X.</em>
+          <em>Actually, Y is happening.</em>
+          <em>That is why Z feels so difficult.</em>
+        </div>
+        <blockquote class="quote-testimonial" style="margin-top: var(--space-xl); max-width: 36rem">
+          <p class="quote-testimonial__text">
+            "You think you're procrastinating because you're lazy. Actually, part of you is afraid that succeeding
+            will change how people see you. That is why starting feels heavier than the task itself."
+          </p>
+          <cite class="quote-testimonial__cite">— Example (coaching)</cite>
+        </blockquote>
+        <p class="md-link">
+          <a class="brand-link" href="../brand/marketing/messaging.md" style="color: #fff">brand/marketing/messaging.md</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="weekly" class="styleguide-section section--cream">
+      <div class="container">
+        <h2>Weekly content rhythm</h2>
+        <p class="text-body">Minimum: <strong>1 counseling post + 1 coaching post per week.</strong> Consistency matters more than volume.</p>
+        <div class="two-col" style="margin-top: var(--space-xl)">
+          <div>
+            <h3>Counseling topics</h3>
+            <ul class="topic-list">
+              <li>Emotional regulation</li>
+              <li>Shame</li>
+              <li>Self-worth</li>
+              <li>Attachment</li>
+              <li>Boundaries</li>
+              <li>Childhood conditioning</li>
+              <li>Internal conflicts</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Coaching topics</h3>
+            <ul class="topic-list">
+              <li>Fear and action</li>
+              <li>Purpose</li>
+              <li>Identity change</li>
+              <li>Life transitions</li>
+              <li>Authentic success</li>
+              <li>Growth obstacles</li>
+              <li>Self-leadership</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sales" class="styleguide-section section--light">
+      <div class="container container--narrow">
+        <h2>Sales &amp; CTAs</h2>
+        <p class="text-body">
+          Do not convince, push, or pressure. Help people understand their situation, show a possible future, explain
+          what keeps them stuck, and invite the next step.
+        </p>
+        <p class="text-body" style="margin-top: var(--space-lg)">
+          <a class="btn-primary" href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener">Schedule your discovery call</a>
+        </p>
+        <p class="text-small text-muted" style="margin-top: var(--space-md)">
+          Free 30-minute intake · mutual fit check · not therapy
+        </p>
+        <p class="md-link">
+          Full doc: <a class="brand-link" href="../brand/marketing/sales.md">brand/marketing/sales.md</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="sources" class="styleguide-section section--cream">
+      <div class="container">
+        <h2>Markdown sources &amp; templates</h2>
+        <div class="two-col">
+          <ul class="topic-list">
+            <li><a class="brand-link" href="../brand/marketing/README.md">brand/marketing/README.md</a> — hub</li>
+            <li><a class="brand-link" href="../brand/marketing/positioning.md">positioning.md</a></li>
+            <li><a class="brand-link" href="../brand/marketing/audience.md">audience.md</a></li>
+            <li><a class="brand-link" href="../brand/marketing/content.md">content.md</a></li>
+            <li><a class="brand-link" href="../brand/marketing/sales.md">sales.md</a></li>
+            <li><a class="brand-link" href="../brand/marketing/messaging.md">messaging.md</a></li>
+          </ul>
+          <ul class="topic-list">
+            <li><a class="brand-link" href="index.html">brand/index.html</a> — all guides hub</li>
+            <li><a class="brand-link" href="../brand/voice.md">brand/voice.md</a> — CTAs &amp; surface copy</li>
+            <li><a class="brand-link" href="index.html">styleguide/index.html</a> — visual brand</li>
+            <li><a class="brand-link" href="../projects/social/templates/post-counseling.html">Social: counseling template</a></li>
+            <li><a class="brand-link" href="../projects/social/templates/post-coaching.html">Social: coaching template</a></li>
+            <li><a class="brand-link" href="../projects/graphics/content-guidelines-one-pager.html">A4 one-pager</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section--burgundy section" style="padding: var(--space-xl) var(--space-section-x)">
+      <div class="container">
+        <p class="text-on-dark text-small" style="margin: 0">
+          Marketing System · annahellmuth.com · contact@annahellmuth.com
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

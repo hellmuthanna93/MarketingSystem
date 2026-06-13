@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Hellmuth — Brand &amp; Marketing Guides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="typography.css" />
+    <link rel="stylesheet" href="components.css" />
+    <style>
+      .guide-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-md) var(--space-section-x);
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm) var(--space-lg);
+      }
+      .guide-nav a {
+        color: var(--color-text-on-dark);
+        text-decoration: none;
+        opacity: 0.9;
+      }
+      .guide-nav a:hover { opacity: 1; text-decoration: underline; }
+      .guide-hero {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-3xl) var(--space-section-x);
+      }
+      .guide-hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: var(--font-weight-heading);
+        margin: 0 0 var(--space-md);
+      }
+      .guide-hero p {
+        font-family: var(--font-body);
+        max-width: 44rem;
+        margin: 0;
+        opacity: 0.95;
+        line-height: 1.6;
+      }
+      .guide-section {
+        padding: var(--space-section-y) var(--space-section-x);
+        border-bottom: 1px solid var(--color-border);
+      }
+      .guide-section h2 {
+        font-family: var(--font-heading);
+        font-size: var(--text-h2-size);
+        margin: 0 0 var(--space-xl);
+        color: var(--color-text);
+      }
+      .guide-section h3 {
+        font-family: var(--font-heading);
+        font-size: var(--text-h3-size);
+        margin: var(--space-xl) 0 var(--space-md);
+        color: var(--color-text);
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: var(--space-xl);
+      }
+      .three-col {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: var(--space-lg);
+      }
+      .card {
+        background: hsl(var(--white-hsl));
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--space-xl);
+      }
+      .card h3 { margin-top: 0; color: var(--color-accent); font-size: 1.15rem; }
+      .card p, .card li {
+        font-family: var(--font-body);
+        font-size: var(--text-body-size);
+        line-height: 1.6;
+      }
+      .card ul { padding-left: 1.25rem; margin: 0; }
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        gap: var(--space-md);
+      }
+      .resource-link {
+        display: block;
+        font-family: var(--font-body);
+        font-size: var(--text-body-size);
+        padding: var(--space-md) var(--space-lg);
+        background: hsla(var(--accent-hsl), 0.06);
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        color: var(--color-text);
+        border: 1px solid var(--color-border);
+        transition: background var(--transition-base);
+      }
+      .resource-link:hover {
+        background: hsla(var(--accent-hsl), 0.12);
+      }
+      .resource-link strong {
+        display: block;
+        color: var(--color-accent);
+        margin-bottom: 0.25rem;
+      }
+      .swatch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+        gap: var(--space-md);
+      }
+      .swatch {
+        padding: var(--space-lg);
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        text-align: center;
+        border: 1px solid var(--color-border);
+      }
+      .formula-box {
+        background: hsla(var(--accent-hsl), 0.08);
+        border-left: 4px solid var(--color-accent);
+        padding: var(--space-lg) var(--space-xl);
+        border-radius: var(--radius-md);
+        font-family: var(--font-body);
+        line-height: 1.8;
+        margin: var(--space-lg) 0;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--font-body);
+        font-size: var(--text-body-size);
+        margin: var(--space-lg) 0;
+      }
+      .data-table th,
+      .data-table td {
+        border: 1px solid var(--color-border);
+        padding: var(--space-sm) var(--space-md);
+        text-align: left;
+        vertical-align: top;
+      }
+      .data-table th {
+        background: hsla(var(--accent-hsl), 0.06);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-accent);
+      }
+      .md-ref {
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        margin-top: var(--space-lg);
+        opacity: 0.85;
+      }
+      .tag {
+        display: inline-block;
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: var(--space-sm);
+      }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: var(--space-lg);
+        margin-top: var(--space-lg);
+      }
+      .pricing-card {
+        background: hsl(var(--white-hsl));
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--space-lg);
+      }
+      .pricing-card h4 {
+        font-family: var(--font-heading);
+        color: var(--color-accent);
+        margin: 0 0 var(--space-md);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="guide-nav" aria-label="Brand guide sections">
+      <a href="../index.html">Marketing center</a>
+      <a href="#overview">Overview</a>
+      <a href="#visual">Visual brand</a>
+      <a href="#voice">Voice</a>
+      <a href="#positioning">Positioning</a>
+      <a href="#audience">Audience</a>
+      <a href="#content">Content</a>
+      <a href="#sales">Sales</a>
+      <a href="#messaging">Messaging</a>
+      <a href="#layouts">Layouts</a>
+      <a href="#resources">Resources</a>
+      <a href="../design-system/index.html">Design system ↗</a>
+      <a href="../styleguide/index.html">Styleguide ↗</a>
+    </nav>
+
+    <header class="guide-hero">
+      <div class="container">
+        <h1>Brand &amp; marketing guides</h1>
+        <p>
+          Complete reference for annahellmuth.com — visual identity, voice, positioning, content strategy,
+          and sales. Markdown sources live alongside this page in <code>brand/</code>.
+          Sell movement, not process.
+        </p>
+      </div>
+    </header>
+
+    <!-- Overview -->
+    <section id="overview" class="guide-section section--cream">
+      <div class="container">
+        <h2>Overview</h2>
+        <p class="text-body" style="max-width: 44rem; margin-bottom: var(--space-xl)">
+          Online counseling and coaching for <em>creative &amp; ambitious souls</em>. This hub consolidates
+          everything agents and collaborators need — from burgundy tokens to the content checklist.
+        </p>
+        <div class="three-col">
+          <article class="card">
+            <h3>Visual brand</h3>
+            <p>Colors, typography, components. Edit tokens in <code>tokens.css</code> only.</p>
+            <p class="md-ref"><a class="brand-link" href="DESIGN.md">DESIGN.md</a></p>
+          </article>
+          <article class="card">
+            <h3>Voice &amp; CTAs</h3>
+            <p>Surface copy, tone, calls to action for web and print.</p>
+            <p class="md-ref"><a class="brand-link" href="voice.md">voice.md</a></p>
+          </article>
+          <article class="card">
+            <h3>Marketing strategy</h3>
+            <p>Positioning, audience, content, sales, approved messaging.</p>
+            <p class="md-ref"><a class="brand-link" href="marketing/README.md">marketing/</a></p>
+          </article>
+        </div>
+        <h3>Quick rules</h3>
+        <ul class="checklist">
+          <li class="checklist__item">Sell movement — relief, clarity, confidence, transformation</li>
+          <li class="checklist__item">New content leads with outcomes; credentials on trust pages</li>
+          <li class="checklist__item">Minimum rhythm: 1 counseling + 1 coaching post per week</li>
+          <li class="checklist__item">Never hardcode hex in projects — link <code>brand/*.css</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Visual brand -->
+    <section id="visual" class="guide-section section--light">
+      <div class="container">
+        <h2>Visual brand</h2>
+        <p class="text-body">Canonical source: <a class="brand-link" href="https://annahellmuth.com/">annahellmuth.com</a>. CSS source of truth: <code>tokens.css</code>.</p>
+        <h3>Color palette</h3>
+        <div class="swatch-grid">
+          <div class="swatch" style="background: var(--color-accent); color: var(--color-text-on-dark)">Accent</div>
+          <div class="swatch" style="background: var(--color-text); color: var(--color-text-on-dark)">Text</div>
+          <div class="swatch" style="background: var(--color-surface)">Surface cream</div>
+          <div class="swatch" style="background: var(--color-surface-light)">Surface light</div>
+        </div>
+        <h3>Typography</h3>
+        <div class="two-col" style="margin-top: var(--space-lg)">
+          <div class="type-sample">
+            <p class="text-small text-muted">Headings — Source Serif 4 600</p>
+            <p class="text-h2" style="font-size: 1.75rem">Shape your future self.</p>
+          </div>
+          <div class="type-sample">
+            <p class="text-small text-muted">Body — Source Serif 4 400</p>
+            <p class="text-body">Warm, professional, and approachable — never clinical or cold.</p>
+          </div>
+        </div>
+        <h3>Key components</h3>
+        <div class="component-stack" style="margin-top: var(--space-lg)">
+          <a class="btn-primary" href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener">Schedule your discovery call</a>
+          <a class="btn-secondary" href="#">Discover Counseling Services</a>
+        </div>
+        <p class="md-ref">Full visual spec: <a class="brand-link" href="../styleguide/index.html">styleguide/index.html</a> · <a class="brand-link" href="DESIGN.md">DESIGN.md</a></p>
+      </div>
+    </section>
+
+    <!-- Voice -->
+    <section id="voice" class="guide-section section--cream">
+      <div class="container container--narrow">
+        <h2>Voice &amp; tone</h2>
+        <div class="two-col">
+          <div>
+            <p class="tag">Tone</p>
+            <ul class="checklist">
+              <li class="checklist__item">Warm, professional, empowering</li>
+              <li class="checklist__item">Validates difficulty; emphasizes support</li>
+              <li class="checklist__item">Honest about limits; confident in process</li>
+              <li class="checklist__item">Direct address ("you"); avoid jargon unless explaining a method</li>
+              <li class="checklist__item">No guilt-based pressure — emphasize choice</li>
+            </ul>
+          </div>
+          <div>
+            <p class="tag">Strategic voice</p>
+            <p class="text-body">Lead with the change the reader wants — not the process, method, or session. Speak from experience as an equal, not from above.</p>
+            <p class="text-body" style="margin-top: var(--space-md)"><strong>Languages:</strong> English, German, Ukrainian, Russian</p>
+          </div>
+        </div>
+        <p class="md-ref"><a class="brand-link" href="voice.md">voice.md</a></p>
+      </div>
+    </section>
+
+    <!-- Positioning -->
+    <section id="positioning" class="guide-section section--light">
+      <div class="container container--narrow">
+        <h2>Positioning</h2>
+        <p class="text-body">You are not selling information. You help people create <strong>lasting inner change</strong>.</p>
+        <p class="text-body" style="margin-top: var(--space-md)">Your strength: psychological depth + coaching practicality + pattern recognition + warmth. Many coaches focus on motivation; many therapists on understanding. You help people understand themselves <em>and</em> move forward.</p>
+
+        <h3>Core marketing principle</h3>
+        <p class="text-body">People do not buy coaching. People buy <strong>movement</strong>:</p>
+        <ul class="checklist">
+          <li class="checklist__item">Relief · Hope · Clarity · Confidence · Possibility · Transformation</li>
+        </ul>
+        <p class="text-body">Always communicate the change — not the process, method, or session itself.</p>
+
+        <h3>Guiding principle</h3>
+        <blockquote class="quote-testimonial">
+          <p class="quote-testimonial__text">"Finally someone understands what I have been experiencing."</p>
+          <cite class="quote-testimonial__cite">— The feeling that creates trust · trust creates clients</cite>
+        </blockquote>
+
+        <h3>2026 priorities</h3>
+        <ul class="checklist">
+          <li class="checklist__item">Consistent content creation</li>
+          <li class="checklist__item">Growing audience trust</li>
+          <li class="checklist__item">Increasing coaching clients</li>
+          <li class="checklist__item">Refining positioning &amp; work-life balance systems</li>
+        </ul>
+
+        <h3>Content advantage</h3>
+        <p class="text-body">Your lived experience — struggles, learnings, client patterns, genuine beliefs. People connect with perspective, not information.</p>
+        <p class="md-ref"><a class="brand-link" href="marketing/positioning.md">marketing/positioning.md</a></p>
+      </div>
+    </section>
+
+    <!-- Audience -->
+    <section id="audience" class="guide-section section--cream">
+      <div class="container">
+        <h2>Ideal audience</h2>
+        <p class="text-body" style="max-width: 44rem">
+          <strong>Profile:</strong> Highly educated professionals, creatives, entrepreneurs — functioning well externally, stuck internally.
+        </p>
+        <p class="text-body" style="max-width: 44rem; margin-top: var(--space-md)">
+          <strong>Public label:</strong> <em>creative &amp; ambitious souls</em>
+        </p>
+
+        <div class="two-col" style="margin-top: var(--space-xl)">
+          <article class="card">
+            <h3>Typical desires</h3>
+            <ul>
+              <li>Authentic self-expression &amp; confidence</li>
+              <li>Meaningful success &amp; values alignment</li>
+              <li>Courage for important goals</li>
+              <li>Life redesign &amp; better relationships</li>
+              <li>Emotional freedom</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Common problems</h3>
+            <ul>
+              <li>Fear of visibility, failure, or success</li>
+              <li>Self-doubt, perfectionism, overthinking</li>
+              <li>Disconnected from self; trapped in old patterns</li>
+              <li>Knowing intellectually but not acting</li>
+              <li>Chronic internal conflict</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3>Counseling vs coaching</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Psychological counseling</th>
+              <th>Life coaching</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Focus</th>
+              <td>Healing, emotional work, past</td>
+              <td>Goals, structure, future</td>
+            </tr>
+            <tr>
+              <th>Tagline</th>
+              <td>Find your power to release emotional burdens and heal your soul</td>
+              <td>Realize your ambitious goals and ascend to new heights</td>
+            </tr>
+            <tr>
+              <th>Ask yourself</th>
+              <td>Are my issues emotional or past-focused?</td>
+              <td>Are my issues goal or future-focused?</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="md-ref"><a class="brand-link" href="marketing/audience.md">marketing/audience.md</a></p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section id="content" class="guide-section section--burgundy">
+      <div class="container">
+        <h2 class="text-on-dark" style="font-family: var(--font-heading); font-size: var(--text-h2-size)">Content guidelines</h2>
+        <p class="text-on-dark" style="font-family: var(--font-body); max-width: 40rem; line-height: 1.6; margin-bottom: var(--space-xl)">
+          The goal is not to sound smart. Make people feel: <em>"She understands exactly what I experience."</em>
+        </p>
+
+        <div class="two-col">
+          <div style="background: hsla(var(--white-hsl), 0.95); border-radius: var(--radius-md); padding: var(--space-xl); color: var(--color-text)">
+            <p class="tag">Before posting — checklist</p>
+            <ul class="checklist">
+              <li class="checklist__item"><strong>Relevance</strong> — real human experience?</li>
+              <li class="checklist__item"><strong>Specificity</strong> — "That's me"?</li>
+              <li class="checklist__item"><strong>Authenticity</strong> — do I believe this?</li>
+              <li class="checklist__item"><strong>Emotional connection</strong> — feel seen?</li>
+              <li class="checklist__item"><strong>Depth</strong> — beyond common advice?</li>
+              <li class="checklist__item"><strong>Business value</strong> — demonstrates how I think?</li>
+            </ul>
+          </div>
+          <div style="background: hsla(var(--white-hsl), 0.95); border-radius: var(--radius-md); padding: var(--space-xl); color: var(--color-text)">
+            <p class="tag">Post formula</p>
+            <div class="formula-box">
+              You think X.<br />
+              Actually, Y is happening.<br />
+              That is why Z feels so difficult.
+            </div>
+            <p class="text-small text-muted">Four elements: recognizable experience · surprising insight · emotional truth · practical implication</p>
+          </div>
+        </div>
+
+        <div class="two-col" style="margin-top: var(--space-xl)">
+          <div>
+            <h3 class="text-on-dark" style="font-family: var(--font-heading)">Counseling topics / week</h3>
+            <p class="text-on-dark" style="font-family: var(--font-body); line-height: 1.8; opacity: 0.95">
+              Emotional regulation · Shame · Self-worth · Attachment · Boundaries · Childhood conditioning · Internal conflicts
+            </p>
+          </div>
+          <div>
+            <h3 class="text-on-dark" style="font-family: var(--font-heading)">Coaching topics / week</h3>
+            <p class="text-on-dark" style="font-family: var(--font-body); line-height: 1.8; opacity: 0.95">
+              Fear and action · Purpose · Identity change · Life transitions · Authentic success · Growth obstacles · Self-leadership
+            </p>
+          </div>
+        </div>
+        <p class="md-ref" style="margin-top: var(--space-xl)">
+          <a class="brand-link" href="marketing/content.md" style="color: var(--color-text-on-dark)">marketing/content.md</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Sales -->
+    <section id="sales" class="guide-section section--cream">
+      <div class="container">
+        <h2>Sales &amp; pricing</h2>
+        <p class="text-body" style="max-width: 44rem">
+          Do not convince, push, or pressure. Help people understand their situation, show a possible future,
+          explain what keeps them stuck, invite the next step. <em>"Why not give it a try and find out!"</em>
+        </p>
+
+        <h3>Client attraction</h3>
+        <div class="four-col three-col">
+          <article class="card"><h3>Trust</h3><p>People buy from people they trust.</p></article>
+          <article class="card"><h3>Visibility</h3><p>People cannot hire someone they never see.</p></article>
+          <article class="card"><h3>Consistency</h3><p>Small actions repeated outperform bursts.</p></article>
+          <article class="card"><h3>Depth</h3><p>One powerful post &gt; twenty generic posts.</p></article>
+        </div>
+
+        <h3>Pricing</h3>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h4>Counseling</h4>
+            <p>Single: €120 / 60 min</p>
+            <p>6 sessions: €660 <em>(recommended)</em></p>
+          </div>
+          <div class="pricing-card">
+            <h4>Coaching</h4>
+            <p>Single: €180 / 60 min</p>
+            <p>6 sessions: €1,020</p>
+            <p>12 sessions: €1,920 <em>(best value)</em></p>
+          </div>
+        </div>
+
+        <p style="margin-top: var(--space-xl)">
+          <a class="btn-primary" href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener">Schedule your discovery call</a>
+        </p>
+        <p class="text-small text-muted">Free 30-minute intake · mutual fit · not therapy</p>
+        <p class="md-ref"><a class="brand-link" href="marketing/sales.md">marketing/sales.md</a></p>
+      </div>
+    </section>
+
+    <!-- Messaging -->
+    <section id="messaging" class="guide-section section--light">
+      <div class="container">
+        <h2>Approved messaging</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th>Context</th><th>Copy</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hero</td><td>Online counseling and coaching for creative &amp; ambitious souls</td></tr>
+            <tr><td>Subhero</td><td>Available wherever you are, in English, German, Ukrainian, Russian, or a mix of them all</td></tr>
+            <tr><td>Transformation</td><td>Shape your future self. / Take the first step today.</td></tr>
+            <tr><td>Invitation</td><td>Don't wait for "someday," struggling against the tide alone.</td></tr>
+            <tr><td>Counseling H1</td><td>You don't have to face this alone</td></tr>
+            <tr><td>Coaching H1</td><td>You need a courageous heart to claim the life you want</td></tr>
+            <tr><td>Footer</td><td>Empowering creative &amp; ambitious souls to achieve mental well-being and personal alignment.</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Prefer / avoid</h3>
+        <div class="two-col">
+          <ul class="checklist">
+            <li class="checklist__item">✔ transformation, clarity, relief, patterns, authentic</li>
+            <li class="checklist__item">✔ courageous, resonate, discovery call</li>
+          </ul>
+          <ul class="checklist">
+            <li class="checklist__item">✘ guaranteed results, hustle, act now</li>
+            <li class="checklist__item">✘ generic self-help, clinical coldness in marketing</li>
+          </ul>
+        </div>
+        <p class="md-ref"><a class="brand-link" href="marketing/messaging.md">marketing/messaging.md</a></p>
+      </div>
+    </section>
+
+    <!-- Layouts -->
+    <section id="layouts" class="guide-section section--cream">
+      <div class="container">
+        <h2>Layout specs</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th>Format</th><th>Size</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Instagram square</td><td>1080 × 1080</td><td>48px safe zone; center 900×900 for CTA</td></tr>
+            <tr><td>Instagram portrait</td><td>1080 × 1350</td><td>Feed 4:5</td></tr>
+            <tr><td>Instagram story</td><td>1080 × 1920</td><td>Top/bottom 250px UI overlap</td></tr>
+            <tr><td>LinkedIn / Facebook</td><td>1200 × 627</td><td>Landscape post</td></tr>
+            <tr><td>A4 handout</td><td>210 × 297 mm</td><td>20mm margins; print at 100%</td></tr>
+            <tr><td>Video 16:9 / 9:16</td><td>1920×1080 / 1080×1920</td><td>Burgundy lower-thirds, cream titles</td></tr>
+          </tbody>
+        </table>
+        <p class="md-ref"><a class="brand-link" href="layouts.md">layouts.md</a></p>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="guide-section section--light">
+      <div class="container">
+        <h2>All guides &amp; templates</h2>
+
+        <h3>Markdown sources</h3>
+        <div class="resource-grid">
+          <a class="resource-link" href="DESIGN.md"><strong>DESIGN.md</strong>Visual cheat sheet</a>
+          <a class="resource-link" href="voice.md"><strong>voice.md</strong>Copy &amp; CTAs</a>
+          <a class="resource-link" href="layouts.md"><strong>layouts.md</strong>Social &amp; print sizes</a>
+          <a class="resource-link" href="AUDIT.md"><strong>AUDIT.md</strong>Live site audit</a>
+          <a class="resource-link" href="marketing/README.md"><strong>marketing/</strong>Strategy hub</a>
+          <a class="resource-link" href="marketing/positioning.md"><strong>positioning.md</strong>Vision &amp; USP</a>
+          <a class="resource-link" href="marketing/audience.md"><strong>audience.md</strong>Ideal clients</a>
+          <a class="resource-link" href="marketing/content.md"><strong>content.md</strong>Posts &amp; checklist</a>
+          <a class="resource-link" href="marketing/sales.md"><strong>sales.md</strong>Pricing &amp; CTAs</a>
+          <a class="resource-link" href="marketing/messaging.md"><strong>messaging.md</strong>Approved copy</a>
+        </div>
+
+        <h3>HTML &amp; templates</h3>
+        <div class="resource-grid" style="margin-top: var(--space-lg)">
+          <a class="resource-link" href="../design-system/index.html"><strong>Design system</strong>Full component library</a>
+          <a class="resource-link" href="../styleguide/index.html"><strong>Styleguide</strong>Components &amp; swatches</a>
+          <a class="resource-link" href="../styleguide/marketing-guide.html"><strong>Marketing guide</strong>Focused strategy page</a>
+          <a class="resource-link" href="../projects/social/templates/post-counseling.html"><strong>Social: counseling</strong>1080×1080</a>
+          <a class="resource-link" href="../projects/social/templates/post-coaching.html"><strong>Social: coaching</strong>1080×1080</a>
+          <a class="resource-link" href="../projects/social/templates/post-quote.html"><strong>Social: quote</strong>1080×1080</a>
+          <a class="resource-link" href="../projects/graphics/content-guidelines-one-pager.html"><strong>One-pager</strong>A4 printable</a>
+        </div>
+
+        <h3>Cursor skills</h3>
+        <div class="resource-grid" style="margin-top: var(--space-lg)">
+          <span class="resource-link"><strong>marketing-system</strong>Visual brand &amp; tokens</span>
+          <span class="resource-link"><strong>content-writing</strong>Posts &amp; captions</span>
+          <span class="resource-link"><strong>marketing-strategy</strong>Positioning &amp; campaigns</span>
+        </div>
+        <p class="text-small text-muted" style="margin-top: var(--space-md)">Skills live in <code>.cursor/skills/</code></p>
+      </div>
+    </section>
+
+    <footer class="section--burgundy section" style="padding: var(--space-xl) var(--space-section-x)">
+      <div class="container">
+        <p class="text-on-dark text-small" style="margin: 0">
+          Anna Hellmuth · Brand &amp; Marketing System · <a href="https://annahellmuth.com/" style="color: inherit">annahellmuth.com</a> · contact@annahellmuth.com
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

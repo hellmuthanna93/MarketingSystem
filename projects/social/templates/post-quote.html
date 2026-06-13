@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, initial-scale=1.0" />
+    <title>Quote Post Template — 1080×1080</title>
+    <!-- Testimonial-style quote card. See brand/marketing/messaging.md for themes. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="../../../brand/tokens.css" />
+    <link rel="stylesheet" href="../../../brand/typography.css" />
+    <link rel="stylesheet" href="../../../brand/components.css" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body {
+        width: 1080px;
+        height: 1080px;
+        overflow: hidden;
+      }
+      .post-frame {
+        width: 1080px;
+        height: 1080px;
+        background: var(--color-surface);
+        padding: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .quote-card {
+        background: hsl(var(--white-hsl));
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 3.5rem 3rem;
+        max-width: 900px;
+        width: 100%;
+      }
+      .quote-text {
+        font-family: var(--font-body);
+        font-size: 1.5rem;
+        line-height: 1.65;
+        color: var(--color-text);
+        margin-bottom: var(--space-xl);
+      }
+      .quote-cite {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-style: normal;
+        color: var(--color-text);
+        opacity: 0.8;
+      }
+      .quote-brand {
+        margin-top: var(--space-2xl);
+        padding-top: var(--space-lg);
+        border-top: 1px solid var(--color-border);
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: var(--font-weight-heading);
+        color: var(--color-accent);
+      }
+    </style>
+  </head>
+  <body>
+    <article class="post-frame">
+      <blockquote class="quote-card">
+        <p class="quote-text">
+          "From the very first session, I experienced a sense of relief, and with each new meeting, things became
+          easier. I finally felt heard and understood in a non-judgmental space."
+        </p>
+        <cite class="quote-cite">— Former client*</cite>
+        <p class="quote-brand">Anna Hellmuth · Counseling &amp; Coaching</p>
+      </blockquote>
+    </article>
+  </body>
+</html>
