@@ -1,48 +1,39 @@
-# Website — static mirror of annahellmuth.com
+# Website — annahellmuth.com (static)
 
-A static HTML copy of [annahellmuth.com](https://annahellmuth.com/) using the shared brand layer in [`../brand/`](../brand/).
+Static HTML mirror of [annahellmuth.com](https://annahellmuth.com/), living in `anna-hellmuth/`.
 
-## Pages
+## Preview
 
-| Path | Live URL |
-|------|----------|
-| `index.html` | `/` |
-| `counseling/` | `/counseling` |
-| `lifecoaching/` | `/lifecoaching` |
-| `about/` | `/about` |
-| `contact/` | `/contact` |
-| `blog/` | `/blog` |
-| `blog/*/index.html` | Blog posts (4) |
-| `impressum/` | `/impressum` |
-| `privacy-policy/` | `/privacy-policy` |
-
-## Preview locally
+From the **repo root**:
 
 ```bash
-cd /Users/annahellmuth/Downloads/MarketingSystem
 python3 -m http.server 8080
 ```
 
-Open `http://localhost:8080/Website/`
+Open [http://localhost:8080/website/anna-hellmuth/](http://localhost:8080/website/anna-hellmuth/)
 
-## Rebuild from live site
+## Styling
 
-When the Squarespace site changes, re-scrape and regenerate:
+Pages import the shared brand system:
 
-```bash
-python3 Website/scripts/build-website.py
-```
+- `brand/tokens.css`
+- `brand/typography.css` (Libre Baskerville + freight-text-pro via Typekit)
+- `brand/components.css`
 
-This fetches all sitemap pages, downloads images to `Website/assets/images/`, and writes HTML. Scraped structure is cached in `Website/data/pages.json`.
+Site-specific layout and sections: `anna-hellmuth/assets/css/index.css`
 
-## Design system
+Edit colors only in `brand/tokens.css`. See `brand/DESIGN.md` for the full reference.
 
-- Layout & site chrome: [`css/site.css`](css/site.css) (imports `../../brand/*.css`)
-- Tokens, typography, components: edit only in [`../brand/`](../brand/)
-- Fonts: Google Fonts (Libre Baskerville) + Adobe Typekit (freight-text-pro) — see [`../brand/assets/fonts/README.md`](../brand/assets/fonts/README.md)
+## Pages
 
-## Notes
+| File | Route |
+|------|--------|
+| `index.html` | Home |
+| `counseling.html` | Psychological counseling |
+| `lifecoaching.html` | Life coaching |
+| `about.html` | About |
+| `contact.html` | Contact |
+| `impressum.html` | Legal notice |
+| `privacy-policy.html` | Privacy policy |
 
-- Contact/scheduling embeds from Squarespace are not mirrored; use mailto or link to the live booking flow on annahellmuth.com.
-- Instagram feed blocks are omitted; social links point to your profiles.
-- This is a static snapshot for marketing/offline use, not a replacement for Squarespace hosting.
+Assets: `anna-hellmuth/assets/images/`
