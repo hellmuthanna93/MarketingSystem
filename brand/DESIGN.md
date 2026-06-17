@@ -25,11 +25,9 @@
 | `--color-accent-hover` | `#4a0202` | Button hover |
 | `--color-text` | `#5c020c` | Headings & body on light backgrounds |
 | `--color-text-on-dark` | `#ffffff` | Nav, text on burgundy |
-| `--color-surface` | `#f7eae3` | Cream sections (SQ `light` theme) |
-| `--color-surface-light` | `#fdf9f4` | Lighter panels |
-| White sections | `#ffffff` | Service cards area (SQ `white` theme) |
-| Testimonial card text | `#5a1c1c` | On white cards |
-| Card border | `rgba(100, 1, 13, 0.14)` | Services + testimonials |
+| `--color-surface` | `#f7eae3` | Darker cream — testimonials, opportunity (`--color-bg-secondary`) |
+| `--color-surface-light` | `#fefbf6` | Light cream — hero, services, steps, intake (`--color-bg-primary`) |
+| `--color-border-card` | `rgba(100, 1, 13, 0.14)` | Service + testimonial cards |
 
 **Squarespace HSL (for `hsla(var(--accent-hsl), …)`):** accent `352.73, 98.02%, 19.8%` · text `353.33, 95.74%, 18.43%`
 

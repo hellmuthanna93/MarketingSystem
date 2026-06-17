@@ -11,7 +11,7 @@
     "text": { "value": "#5c020c" },
     "textOnDark": { "value": "#ffffff" },
     "surface": { "value": "#f7eae3" },
-    "surfaceLight": { "value": "#fdf9f4" }
+    "surfaceLight": { "value": "#fefbf6" }
   },
   "font": {
     "heading": { "value": "Source Serif 4, Georgia, serif" },

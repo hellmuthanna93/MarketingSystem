@@ -11,15 +11,16 @@
   --color-text-muted: #5c020c; /* opacity applied in components */
   --color-text-on-dark: #ffffff; /* used for: nav, buttons on burgundy */
   --color-surface: #f7eae3; /* used for: main section backgrounds (darkAccent) */
-  --color-surface-light: #fdf9f4; /* used for: light accent panels (lightAccent) */
+  --color-surface-light: #fefbf6; /* light cream sections (Squarespace white/light theme) */
   --color-border: rgba(92, 2, 12, 0.15);
+  --color-border-card: rgba(100, 1, 13, 0.14);
   --color-border-strong: #5c020c;
 
   /* Squarespace HSL mirrors (optional, for alpha mixes) */
   --accent-hsl: 352.73, 98.02%, 19.8%;
   --black-hsl: 353.33, 95.74%, 18.43%;
   --white-hsl: 0, 0%, 100%;
-  --light-accent-hsl: 37.5, 80%, 98.04%;
+  --light-accent-hsl: 30, 80%, 98.43%;
   --dark-accent-hsl: 21, 55.56%, 92.94%;
 
   /* Typography families — Source Serif 4 (Google Fonts) */

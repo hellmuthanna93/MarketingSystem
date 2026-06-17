@@ -1,6 +1,6 @@
 /* Site layout aliases — brand/tokens.css must load first */
 :root {
-  --color-bg-primary: var(--color-surface);
+  --color-bg-primary: var(--color-surface-light);
   --color-bg-secondary: var(--color-surface);
   --color-bg-dark: var(--color-accent);
   --color-text-primary: var(--color-text);
@@ -27,6 +27,8 @@
 
   --max-width: var(--layout-max-width);
   --header-height: 180px;
+  --hero-padding-top: calc(var(--header-height) + clamp(2rem, 4vw, 3.5rem));
+  --hero-padding-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 /* --- Reset & Base Styles --- */
@@ -65,9 +67,9 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
   font-weight: var(--font-weight-heading);
-  line-height: 1.3;
+  line-height: 1.35;
   color: var(--color-text-primary);
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 [id] {
@@ -127,19 +129,19 @@ h1 {
 h2 {
   font-size: clamp(1.6rem, 4vw, 2.5rem);
   margin-bottom: 1.5rem;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 h3 {
   font-size: clamp(1.25rem, 3vw, 1.75rem);
   margin-bottom: 1rem;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 h4 {
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 p {
@@ -178,6 +180,7 @@ ul {
 
 section {
   padding: clamp(4rem, 8vw, 8rem) 0;
+  background-color: var(--color-bg-primary);
 }
 
 .bg-secondary {
@@ -194,7 +197,7 @@ section {
 }
 
 /* --- Navigation Header --- */
-header {
+body > header {
   height: var(--header-height);
   position: absolute;
   top: 0;
@@ -203,10 +206,11 @@ header {
   z-index: 100;
   display: flex;
   align-items: center;
+  background-color: var(--color-bg-primary);
   border-bottom: 1px solid hsla(var(--accent-hsl), 0.05);
 }
 
-header.scrolled {
+body > header.scrolled {
   position: fixed;
   background-color: hsla(var(--light-accent-hsl), 0.95);
   backdrop-filter: blur(10px);
@@ -378,9 +382,18 @@ header.scrolled .nav-cta {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: var(--header-height);
+  padding-top: var(--hero-padding-top);
   position: relative;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
+  overflow: visible;
+}
+
+.hero.hero--landing {
+  min-height: auto;
+  display: block;
+  align-items: unset;
+  padding-top: var(--hero-padding-top);
+  padding-bottom: var(--hero-padding-bottom);
 }
 
 .hero-grid {
@@ -407,7 +420,7 @@ header.scrolled .nav-cta {
 
 .hero-title {
   margin-bottom: 2rem;
-  line-height: 1.2;
+  line-height: 1.35;
 }
 
 .hero-description {
@@ -455,10 +468,10 @@ header.scrolled .nav-cta {
 
 .service-card {
   background-color: var(--color-card-bg);
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px hsla(var(--black-hsl), 0.02);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border-card);
   transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
@@ -488,21 +501,26 @@ header.scrolled .nav-cta {
 }
 
 .service-card-content {
-  padding: 2.5rem;
+  padding: 2.5rem clamp(2rem, 5vw, 5rem);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  align-items: center;
+  text-align: center;
 }
 
 .service-card-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-text-primary);
 }
 
 .service-card-content p {
   color: var(--color-text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   flex-grow: 1;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* --- Testimonials Carousel --- */
@@ -611,6 +629,42 @@ header.scrolled .nav-cta {
   margin: 0 auto;
 }
 
+.section--quote .accordion-block {
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--color-bg-primary);
+  border-radius: 20px;
+  padding: clamp(2rem, 4vw, 2.75rem) clamp(1.75rem, 5vw, 4.5rem);
+}
+
+.section--quote .accordion-list {
+  max-width: none;
+  margin: 0;
+  display: block;
+}
+
+.section--quote .accordion-item {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section--quote .accordion-item summary {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  padding: 1.25rem 0;
+}
+
+.section--quote .accordion-item:first-child summary {
+  padding-top: 0;
+}
+
+.section--quote .accordion-content {
+  padding-bottom: 1.5rem;
+}
+
 .accordion-item {
   border-bottom: 1px solid var(--color-border);
   margin-bottom: 0;
@@ -659,6 +713,11 @@ header.scrolled .nav-cta {
   position: absolute;
   background-color: var(--color-text-primary);
   transition: var(--transition-smooth);
+}
+
+.section--quote .accordion-icon::before,
+.section--quote .accordion-icon::after {
+  background-color: var(--color-accent);
 }
 
 /* Horizontal line */
@@ -769,6 +828,7 @@ details[open] .accordion-icon::before {
   background-attachment: fixed;
   height: 400px;
   position: relative;
+  margin-top: var(--header-height);
 }
 
 .banner-overlay {
@@ -959,10 +1019,11 @@ footer {
 
 /* --- Internal pages style --- */
 .page-header {
-  padding: 10rem 0 4rem 0;
-  background-color: var(--color-bg-secondary);
+  padding: var(--hero-padding-top) 0 var(--hero-padding-bottom);
+  background-color: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-border);
   text-align: center;
+  overflow: visible;
 }
 
 .page-header h1 {
@@ -1129,7 +1190,7 @@ footer {
 }
 
 .contact-prompt {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
   padding: 3rem;
   border-radius: 12px;
   border: 1px solid var(--color-border);
@@ -1148,7 +1209,7 @@ footer {
 .legal-content {
   max-width: 800px;
   margin: 0 auto;
-  padding: calc(var(--header-height) + 3rem) 0 6rem;
+  padding: var(--hero-padding-top) 0 6rem;
 }
 
 .legal-content h2 {
@@ -1246,7 +1307,7 @@ footer {
     font-size: 1rem;
   }
   
-  header {
+  body > header {
     height: 80px;
   }
 
@@ -1280,18 +1341,21 @@ footer {
   }
   
   .hero,
-  .hero--landing {
-    padding-top: 7rem;
+  .hero--landing,
+  .hero.hero--landing {
+    padding-top: calc(80px + 1.5rem);
     padding-bottom: clamp(3rem, 8vw, 4rem);
     min-height: auto;
   }
 
-  .page-header {
-    padding: 7rem 0 3rem 0;
+  .page-header,
+  .page-intro-offset,
+  .legal-content {
+    padding-top: calc(80px + 1.5rem);
   }
 
-  .page-intro-offset {
-    padding-top: calc(80px + 2.5rem) !important;
+  .page-header {
+    padding-bottom: 3rem;
   }
   
   .hero-grid {
@@ -1470,9 +1534,9 @@ footer {
 
 .testimonial-card {
   background: hsl(var(--white-hsl));
-  padding: 2.25rem 2.25rem;
+  padding: 1.5rem 2rem;
   border-radius: 12px;
-  border: 2px solid var(--color-border);
+  border: 2px solid var(--color-border-card);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1550,7 +1614,23 @@ footer {
   }
 }
 
-/* --- Solid Journey Step Circles --- */
+/* --- Solid Journey Step Circles (legacy) --- */
+.steps-text-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  max-width: 1100px;
+  margin: 3rem auto 0;
+}
+
+.step-text {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.65;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
 .steps-container {
   display: flex;
   justify-content: center;
@@ -1598,6 +1678,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .steps-text-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .steps-container {
     gap: 2rem;
   }
@@ -1853,15 +1938,15 @@ footer {
 .opportunity-section .opportunity-header h2 {
   font-size: clamp(1.65rem, 3.8vw, 2.35rem);
   line-height: 1.45;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 .opportunity-card {
   max-width: 920px;
   margin: 0 auto;
   background: hsl(var(--white-hsl));
-  border-radius: 16px;
-  border: 1px solid hsla(var(--accent-hsl), 0.08);
+  border-radius: 12px;
+  border: 2px solid var(--color-accent);
   box-shadow: 0 12px 40px hsla(var(--accent-hsl), 0.04);
   padding: clamp(2rem, 5vw, 3.25rem) clamp(2rem, 5vw, 3.5rem);
 }
@@ -1890,10 +1975,10 @@ footer {
 
 .opportunity-list p {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
   line-height: 1.65;
-  color: var(--color-accent);
+  color: var(--color-text-primary);
   font-weight: var(--font-weight-regular);
 }
 
@@ -1916,10 +2001,16 @@ footer {
 }
 
 /* --- Landing hero & page banners --- */
-.hero--landing {
-  padding-top: clamp(9rem, 18vw, 13rem);
-  padding-bottom: clamp(3rem, 8vw, 6rem);
-  background-color: var(--color-bg-secondary);
+.hero--landing h1,
+.hero--landing h2,
+.hero--landing h3 {
+  color: var(--color-text-primary);
+}
+
+.hero-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1.15;
 }
 
 .hero-grid--split {
@@ -1927,6 +2018,19 @@ footer {
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: start;
   margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .hero-grid.hero-grid--split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .hero-grid--split .hero-content {
+    text-align: left;
+    max-width: none;
+  }
 }
 
 .services-grid--narrow {
@@ -1950,7 +2054,17 @@ footer {
 }
 
 .page-intro-offset {
-  padding-top: calc(var(--header-height) + 4rem);
+  padding-top: var(--hero-padding-top);
+}
+
+/* First content block with a page title (service pages after image banner) */
+.page-intro {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(4rem, 8vw, 6rem);
+}
+
+.page-intro h1 {
+  margin-bottom: 2rem;
 }
 
 .split-grid,
@@ -1971,6 +2085,10 @@ footer {
       opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform;
+  }
+
+  .page-header.reveal {
+    overflow: visible;
   }
 
   .reveal.is-visible {

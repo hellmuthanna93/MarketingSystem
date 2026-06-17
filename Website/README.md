@@ -35,5 +35,8 @@ Edit colors only in `brand/tokens.css`. See `brand/DESIGN.md` for the full refer
 | `contact.html` | Contact |
 | `impressum.html` | Legal notice |
 | `privacy-policy.html` | Privacy policy |
+| `blog/index.html` | Blog (articles) |
+
+Blog styles: `anna-hellmuth/assets/css/blog.css`
 
 Assets: `anna-hellmuth/assets/images/`
