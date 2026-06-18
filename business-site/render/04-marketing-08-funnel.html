@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing Funnel — Anna Hellmuth Business Suite</title>
+    <meta name="description" content="The path from a stranger seeing a post to a committed package client, with the Clarity Session wedge as the conversion bridge." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../../brand/tokens.css" />
+    <link rel="stylesheet" href="../../brand/typography.css" />
+    <link rel="stylesheet" href="../../brand/components.css" />
+    <style>
+      body { font-family: var(--font-body); color: var(--color-text); margin: 0; }
+      .wrap { max-width: 52rem; margin: 0 auto; padding: var(--space-section-y) var(--space-section-x); }
+      h1 { font-family: var(--font-heading); color: var(--color-accent); font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0 0 var(--space-sm); }
+      .lead { font-size: 1.15rem; opacity: 0.85; line-height: 1.6; margin: 0 0 var(--space-2xl); }
+      h2 { font-family: var(--font-heading); color: var(--color-accent); font-size: clamp(1.3rem, 3vw, 1.7rem); margin: var(--space-2xl) 0 var(--space-md); }
+      .diagram { background: var(--color-surface-light); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-xl); margin: var(--space-lg) 0; overflow-x: auto; }
+      table { width: 100%; border-collapse: collapse; margin: var(--space-lg) 0; font-size: 0.95rem; }
+      th, td { text-align: left; padding: var(--space-sm) var(--space-md); border-bottom: 1px solid var(--color-border); }
+      th { color: var(--color-accent); font-weight: var(--font-weight-semibold); }
+      .back { display: inline-block; margin-top: var(--space-2xl); color: var(--color-accent); font-size: var(--text-small-size); }
+      footer { padding: var(--space-xl) var(--space-section-x); text-align: center; font-size: var(--text-small-size); opacity: 0.8; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Marketing Funnel</h1>
+      <p class="lead">From a stranger seeing a post to a committed client — with the Clarity Session as the conversion bridge between free and full commitment.</p>
+
+      <div class="diagram">
+        <pre class="mermaid">
+flowchart TD
+    awareness["Awareness (IG / LI / TikTok / FB / blog / SEO)"] --> follow[Follow or subscribe]
+    follow --> resonate["Feels understood over time"]
+    resonate --> discovery["Free 30-min discovery call"]
+    discovery -->|Clear package fit| package["Counseling or coaching package"]
+    discovery -->|Wants to try first| wedge["Clarity Session (paid wedge)"]
+    wedge --> followup["Day-7 follow-up"]
+    followup --> package
+    package --> renewal["Renewal / referral / testimonial"]
+        </pre>
+      </div>
+
+      <h2>Stage by stage</h2>
+      <table>
+        <thead><tr><th>Stage</th><th>Goal</th><th>Metric</th></tr></thead>
+        <tbody>
+          <tr><td>Awareness</td><td>Be seen by the right person</td><td>Reach, profile visits</td></tr>
+          <tr><td>Follow / subscribe</td><td>Stay in their world</td><td>Followers, subscribers</td></tr>
+          <tr><td>Resonate</td><td>Build trust over time</td><td>Saves, DMs, "that's me"</td></tr>
+          <tr><td>Discovery call</td><td>Understand + recommend</td><td>Calls booked, show rate</td></tr>
+          <tr><td>Wedge</td><td>Let them feel the depth</td><td>Wedge bookings, → package rate</td></tr>
+          <tr><td>Package</td><td>Transformation + revenue</td><td>Packages sold, completion</td></tr>
+          <tr><td>Renewal / referral</td><td>Compounding growth</td><td>Renewals, referrals</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Highest-leverage transitions</h2>
+      <ul>
+        <li><strong>Resonate → discovery:</strong> the precise "that's me" feeling + a frictionless booking link</li>
+        <li><strong>Discovery → wedge/package:</strong> a clear, no-pressure recommendation</li>
+        <li><strong>Wedge → package:</strong> the written summary + the day-7 follow-up</li>
+      </ul>
+
+      <a class="back" href="../index.html">← Back to the business suite</a>
+    </div>
+
+    <footer>Anna Hellmuth business suite · generated from <code>docs/04-marketing/08-marketing-funnel.md</code></footer>
+
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+      const dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      mermaid.initialize({ startOnLoad: true, theme: dark ? "dark" : "neutral" });
+    </script>
+  </body>
+</html>

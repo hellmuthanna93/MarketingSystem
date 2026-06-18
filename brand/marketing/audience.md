@@ -2,17 +2,78 @@
 
 ## Primary audience
 
-Highly educated professionals, creatives, and entrepreneurs.
+Sensitive, deep-feeling people who understand a lot and genuinely strive for change — often highly educated professionals who function well externally but feel stuck internally.
 
-People who are already functioning relatively well externally but feel stuck internally.
+They are not lacking insight. They have read, reflected, and analyzed. What they need is guided support to move through what understanding alone cannot shift.
 
 ### Public-facing label
 
 On the website and in marketing materials, use:
 
-**creative & ambitious souls**
+**sensitive, thoughtful souls**
 
-This is the warm, inclusive tagline. The profile above describes who you are actually trying to reach underneath that label.
+This is the warm, inclusive tagline. The profiles below describe who you are actually trying to reach underneath that label.
+
+*Note: Live site hero copy still uses "creative & ambitious souls" — prefer the label above in new content.*
+
+---
+
+## Ideal coaching client
+
+**Profile:** **Both men and women**, typically **30–45 years old** — skilled professionals or thoughtful seekers who are curious and self-aware. **Goal-oriented doers**, used to acting and producing — but not very aware of their own emotions. Often the **oldest child** in the family.
+
+**Life context:** High-functioning but craving something deeper. Often living abroad or in transition. Seeking meaning, freedom, and authenticity beyond traditional success.
+
+**Inner experience:** Something feels *off* despite outward stability. Chronic tension between longing and fear. In the push toward goals they tend to **lose contact with themselves and their inner values** — over-functioning, rationalizing, treating emotion as inefficient. Understands the pattern but cannot change it alone. Wants more but lacks inner resources for new decisions — forces forward, burns out, and ends even more exhausted and disappointed.
+
+**A common variant:** clients who arrive already **exhausted and tired of old decisions** — ready for change but without the energy to make it happen alone. They know what no longer fits; they cannot find the fuel to step out of it.
+
+**Common struggles:**
+
+- Paralysis and procrastination
+- Emotional avoidance
+- Fear of failure or success
+- Difficulty deciding
+- Identity confusion
+- Blocked creativity
+- Loneliness or lack of aligned community
+
+---
+
+## Ideal psychological counseling client
+
+**Profile:** Typically a **woman 25–45**; also **gay men**. A highly trained, sensitive professional in a demanding field.
+
+**Life context:** Most grew up with cold, emotionally unavailable, or absent parents and carry a deep hole inside. Invests carefully in her appearance. **Relationship status varies** — some are in a serious partnership, others are single and unable to build one.
+
+**Background — varied, not single-origin:**
+
+- **Ukrainian women abroad** are one meaningful segment — building a new life, nostalgic for home, struggling with deep connection in their adopted country
+- Clients with **other immigration backgrounds** carrying similar early-attachment wounds
+- **Locals** with the same inner patterns regardless of nationality
+
+**Inner experience:** Learned to suppress emotions and neglect personal needs. Understands why she feels this way — but understanding has not been enough to shift it. Many arrive in **mild to moderate depression** with **anxiety and chronic overthinking**. **Highly demanding of herself** and carries a deep, often hidden, sense of **shame**. **Lost goals and orientation** — the old ways of coping and achieving no longer work, and she doesn't yet know how to live differently.
+
+**Relationships — one of the biggest pressure points:**
+
+- For partnered clients, fear of losing the partner and being left alone — driven by an **insecure attachment style** rather than the bond itself
+- For single clients, inability to form or sustain a deep relationship at all
+- Both patterns trace back to early attachment wounds and the inner emptiness left by cold, absent parenting
+
+**Body image:** Many do not like their own body and carry shame around it, even while presenting carefully on the outside.
+
+**Common struggles:**
+
+- Mild-to-moderate depression
+- Anxiety and chronic overthinking
+- Perfectionism and harsh self-demand
+- Shame (often hidden)
+- Lost goals and orientation — old ways no longer work, new way unknown
+- Attachment-driven relationship fear or inability to build relationships
+- Body image issues and dislike of own body
+- Exhaustion and emotional depletion
+- Busyness or scrolling to avoid deeper feelings
+- Avoidance of difficult decisions
 
 ---
 

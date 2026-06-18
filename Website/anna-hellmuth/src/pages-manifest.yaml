@@ -1,0 +1,163 @@
+# Canonical page registry: translation_key, output category, slugs per locale
+pages:
+  - translation_key: home
+    category: page
+    slugs:
+      en: index
+      de: index
+      uk: index
+      ru: index
+    titles:
+      en: "Anna Hellmuth | Psychological Counseling & Life Coaching"
+      de: "Anna Hellmuth | Psychologische Beratung & Life Coaching"
+      uk: "Анна Гельмут | Психологічне консультування та лайф-коучинг"
+      ru: "Анна Гельмут | Психологическое консультирование и лайф-коучинг"
+
+  - translation_key: counseling
+    category: page
+    slugs:
+      en: counseling
+      de: psychologische-beratung
+      uk: psychologichne-konsultuvannya
+      ru: psihologicheskoe-konsultirovanie
+    titles:
+      en: "Psychological Counseling | Anna Hellmuth"
+      de: "Psychologische Beratung | Anna Hellmuth"
+      uk: "Психологічне консультування | Анна Гельмут"
+      ru: "Психологическое консультирование | Анна Гельмут"
+
+  - translation_key: lifecoaching
+    category: page
+    slugs:
+      en: lifecoaching
+      de: life-coaching
+      uk: layf-kouching
+      ru: layf-kouching
+    titles:
+      en: "Life Coaching | Anna Hellmuth"
+      de: "Life Coaching | Anna Hellmuth"
+      uk: "Лайф-коучинг | Анна Гельмут"
+      ru: "Лайф-коучинг | Анна Гельмут"
+
+  - translation_key: about
+    category: page
+    slugs:
+      en: about
+      de: ueber-mich
+      uk: pro-mene
+      ru: obo-mne
+    titles:
+      en: "About | Anna Hellmuth"
+      de: "Über mich | Anna Hellmuth"
+      uk: "Про мене | Анна Гельмут"
+      ru: "Обо мне | Анна Гельмут"
+
+  - translation_key: contact
+    category: page
+    slugs:
+      en: contact
+      de: kontakt
+      uk: kontakt
+      ru: kontakt
+    titles:
+      en: "Contact | Reach Out To Me | Anna Hellmuth"
+      de: "Kontakt | Anna Hellmuth"
+      uk: "Контакт | Анна Гельмут"
+      ru: "Контакт | Анна Гельмут"
+
+  - translation_key: impressum
+    category: legal
+    slugs:
+      en: impressum
+      de: impressum
+      uk: impressum
+      ru: impressum
+    titles:
+      en: "Impressum | Legal Notice | Anna Hellmuth"
+      de: "Impressum | Anna Hellmuth"
+      uk: "Impressum | Анна Гельмут"
+      ru: "Impressum | Анна Гельмут"
+
+  - translation_key: privacy-policy
+    category: legal
+    slugs:
+      en: privacy-policy
+      de: datenschutz
+      uk: polityka-konfidentsiynosti
+      ru: politika-konfidentsialnosti
+    titles:
+      en: "Privacy Policy | Anna Hellmuth"
+      de: "Datenschutzerklärung | Anna Hellmuth"
+      uk: "Політика конфіденційності | Анна Гельмут"
+      ru: "Политика конфиденциальности | Анна Гельмут"
+
+  - translation_key: blog
+    category: blog-index
+    slugs:
+      en: index
+      de: index
+      uk: index
+      ru: index
+    titles:
+      en: "Blog | Anna Hellmuth | Counseling & Coaching Insights"
+      de: "Blog | Anna Hellmuth | Beratung & Coaching"
+      uk: "Блог | Анна Гельмут"
+      ru: "Блог | Анна Гельмут"
+
+  - translation_key: blog-counseling-vs-coaching
+    category: blog
+    slugs:
+      en: counseling-vs-life-coaching
+      de: beratung-vs-life-coaching
+      uk: konsultuvannya-vs-layf-kouching
+      ru: konsultirovanie-vs-layf-kouching
+    titles:
+      en: "Counseling vs life coaching | Anna Hellmuth"
+      de: "Beratung vs. Life Coaching | Anna Hellmuth"
+      uk: "Консультування чи лайф-коучинг | Анна Гельмут"
+      ru: "Консультирование или лайф-коучинг | Анна Гельмут"
+
+  - translation_key: blog-expats
+    category: blog
+    slugs:
+      en: online-counseling-for-expats
+      de: online-beratung-fuer-expats
+      uk: onlayn-konsultuvannya-dlya-ekspativ
+      ru: onlayn-konsultirovanie-dlya-ekspatov
+    titles:
+      en: "Online counseling for expats | Anna Hellmuth"
+      de: "Online-Beratung für Expats | Anna Hellmuth"
+      uk: "Онлайн-консультування для експатів | Анна Гельмут"
+      ru: "Онлайн-консультирование для экспатов | Анна Гельмут"
+
+  - translation_key: blog-burnout
+    category: blog
+    slugs:
+      en: burnout-when-success-feels-empty
+      de: burnout-wenn-erfolg-leer-fuehlt
+      uk: vyhorannya-koly-uspikh-porozhniy
+      ru: vygoranie-kogda-uspeh-pust
+    titles:
+      en: "Burnout when success feels empty | Anna Hellmuth"
+      de: "Burnout, wenn Erfolg leer fühlt | Anna Hellmuth"
+      uk: "Вигорання, коли успіх порожній | Анна Гельмут"
+      ru: "Выгорание, когда успех пустой | Анна Гельмут"
+
+  - translation_key: blog-signs
+    category: blog
+    slugs:
+      en: signs-you-need-professional-support
+      de: anzeichen-fuer-professionelle-unterstuetzung
+      uk: oznaky-profesiynoi-pidtrymky
+      ru: priznaki-professionalnoy-podderzhki
+    titles:
+      en: "Signs you need professional support | Anna Hellmuth"
+      de: "Anzeichen für professionelle Unterstützung | Anna Hellmuth"
+      uk: "Ознаки, що вам потрібна підтримка | Анна Гельмут"
+      ru: "Признаки, что вам нужна поддержка | Анна Гельмут"
+
+locales:
+  - en
+  - de
+  - uk
+  - ru

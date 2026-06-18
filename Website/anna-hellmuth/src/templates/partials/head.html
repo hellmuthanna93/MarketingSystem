@@ -1,0 +1,20 @@
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta name="theme-color" content="#64010d">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <link rel="canonical" href="{{ canonical }}">
+  {% for alt in alternates %}
+  <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.href }}">
+  {% endfor %}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="{{ brand_path('tokens.css') }}">
+  <link rel="stylesheet" href="{{ brand_path('typography.css') }}">
+  <link rel="stylesheet" href="{{ brand_path('components.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ asset_path('images/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ asset_path('css/index.css') }}">
+  {% if blog_css %}
+  <link rel="stylesheet" href="{{ asset_path('css/blog.css') }}">
+  {% endif %}

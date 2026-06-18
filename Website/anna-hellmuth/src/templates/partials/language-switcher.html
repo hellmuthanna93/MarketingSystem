@@ -1,0 +1,9 @@
+  <nav class="lang-switcher" aria-label="Language">
+    {% for lang in language_links %}
+    {% if lang.current %}
+    <span class="lang-switcher__current" aria-current="page">{{ lang.short }}</span>
+    {% else %}
+    <a href="{{ lang.href }}" hreflang="{{ lang.code }}" lang="{{ lang.code }}">{{ lang.short }}</a>
+    {% endif %}{% if not loop.last %}<span class="lang-switcher__sep" aria-hidden="true">·</span>{% endif %}
+    {% endfor %}
+  </nav>

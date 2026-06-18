@@ -1,0 +1,37 @@
+locale: de
+lang: de
+locale_name: Deutsch
+locale_short: DE
+cta: Vereinbaren Sie Ihr kostenloses Erstgespräch
+skip_link: Zum Hauptinhalt springen
+toggle_nav: Navigation umschalten
+mobile_nav_label: Mobile Navigation
+theme_light: Zum hellen Modus wechseln
+theme_dark: Zum dunklen Modus wechseln
+logo_alt: Anna Hellmuth Logo
+footer_tagline: Online psychologische Beratung und Life Coaching. Für sensible, nachdenkliche Menschen, die inneres Wohlbefinden und persönliche Ausrichtung suchen.
+footer_nav_heading: Navigation
+footer_contact_heading: Kontakt & Büro
+footer_email_label: "E-Mail:"
+footer_office_label: "Büro:"
+footer_languages_label: "Sprachen:"
+footer_languages_list: Englisch, Deutsch, Ukrainisch, Russisch
+footer_copyright: "© 2026 Anna Hellmuth. Alle Rechte vorbehalten."
+legal_impressum: Impressum
+legal_privacy: Datenschutzerklärung
+nav:
+  home: Startseite
+  counseling: Psychologische Beratung
+  lifecoaching: Life Coaching
+  about: Über mich
+  blog: Blog
+  contact: Kontakt
+footer:
+  home: Startseite
+  counseling: Psychologische Beratung
+  lifecoaching: Life Coaching
+  about: Über mich
+  blog: Blog
+  contact: Kontakt
+address_display: Erhardstraße 13, 90482 Nürnberg, Deutschland
+meta_default_description: Online psychologische Beratung und Life Coaching auf Deutsch, Englisch, Ukrainisch und Russisch.

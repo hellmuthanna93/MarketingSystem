@@ -2,13 +2,13 @@
 :root {
   --color-bg-primary: var(--color-surface-light);
   --color-bg-secondary: var(--color-surface);
-  --color-bg-dark: var(--color-accent);
+  --color-bg-dark: var(--color-burgundy);
   --color-text-primary: var(--color-text);
   --color-text-secondary: var(--color-text);
   --color-text-muted: var(--color-text);
   --color-text-light: var(--color-text-on-dark);
   --color-accent-light: var(--color-accent-hover);
-  --color-card-bg: hsl(var(--white-hsl));
+  --color-card-bg: var(--color-surface-card);
   --color-border-light: hsla(var(--white-hsl), 0.2);
 
   --font-serif: var(--font-heading);
@@ -87,7 +87,7 @@ body:has(header.scrolled) [id] {
   left: 1rem;
   z-index: 200;
   padding: 0.75rem 1.25rem;
-  background-color: var(--color-accent);
+  background-color: var(--color-burgundy);
   color: var(--color-text-on-dark);
   font-size: 0.9rem;
   font-weight: var(--font-weight-button);
@@ -303,6 +303,73 @@ header.scrolled .nav-container {
   width: 100%;
 }
 
+/* Language switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+
+.lang-switcher a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.2rem 0.15rem;
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.lang-switcher a:hover {
+  color: var(--color-accent);
+}
+
+.lang-switcher__current {
+  color: var(--color-accent);
+  padding: 0.2rem 0.15rem;
+}
+
+.lang-switcher__sep {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  user-select: none;
+}
+
+.mobile-menu .lang-switcher {
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+}
+
+/* Cyrillic + long German compounds */
+html[lang="uk"] h1,
+html[lang="uk"] h2,
+html[lang="uk"] h3,
+html[lang="ru"] h1,
+html[lang="ru"] h2,
+html[lang="ru"] h3 {
+  line-height: 1.4;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+html[lang="de"] h1,
+html[lang="de"] h2 {
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 900px) {
+  header .lang-switcher {
+    display: none;
+  }
+}
+
 .nav-cta {
   position: absolute;
   top: 50%;
@@ -336,7 +403,7 @@ header.scrolled .nav-cta {
 
 .btn-light:hover {
   background-color: var(--color-text-on-dark);
-  color: var(--color-accent);
+  color: var(--color-burgundy);
   transform: translateY(-2px);
 }
 
@@ -982,7 +1049,7 @@ footer {
 
 .social-icon:hover {
   background-color: var(--color-text-light);
-  color: var(--color-accent);
+  color: var(--color-burgundy);
   border-color: var(--color-text-light);
   transform: translateY(-2px);
 }
@@ -1072,7 +1139,7 @@ footer {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-accent);
+  background-color: var(--color-burgundy);
   color: var(--color-text-on-dark);
   padding: 0.25rem 1rem;
   font-size: 0.75rem;
@@ -1533,7 +1600,7 @@ footer {
 }
 
 .testimonial-card {
-  background: hsl(var(--white-hsl));
+  background: var(--color-card-bg);
   padding: 1.5rem 2rem;
   border-radius: 12px;
   border: 2px solid var(--color-border-card);
@@ -1641,7 +1708,7 @@ footer {
 }
 
 .step-circle {
-  background-color: var(--color-accent); /* Burgundy */
+  background-color: var(--color-burgundy); /* Burgundy */
   color: var(--color-text-light); /* Off-white */
   width: 280px;
   height: 280px;
@@ -1944,7 +2011,7 @@ footer {
 .opportunity-card {
   max-width: 920px;
   margin: 0 auto;
-  background: hsl(var(--white-hsl));
+  background: var(--color-card-bg);
   border-radius: 12px;
   border: 2px solid var(--color-accent);
   box-shadow: 0 12px 40px hsla(var(--accent-hsl), 0.04);
@@ -2122,6 +2189,93 @@ footer {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* --- Theme toggle (light / dark) --- */
+.theme-toggle {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 150;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-card-bg);
+  color: var(--color-accent);
+  border: 1px solid var(--color-border-card);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: hsla(var(--accent-hsl), 0.3);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+  .theme-toggle:hover {
+    transform: none;
+  }
+}
+
+/* Footer email sits on the burgundy footer in both themes — keep it legible
+   (the inline accent color was burgundy-on-burgundy). */
+footer .footer-contact a[href^="mailto:"] {
+  color: var(--color-gold);
+}
+
+footer .footer-contact a[href^="mailto:"]:hover {
+  color: var(--color-text-on-dark);
+}
+
+/* Dark mode: the brand logo has a solid cream background. Let it read as a
+   deliberate light "chip" on the dark header with softened corners rather than
+   a hard-edged square. Footer stays burgundy in both themes, so leave it. */
+:root[data-theme="dark"] body > header .logo img {
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body > header .logo img {
+    border-radius: 8px;
   }
 }
 

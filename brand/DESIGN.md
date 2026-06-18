@@ -106,7 +106,8 @@ Source Serif 4 is a **variable font** (200–900) loaded from Google Fonts.
 
 ## Voice (short)
 
-- Warm, professional, empowering; audience: **creative & ambitious souls**
+- Warm, understanding, confidently change-oriented; felt inner strength and compassion; not separate from the struggle — lived experience from the inside out; specialist who names the client's experience precisely; reader feels safe to trust you and that you'll get there together; clients respected as grown-ups; audience: **sensitive, thoughtful souls**
+- **No-goes:** motivational slogans, downplaying experiences, pitying / collapsing into helplessness with the client, making yourself small, parent-to-child voice, coldness or showing off, name-dropping to impress
 - Languages: EN, DE, UK, RU
 - Primary CTA: **Schedule your discovery call**
 - Full copy table: `brand/voice.md`

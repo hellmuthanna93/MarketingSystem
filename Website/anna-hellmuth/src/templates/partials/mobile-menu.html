@@ -1,0 +1,13 @@
+  <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-label="{{ site.mobile_nav_label }}" aria-hidden="true">
+    <nav class="mobile-menu-links">
+      <a href="{{ link_to('counseling') }}">{{ site.nav.counseling }}</a>
+      <a href="{{ link_to('lifecoaching') }}">{{ site.nav.lifecoaching }}</a>
+      <a href="{{ link_to('about') }}">{{ site.nav.about }}</a>
+      <a href="{{ link_to('blog') }}">{{ site.nav.blog }}</a>
+      <a href="{{ link_to('contact') }}">{{ site.nav.contact }}</a>
+    </nav>
+    {% include 'partials/language-switcher.html' %}
+    <div style="margin-top: 2rem;">
+      <a href="{{ contact.calendar_url }}" target="_blank" rel="noopener" class="btn-primary">{{ site.cta }}</a>
+    </div>
+  </div>

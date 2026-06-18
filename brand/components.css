@@ -12,7 +12,7 @@
 }
 
 .section--burgundy {
-  background-color: var(--color-accent);
+  background-color: var(--color-burgundy);
   color: var(--color-text-on-dark);
 }
 
@@ -40,8 +40,8 @@
   letter-spacing: var(--letter-spacing-button);
   line-height: 1.2;
   color: var(--color-text-on-dark);
-  background-color: var(--color-accent);
-  border: 2px solid var(--color-accent);
+  background-color: var(--color-burgundy);
+  border: 2px solid var(--color-burgundy);
   border-radius: var(--radius-pill);
   padding: var(--button-padding-y) var(--button-padding-x);
   text-decoration: none;
@@ -54,8 +54,8 @@
 }
 
 .btn-primary:hover {
-  background-color: var(--color-accent-hover);
-  border-color: var(--color-accent-hover);
+  background-color: var(--color-burgundy-hover);
+  border-color: var(--color-burgundy-hover);
   opacity: 0.95;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-burgundy);
   color: var(--color-text-on-dark);
 }
 

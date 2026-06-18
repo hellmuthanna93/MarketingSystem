@@ -1,0 +1,37 @@
+locale: uk
+lang: uk
+locale_name: Українська
+locale_short: UK
+cta: Запишіться на безкоштовну ознайомлювальну зустріч
+skip_link: Перейти до основного вмісту
+toggle_nav: Перемкнути навігацію
+mobile_nav_label: Мобільна навігація
+theme_light: Увімкнути світлу тему
+theme_dark: Увімкнути темну тему
+logo_alt: Логотип Анни Гельмут
+footer_tagline: Онлайн психологічне консультування та лайф-коучинг. Для чутливих, вдумливих людей, які шукають внутрішнє благополуччя та особисту цілісність.
+footer_nav_heading: Навігація
+footer_contact_heading: Контакти та офіс
+footer_email_label: "Електронна пошта:"
+footer_office_label: "Офіс:"
+footer_languages_label: "Мови:"
+footer_languages_list: Англійська, німецька, українська, російська
+footer_copyright: "© 2026 Анна Гельмут. Усі права захищені."
+legal_impressum: Правова інформація (Impressum)
+legal_privacy: Політика конфіденційності
+nav:
+  home: Головна
+  counseling: Психологічне консультування
+  lifecoaching: Лайф-коучинг
+  about: Про мене
+  blog: Блог
+  contact: Контакт
+footer:
+  home: Головна
+  counseling: Психологічне консультування
+  lifecoaching: Лайф-коучинг
+  about: Про мене
+  blog: Блог
+  contact: Контакт
+address_display: Erhardstraße 13, 90482 Нюрнберг, Німеччина
+meta_default_description: Онлайн психологічне консультування та лайф-коучинг англійською, німецькою, українською та російською мовами.

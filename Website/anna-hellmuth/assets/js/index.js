@@ -1,9 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
+  setupThemeToggle();
   setupStickyHeader();
   setupMobileMenu();
   setupAboutSlider();
   setupScrollReveal();
 });
+
+/**
+ * Light / dark theme toggle.
+ * The saved preference is applied pre-paint by a tiny inline <head> script;
+ * here we build the control and let the visitor switch and persist it.
+ */
+function setupThemeToggle() {
+  const root = document.documentElement;
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const readStored = () => {
+    try {
+      return localStorage.getItem('theme');
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const effectiveTheme = () => {
+    const stored = readStored();
+    if (stored === 'dark' || stored === 'light') return stored;
+    return media.matches ? 'dark' : 'light';
+  };
+
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'theme-toggle';
+  button.innerHTML = `
+    <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+    </svg>`;
+
+  const body = document.body;
+  const labelLight = body.dataset.themeLabelLight || 'Switch to light theme';
+  const labelDark = body.dataset.themeLabelDark || 'Switch to dark theme';
+
+  const syncLabel = () => {
+    const isDark = effectiveTheme() === 'dark';
+    button.setAttribute('aria-label', isDark ? labelLight : labelDark);
+    button.setAttribute('aria-pressed', String(isDark));
+  };
+
+  button.addEventListener('click', () => {
+    const next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {
+      /* storage unavailable — toggle still applies for this session */
+    }
+    syncLabel();
+  });
+
+  // Keep an unset (system-driven) preference in sync if the OS theme changes.
+  media.addEventListener('change', () => {
+    if (!readStored()) syncLabel();
+  });
+
+  syncLabel();
+  document.body.appendChild(button);
+}
 
 /**
  * Sticky Header on Scroll
@@ -34,6 +100,9 @@ function setupMobileMenu() {
   const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
 
   if (!navToggle || !mobileMenu) return;
+
+  const navLabel = document.body.dataset.navLabel || 'Toggle navigation';
+  navToggle.setAttribute('aria-label', navLabel);
 
   function setMenuOpen(isOpen) {
     mobileMenu.classList.toggle('open', isOpen);

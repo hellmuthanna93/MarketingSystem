@@ -155,7 +155,7 @@ Do not default to generic educational content or modality explanations (CBT, hyp
 
 **Weak:** "As a medical doctor and psychologist, I use integrative methods including CBT and hypnotherapy to help clients achieve better mental health."
 
-**Strong:** "You can explain your patterns perfectly — and still feel stuck. Understanding isn't the same as release. That's often when people realize they need support going deeper than insight alone."
+**Strong:** "You can explain your patterns perfectly and still feel stuck. Understanding isn't the same as release. That's often when people realize they need support going deeper than insight alone."
 
 ---
 

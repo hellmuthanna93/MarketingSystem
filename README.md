@@ -6,6 +6,7 @@ A static, portable brand foundation for marketing materials based on [annahellmu
 
 1. Open the **Marketing Center** in a browser:
    - **Hub:** [`index.html`](index.html) — links to everything
+   - **Business suite:** [`business-site/index.html`](business-site/index.html) — internal operating manual (strategy → toolkit), source in [`business-site/docs/`](business-site/docs/)
    - **Brand hub:** [`brand/index.html`](brand/index.html) — all guides in one page
    - **Styleguide:** [`styleguide/index.html`](styleguide/index.html)
    - **Design system:** [`design-system/index.html`](design-system/index.html) — full component library

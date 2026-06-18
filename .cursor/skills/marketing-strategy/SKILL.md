@@ -25,15 +25,15 @@ For approved copy and taglines: **[brand/marketing/messaging.md](brand/marketing
 
 - Not selling information — selling **lasting inner change**
 - People buy **movement** (relief, hope, clarity, confidence, possibility, transformation)
-- Guiding principle: ideal clients think *"Finally someone understands what I have been experiencing"*
-- Strength: psychological depth + coaching practicality + pattern recognition + warmth
+- Guiding principle: ideal clients think *"Finally someone understands what I have been experiencing"* — and feel *she knows what she's doing; I can trust her; we'll get where I need to go*
+- Strength: psychological depth + coaching practicality + pattern recognition + warmth + **lived experience** — you do not speak from above; you have been there
 
 ## Audience
 
-- **Profile:** highly educated professionals, creatives, entrepreneurs — functioning externally, stuck internally
-- **Public label:** *creative & ambitious souls* (keep on website and broad marketing)
+- **Profile:** sensitive, deep-feeling people who understand a lot and strive for change — often highly educated professionals functioning externally, stuck internally; insight alone has not been enough
+- **Public label:** *sensitive, thoughtful souls* (use in new content; live site hero still uses legacy *creative & ambitious souls*)
 - **Counseling:** emotional/past-focused — heal, release, regulate
-- **Coaching:** goal/future-focused — action, purpose, transitions, authentic success
+- **Coaching:** goal/future-focused — action, purpose, transitions, authentic change
 
 ## Sales approach
 

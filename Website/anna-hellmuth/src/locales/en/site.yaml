@@ -1,0 +1,37 @@
+locale: en
+lang: en
+locale_name: English
+locale_short: EN
+cta: Schedule your discovery call
+skip_link: Skip to main content
+toggle_nav: Toggle navigation
+mobile_nav_label: Mobile navigation
+theme_light: Switch to light theme
+theme_dark: Switch to dark theme
+logo_alt: Anna Hellmuth Logo
+footer_tagline: Online psychological counseling and life coaching. Empowering sensitive, thoughtful souls to achieve mental well-being and personal alignment.
+footer_nav_heading: Navigation
+footer_contact_heading: Contact & Office
+footer_email_label: "Email:"
+footer_office_label: "Office:"
+footer_languages_label: "Languages:"
+footer_languages_list: English, German, Ukrainian, Russian
+footer_copyright: "© 2026 Anna Hellmuth. All rights reserved."
+legal_impressum: Legal Notice (Impressum)
+legal_privacy: Privacy Policy
+nav:
+  home: Home
+  counseling: Psychological counseling
+  lifecoaching: Life coaching
+  about: About
+  blog: Blog
+  contact: Contact
+footer:
+  home: Home
+  counseling: Psychological counseling
+  lifecoaching: Life coaching
+  about: About Me
+  blog: Blog
+  contact: Contact
+address_display: Erhardstraße 13, 90482 Nuremberg, Germany
+meta_default_description: Online psychological counseling and life coaching in English, German, Ukrainian, and Russian.

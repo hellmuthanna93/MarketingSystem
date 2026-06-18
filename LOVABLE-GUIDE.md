@@ -255,7 +255,7 @@ Build in this order:
 
 | Context | Copy |
 |---------|------|
-| Hero H1 | Online counseling and coaching for creative & ambitious souls |
+| Hero H1 | Online psychological counseling and life coaching |
 | Subhero | Available wherever you are, in English, German, Ukrainian, Russian, or a mix of them all |
 | Transformation | Shape your future self. / Take the first step today. |
 | Invitation | Don't wait for "someday," struggling against the tide alone. |

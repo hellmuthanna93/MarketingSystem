@@ -1,0 +1,17 @@
+---
+description: Mandatory voice + facts workflow for any Anna Hellmuth client-facing copy
+globs: business-site/**/*,projects/**/*,Website/**/*,brand/marketing/**/*
+alwaysApply: true
+---
+
+# Mandatory copy workflow (Anna Hellmuth)
+
+Before writing or editing ANY user-facing copy (social posts, captions, emails, web, blog, newsletters, proposals, wedge deliverables, client-facing docs):
+
+1. Read **`.cursor/skills/practice-voice/SKILL.md`** + **`practice-voice/humanizer-patterns.md`** — voice, never-list, anti-AI pass.
+2. Read **`.cursor/skills/practice-profile/SKILL.md`** — never invent facts, prices, credentials, or metrics. Unknowns are **TBD**.
+3. Layer the matching channel/deliverable skill: `content-writing`, `discovery-calls`, `client-emails`, `wedge-clarity-session`, `case-studies-anonymized`.
+4. For any health claim, scope statement, outreach, or testimonial, also read **`dach-mental-health-compliance`**.
+5. Draft → run the humanizer pass → run the `practice-voice` quick self-check before finalizing.
+
+Non-negotiables: sell movement not process; soft CTAs only (primary = Schedule your discovery call); no guaranteed outcomes; no client-identifying detail; tokens/colors only via `brand/*.css`.

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Hellmuth — Business Suite</title>
+    <meta name="description" content="Internal business operating system for Anna Hellmuth's psychological counseling and life coaching practice — strategy, brand, offerings, marketing, sales, operations, finance, roadmap, and toolkit." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../brand/tokens.css" />
+    <link rel="stylesheet" href="../brand/typography.css" />
+    <link rel="stylesheet" href="../brand/components.css" />
+    <style>
+      .hub-nav {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: var(--space-md) var(--space-section-x);
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm) var(--space-lg);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      .hub-nav a { color: var(--color-text-on-dark); text-decoration: none; opacity: 0.92; }
+      .hub-nav a:hover { opacity: 1; text-decoration: underline; }
+      .hub-hero {
+        background: var(--color-accent);
+        color: var(--color-text-on-dark);
+        padding: clamp(3rem, 8vw, 5rem) var(--space-section-x);
+        text-align: center;
+      }
+      .hub-hero__logo { height: 64px; width: auto; margin: 0 auto var(--space-lg); }
+      .hub-hero__kicker {
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin: 0 0 var(--space-sm);
+      }
+      .hub-hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        font-weight: var(--font-weight-heading);
+        margin: 0 0 var(--space-md);
+      }
+      .hub-hero__tagline {
+        font-family: var(--font-body);
+        font-size: 1.15rem;
+        font-style: italic;
+        opacity: 0.92;
+        max-width: 40rem;
+        margin: 0 auto var(--space-xl);
+        line-height: 1.6;
+      }
+      .hub-hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center; }
+      .hub-section {
+        padding: var(--space-section-y) var(--space-section-x);
+        border-bottom: 1px solid var(--color-border);
+      }
+      .hub-section__num {
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 0.1em;
+        color: var(--color-accent);
+        opacity: 0.7;
+      }
+      .hub-section h2 {
+        font-family: var(--font-heading);
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: var(--color-accent);
+        margin: 0.25rem 0 var(--space-sm);
+      }
+      .hub-section__lead {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        opacity: 0.85;
+        max-width: 42rem;
+        margin: 0 0 var(--space-xl);
+        line-height: 1.6;
+      }
+      .hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: var(--space-lg); }
+      .hub-card {
+        display: flex;
+        flex-direction: column;
+        background: hsl(var(--white-hsl));
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: var(--space-xl);
+        text-decoration: none;
+        color: var(--color-text);
+        transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        height: 100%;
+        box-shadow: var(--shadow-card);
+      }
+      .hub-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); border-color: hsla(var(--accent-hsl), 0.3); }
+      .hub-card__tag {
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: var(--space-sm);
+      }
+      .hub-card__title {
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        font-weight: var(--font-weight-heading);
+        color: var(--color-accent);
+        margin: 0 0 var(--space-sm);
+      }
+      .hub-card__desc { font-family: var(--font-body); font-size: 0.92rem; line-height: 1.55; opacity: 0.88; margin: 0; flex-grow: 1; }
+      .hub-card__arrow { margin-top: var(--space-md); font-size: 0.85rem; font-weight: var(--font-weight-semibold); color: var(--color-accent); }
+      .hub-card--wedge { border-color: hsla(var(--accent-hsl), 0.4); background: var(--color-surface); }
+      .hub-footer {
+        padding: var(--space-xl) var(--space-section-x);
+        text-align: center;
+        font-family: var(--font-body);
+        font-size: var(--text-small-size);
+        opacity: 0.85;
+      }
+      .hub-footer a { color: var(--color-accent); }
+      .skip-link {
+        position: absolute; top: -100%; left: 1rem; z-index: 200;
+        padding: 0.75rem 1.25rem; background: var(--color-accent);
+        color: var(--color-text-on-dark); font-weight: var(--font-weight-button);
+        border-radius: 0 0 8px 8px; text-decoration: none;
+      }
+      .skip-link:focus { top: 0; }
+      .btn-light {
+        display: inline-block; padding: 1rem 2rem; font-family: var(--font-body);
+        font-size: var(--text-button-size); font-weight: var(--font-weight-button);
+        border-radius: var(--radius-pill); border: 2px solid var(--color-text-on-dark);
+        color: var(--color-text-on-dark); background: transparent; text-decoration: none;
+        transition: background var(--transition-base), color var(--transition-base);
+      }
+      .btn-light:hover { background: var(--color-text-on-dark); color: var(--color-accent); }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="hub-hero">
+      <img class="hub-hero__logo" src="../Website/anna-hellmuth/assets/images/logo.png" alt="Anna Hellmuth" width="180" height="64" />
+      <p class="hub-hero__kicker">Internal business suite</p>
+      <h1>Run &amp; grow the practice</h1>
+      <p class="hub-hero__tagline">The complete operating system behind annahellmuth.com — strategy, brand, offerings, marketing, sales, operations, finance, and a copy-paste toolkit.</p>
+      <div class="hub-hero__actions">
+        <a class="btn-primary" href="site/00-overview.html">Read the overview</a>
+        <a class="btn-light" href="site/08-roadmap/01-90-day-launch.html">90-day plan</a>
+        <a class="btn-light" href="site/index.html">Browse all docs</a>
+      </div>
+    </header>
+
+    <nav class="hub-nav" aria-label="Suite sections">
+      <a href="#strategy">01 Strategy</a>
+      <a href="#brand">02 Brand</a>
+      <a href="#offerings">03 Offerings</a>
+      <a href="#marketing">04 Marketing</a>
+      <a href="#sales">05 Sales</a>
+      <a href="#operations">06 Operations</a>
+      <a href="#finance">07 Finance &amp; Legal</a>
+      <a href="#roadmap">08 Roadmap</a>
+      <a href="#toolkit">09 Toolkit</a>
+    </nav>
+
+    <main id="main">
+      <section class="hub-section section--cream" id="start">
+        <div class="container">
+          <span class="hub-section__num">Start</span>
+          <h2>Overview</h2>
+          <p class="hub-section__lead">The thesis, north star, and operating principles that hold the whole suite together.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/00-overview.html">
+              <span class="hub-card__tag">HTML</span>
+              <h3 class="hub-card__title">Practice overview</h3>
+              <p class="hub-card__desc">Thesis, north star (€300k @ ≤7hrs/day), operating principles, and the section map.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+            <a class="hub-card" href="site/readme.html">
+              <span class="hub-card__tag">HTML</span>
+              <h3 class="hub-card__title">How this suite works</h3>
+              <p class="hub-card__desc">Source of truth, skills, conventions, and where to start.</p>
+              <span class="hub-card__arrow">Open →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--light" id="strategy">
+        <div class="container">
+          <span class="hub-section__num">01</span>
+          <h2>Strategy</h2>
+          <p class="hub-section__lead">Vision, positioning, who we serve, the market, and the numbers behind the practice.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/01-strategy/02-positioning-and-niche.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Positioning &amp; niche</h3><p class="hub-card__desc">Sell movement, not process. Counseling vs coaching lanes and the wedge.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/01-strategy/03-ideal-client-profile.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Ideal client profile</h3><p class="hub-card__desc">Sensitive, thoughtful souls — segments, triggers, anti-ICP.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/01-strategy/07-pricing-and-packaging.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Pricing &amp; packaging</h3><p class="hub-card__desc">Sessions, packages, and the proposed Clarity Session wedge.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/01-strategy/08-business-plan.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Business plan</h3><p class="hub-card__desc">Formal plan — market, GTM, ops, financials, risks.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--cream" id="brand">
+        <div class="container">
+          <span class="hub-section__num">02</span>
+          <h2>Brand</h2>
+          <p class="hub-section__lead">Brand strategy and voice. Visual identity, messaging, and the design system point to the existing <code>brand/</code> source of truth.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/02-brand/01-brand-strategy.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Brand strategy</h3><p class="hub-card__desc">Brand idea, promise, pillars, personality.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/02-brand/07-voice-reference.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Voice reference</h3><p class="hub-card__desc">Evidence-based voice from real website and blog writing.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="../brand/DESIGN.md"><span class="hub-card__tag">Pointer</span><h3 class="hub-card__title">Visual identity</h3><p class="hub-card__desc">Burgundy/cream, Source Serif 4 — see brand/DESIGN.md.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="../brand/voice.md"><span class="hub-card__tag">Pointer</span><h3 class="hub-card__title">Voice &amp; tone</h3><p class="hub-card__desc">Full voice guide — see brand/voice.md.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--light" id="offerings">
+        <div class="container">
+          <span class="hub-section__num">03</span>
+          <h2>Offerings</h2>
+          <p class="hub-section__lead">What the practice sells — from the free discovery call to packages, with the new paid wedge in the middle.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/03-offerings/01-service-catalog.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Service catalog</h3><p class="hub-card__desc">The full ladder: discovery → wedge → single → packages.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card hub-card--wedge" href="site/03-offerings/02-wedge-offer-clarity-session.html"><span class="hub-card__tag">Wedge · TBD</span><h3 class="hub-card__title">Clarity Session</h3><p class="hub-card__desc">Proposed paid wedge — 90-min session + written pattern summary.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/03-offerings/03-retainers-and-packages.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Packages</h3><p class="hub-card__desc">Counseling and coaching multi-session packages.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/03-offerings/02-wedge-offer-clarity-session.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Wedge offer page</h3><p class="hub-card__desc">Rendered, on-brand view of the Clarity Session.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--cream" id="marketing">
+        <div class="container">
+          <span class="hub-section__num">04</span>
+          <h2>Marketing</h2>
+          <p class="hub-section__lead">How the right clients find Anna — content engine, channels, funnel, and DACH-compliant outreach.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/04-marketing/01-marketing-strategy.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Marketing strategy</h3><p class="hub-card__desc">Positioning-led, reputation-funnel GTM.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/04-marketing/02-content-engine.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Content engine</h3><p class="hub-card__desc">Pillars, formats, cadence, repurposing.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/04-marketing/08-marketing-funnel.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Marketing funnel</h3><p class="hub-card__desc">Awareness → discovery → wedge → package.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/04-marketing/06-outreach-compliance-germany.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Outreach compliance</h3><p class="hub-card__desc">UWG, HWG, GDPR for mental-health data.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--light" id="sales">
+        <div class="container">
+          <span class="hub-section__num">05</span>
+          <h2>Sales</h2>
+          <p class="hub-section__lead">From discovery call to committed client — without pressure.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/05-sales/01-sales-process.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Sales process</h3><p class="hub-card__desc">Pipeline stages, qualification, timing.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/05-sales/02-discovery-to-wedge-script.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Discovery → wedge</h3><p class="hub-card__desc">The decision tree from call to recommendation.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/05-sales/04-onboarding.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Onboarding</h3><p class="hub-card__desc">Intake, access, communication norms.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--cream" id="operations">
+        <div class="container">
+          <span class="hub-section__num">06</span>
+          <h2>Operations</h2>
+          <p class="hub-section__lead">Tools, workflow, SOPs, and the quality bar for every session and deliverable.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/06-operations/01-tools-and-stack.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Tools &amp; stack</h3><p class="hub-card__desc">Calendar, video, payment, notes, content.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/06-operations/02-delivery-workflow.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Delivery workflow</h3><p class="hub-card__desc">End-to-end engagement flow.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/06-operations/04-quality-bar.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Quality bar</h3><p class="hub-card__desc">Definition of done for sessions and deliverables.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--light" id="finance">
+        <div class="container">
+          <span class="hub-section__num">07</span>
+          <h2>Finance &amp; Legal</h2>
+          <p class="hub-section__lead">DACH-specific legal posture, finance model, runway, and the path to the income goal. Not legal advice.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/07-finance-legal/01-legal-setup-germany.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Legal setup (Germany)</h3><p class="hub-card__desc">Beratung vs Psychotherapie, HWG, GDPR, insurance, tax.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/07-finance-legal/02-finance-model.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Finance model</h3><p class="hub-card__desc">Path to €300k — hours, session mix, margins.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/07-finance-legal/05-financial-projections.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Projections</h3><p class="hub-card__desc">Year 1–3 scenarios.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--cream" id="roadmap">
+        <div class="container">
+          <span class="hub-section__num">08</span>
+          <h2>Roadmap</h2>
+          <p class="hub-section__lead">What to do, in what order — with success metrics and a master backlog.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/08-roadmap/01-90-day-launch.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">90-day launch</h3><p class="hub-card__desc">Phased plan with checkboxes.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/08-roadmap/03-milestones-and-kpis.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Milestones &amp; KPIs</h3><p class="hub-card__desc">Success criteria by phase.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/08-roadmap/04-task-backlog.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Master backlog</h3><p class="hub-card__desc">Every task, linked to its source doc.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/08-roadmap/01-90-day-launch.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">90-day (printable)</h3><p class="hub-card__desc">Rendered checklist for printing.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hub-section section--light" id="toolkit">
+        <div class="container">
+          <span class="hub-section__num">09</span>
+          <h2>Toolkit</h2>
+          <p class="hub-section__lead">The execution layer — full copy, not outlines. Posts, scripts, emails, and templates ready to use.</p>
+          <div class="hub-grid">
+            <a class="hub-card" href="site/09-toolkit/00-toolkit-index.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Toolkit index</h3><p class="hub-card__desc">Navigation + usage rules.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/09-toolkit/01-discovery-call-script.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Discovery call script</h3><p class="hub-card__desc">30-min structure, listen-fors, close.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/09-toolkit/02-instagram-launch-posts.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">Instagram launch posts</h3><p class="hub-card__desc">12 ready-to-publish posts.</p><span class="hub-card__arrow">Open →</span></a>
+            <a class="hub-card" href="site/09-toolkit/04-content-calendar-90day.html"><span class="hub-card__tag">HTML</span><h3 class="hub-card__title">90-day calendar</h3><p class="hub-card__desc">Week-by-week posting plan.</p><span class="hub-card__arrow">Open →</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="hub-footer">
+      <div class="container">
+        <p>Anna Hellmuth business suite · internal operating manual · edit <code>docs/</code> · read <a href="site/index.html">designed HTML</a></p>
+        <p><a href="https://annahellmuth.com/" target="_blank" rel="noopener">annahellmuth.com</a> · <a href="../index.html">Marketing Center</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

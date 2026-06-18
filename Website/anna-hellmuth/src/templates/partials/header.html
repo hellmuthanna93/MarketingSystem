@@ -1,0 +1,21 @@
+  <header>
+    <div class="nav-container">
+      <a href="{{ link_to('home') }}" class="logo">
+        <img src="{{ asset_path('images/logo.png') }}" alt="{{ site.logo_alt }}">
+      </a>
+      <nav class="nav-links" aria-label="{{ site.nav.counseling }}">
+        <a href="{{ link_to('counseling') }}"{% if is_active('counseling') %} class="active"{% endif %}>{{ site.nav.counseling }}</a>
+        <a href="{{ link_to('lifecoaching') }}"{% if is_active('lifecoaching') %} class="active"{% endif %}>{{ site.nav.lifecoaching }}</a>
+        <a href="{{ link_to('about') }}"{% if is_active('about') %} class="active"{% endif %}>{{ site.nav.about }}</a>
+        <a href="{{ link_to('blog') }}"{% if is_active('blog') or current_key.startswith('blog-') %} class="active"{% endif %}>{{ site.nav.blog }}</a>
+        <a href="{{ link_to('contact') }}"{% if is_active('contact') %} class="active"{% endif %}>{{ site.nav.contact }}</a>
+      </nav>
+      {% include 'partials/language-switcher.html' %}
+      <div class="nav-cta">
+        <a href="{{ contact.calendar_url }}" target="_blank" rel="noopener" class="btn-primary">{{ site.cta }}</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="{{ site.toggle_nav }}" aria-expanded="false" aria-controls="mobile-navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>

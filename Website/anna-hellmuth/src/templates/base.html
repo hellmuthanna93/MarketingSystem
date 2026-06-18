@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include 'partials/head.html' %}
+</head>
+<body data-locale="{{ locale }}" data-theme-label-light="{{ site.theme_light }}" data-theme-label-dark="{{ site.theme_dark }}" data-nav-label="{{ site.toggle_nav }}">
+
+  <a href="#main-content" class="skip-link">{{ site.skip_link }}</a>
+  {% include 'partials/header.html' %}
+  {% include 'partials/mobile-menu.html' %}
+
+  {% block main %}{% endblock %}
+
+  {% include 'partials/footer.html' %}
+  <script src="{{ brand_path('typography.css') | replace('typography.css', '') }}../assets/js/index.js" defer></script>
+</body>
+</html>

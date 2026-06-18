@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Review &amp; Plan — annahellmuth.com</title>
+  <meta name="description" content="Business-aware design review and improvement plan with visual before/after examples for annahellmuth.com.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../brand/tokens.css">
+  <link rel="stylesheet" href="../brand/typography.css">
+  <link rel="stylesheet" href="../brand/components.css">
+  <style>
+    :root {
+      --rv-maxw: 1180px;
+      --rv-gap: clamp(1rem, 3vw, 2rem);
+      --rv-radius: 16px;
+      --rv-p0: #8c1d2a;
+      --rv-p1: #b0852f;
+      --rv-p2: #4f6d6a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--color-surface-light, #fefbf6);
+      color: var(--color-text, #5c020c);
+      font-family: var(--font-body, Georgia, serif);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--color-accent, #64010d); }
+
+    /* Top bar */
+    .rv-topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: var(--color-burgundy, #64010d);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .rv-topbar__inner {
+      max-width: var(--rv-maxw); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: .85rem clamp(1rem, 4vw, 2.5rem);
+      flex-wrap: wrap;
+    }
+    .rv-topbar strong { font-weight: 600; letter-spacing: .01em; }
+    .rv-topbar nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+    .rv-topbar nav a {
+      color: rgba(255,255,255,.86); text-decoration: none; font-size: .92rem;
+    }
+    .rv-topbar nav a:hover { color: #fff; text-decoration: underline; }
+
+    .rv-wrap { max-width: var(--rv-maxw); margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+
+    /* Hero */
+    .rv-hero { padding: clamp(2.5rem, 6vw, 4.5rem) 0 1.5rem; }
+    .rv-kicker {
+      font-size: .8rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--color-gold, #b0852f); font-weight: 600; margin: 0 0 1rem;
+    }
+    .rv-hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.1; margin: 0 0 1rem; font-weight: 600; }
+    .rv-hero p.lead { font-size: 1.15rem; max-width: 60ch; color: var(--color-text-muted, #6b3b3b); margin: 0 0 1.5rem; }
+    .rv-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: .9rem; color: var(--color-text-muted, #6b3b3b); }
+    .rv-meta span strong { color: var(--color-text, #5c020c); }
+
+    section.rv-section { padding: clamp(2rem, 5vw, 3.5rem) 0; border-top: 1px solid var(--color-border, rgba(92,2,12,.12)); }
+    .rv-section h2 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); margin: 0 0 .4rem; font-weight: 600; }
+    .rv-section .rv-sub { color: var(--color-text-muted, #6b3b3b); max-width: 65ch; margin: 0 0 2rem; }
+    h3.rv-h3 { font-size: 1.25rem; margin: 2.2rem 0 .6rem; font-weight: 600; }
+
+    /* Context cards */
+    .rv-grid { display: grid; gap: var(--rv-gap); }
+    .rv-grid--2 { grid-template-columns: repeat(2, 1fr); }
+    .rv-grid--3 { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 800px) { .rv-grid--2, .rv-grid--3 { grid-template-columns: 1fr; } }
+    .rv-card {
+      background: var(--color-surface-card, #fff);
+      border: 1px solid var(--color-border-card, rgba(100,1,13,.14));
+      border-radius: var(--rv-radius);
+      padding: 1.4rem 1.5rem;
+    }
+    .rv-card h4 { margin: 0 0 .4rem; font-size: 1.02rem; font-weight: 600; }
+    .rv-card p { margin: 0; font-size: .95rem; color: var(--color-text-muted, #6b3b3b); }
+
+    /* Priority badge */
+    .rv-badge {
+      display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; color: #fff; padding: .18rem .55rem; border-radius: 999px;
+      vertical-align: middle;
+    }
+    .rv-badge.p0 { background: var(--rv-p0); }
+    .rv-badge.p1 { background: var(--rv-p1); }
+    .rv-badge.p2 { background: var(--rv-p2); }
+
+    /* Scorecard table */
+    .rv-tablewrap { overflow-x: auto; border-radius: var(--rv-radius); border: 1px solid var(--color-border-card, rgba(100,1,13,.14)); }
+    table.rv-table { width: 100%; border-collapse: collapse; background: var(--color-surface-card, #fff); font-size: .92rem; min-width: 640px; }
+    table.rv-table th, table.rv-table td { text-align: left; padding: .8rem 1rem; border-bottom: 1px solid var(--color-border, rgba(92,2,12,.1)); }
+    table.rv-table th { font-weight: 600; background: var(--color-surface, #f7eae3); }
+    table.rv-table tr:last-child td { border-bottom: 0; }
+    .dot { font-size: 1.1rem; line-height: 1; }
+    .dot.good { color: #3f7d54; }
+    .dot.mid { color: var(--color-gold, #b0852f); }
+    .dot.bad { color: var(--rv-p0); }
+
+    /* Roadmap list */
+    .rv-rec { display: flex; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--color-border, rgba(92,2,12,.1)); align-items: flex-start; }
+    .rv-rec:last-child { border-bottom: 0; }
+    .rv-rec__num { flex: 0 0 auto; width: 2rem; height: 2rem; border-radius: 50%; background: var(--color-burgundy, #64010d); color: #fff; display: grid; place-items: center; font-size: .9rem; font-weight: 600; }
+    .rv-rec__body h4 { margin: 0 0 .25rem; font-size: 1.05rem; font-weight: 600; }
+    .rv-rec__body p { margin: 0; font-size: .94rem; color: var(--color-text-muted, #6b3b3b); }
+    .rv-rec__tags { margin-top: .5rem; display: flex; gap: .5rem; flex-wrap: wrap; font-size: .78rem; }
+    .rv-tag { background: var(--color-surface, #f7eae3); border-radius: 999px; padding: .15rem .6rem; color: var(--color-text, #5c020c); }
+
+    /* Before/After */
+    .rv-ba { display: grid; grid-template-columns: 1fr 1fr; gap: var(--rv-gap); align-items: stretch; margin-top: 1.2rem; }
+    @media (max-width: 800px) { .rv-ba { grid-template-columns: 1fr; } }
+    .rv-pane { border-radius: var(--rv-radius); overflow: hidden; border: 1px solid var(--color-border-card, rgba(100,1,13,.14)); display: flex; flex-direction: column; }
+    .rv-pane__label { font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .5rem 1rem; display: flex; align-items: center; gap: .5rem; }
+    .rv-pane.before .rv-pane__label { background: #f3e2e2; color: #8c1d2a; }
+    .rv-pane.after .rv-pane__label { background: #e6efe8; color: #2f6442; }
+    .rv-pane__stage { padding: 1.6rem; background: var(--color-surface-light, #fefbf6); flex: 1; display: flex; flex-direction: column; gap: 1rem; }
+    .rv-pane.before .rv-pane__stage { background: #fbf6f2; }
+    .rv-note { font-size: .85rem; color: var(--color-text-muted, #6b3b3b); padding: .8rem 1rem; background: var(--color-surface, #f7eae3); margin: 0; }
+
+    /* Mock device chrome for examples */
+    .mock {
+      background: var(--color-surface-card, #fff);
+      border: 1px solid var(--color-border-card, rgba(100,1,13,.14));
+      border-radius: 12px; padding: 1.2rem; font-size: .92rem;
+    }
+    .mock--burgundy { background: var(--color-burgundy, #64010d); color: #fff; border-color: transparent; }
+    .mock--cream { background: var(--color-surface, #f7eae3); }
+
+    /* mock CTA button */
+    .mbtn { display: inline-block; background: var(--color-burgundy, #64010d); color: #fff; border-radius: 999px; padding: .6rem 1.3rem; font-size: .92rem; text-decoration: none; border: 2px solid var(--color-burgundy, #64010d); }
+    .mbtn--ghost { background: transparent; color: var(--color-burgundy, #64010d); }
+    .mbtn--block { display: block; text-align: center; }
+    .mbtn-reassure { font-size: .78rem; color: var(--color-text-muted, #6b3b3b); margin: .5rem 0 0; }
+
+    .mlabel { font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: var(--color-gold, #b0852f); font-weight: 700; }
+    .chip { display: inline-block; font-size: .76rem; border: 1px solid var(--color-border-card, rgba(100,1,13,.2)); border-radius: 999px; padding: .15rem .6rem; margin: .15rem .2rem 0 0; }
+    .chip--bad { border-color: #d9a; color: #8c1d2a; text-decoration: line-through; opacity: .8; }
+    .chip--good { border-color: #8bbf9f; color: #2f6442; }
+
+    .strike { color: #8c1d2a; }
+    .muted { color: var(--color-text-muted, #6b3b3b); }
+    .small { font-size: .85rem; }
+
+    /* testimonial mini */
+    .tmini { background: var(--color-surface-card,#fff); border: 1px solid var(--color-border-card, rgba(100,1,13,.14)); border-radius: 12px; padding: 1rem; font-size: .85rem; }
+    .tmini__q { margin: 0 0 .6rem; }
+    .tmini__cite { font-size: .78rem; color: var(--color-text-muted,#6b3b3b); display: flex; align-items: center; gap: .5rem; }
+    .tmini__cite .av { width: 26px; height: 26px; border-radius: 50%; background: var(--color-surface,#f7eae3); display: inline-block; }
+
+    /* chooser mock */
+    .chooser { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+    @media (max-width: 560px){ .chooser { grid-template-columns: 1fr; } }
+    .chooser__col { border: 1px solid var(--color-border-card, rgba(100,1,13,.14)); border-radius: 12px; padding: 1rem; background: var(--color-surface-card,#fff); }
+    .chooser__col h5 { margin: 0 0 .5rem; font-size: 1rem; }
+    .chooser__col ul { margin: 0; padding-left: 1.1rem; font-size: .85rem; color: var(--color-text-muted,#6b3b3b); }
+
+    /* trust strip mock */
+    .trust { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: space-between; align-items: center; }
+    .trust__item { font-size: .85rem; }
+    .trust__item strong { display: block; font-size: 1.05rem; }
+
+    .rv-footer { padding: 2.5rem 0 4rem; color: var(--color-text-muted,#6b3b3b); font-size: .9rem; border-top: 1px solid var(--color-border, rgba(92,2,12,.12)); }
+
+    .rv-legend { display: flex; gap: 1.2rem; flex-wrap: wrap; font-size: .85rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+
+  <div class="rv-topbar">
+    <div class="rv-topbar__inner">
+      <strong>Design Review &middot; annahellmuth.com</strong>
+      <nav>
+        <a href="#context">Context</a>
+        <a href="#scorecard">Scorecard</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#examples">Visual examples</a>
+        <a href="#questions">Questions</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="rv-hero rv-wrap">
+    <p class="rv-kicker">Proposal for review &middot; nothing applied to the live site yet</p>
+    <h1>A business-aware design review, with proposed improvements</h1>
+    <p class="lead">The brand and craft are genuinely strong. The biggest wins are not a redesign, they are tightening conversion consistency and closing a few credibility leaks, so the site does its one job: turn the right person into a booked discovery call.</p>
+    <div class="rv-meta">
+      <span><strong>Mode:</strong> Redesign, preserve</span>
+      <span><strong>Dials:</strong> Variance 6 &middot; Motion 4 &middot; Density 3</span>
+      <span><strong>Pages reviewed:</strong> 7 templates</span>
+    </div>
+  </header>
+
+  <!-- CONTEXT -->
+  <section class="rv-section" id="context">
+    <div class="rv-wrap">
+      <h2>1. The business this design has to serve</h2>
+      <p class="rv-sub">Every recommendation below ladders up to one of these drivers, taken from your marketing and voice docs.</p>
+      <div class="rv-grid rv-grid--3">
+        <div class="rv-card">
+          <h4>One conversion</h4>
+          <p>Every page exists to move the right person to "Schedule your discovery call." That is the metric the design should optimize.</p>
+        </div>
+        <div class="rv-card">
+          <h4>Premium, low volume</h4>
+          <p>A high-value practice. The site must feel expensive and trustworthy. Polish and calm beat aggressive funneling.</p>
+        </div>
+        <div class="rv-card">
+          <h4>Trust is the lever</h4>
+          <p>"Finally, someone understands me." The design's job is to make a sensitive, discerning reader feel understood and safe.</p>
+        </div>
+        <div class="rv-card">
+          <h4>Sell movement</h4>
+          <p>Lead with relief, clarity, transformation. Credentials and methods support trust but never shout.</p>
+        </div>
+        <div class="rv-card">
+          <h4>Sensitive audience</h4>
+          <p>Self-aware professionals 25 to 45, often expat, multilingual. Calm and feminine, no hype, no pressure.</p>
+        </div>
+        <div class="rv-card">
+          <h4>No-pressure sales</h4>
+          <p>Reassurance is welcome. Urgency and scarcity tactics are off-brand and avoided throughout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCORECARD -->
+  <section class="rv-section" id="scorecard">
+    <div class="rv-wrap">
+      <h2>2. Scorecard</h2>
+      <p class="rv-sub">A quick read of where each page stands today. The pattern is clear: strong brand and trust, with conversion consistency and a few content leaks dragging the score.</p>
+      <div class="rv-tablewrap">
+        <table class="rv-table">
+          <thead>
+            <tr><th>Page</th><th>Conversion</th><th>Trust</th><th>Clarity</th><th>Polish</th><th>Note</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Home</td><td><span class="dot mid">&#9685;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot mid">&#9685;</span></td><td><span class="dot good">&#9679;</span></td><td>CTA repeated 4&times;, testimonials wall heavy, hero runs long</td></tr>
+            <tr><td>Counseling</td><td><span class="dot mid">&#9685;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot good">&#9679;</span></td><td>Good; CTA labels drift</td></tr>
+            <tr><td>Life coaching</td><td><span class="dot bad">&#9675;</span></td><td><span class="dot mid">&#9685;</span></td><td><span class="dot bad">&#9675;</span></td><td><span class="dot mid">&#9685;</span></td><td><strong>Contains broken placeholder copy</strong>; CTA label and destination drift</td></tr>
+            <tr><td>About</td><td><span class="dot good">&#9679;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot mid">&#9685;</span></td><td><span class="dot good">&#9679;</span></td><td>Rich and credible; very long; credentials could work harder</td></tr>
+            <tr><td>Contact</td><td><span class="dot mid">&#9685;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot mid">&#9685;</span></td><td>Clean; email-first copy competes with the booking embed</td></tr>
+            <tr><td>Blog</td><td><span class="dot good">&#9679;</span></td><td><span class="dot mid">&#9685;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot good">&#9679;</span></td><td>Best-structured template; use as the quality bar</td></tr>
+            <tr><td>Legal</td><td class="muted">&ndash;</td><td><span class="dot good">&#9679;</span></td><td><span class="dot good">&#9679;</span></td><td><span class="dot good">&#9679;</span></td><td>Fine</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rv-legend">
+        <span><span class="dot good">&#9679;</span> solid</span>
+        <span><span class="dot mid">&#9685;</span> needs work</span>
+        <span><span class="dot bad">&#9675;</span> problem</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="rv-section" id="roadmap">
+    <div class="rv-wrap">
+      <h2>3. Prioritized roadmap</h2>
+      <p class="rv-sub">Priority is business impact times confidence. Effort is rough: S under half a day, M about a day, L multi-day.</p>
+
+      <h3 class="rv-h3"><span class="rv-badge p0">P0</span> &nbsp;Do first: credibility and the one conversion</h3>
+      <div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">1</div>
+          <div class="rv-rec__body">
+            <h4>Fix the broken copy on Life Coaching</h4>
+            <p>The "Do I really need a coach?" intro contains corrupted text ("Say it to be delightful are my momma..."). A premium practice cannot ship gibberish on a money page.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: S</span><span class="rv-tag">Credibility</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">2</div>
+          <div class="rv-rec__body">
+            <h4>Standardize the primary CTA label everywhere</h4>
+            <p>One phrase: "Schedule your discovery call." Retire "Book a discovery call", "Book a free 30 min session with me", "Let's discuss the plan". One clear action converts better and reads as a more confident brand.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: S</span><span class="rv-tag">Conversion</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">3</div>
+          <div class="rv-rec__body">
+            <h4>Unify the CTA destination and behavior</h4>
+            <p>Today the same button goes three places: an in-page anchor, an external calendar in a new tab, and the contact page. Pick one model (recommended: land on the embedded scheduler) so intent converts in place.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Conversion</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">4</div>
+          <div class="rv-rec__body">
+            <h4>Add quiet reassurance under primary CTAs</h4>
+            <p>"Free &middot; 30 minutes &middot; no obligation." Lowers hesitation for a cautious audience without breaking the no-pressure rule.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: S</span><span class="rv-tag">Conversion</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="rv-h3"><span class="rv-badge p1">P1</span> &nbsp;High value: trust, self-selection, scannability</h3>
+      <div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">5</div>
+          <div class="rv-rec__body">
+            <h4>Curate the testimonials</h4>
+            <p>Lead with the bolded one-line transformation, full quote behind "read more" or a carousel, visible quote capped near 3 lines. The current wall is skimmed, not read. Curation reads as more premium.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Trust</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">6</div>
+          <div class="rv-rec__body">
+            <h4>Add a calm trust strip</h4>
+            <p>Qualifications (MD, psychologist, hypnotherapy in training), online since 2023, four languages, Location Independent Therapists. Factual, not boastful. Surfaced on home and service pages.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Trust</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">7</div>
+          <div class="rv-rec__body">
+            <h4>Add a "Counseling vs Coaching" chooser</h4>
+            <p>The "which is right for me?" fork is a core conversion decision. Promote it from inside an FAQ to a visible, visual chooser. The comparison already exists in your audience doc.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Self-selection</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">8</div>
+          <div class="rv-rec__body">
+            <h4>Tighten the home hero</h4>
+            <p>Get the value prop plus one CTA into the first viewport; move the long reflective paragraphs to the section below. First impression decides whether a sensitive reader stays.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Conversion</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">9</div>
+          <div class="rv-rec__body">
+            <h4>Unify the hero system across pages</h4>
+            <p>Home, counseling, coaching, and contact use four different hero patterns. One system with variants improves cohesion and maintainability.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Consistency</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">10</div>
+          <div class="rv-rec__body">
+            <h4>SEO and sharing</h4>
+            <p>Add ProfessionalService and Person structured data, Open Graph and Twitter cards, canonical tags. A discovery-led practice lives on being found and shared credibly.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Reach</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="rv-h3"><span class="rv-badge p2">P2</span> &nbsp;Polish and strategic</h3>
+      <div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">11</div>
+          <div class="rv-rec__body">
+            <h4>Multilingual plan</h4>
+            <p>At minimum signal "sessions in your language" as a trust element; ideally localized German, Ukrainian, and Russian landing pages with hreflang. The ideal client is frequently Ukrainian, Russian, or German.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: L</span><span class="rv-tag">Growth</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">12</div>
+          <div class="rv-rec__body">
+            <h4>Reading comfort on long pages</h4>
+            <p>Constrain body measure near 65 characters, break long runs with subheads and pull quotes, vary section layouts to avoid monotony, especially on life coaching.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Engagement</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">13</div>
+          <div class="rv-rec__body">
+            <h4>Move inline styles into components</h4>
+            <p>The pages carry many inline styles. Consolidating into the brand CSS makes future iteration faster and more consistent.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: L</span><span class="rv-tag">Maintainability</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">14</div>
+          <div class="rv-rec__body">
+            <h4>Decide the public label</h4>
+            <p>Hero says "creative &amp; ambitious souls"; strategy prefers "sensitive, thoughtful souls." Decide and apply consistently. Needs your sign-off.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: S</span><span class="rv-tag">Positioning</span></div>
+          </div>
+        </div>
+        <div class="rv-rec">
+          <div class="rv-rec__num">15</div>
+          <div class="rv-rec__body">
+            <h4>Imagery consistency</h4>
+            <p>Ensure warm, premium, feminine photography across pages with consistent treatment and aspect ratios. Photography carries the premium feeling more than any CSS.</p>
+            <div class="rv-rec__tags"><span class="rv-tag">Effort: M</span><span class="rv-tag">Brand</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL EXAMPLES -->
+  <section class="rv-section" id="examples">
+    <div class="rv-wrap">
+      <h2>4. Visual examples (before / after)</h2>
+      <p class="rv-sub">Illustrative mockups built with your real brand tokens, so you can see the proposals, not just read them. These are concepts for discussion, not final layouts.</p>
+
+      <!-- Example 1: CTA system -->
+      <h3 class="rv-h3"><span class="rv-badge p0">P0</span> &nbsp;A. One CTA: label, destination, reassurance</h3>
+      <div class="rv-ba">
+        <div class="rv-pane before">
+          <div class="rv-pane__label">Before</div>
+          <div class="rv-pane__stage">
+            <p class="small muted" style="margin:0">Same action, five different labels across the site:</p>
+            <div>
+              <span class="chip chip--bad">Schedule your discovery call</span>
+              <span class="chip chip--bad">Book a discovery call</span>
+              <span class="chip chip--bad">Book a free 30 min session with me</span>
+              <span class="chip chip--bad">Let's discuss the plan</span>
+            </div>
+            <p class="small muted" style="margin:.4rem 0 0">...and three destinations: in-page anchor, external calendar in a new tab, the contact page.</p>
+            <a href="#examples" class="mbtn" style="margin-top:.4rem">Book a free 30 min session with me</a>
+          </div>
+          <p class="rv-note">Mixed signals at the moment of intent. The reader relearns the button on every page.</p>
+        </div>
+        <div class="rv-pane after">
+          <div class="rv-pane__label">After</div>
+          <div class="rv-pane__stage">
+            <p class="small muted" style="margin:0">One label, one predictable destination:</p>
+            <div>
+              <span class="chip chip--good">Schedule your discovery call</span>
+            </div>
+            <p class="small muted" style="margin:.4rem 0 0">Always lands on the embedded scheduler. Plus a calm reassurance line:</p>
+            <a href="#examples" class="mbtn" style="margin-top:.4rem">Schedule your discovery call</a>
+            <p class="mbtn-reassure">Free &middot; 30 minutes &middot; no obligation</p>
+          </div>
+          <p class="rv-note">Confident, consistent, lower friction. Reassurance, not pressure.</p>
+        </div>
+      </div>
+
+      <!-- Example 2: Hero tighten -->
+      <h3 class="rv-h3"><span class="rv-badge p1">P1</span> &nbsp;B. Tighten the home hero</h3>
+      <div class="rv-ba">
+        <div class="rv-pane before">
+          <div class="rv-pane__label">Before</div>
+          <div class="rv-pane__stage">
+            <div class="mock">
+              <p style="font-size:1.1rem;font-weight:600;margin:.2rem 0">Online psychological counseling and life coaching</p>
+              <p class="small muted" style="font-style:italic;margin:.2rem 0">Available wherever you are, in four languages...</p>
+              <hr style="border:0;border-top:1px solid var(--color-border,#e3d3cb);margin:.7rem 0">
+              <p class="small muted" style="margin:.3rem 0">Shape your future self. Take the first step today.</p>
+              <p class="small muted" style="margin:.3rem 0">The thought of a life unlived is a potent call to action...</p>
+              <p class="small muted" style="margin:.3rem 0">We are our own toughest critics...</p>
+              <p class="small muted" style="margin:.3rem 0">Perhaps you long for a life brimming with joy...</p>
+              <p class="small muted" style="margin:.3rem 0">With the right guidance and dedicated support...</p>
+              <a href="#examples" class="mbtn" style="margin-top:.3rem">Schedule your discovery call</a>
+            </div>
+          </div>
+          <p class="rv-note">The primary action sits below four paragraphs. On a laptop the CTA is well past the fold.</p>
+        </div>
+        <div class="rv-pane after">
+          <div class="rv-pane__label">After</div>
+          <div class="rv-pane__stage">
+            <div class="mock">
+              <p class="mlabel">Online counseling &amp; coaching</p>
+              <p style="font-size:1.25rem;font-weight:600;margin:.3rem 0 .4rem">Shape your future self. Take the first step today.</p>
+              <p class="small muted" style="margin:0 0 .8rem">For sensitive, thoughtful souls ready for change that insight alone has not delivered. In English, German, Ukrainian, or Russian.</p>
+              <a href="#examples" class="mbtn">Schedule your discovery call</a>
+              <p class="mbtn-reassure">Free &middot; 30 minutes &middot; no obligation</p>
+            </div>
+            <p class="small muted" style="margin:0">The reflective paragraphs move just below, where they support rather than block the decision.</p>
+          </div>
+          <p class="rv-note">Value prop and CTA visible immediately. Warmth preserved, friction removed.</p>
+        </div>
+      </div>
+
+      <!-- Example 3: Testimonials -->
+      <h3 class="rv-h3"><span class="rv-badge p1">P1</span> &nbsp;C. Curate the testimonials</h3>
+      <div class="rv-ba">
+        <div class="rv-pane before">
+          <div class="rv-pane__label">Before</div>
+          <div class="rv-pane__stage">
+            <div class="tmini">
+              <p class="tmini__q">"Through our work together, I became aware of my negative patterns and inappropriate reactions, and I learned how to improve and regulate myself better, adopting a more mature approach to life. The best part is that, with your guidance, I was finally able to work deeply with my inner self, uncover and resolve many difficult emotions, and accelerate my healing process. Now, everything in my life is better than I ever expected..."</p>
+              <span class="tmini__cite"><span class="av"></span> Former client</span>
+            </div>
+            <p class="small muted" style="margin:0">Six long quotes like this in a row.</p>
+          </div>
+          <p class="rv-note">A wall of long testimonials gets skimmed. The transformation is buried mid-paragraph.</p>
+        </div>
+        <div class="rv-pane after">
+          <div class="rv-pane__label">After</div>
+          <div class="rv-pane__stage">
+            <div class="tmini">
+              <p class="tmini__q" style="font-weight:600;font-style:italic">"Everything in my life is better than I ever expected: my relationship with myself, my family, my work."</p>
+              <span class="tmini__cite"><span class="av"></span> Former client</span>
+              <p class="small" style="margin:.6rem 0 0"><a href="#examples">Read the full story</a></p>
+            </div>
+            <div class="tmini">
+              <p class="tmini__q" style="font-weight:600;font-style:italic">"From the very first session, I felt relief. I finally reached the inner lightness I had been longing for."</p>
+              <span class="tmini__cite"><span class="av"></span> Former client</span>
+            </div>
+          </div>
+          <p class="rv-note">Lead with the one-line transformation; depth on demand. Scannable and more premium.</p>
+        </div>
+      </div>
+
+      <!-- Example 4: Trust strip -->
+      <h3 class="rv-h3"><span class="rv-badge p1">P1</span> &nbsp;D. Calm trust strip</h3>
+      <div class="rv-ba">
+        <div class="rv-pane before">
+          <div class="rv-pane__label">Before</div>
+          <div class="rv-pane__stage">
+            <p class="small muted" style="margin:0">Credentials live only deep inside the About page:</p>
+            <div class="mock small muted">
+              ...My Education<br>Medical Doctor, Bogomolets National Medical University...<br>Psychologist, Institute of Effective Psychology...<br>(several screens down)
+            </div>
+          </div>
+          <p class="rv-note">The premium positioning has no visible proof on the pages where people decide.</p>
+        </div>
+        <div class="rv-pane after">
+          <div class="rv-pane__label">After</div>
+          <div class="rv-pane__stage">
+            <div class="mock mock--cream">
+              <div class="trust">
+                <div class="trust__item"><strong>MD &amp; psychologist</strong>Medical and psychological training</div>
+                <div class="trust__item"><strong>Since 2023</strong>Online practice</div>
+                <div class="trust__item"><strong>4 languages</strong>EN &middot; DE &middot; UK &middot; RU</div>
+                <div class="trust__item"><strong>Integrative</strong>Tailored to each client</div>
+              </div>
+            </div>
+            <p class="small muted" style="margin:0">A quiet band on home and service pages. Factual, not boastful, on-voice.</p>
+          </div>
+          <p class="rv-note">Visible credibility at the decision point, without showing off.</p>
+        </div>
+      </div>
+
+      <!-- Example 5: Chooser -->
+      <h3 class="rv-h3"><span class="rv-badge p1">P1</span> &nbsp;E. Counseling vs Coaching chooser</h3>
+      <div class="rv-ba">
+        <div class="rv-pane before">
+          <div class="rv-pane__label">Before</div>
+          <div class="rv-pane__stage">
+            <div class="mock small">
+              <p style="margin:.2rem 0;font-weight:600">FAQ</p>
+              <p class="muted" style="margin:.2rem 0">+ What's the difference between psychological counseling and life coaching?</p>
+              <p class="muted" style="margin:.2rem 0">+ What methods are you using?</p>
+            </div>
+            <p class="small muted" style="margin:0">The key decision is hidden inside a collapsed FAQ row.</p>
+          </div>
+          <p class="rv-note">The reader's central question is buried; many never expand it.</p>
+        </div>
+        <div class="rv-pane after">
+          <div class="rv-pane__label">After</div>
+          <div class="rv-pane__stage">
+            <div class="chooser">
+              <div class="chooser__col">
+                <h5>Counseling</h5>
+                <p class="small muted" style="margin:0 0 .4rem">Healing and emotional work, processing the past.</p>
+                <ul><li>Burnout, anxiety</li><li>Relationships, identity</li><li>Past-focused</li></ul>
+              </div>
+              <div class="chooser__col">
+                <h5>Coaching</h5>
+                <p class="small muted" style="margin:0 0 .4rem">Goals, structure, future direction.</p>
+                <ul><li>Ambitious goals</li><li>Transitions, performance</li><li>Future-focused</li></ul>
+              </div>
+            </div>
+            <p class="small muted" style="margin:0">"Still unsure? The discovery call helps you decide." Clarity itself can be the goal.</p>
+          </div>
+          <p class="rv-note">Helps the right client self-select fast, which raises qualified bookings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUESTIONS -->
+  <section class="rv-section" id="questions">
+    <div class="rv-wrap">
+      <h2>5. Open questions for you</h2>
+      <div class="rv-grid rv-grid--2">
+        <div class="rv-card"><h4>Booking model</h4><p>Keep the embedded Google Calendar as the single destination, or add a light "before we talk" step?</p></div>
+        <div class="rv-card"><h4>Public label</h4><p>Stay with "creative &amp; ambitious souls," or move to "sensitive, thoughtful souls" per strategy?</p></div>
+        <div class="rv-card"><h4>Multilingual</h4><p>Is German, Ukrainian, Russian localization in scope this year, or just signal it for now?</p></div>
+        <div class="rv-card"><h4>Copy latitude</h4><p>May I propose rewritten copy next session (life coaching especially), or keep edits visual-only?</p></div>
+      </div>
+      <p class="small muted" style="margin-top:1.5rem">Suggested phasing: <strong>Phase 1</strong> P0 items 1-4 (1 to 2 days) &middot; <strong>Phase 2</strong> P1 items 5-10 (3 to 4 days) &middot; <strong>Phase 3</strong> P2 items 11-15 (ongoing).</p>
+    </div>
+  </section>
+
+  <footer class="rv-footer rv-wrap">
+    <p>Companion document: <strong>design-review/DESIGN-REVIEW.md</strong>. This page and the markdown are proposals for review; no changes have been made to the live site.</p>
+  </footer>
+
+</body>
+</html>

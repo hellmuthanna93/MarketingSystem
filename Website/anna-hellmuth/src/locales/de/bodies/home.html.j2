@@ -1,0 +1,434 @@
+<!-- Hero Section -->
+ <section class="hero hero--landing">
+ <div class="container">
+ <div style="text-align: center; margin-bottom: 4rem;">
+ <h1 style="font-size: clamp(1.8rem, 4.5vw, 3rem); margin-bottom: 1.5rem; font-family: var(--font-serif); font-weight: var(--font-weight-heading);">Wissen allein ist nicht dasselbe wie echte Veränderung.</h1>
+ <p class="large" style="font-style: italic; color: var(--color-text-secondary);">Online psychologische Beratung und Life Coaching, auf Englisch, Deutsch, Ukrainisch, Russisch oder gemischt</p>
+ </div>
+ 
+ <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 3rem auto; max-width: var(--max-width);">
+ 
+ <div class="hero-grid hero-grid--split">
+ <div class="hero-image">
+ <div class="hero-image-wrapper">
+ <img src="{{ asset('images/1bc23666-cb2a-40a2-8735-5029651e0064.jpg') }}" alt="Anna Hellmuth Portrait" width="820" height="1000" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover;">
+ </div>
+ </div>
+ <div class="hero-content" style="padding-top: 1rem;">
+ <blockquote style="font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.5; font-style: italic; color: var(--color-accent); border-left: 3px solid var(--color-accent); padding-left: 1.5rem; margin: 0 0 1.5rem 0; font-weight: var(--font-weight-body);">
+ “I know myself and my typical patterns. I understand my struggles. Actually, I should know better and be able to act differently.”
+ </blockquote>
+ <p style="margin-bottom: 1.5rem; font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary);">
+ Is that what you keep thinking about yourself, yet you still find yourself reliving the same patterns over and over again?
+ </p>
+ <p style="margin-bottom: 1.5rem; font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary);">
+ Knowledge by itself is only one piece of the puzzle.
+ </p>
+ <p style="margin-bottom: 2.5rem; font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary);">
+ And one piece is not enough to see the whole picture. In my work with clients, we complete all the other pieces.
+ </p>
+ <a href="#intake" class="btn-primary">{{ site.cta }}</a>
+ </div>
+ </div>
+ <div style="text-align: left; margin-top: 5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+ <p style="font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1.5rem;">Many of my clients arrive already highly self-aware. They have read the books, listened to the podcasts, reflected deeply, and often spent years trying to understand themselves. Some have even shamed themselves into knowing better and discovered that shame doesn't work either. Some went further still, into disappointment and even quiet despair, until they stopped trying.</p>
+ <h3 style="font-family: var(--font-serif); font-weight: var(--font-weight-heading); font-size: 1.5rem; margin-bottom: 1rem;">The problem is not a lack of insight.</h3>
+ <p style="font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1.5rem;">And there is absolutely nothing wrong with your understanding. You are smart enough, capable enough, and conscientious enough.</p>
+ <h3 style="font-family: var(--font-serif); font-weight: var(--font-weight-heading); font-size: 1.5rem; margin-bottom: 1rem;">The problem is that lasting change requires more than insight alone.</h3>
+ <p style="font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1.5rem;">It needs emotional processing, recognition of subtle subconscious patterns, and a shift in your typical inner state. These are things that are almost impossible to do by yourself.</p>
+ <p style="font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1.5rem;">Exactly that is my daily work and great passion in life: to dive deep with you and come back stronger, happier, and healthier.</p>
+ <p style="font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 2rem;">I would be honored if you entrusted me to guide you on that journey as well.</p>
+ <div style="text-align: center;">
+ <a href="#intake" class="btn-primary">{{ site.cta }}</a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Services Path -->
+ <section>
+ <div class="container">
+ <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+ <h2>Meine Angebote</h2>
+ <p style="font-size: 1.15rem; color: var(--color-text-secondary); max-width: 800px; margin: 0 auto; font-weight: var(--font-weight-body);">Vom Umgang mit Lebenskrise bis zu mehr Erfüllung: Angebote für Ihren Weg</p>
+ </div>
+ <div class="services-grid services-grid--narrow">
+ <!-- Service Card 1 -->
+ <div class="service-card">
+ <div class="service-card-content">
+ <h3>Psychologische Beratung</h3>
+ <p>Emotionale Lasten lösen und innere Heilung finden</p>
+ <a href="{{ page_url('counseling') }}" class="btn-primary">Zur psychologischen Beratung</a>
+ </div>
+ </div>
+ <!-- Service Card 2 -->
+ <div class="service-card">
+ <div class="service-card-content">
+ <h3>Life Coaching</h3>
+ <p>Ambitionierte Ziele verwirklichen und neue Höhen erreichen</p>
+ <a href="{{ page_url('lifecoaching') }}" class="btn-primary">Zum Life Coaching</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Testimonials Grid (Dual Structure to match desktop/mobile Squarespace display) -->
+  <section class="bg-secondary" id="testimonials">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+        <h2>Was Klientinnen und Klienten über die Arbeit mit mir sagen</h2>
+        <p style="font-size: 0.95rem; font-style: italic; color: var(--color-text-secondary);">* Rückmeldungen werden anonym veröffentlicht, um die Privatsphäre zu schützen</p>
+      </div>
+
+      <!-- Desktop Testimonial Grid -->
+      <div class="hide-mobile">
+        <div class="testimonial-container grid-2" style="margin-bottom: 2.5rem;">
+          <div class="testimonial-card">
+            <div>
+              <p>“Through our work together, I became aware of my negative patterns and inappropriate reactions, and I learned how to improve and regulate myself better, adopting a more mature approach to life. The best part is that, with your guidance, I was finally able to work deeply with my inner self, uncover and resolve many difficult emotions, and accelerate my healing process.</p>
+              <p><strong><em>Now, everything in my life is better than I ever expected—my relationship with myself, my mom, my family, my romantic connection, and my friends.</em></strong> Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my 'saviour.'”</p>
+            </div>
+            <div class="client-info">
+              <img src="{{ asset('images/user_01a.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <p>“Turning to Anna was a lifesaver at a time when I felt like I was drowning and couldn’t cope on my own. From the very first session, I experienced a sense of relief, and with each new meeting, things became easier. Through tears, memories, and deep inner work, <strong><em>I finally reached what I had been longing for—inner lightness and emotional stability.</em></strong></p>
+              <p>Anna is a compassionate, attentive, and highly professional specialist who creates a safe space for processing even the most difficult experiences. I am sincerely grateful for her support and guidance and highly recommend her to anyone seeking a path to self-understanding and emotional balance.”</p>
+            </div>
+            <div class="client-info">
+              <img src="{{ asset('images/03.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-container" style="margin-bottom: 2.5rem;">
+          <div class="testimonial-card">
+            <div>
+              <p>“Anna gave me the best result a therapist could give in the short time we had because she found a method that would work best specifically for me. I'm a rationalizing type, so her approach to me was based on explaining how things work, with a justified expectation that I would put the information to good use.</p>
+              <p>She was so correct! <strong><em>Something clicked in my head, and not only did she help me work through a major traumatic event in my life, but I also just happened to find my soulmate within weeks after her therapy. (Go figure!)</em></strong> And I'm sure the seeds that she planted in my head will keep bearing fruit for years to come. I absolutely can't recommend her enough.”</p>
+            </div>
+            <div class="client-info">
+              <img src="{{ asset('images/user_04c.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-container grid-2-4-8" style="margin-bottom: 2.5rem;">
+          <div class="testimonial-card">
+            <div>
+              <p>“Thank you for our work together and for everything you do—for your professional approach, the safe space you create, and the knowledge you provide.</p>
+              <p><strong><em>You've been there with me every step of the way, supporting my transformations and making them so much smoother and faster.</em></strong> The importance of all this for me and for those around me cannot be overstated.”</p>
+            </div>
+            <div class="client-info">
+              <img src="{{ asset('images/01.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <p>“At first, I was skeptical—I had already tried therapy before and thought, What could I possibly learn that I don’t already know? But with Anna, I was able to talk about things I had never shared with my mother, my family, or even my closest friends. For the first time, I truly felt heard and understood.</p>
+              <p>Through our work together, I was able to process childhood traumas that had been affecting me throughout my adult life. These wounds were holding me back from moving forward and being happy. <strong><em>After a year of active, consistent therapy, I have changed tremendously.</em></strong> Of course, I still face difficult situations, stress, and unpleasant people, but now I know how to respond, how to process my emotions, and how to channel negative feelings constructively.</p>
+              <p><strong><em>Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings—and others have noticed this transformation as well.”</em></strong></p>
+            </div>
+            <div class="client-info">
+              <img src="{{ asset('images/04.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-container" style="margin-bottom: 2.5rem;">
+          <div class="testimonial-card">
+            <div>
+              <p>“I highly recommend Anna as an incredibly warm, knowledgeable and empathetic therapist. From the very first session, she made me feel completely safe and understood. She takes the time to really listen, asks thoughtful questions, and creates a space where I can be completely honest without any fear of judgment. She’s amazing at giving room for self-reflection and helping me explore my thoughts and feelings in a deeper way. We’ve had some truly eye-opening conversations and I always look forward to our next sessions.”</p>
+            </div>
+            <div class="client-info">
+              <img src="{{ asset('images/02.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-container grid-1">
+          <div class="testimonial-card">
+            <div>
+              <p>“When I first came to therapy, I was in a deep depression…Over these years, we’ve worked through hundreds of issues. Some of the most important ones:</p>
+              <ul>
+                <li>freeing myself from dysfunctional relationships and going through a peaceful divorce;</li>
+                <li>fully separating from my parents, especially my mother, while at the same time healing our relationship;</li>
+                <li>realizing that the career path I had been chasing was actually harming me, accepting that, and finding a new one—leading to a job that finally feels right;</li>
+                <li>learning to see my own worth, ask for a fair salary, and completely changing my approach to finances;</li>
+                <li>gradually and fully coming off antidepressants after nearly three years of taking them;</li>
+                <li>experiencing, for the first time, a truly healthy romantic relationship.</li>
+              </ul>
+              <p><strong><em>But the most valuable thing is that I have learned to listen to myself—my emotions, my feelings, my true desires.</em></strong> To notice changes within me and respond to them. To stand my ground, to walk away from situations that don’t feel right, to do things for myself simply because I want to, not because someone else expects it. And to do all this without feeling shame or guilt. <strong><em>I no longer need external praise or validation like I once did. And this allows me to not only live my own life in harmony but also to raise my daughter in kindness, peace, and confidence.</em></strong> And I see Anna’s role in all of this as immense. She guided me, explained things, and answered every question.</p>
+              <p>Our sessions are always warm and genuine. It’s a space free of judgment, where no word or expression feels out of place. A place of absolute acceptance and real, tangible help.”</p>
+            </div>
+            <div class="client-info">
+              <img src="{{ asset('images/06.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Testimonial Grid -->
+      <div class="hide-desktop">
+        <div class="testimonial-container grid-1" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="testimonial-card">
+            <p>“Now, everything in my life is better than I ever expected—my relationship with myself, my mom, my family, my romantic connection, and my friends. Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my ‘saviour‘.”</p>
+            <div class="client-info">
+              <img src="{{ asset('images/user_01a.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>“From the very first session, I experienced a sense of relief, and with each new meeting, things became easier. Through tears, memories, and deep inner work, I finally reached what I had been longing for—inner lightness and emotional stability.”</p>
+            <div class="client-info">
+              <img src="{{ asset('images/03.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>“Anna gave me the best result a therapist could give in the short time we had because she found a method that would work best specifically for me. Something clicked in my head, and not only did she help me work through a major traumatic event in my life, but I also just happened to find my soulmate within weeks after her therapy. (Go figure!) And I'm sure the seeds that she planted in my head will keep bearing fruit for years to come. I absolutely can't recommend her enough.”</p>
+            <div class="client-info">
+              <img src="{{ asset('images/user_04c.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>“After a year of active, consistent therapy, I have changed tremendously….Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings—and others have noticed this transformation as well.”</p>
+            <div class="client-info">
+              <img src="{{ asset('images/01.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>“Anna is amazing at giving room for self-reflection and helping me explore my thoughts and feelings in a deeper way. We’ve had some truly eye-opening conversations and I always look forward to our next sessions.”</p>
+            <div class="client-info">
+              <img src="{{ asset('images/04.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p>“But the most valuable thing is that I have learned to listen to myself—my emotions, my feelings, my true desires. I no longer need external praise or validation like I once did. And this allows me to not only live my own life in harmony but also to raise my daughter in kindness, peace, and confidence. And I see Anna’s role in all of this as immense. She guided me, explained things, and answered every question. Our sessions are always warm and genuine. It’s a space free of judgment, where no word or expression feels out of place. A place of absolute acceptance and real, tangible help.”</p>
+            <div class="client-info">
+              <img src="{{ asset('images/06.png') }}" alt="Client Avatar">
+              <span>— Ehemalige Klientin/Klient*</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- Journey Section -->
+ <section>
+ <div class="container">
+ <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+ <h2>Der Einstieg in ein neues Leben ist einfach</h2>
+ </div>
+ <div class="steps-text-grid">
+ <p class="step-text"><strong>Schritt 1:</strong> Kostenloses 30-minütiges Erstgespräch vereinbaren.</p>
+ <p class="step-text"><strong>Schritt 2:</strong> Fragen stellen und prüfen, ob wir zusammenpassen.</p>
+ <p class="step-text"><strong>Schritt 3:</strong> Wenn es passt, beginnen wir Ihre Veränderungsreise.</p>
+ </div>
+ <div style="text-align: center; margin-top: 4rem;">
+ <a href="#intake" class="btn-primary">{{ site.cta }}</a>
+ </div>
+ </div>
+ </section>
+
+ <!-- Discovery Session Benefits -->
+ <section class="bg-secondary opportunity-section" id="schedule">
+ <div class="container">
+ <div class="section-header opportunity-header">
+ <h2>Ein kostenloses 30-minütiges Gespräch mit mir ist eine Gelegenheit…</h2>
+ </div>
+
+ <div class="opportunity-card">
+ <ul class="opportunity-list">
+ <li>
+ <span class="opportunity-check" aria-hidden="true">✓</span>
+ <p><strong>Get a sense of who I am</strong> and determine if I’m the right specialist for you.</p>
+ </li>
+ <li>
+ <span class="opportunity-check" aria-hidden="true">✓</span>
+ <p><strong>Clarify your needs.</strong> Share your problem or challenge and find out whether psychological counseling or life coaching is the right answer for your needs.</p>
+ </li>
+ <li>
+ <span class="opportunity-check" aria-hidden="true">✓</span>
+ <p><strong>Explore the best approach.</strong> Understand if your situation requires long-term support or a focused, intensive process, and what kind of results you can expect.</p>
+ </li>
+ <li>
+ <span class="opportunity-check" aria-hidden="true">✓</span>
+ <p><strong>Get answers to your questions</strong> about my work approach and what to expect from working together.</p>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <!-- FAQ Accordion (Burgundy Red background block with white cards inside) -->
+ <section class="bg-dark section--quote">
+ <div class="container">
+ <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+ <h2 style="color: var(--color-text-light);">Häufig gestellte Fragen</h2>
+ </div>
+ <div class="accordion-block">
+ <div class="accordion-list">
+ 
+ <div class="accordion-item">
+ <details>
+ <summary>
+ <span class="accordion-title">Can I not address my inner issues on my own? Do I really need someone else's help?</span>
+ <div class="accordion-icon" aria-hidden="true"></div>
+ </summary>
+ <div class="accordion-content">
+ There are times when self-reliance is sufficient, and times when it's not. A skilled specialist can save you years of wasted time and unnecessary struggle, guiding you to insights you might never achieve independently.
+ </div>
+ </details>
+ </div>
+
+ <div class="accordion-item">
+ <details>
+ <summary>
+ <span class="accordion-title">What’s the difference between psychological counseling and life coaching? How do I identify my needs?</span>
+ <div class="accordion-icon" aria-hidden="true"></div>
+ </summary>
+ <div class="accordion-content">
+ <p style="margin-bottom: 1rem;">Life Coaching and psychological counseling are both wonderful tools for personal development. They both help you understand yourself better and they both have therapeutic potential, but they differ in focus and approach.</p>
+ <ul style="list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+ <li><strong>Psychological Counseling:</strong> Focuses on healing emotional issues and mental health.</li>
+ <li><strong>Life Coaching:</strong> Focuses on achieving goals and creating a structured path toward success.</li>
+ </ul>
+ <p><strong>Ask yourself:</strong> Are my issues emotional/past-focused (counseling), or goal/future-focused (coaching)? If you're still not sure what you need, just reach out to me.</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="accordion-item">
+ <details>
+ <summary>
+ <span class="accordion-title">What methods are you using in your work?</span>
+ <div class="accordion-icon" aria-hidden="true"></div>
+ </summary>
+ <div class="accordion-content">
+ I utilize an integrative approach, customizing my methods to meet your unique needs. My foundation is a humanistic approach, often enhanced with hypnotherapy, which has proven highly effective for many clients. Based on your personality and goals, I may also incorporate psychodynamic therapy, CBT, or systemic constellations. I select methods that will best serve your individual journey.
+ </div>
+ </details>
+ </div>
+
+ <div class="accordion-item">
+ <details>
+ <summary>
+ <span class="accordion-title">Can you guarantee the results I'm looking for?</span>
+ <div class="accordion-icon" aria-hidden="true"></div>
+ </summary>
+ <div class="accordion-content">
+ While I can't promise a specific result, I can assure you that I'll provide you with the resources and support necessary for your growth. In my experience, the most transformative results come from clients who are fully present in each session and integrate their insights into daily life. These are the individuals whose lives have seen dramatic change.
+ </div>
+ </details>
+ </div>
+
+ <div class="accordion-item">
+ <details>
+ <summary>
+ <span class="accordion-title">I work 9 to 5. Can I book evening or weekend appointments?</span>
+ <div class="accordion-icon" aria-hidden="true"></div>
+ </summary>
+ <div class="accordion-content">
+ For optimal effectiveness, I recommend scheduling sessions when you are fresh and well-rested. However, I understand that time zone differences and work schedules can be challenging. Therefore, I do offer some evening and weekend slots.
+ </div>
+ </details>
+ </div>
+
+ <div class="accordion-item">
+ <details>
+ <summary>
+ <span class="accordion-title">What happens if I have to cancel an appointment?</span>
+ <div class="accordion-icon" aria-hidden="true"></div>
+ </summary>
+ <div class="accordion-content">
+ Sessions can be rescheduled or cancelled free of charge up to 48 hours before the scheduled appointment. Cancellations made with less than 48 hours' notice will incur the full session fee.
+ </div>
+ </details>
+ </div>
+
+ <div class="accordion-item">
+ <details>
+ <summary>
+ <span class="accordion-title">Can we work together if I'm still figuring out what I want?</span>
+ <div class="accordion-icon" aria-hidden="true"></div>
+ </summary>
+ <div class="accordion-content">
+ Definitely. Lots of people I work with come to me because they're not really sure what they want. We can figure it out together, and that can be a goal on its own.
+ </div>
+ </details>
+ </div>
+
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Lernen Sie mich kennen, calendar + Instagram (matches live homepage) -->
+ <section id="intake">
+ <div class="container" style="max-width: 900px;">
+ <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+ <h2>Lernen Sie mich kennen</h2>
+ <p style="font-size: 1.1rem; color: var(--color-text-secondary); font-weight: var(--font-weight-body);">Wählen Sie unten Datum und Uhrzeit für unser kostenloses Erstgespräch.</p>
+ </div>
+ <div class="iframe-container">
+ <iframe title="Schedule a free 30-minute discovery call with Anna Hellmuth" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Mgq6aYzQTI2riYKKIKPOP2u7HRMDUxjf-Q-ihQCMh8zVe-oKYd9hQNNdoUy1i9QbvPDyMVC0i?gv=true" style="border: 0" width="100%" height="600" loading="lazy"></iframe>
+ </div>
+ <div class="instagram-grid" style="margin-top: 4rem;">
+ <a href="https://www.instagram.com/p/DYl11kHDuBB/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ <a href="https://www.instagram.com/p/DXyTrGEDd3r/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset_1.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ <a href="https://www.instagram.com/p/DXtRA1ijrOp/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset_2.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ <a href="https://www.instagram.com/p/DXoYhTCDv7B/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset_3.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ <a href="https://www.instagram.com/p/DXhORIgCFez/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset_4.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ <a href="https://www.instagram.com/p/DXcGW65DeqE/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset_5.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ <a href="https://www.instagram.com/p/DXWXBATjRrh/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset_6.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ <a href="https://www.instagram.com/p/DXRGelSjfw0/" target="_blank" rel="noopener" class="instagram-item">
+ <img src="{{ asset('images/image-asset_7.jpeg') }}" alt="Instagram post preview" width="400" height="400" loading="lazy">
+ <div class="instagram-overlay">Auf Instagram ansehen</div>
+ </a>
+ </div>
+ </div>
+ </section>

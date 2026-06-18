@@ -34,6 +34,6 @@ Strategic marketing reference for annahellmuth.com. Synthesized from the live we
 ## Quick rules
 
 1. **Sell movement, not process** — communicate relief, clarity, confidence, transformation
-2. **Public label:** *creative & ambitious souls* — ideal client profile is sharper in [audience.md](audience.md)
+2. **Public label:** *sensitive, thoughtful souls* — ideal client profile is sharper in [audience.md](audience.md)
 3. **New content** leads with outcomes; credentials and methods belong on trust pages
 4. **Minimum rhythm:** 1 counseling post + 1 coaching post per week

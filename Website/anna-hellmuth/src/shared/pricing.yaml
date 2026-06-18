@@ -1,0 +1,21 @@
+counseling:
+  single:
+    amount: 120
+    period_key: per_60min
+  package:
+    amount: 660
+    sessions: 6
+    per_session: 110
+coaching:
+  single:
+    amount: 180
+    period_key: per_60min
+  basic:
+    amount: 1020
+    sessions: 6
+    label_key: basic_breakthrough
+  profound:
+    amount: 1920
+    sessions: 12
+    label_key: profound_transformation
+cancel_hours: 48

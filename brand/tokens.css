@@ -5,13 +5,17 @@
 
 :root {
   /* Colors — semantic */
-  --color-accent: #64010d; /* used for: hero bg, primary buttons, header on dark */
-  --color-accent-hover: #4a0202; /* used for: button hover (site uses darker burgundy) */
+  --color-accent: #64010d; /* accent INK: headings, links, icons on the page surface. Lightens to rose in dark mode. */
+  --color-accent-hover: #4a0202; /* used for: link/secondary hover */
+  --color-burgundy: #64010d; /* solid FILLS that carry light text: buttons, burgundy sections, badges. Stays dark in both themes. */
+  --color-burgundy-hover: #4a0202; /* fill hover */
+  --color-gold: #b0852f; /* warm gold accent: checklist marks, step numerals, pull-quote citations */
   --color-text: #5c020c; /* used for: headings and body on cream sections */
   --color-text-muted: #5c020c; /* opacity applied in components */
   --color-text-on-dark: #ffffff; /* used for: nav, buttons on burgundy */
   --color-surface: #f7eae3; /* used for: main section backgrounds (darkAccent) */
   --color-surface-light: #fefbf6; /* light cream sections (Squarespace white/light theme) */
+  --color-surface-card: #ffffff; /* card / elevated surface background (flips in dark mode) */
   --color-border: rgba(92, 2, 12, 0.15);
   --color-border-card: rgba(100, 1, 13, 0.14);
   --color-border-strong: #5c020c;
@@ -85,4 +89,50 @@
   /* Motion */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
+
+  color-scheme: light;
+}
+
+/**
+ * Dark theme — warm burgundy-charcoal palette.
+ * Light mode stays untouched. Burgundy FILLS (--color-burgundy) keep carrying
+ * light text; the accent INK (--color-accent) lightens to a readable rose so
+ * the many heading/link/icon usages stay legible on the dark surface.
+ * Applied on system preference (unless the visitor opted into light) and on an
+ * explicit data-theme="dark".
+ */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-accent: #ef9aa4;
+  --color-accent-hover: #f6bcc3;
+  --color-text: #f3e7e3;
+  --color-text-muted: #d8c4bf;
+  --color-surface: #241015;
+  --color-surface-light: #1a090b;
+  --color-surface-card: #2c1419;
+  --color-border: rgba(243, 231, 227, 0.14);
+  --color-border-card: rgba(243, 231, 227, 0.18);
+  --color-border-strong: #f3e7e3;
+  --color-gold: #d8ad4e;
+  --light-accent-hsl: 348, 35%, 8%;
+  --dark-accent-hsl: 348, 30%, 12%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-accent: #ef9aa4;
+    --color-accent-hover: #f6bcc3;
+    --color-text: #f3e7e3;
+    --color-text-muted: #d8c4bf;
+    --color-surface: #241015;
+    --color-surface-light: #1a090b;
+    --color-surface-card: #2c1419;
+    --color-border: rgba(243, 231, 227, 0.14);
+    --color-border-card: rgba(243, 231, 227, 0.18);
+    --color-border-strong: #f3e7e3;
+    --color-gold: #d8ad4e;
+    --light-accent-hsl: 348, 35%, 8%;
+    --dark-accent-hsl: 348, 30%, 12%;
+  }
 }
