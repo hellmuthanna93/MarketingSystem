@@ -12,6 +12,76 @@ When people feel understood, trust develops naturally.
 
 ---
 
+## Anna's personal content principles
+
+### The purpose of my content
+
+My content should show how I think.
+
+It should:
+
+- Make deep observations
+- Name things that other people can't articulate
+- Connect theory with real life
+- Explain the "why" behind patterns
+
+### Capture ideas immediately
+
+Write or record content as soon as an idea appears:
+
+- After a client session
+- After I learn something
+- From my own stories and observations
+
+### Make my work obvious
+
+Invite people to work with me clearly.
+
+People should think:
+
+> "This is manageable."
+>
+> "This is exactly what I need help with."
+
+Translate the value of my work into language people understand.
+
+### Communicate my values and beliefs
+
+The main goal of my content is teaching and bringing value.
+
+I want people not only to consume information but also to understand how I see the world.
+
+### Know who I'm speaking to
+
+My content is for:
+
+- Deep thinkers
+- High achievers
+- Immigrants
+- People in transition
+- Successful people who don't feel fulfilled
+- People with internal blocks
+- People who want more satisfaction in life
+
+### The experience I want to create
+
+I want people to:
+
+- Understand themselves and life more deeply
+- Exhale
+- Realize that nothing is fundamentally wrong with them
+- Feel accepted and seen
+- Leave with useful ideas and practical tools
+- Naturally become interested in working with me
+
+### Reminders for myself
+
+- I am already deep enough. I don't need to overcomplicate things.
+- I am not my content. Creating content is simply one of my roles. It exists to serve my goals and my business, not to define who I am.
+- There are enough successful specialists whose English is worse than mine.
+
+---
+
 ## Personal content lens
 
 ### Speak
