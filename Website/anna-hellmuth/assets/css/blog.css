@@ -41,7 +41,7 @@
 .blog-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
-  border-color: hsla(var(--accent-hsl), 0.25);
+  border-color: var(--color-border-emphasis);
 }
 
 .blog-card__tag {

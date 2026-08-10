@@ -285,14 +285,20 @@
     const help = question.help.trim();
     helpEl.hidden = !help;
     helpEl.textContent = help;
-    progressEl.style.width = `${Math.min(92, 12 + history.length * 14)}%`;
+    progressEl.style.transform = `scaleX(${Math.min(92, 12 + history.length * 14) / 100})`;
     optionsEl.innerHTML = "";
 
     question.options.forEach((option) => {
+      const optionEl = document.createElement("div");
+      const text = document.createElement("p");
       const button = document.createElement("button");
+      optionEl.className = "quiz-option";
+      text.className = "quiz-option__text";
+      text.textContent = option.label;
       button.type = "button";
-      button.className = "quiz-option";
-      button.textContent = option.label;
+      button.className = "quiz-option__choose";
+      button.textContent = "Choose";
+      button.setAttribute("aria-label", `Choose: ${option.label}`);
       button.addEventListener("click", () => {
         const appliedScore = getAppliedScore(option);
         addScore(appliedScore);
@@ -303,7 +309,8 @@
           renderQuestion(option.next);
         }
       });
-      optionsEl.appendChild(button);
+      optionEl.append(text, button);
+      optionsEl.appendChild(optionEl);
     });
   }
 
@@ -314,7 +321,7 @@
       ? `<div class="quiz-result__actions">${ctas.map((cta) => `<a class="${cta.className} quiz-result__cta" href="${cta.href}"${cta.external ? ' target="_blank" rel="noopener"' : ''}>${cta.label}</a>`).join("")}</div>`
       : "";
     cardEl.hidden = true;
-    progressEl.style.width = "100%";
+    progressEl.style.transform = "scaleX(1)";
     resultEl.hidden = false;
     resultEl.innerHTML = `
       <p class="quiz-result__eyebrow">${result.eyebrow}</p>

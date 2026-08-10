@@ -1,0 +1,22 @@
+{
+  "files": [
+    "index.html",
+    "brand/index.html",
+    "styleguide/**/*.html",
+    "design-system/index.html",
+    "business-site/index.html",
+    "business-site/site/**/*.html",
+    "website/anna-hellmuth/en/**/*.html",
+    "website/anna-hellmuth/de/**/*.html",
+    "website/anna-hellmuth/uk/**/*.html",
+    "website/anna-hellmuth/ru/**/*.html",
+    "website/anna-hellmuth/index.html"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/.venv/**"
+  ],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}

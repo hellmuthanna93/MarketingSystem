@@ -20,6 +20,42 @@
   --color-border-card: rgba(100, 1, 13, 0.14);
   --color-border-strong: #5c020c;
 
+  /* Transparent brand roles — use these rather than inline colour formulas. */
+  --color-tap-highlight: hsla(var(--accent-hsl), 0.12);
+  --color-surface-frosted: hsla(var(--light-accent-hsl), 0.95);
+  --color-border-subtle: hsla(var(--accent-hsl), 0.05);
+  --color-border-muted: hsla(var(--accent-hsl), 0.08);
+  --color-border-interactive: hsla(var(--accent-hsl), 0.18);
+  --color-border-emphasis: hsla(var(--accent-hsl), 0.3);
+  --color-border-on-dark: hsla(var(--white-hsl), 0.2);
+  --color-border-on-dark-subtle: hsla(var(--white-hsl), 0.1);
+  --color-text-on-dark-muted: hsla(var(--white-hsl), 0.6);
+  --color-text-on-dark-soft: hsla(var(--white-hsl), 0.8);
+  --color-text-on-dark-subtle: hsla(var(--white-hsl), 0.9);
+  --color-text-on-dark-emphasis: rgba(250, 249, 246, 0.85);
+  --color-text-on-dark-overlay: rgba(250, 249, 246, 0.8);
+  --color-overlay-dark: hsla(var(--black-hsl), 0.35);
+  --color-overlay-dark-subtle: hsla(var(--black-hsl), 0.13);
+  --color-overlay-dark-strong: hsla(var(--black-hsl), 0.6);
+  --color-overlay-cream: rgba(250, 249, 246, 0.86);
+  --color-border-accent-subtle: rgba(100, 3, 3, 0.08);
+  --color-shadow-neutral-01: rgba(0, 0, 0, 0.01);
+  --color-shadow-neutral-03: rgba(0, 0, 0, 0.03);
+  --color-shadow-neutral-05: rgba(0, 0, 0, 0.05);
+  --color-shadow-ink-01: hsla(var(--black-hsl), 0.01);
+  --color-shadow-ink-02: hsla(var(--black-hsl), 0.02);
+  --color-shadow-ink-03: hsla(var(--black-hsl), 0.03);
+  --color-shadow-ink-04: hsla(var(--black-hsl), 0.04);
+  --color-shadow-ink-05: hsla(var(--black-hsl), 0.05);
+  --color-shadow-ink-06: hsla(var(--black-hsl), 0.06);
+  --color-shadow-accent-04: hsla(var(--accent-hsl), 0.04);
+  --color-shadow-accent-08: hsla(var(--accent-hsl), 0.08);
+  --color-shadow-accent-10: hsla(var(--accent-hsl), 0.1);
+  --color-shadow-accent-12: hsla(var(--accent-hsl), 0.12);
+  --color-shadow-accent-15: hsla(var(--accent-hsl), 0.15);
+  --color-shadow-accent-20: hsla(var(--accent-hsl), 0.2);
+  --gradient-accent-soft: linear-gradient(150deg, hsla(var(--accent-hsl), 0.04), hsla(var(--accent-hsl), 0.13));
+
   /* Squarespace HSL mirrors (optional, for alpha mixes) */
   --accent-hsl: 352.73, 98.02%, 19.8%;
   --black-hsl: 353.33, 95.74%, 18.43%;
