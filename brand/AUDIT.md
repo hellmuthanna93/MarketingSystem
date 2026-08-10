@@ -1,4 +1,4 @@
-# Brand audit — annahellmuth.com
+# Brand audit - annahellmuth.com
 
 **Source:** [annahellmuth.com](https://annahellmuth.com/) (Squarespace, Fluid Engine)  
 **Audited:** 2026-06-02 (computed styles + Squarespace theme variables)
@@ -36,9 +36,9 @@
 
 ## Components (live site)
 
-- **Primary CTA:** Solid burgundy pill, white label, Source Serif 4 regular (400) — “Schedule your discovery call”
+- **Primary CTA:** Solid burgundy pill, white label, Source Serif 4 regular (400) - “Schedule your discovery call”
 - **Service cards:** H3 + short description, secondary CTAs (“Discover Counseling Services”)
-- **Testimonials:** Long quotes, attribution “— Former client*”
+- **Testimonials:** Long quotes, attribution “- Former client*”
 - **FAQ:** Accordion with H3 questions
 - **Steps:** Numbered journey (“Step 1… Step 2… Step 3…”)
 
@@ -54,4 +54,4 @@
 
 ## Not in brand tokens (legacy)
 
-The `projects/table/` emotion table uses a separate orange/gray palette — **Phase 2** realign to this audit.
+The `projects/table/` emotion table uses a separate orange/gray palette - **Phase 2** realign to this audit.

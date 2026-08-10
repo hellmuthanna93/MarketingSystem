@@ -1,4 +1,4 @@
-# Table — Таблица чувств
+# Table - Таблица чувств
 
 Educational emotion grid (Russian copy).
 

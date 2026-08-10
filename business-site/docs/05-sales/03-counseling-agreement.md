@@ -11,10 +11,10 @@ Clarity protects both sides: scope, money, cancellation, confidentiality, and th
 | Section | Content |
 |---------|---------|
 | Parties | Anna Hellmuth (practice) and client |
-| Service description | Psychological **counseling (Beratung)** and/or **coaching** — explicitly **not Psychotherapie** / not medical treatment |
+| Service description | Psychological **counseling (Beratung)** and/or **coaching** - explicitly **not Psychotherapie** / not medical treatment |
 | Scope & limits | No diagnosis, no treatment of illness, no guaranteed outcomes; referral if needs exceed scope |
 | Format | Online, 60-min sessions (90 for Clarity Session); platform |
-| Fees & payment | Per price list; payment on booking |
+| Fees & payment | Per price list; direct bank transfer or Revolut transfer |
 | Cancellation | Free up to 48h before; full fee within 48h |
 | Confidentiality | What is kept private; lawful exceptions |
 | Data protection | GDPR/DSGVO basis; tools used; consent for health data |
@@ -33,4 +33,4 @@ Include a clear line that the service is not emergency care and direct clients t
 
 ## So what
 
-A clean Beratung/coaching agreement protects clients, keeps Anna in scope, and satisfies GDPR — turn the checklist into the fill-in template ([../09-toolkit/07-counseling-agreement-template.md](../09-toolkit/07-counseling-agreement-template.md)) and have it lawyer-reviewed. Onboarding flow: [04-onboarding.md](04-onboarding.md).
+A clean Beratung/coaching agreement protects clients, keeps Anna in scope, and satisfies GDPR - turn the checklist into the fill-in template ([../09-toolkit/07-counseling-agreement-template.md](../09-toolkit/07-counseling-agreement-template.md)) and have it lawyer-reviewed. Onboarding flow: [04-onboarding.md](04-onboarding.md).

@@ -1,6 +1,6 @@
 # Savings & Runway
 
-> A solo practice has variable income. A cash cushion turns that volatility from a stressor into a non-issue — and protects the no-pressure brand (you sell better when you don't need the sale).
+> A solo practice has variable income. A cash cushion turns that volatility from a stressor into a non-issue - and protects the no-pressure brand (you sell better when you don't need the sale).
 
 ## Why a cushion matters here
 
@@ -20,7 +20,7 @@
 
 ## Smoothing variable income
 
-- **Separate accounts:** operating, taxes (set aside USt/income tax as earned — see [01-legal-setup-germany.md](01-legal-setup-germany.md)), and personal pay.
+- **Separate accounts:** operating, taxes (set aside USt/income tax as earned - see [01-legal-setup-germany.md](01-legal-setup-germany.md)), and personal pay.
 - **Owner's draw:** pay yourself a steady monthly amount from the operating account, not whatever happened to land.
 - **Tax reserve:** ring-fence a percentage of every payment so tax time is a non-event.
 
@@ -32,4 +32,4 @@
 
 ## So what
 
-A 3–6+ month cushion plus disciplined account separation makes income volatility irrelevant and keeps the brand calm and non-pushy. Set the number, automate the reserves. Projections that inform the target: [05-financial-projections.md](05-financial-projections.md).
+A 3-6+ month cushion plus disciplined account separation makes income volatility irrelevant and keeps the brand calm and non-pushy. Set the number, automate the reserves. Projections that inform the target: [05-financial-projections.md](05-financial-projections.md).

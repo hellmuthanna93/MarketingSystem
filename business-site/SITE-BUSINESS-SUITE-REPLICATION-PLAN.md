@@ -1,7 +1,7 @@
 # Business Suite Replication Plan & Full Inventory
 
 > **Purpose:** Hand this document to an AI agent (or human team) building the same kind of extensive operating manual for **another solo or small professional services business**.  
-> **Source reference:** Design Engineering Studio repo — `docs/` (source of truth) + `site/` (generated HTML view) + `agents/skills/` (portable agent instructions).  
+> **Source reference:** Design Engineering Studio repo - `docs/` (source of truth) + `site/` (generated HTML view) + `agents/skills/` (portable agent instructions).  
 > **Last inventoried:** June 2026
 
 ---
@@ -12,7 +12,7 @@ This is not a marketing website. It is a **complete business operating system** 
 
 | Layer | Role |
 | --- | --- |
-| **`docs/`** | Markdown source of truth — strategy, brand, sales, ops, finance, roadmap, and copy-paste toolkit |
+| **`docs/`** | Markdown source of truth - strategy, brand, sales, ops, finance, roadmap, and copy-paste toolkit |
 | **`site/`** | Generated, styled HTML documentation site for reading, sharing, and printing |
 | **`agents/skills/`** | Portable Agent Skills that enforce voice, facts, and channel-specific output quality |
 | **`build.mjs`** | Static site generator: Markdown → themed HTML with sidebar nav, TOC, Mermaid, dark mode |
@@ -29,12 +29,12 @@ This is not a marketing website. It is a **complete business operating system** 
 
 **Design philosophy:**
 
-1. **Markdown first** — agents and humans edit `.md`; HTML is disposable output.
-2. **Numbered sections** — forces a logical build order (strategy before marketing before sales).
-3. **Strategy + execution split** — sections 01–08 are thinking; section 09 is copy-paste assets.
-4. **One thesis, many layers** — overview doc holds the mental model; everything else drills down.
-5. **Operating principles as guardrails** — when in doubt, docs point back to principles in `00-overview`.
-6. **Compound assets** — every engagement should produce a case study, template, or content piece.
+1. **Markdown first** - agents and humans edit `.md`; HTML is disposable output.
+2. **Numbered sections** - forces a logical build order (strategy before marketing before sales).
+3. **Strategy + execution split** - sections 01-08 are thinking; section 09 is copy-paste assets.
+4. **One thesis, many layers** - overview doc holds the mental model; everything else drills down.
+5. **Operating principles as guardrails** - when in doubt, docs point back to principles in `00-overview`.
+6. **Compound assets** - every engagement should produce a case study, template, or content piece.
 
 ---
 
@@ -48,8 +48,8 @@ project-root/
 ├── package.json              # { "dependencies": { "marked": "^12" }, "scripts": { "build": "node build.mjs" } }
 ├── build.mjs                 # Static site generator (see §2.3)
 ├── assets/
-│   └── styles.css            # Suite chrome (sidebar, prose, cards, TOC) — NOT regenerated
-├── docs/                     # SOURCE OF TRUTH — agent edits here
+│   └── styles.css            # Suite chrome (sidebar, prose, cards, TOC) - NOT regenerated
+├── docs/                     # SOURCE OF TRUTH - agent edits here
 │   ├── 00-overview.md
 │   ├── 01-strategy/
 │   ├── 02-brand/
@@ -60,7 +60,7 @@ project-root/
 │   ├── 07-finance-legal/
 │   ├── 08-roadmap/
 │   └── 09-toolkit/
-├── site/                     # GENERATED — do not hand-edit; run npm run build
+├── site/                     # GENERATED - do not hand-edit; run npm run build
 │   ├── index.html
 │   ├── 00-overview.html
 │   ├── 01-strategy/ … 09-toolkit/
@@ -73,9 +73,9 @@ project-root/
 
 Optional but recommended alongside the suite:
 
-- **`website/`** — public lead-gen site (separate from internal business suite)
-- **`AGENT-PLAYBOOK.md`** — brainstorm of agent-driven tasks that extend the suite
-- **`media/`** — images referenced from docs (logo concepts, etc.; copied to `site/media/` at build)
+- **`website/`** - public lead-gen site (separate from internal business suite)
+- **`AGENT-PLAYBOOK.md`** - brainstorm of agent-driven tasks that extend the suite
+- **`media/`** - images referenced from docs (logo concepts, etc.; copied to `site/media/` at build)
 
 ### 2.2 HTML site features (what `build.mjs` produces)
 
@@ -89,8 +89,8 @@ Each page includes:
 - **On-page TOC** (auto-generated from `##` and `###` headings when ≥3 exist)
 - **Prose styling** for headings, lists, blockquotes, code, tables
 - **Mermaid diagrams** rendered client-side (flowcharts in strategy, funnel, wedge offer)
-- **Internal link rewriting** — `.md` → `.html` automatically
-- **Dashboard cards** — README content + one card per section listing all pages
+- **Internal link rewriting** - `.md` → `.html` automatically
+- **Dashboard cards** - README content + one card per section listing all pages
 
 Tech stack: **zero framework**, one npm dependency (`marked`), Google Fonts (Inter + JetBrains Mono), Mermaid 11 from CDN.
 
@@ -202,7 +202,7 @@ npm run serve          # build + python http.server on :4173
 | `02-finance-model.md` | Finance Model | Revenue targets, cost structure, margin assumptions |
 | `03-savings-and-cushion.md` | Savings & Runway | Side-venture runway, transition triggers |
 | `04-templates.md` | Documents & Templates Checklist | Invoices, contracts, filings |
-| `05-financial-projections.md` | Financial Projections | Year 1–3 scenarios |
+| `05-financial-projections.md` | Financial Projections | Year 1-3 scenarios |
 
 > **Adaptation note:** Replace jurisdiction-specific legal/finance docs for the target business's country. Keep the same *structure* (setup checklist, finance model, runway, projections).
 
@@ -215,11 +215,11 @@ npm run serve          # build + python http.server on :4173
 | `03-milestones-and-kpis.md` | Milestones & KPIs | Measurable success criteria by phase |
 | `04-task-backlog.md` | Master Task Backlog | Consolidated checkbox list linking to all other docs |
 
-### 09 · Toolkit (16 pages) — execution layer
+### 09 · Toolkit (16 pages) - execution layer
 
 | File | Title | Asset type | Volume |
 | --- | --- | --- | --- |
-| `00-toolkit-index.md` | Toolkit Index | Navigation + usage rules | — |
+| `00-toolkit-index.md` | Toolkit Index | Navigation + usage rules | - |
 | `01-outreach-playbook.md` | Outreach Playbook | Warm intro, LinkedIn, phone, email templates | Multi-channel scripts |
 | `02-linkedin-launch-posts.md` | LinkedIn Launch Posts | Full post copy | **12 posts** |
 | `03-content-calendar.md` | Content Calendar | 90-day posting plan | 3×/week LinkedIn + monthly newsletter |
@@ -277,7 +277,7 @@ Skills live in `agents/skills/` as folders with `SKILL.md` (YAML frontmatter + m
 Create `.cursor/rules/voice.mdc` (or equivalent) with `alwaysApply: true`:
 
 1. Read `studio-voice` + `humanizer-patterns` before any user-facing text
-2. Read `studio-profile` — no invented facts or numbers
+2. Read `studio-profile` - no invented facts or numbers
 3. Layer the matching channel skill
 4. Draft → humanize pass → self-check
 
@@ -297,10 +297,10 @@ The HTML suite uses a **documentation chrome** skinned with the business's desig
 | --- | --- |
 | Layout | Fixed 300px sidebar + fluid content; max prose width ~760px |
 | Typography | Inter (UI + prose), JetBrains Mono (code) |
-| Colors | Imported from `website/design-system/tokens.css` — indigo primary, neutral surfaces |
+| Colors | Imported from `website/design-system/tokens.css` - indigo primary, neutral surfaces |
 | Dark mode | `.dark` class on `<html>`; toggled via button; respects `prefers-color-scheme` initially |
 | Components | `.prose`, `.toc`, `.cards` / `.card`, `.sidebar`, blockquotes, code blocks |
-| Motion | `motion.css` — micro transitions; respects `prefers-reduced-motion` |
+| Motion | `motion.css` - micro transitions; respects `prefers-reduced-motion` |
 | Diagrams | Mermaid flowcharts in strategy, offerings, marketing, overview |
 | Footer | "Generated from Markdown · node build.mjs · [Business name] business suite" |
 
@@ -312,7 +312,7 @@ Source CSS: `assets/styles.css` (hand-maintained, copied to `site/assets/` at bu
 
 Use this sequence for another business. Each phase ends with **shippable artifacts**, not endless strategy.
 
-### Phase 0 — Scaffold (Day 1)
+### Phase 0 - Scaffold (Day 1)
 
 - [ ] Create repo layout (`docs/`, `agents/skills/`, `assets/`, `build.mjs`, `package.json`)
 - [ ] Port or write `build.mjs` and verify empty build works
@@ -320,56 +320,56 @@ Use this sequence for another business. Each phase ends with **shippable artifac
 - [ ] Create `studio-profile` skill with **real** facts only (bio, offers, pricing placeholders marked TBD)
 - [ ] Create `studio-voice` skill from founder's existing writing samples
 
-### Phase 1 — Foundation docs (Week 1)
+### Phase 1 - Foundation docs (Week 1)
 
 Build in dependency order:
 
-1. `00-overview.md` — thesis, north star, operating principles, section map
-2. `01-strategy/` — all 8 files (positioning and ICP are critical path)
-3. `02-brand/` — at minimum: brand strategy, voice, messaging, voice reference
-4. `03-offerings/` — service catalog + **one wedge offer** fully productized
+1. `00-overview.md` - thesis, north star, operating principles, section map
+2. `01-strategy/` - all 8 files (positioning and ICP are critical path)
+3. `02-brand/` - at minimum: brand strategy, voice, messaging, voice reference
+4. `03-offerings/` - service catalog + **one wedge offer** fully productized
 
 **Exit criteria:** A stranger can read overview + strategy + wedge offer and understand what the business sells, to whom, and why it's credible.
 
-### Phase 2 — Go-to-market docs (Week 2)
+### Phase 2 - Go-to-market docs (Week 2)
 
-5. `04-marketing/` — strategy, content engine, channels, funnel, outreach plan
-6. `05-sales/` — process, proposals, contracts outline, onboarding
-7. `08-roadmap/` — 90-day plan + master task backlog (pulls checkboxes from everywhere)
+5. `04-marketing/` - strategy, content engine, channels, funnel, outreach plan
+6. `05-sales/` - process, proposals, contracts outline, onboarding
+7. `08-roadmap/` - 90-day plan + master task backlog (pulls checkboxes from everywhere)
 
 **Exit criteria:** 90-day launch plan is executable; backlog has 50+ concrete checkboxes.
 
-### Phase 3 — Operations & finance (Week 2–3)
+### Phase 3 - Operations & finance (Week 2-3)
 
-8. `06-operations/` — tools, workflow, SOPs, quality bar
-9. `07-finance-legal/` — jurisdiction-specific setup ( **not** generic placeholders)
+8. `06-operations/` - tools, workflow, SOPs, quality bar
+9. `07-finance-legal/` - jurisdiction-specific setup ( **not** generic placeholders)
 
 **Exit criteria:** Founder knows legal next steps, target rates, and runway math.
 
-### Phase 4 — Toolkit burst (Week 3–4)
+### Phase 4 - Toolkit burst (Week 3-4)
 
 10. `09-toolkit/` index + sales templates (proposal, SOW, discovery script, emails)
 11. Wedge deliverable template (audit report or equivalent)
 12. Outreach playbook
-13. **Social content batches** — minimum viable:
+13. **Social content batches** - minimum viable:
     - 12 launch LinkedIn posts
     - 12 proof/authority LinkedIn posts
     - 90-day content calendar
-    - One Instagram batch (10–14 posts) if visual channel matters
+    - One Instagram batch (10-14 posts) if visual channel matters
 
 **Exit criteria:** Founder can run a discovery call, send a proposal, and publish 4 weeks of content without writing from scratch.
 
-### Phase 5 — Depth & series (Week 4+)
+### Phase 5 - Depth & series (Week 4+)
 
 14. Long-form content series (e.g. 28-post interleaved calendar)
 15. Visual strategy doc for carousels/Reels
 16. Topic-specific social packs tied to lead magnets
 17. Remaining brand docs (logo concepts, full design system)
-18. `AGENT-PLAYBOOK.md` — agent task ideas for ongoing extension
+18. `AGENT-PLAYBOOK.md` - agent task ideas for ongoing extension
 
 **Exit criteria:** 90+ days of content exists; sales assets cover full funnel.
 
-### Phase 6 — Polish & wire
+### Phase 6 - Polish & wire
 
 - [ ] Run `npm run build`; fix broken internal links
 - [ ] Add Mermaid diagrams to overview, wedge offer, funnel
@@ -446,7 +446,7 @@ Replace these elements; keep the structure.
 
 ---
 
-## 9. Quality bar — what makes it "extensive"
+## 9. Quality bar - what makes it "extensive"
 
 The suite is considered complete at v1 when all of the following are true:
 
@@ -455,12 +455,12 @@ The suite is considered complete at v1 when all of the following are true:
 - [ ] Every function of a solo consultancy has a home doc (strategy → cash collection)
 - [ ] At least one **productized wedge offer** is fully specified end-to-end
 - [ ] Master backlog consolidates tasks from all sections
-- [ ] Toolkit separates **strategy** (sections 01–08) from **execution** (section 09)
+- [ ] Toolkit separates **strategy** (sections 01-08) from **execution** (section 09)
 
 ### Content depth
 
 - [ ] ~6,000+ lines of Markdown across 60+ files
-- [ ] 90+ social posts drafted (not outlines — full copy)
+- [ ] 90+ social posts drafted (not outlines - full copy)
 - [ ] 8+ fill-in templates (proposal, SOW, report, emails, invoice, discovery script, outreach)
 - [ ] Voice reference grounded in real writing samples
 - [ ] 90-day calendar maps posts to weeks
@@ -560,7 +560,7 @@ These are **not required** for the core business suite but demonstrate how the t
 5. **Extend** toolkit by adding numbered files (`15-new-pack.md`) and rebuilding
 6. **Track** execution in `08-roadmap/04-task-backlog.md`
 
-Never hand-edit `site/` HTML — it is wiped on every build.
+Never hand-edit `site/` HTML - it is wiped on every build.
 
 ---
 

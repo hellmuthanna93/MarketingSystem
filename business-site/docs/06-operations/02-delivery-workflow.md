@@ -1,6 +1,6 @@
 # Delivery Workflow
 
-End-to-end flow for delivering counseling, coaching, and the wedge — designed to be repeatable and to protect Anna's time and energy.
+End-to-end flow for delivering counseling, coaching, and the wedge - designed to be repeatable and to protect Anna's time and energy.
 
 ## Full engagement flow
 
@@ -18,11 +18,11 @@ flowchart LR
 
 ## Per-session loop
 
-1. **Prep** — review prior notes + intake; set an intention for the session.
-2. **Session (60 / 90 min)** — recognition → work → grounding; hold the quality bar ([04-quality-bar.md](04-quality-bar.md)).
-3. **Post-session notes** — brief, secure, EU-hosted; capture themes and next focus (never in non-covered tools).
-4. **Between-session** — coaching: action plan/assignments; counseling: as appropriate.
-5. **Continuity** — confirm next session.
+1. **Prep** - review prior notes + intake; set an intention for the session.
+2. **Session (60 / 90 min)** - recognition → work → grounding; hold the quality bar ([04-quality-bar.md](04-quality-bar.md)).
+3. **Post-session notes** - brief, secure, EU-hosted; capture themes and next focus (never in non-covered tools).
+4. **Between-session** - coaching: action plan/assignments; counseling: as appropriate.
+5. **Continuity** - confirm next session.
 
 ## Wedge (Clarity Session) flow
 
@@ -31,7 +31,7 @@ Follows the SOP in [../03-offerings/02-wedge-offer-clarity-session.md](../03-off
 ## Energy & scheduling principles
 
 - Anna prefers well-rested sessions; cluster sessions to protect the 2 free days.
-- Cap sessions/day in line with the work-hour limit — depth requires presence.
+- Cap sessions/day in line with the work-hour limit - depth requires presence.
 - Build buffer for notes and summaries (especially wedge deliverables).
 
 ## Handoffs & continuity

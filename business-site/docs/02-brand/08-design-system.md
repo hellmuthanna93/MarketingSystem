@@ -1,6 +1,6 @@
 # Design System
 
-> **Pointer doc.** The component library is [design-system/index.html](../../../design-system/index.html); the styling cheat sheet is [brand/DESIGN.md](../../../brand/DESIGN.md); components live in [brand/components.css](../../../brand/components.css). Do not duplicate styles — link the brand CSS.
+> **Pointer doc.** The component library is [design-system/index.html](../../../design-system/index.html); the styling cheat sheet is [brand/DESIGN.md](../../../brand/DESIGN.md); components live in [brand/components.css](../../../brand/components.css). Do not duplicate styles - link the brand CSS.
 
 ## What exists
 
@@ -14,13 +14,13 @@
 
 ## Key components (for any studio-owned surface)
 
-- `.btn-primary` — burgundy pill, white text, Source Serif 4 400
-- `.btn-light` — outline variant for dark backgrounds
-- `.services-card` + `.services-button` — white cards with full-width CTA
-- `.testimonial-card` on `.section--burgundy` — white quote cards
-- `.section--cream` / `--white` / `--light` / `--burgundy` — section backgrounds
-- `.faq-details` — `<details>` accordion
-- `.brand-link` — context-aware link color
+- `.btn-primary` - burgundy pill, white text, Source Serif 4 400
+- `.btn-light` - outline variant for dark backgrounds
+- `.services-card` + `.services-button` - white cards with full-width CTA
+- `.testimonial-card` on `.section--burgundy` - white quote cards
+- `.section--cream` / `--white` / `--light` / `--burgundy` - section backgrounds
+- `.faq-details` - `<details>` accordion
+- `.brand-link` - context-aware link color
 
 ## HTML boilerplate for a new suite page
 

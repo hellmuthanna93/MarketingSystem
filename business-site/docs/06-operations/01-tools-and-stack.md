@@ -17,20 +17,20 @@ A lean online stack. Every tool that touches client data must be GDPR-safe with 
 | Function | Option | DPA needed? |
 |----------|--------|-------------|
 | Video sessions | Zoom (EU data option) or equivalent | Yes |
-| Payments | Stripe / Wise / SEPA | Yes |
-| Booking + payment for wedge/packages | Calendar tool with payment, or Stripe link | Yes |
-| Session notes | Encrypted/EU-hosted notes (TBD) | Yes — health data |
+| Payments | Direct bank transfer / Revolut transfer | Yes |
+| Booking | Calendar tool; payment details sent separately | Yes |
+| Session notes | Encrypted/EU-hosted notes (TBD) | Yes - health data |
 | Newsletter | Double-opt-in provider (e.g. EU-based) | Yes |
-| Intake forms | GDPR-safe form tool | Yes — health data |
+| Intake forms | GDPR-safe form tool | Yes - health data |
 | Async video (summaries, welcome) | Loom or similar | Yes if client data |
 | Content scheduling | Buffer/Later or native | No client data |
 
 ## Selection principles
 
-- **GDPR first** — prefer EU-hosted or DPA-covered providers; client/health data is special category.
-- **Simple over sprawling** — fewer tools, less admin, more free time.
-- **Reliability** — sessions and payments must just work.
-- **Brand consistency** — client-facing surfaces use `brand/*.css`.
+- **GDPR first** - prefer EU-hosted or DPA-covered providers; client/health data is special category.
+- **Simple over sprawling** - fewer tools, less admin, more free time.
+- **Reliability** - sessions and payments must just work.
+- **Brand consistency** - client-facing surfaces use `brand/*.css`.
 
 ## Data hygiene
 

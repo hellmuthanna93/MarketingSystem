@@ -1,5 +1,5 @@
 /**
- * Presentational components — aligned with annahellmuth.com
+ * Presentational components - aligned with annahellmuth.com
  */
 
 .section {
@@ -31,7 +31,7 @@
   max-width: var(--layout-content-width);
 }
 
-/* Primary CTA — pill button */
+/* Primary CTA - pill button */
 .btn-primary {
   display: inline-block;
   font-family: var(--font-body);
@@ -59,7 +59,7 @@
   opacity: 0.95;
 }
 
-/* Header nav CTA — compact; in-page CTAs keep default .btn-primary padding */
+/* Header nav CTA - compact; in-page CTAs keep default .btn-primary padding */
 .nav-cta .btn-primary {
   padding: var(--button-padding-y-nav) var(--button-padding-x-nav);
   font-size: var(--text-button-size-nav);

@@ -31,7 +31,7 @@ The goal is not to sound smart. The goal is to make the right person feel *"she 
 |--------|-------|
 | IG / LI single post | One insight; recognition-led; soft optional CTA |
 | Carousel | One insight per slide; slide 1 = recognition; last = soft CTA optional |
-| Reel / TikTok | Hook + body + soft close, 30–60s |
+| Reel / TikTok | Hook + body + soft close, 30-60s |
 | Blog | Flowing paragraphs; movement-first opening; credentials in bio |
 | Newsletter | One theme; personal lens; CTA only if natural |
 
@@ -60,7 +60,7 @@ Relevance · Specificity · Authenticity · Emotional connection · Depth · Bus
 
 1. Things Anna has genuinely struggled with
 2. Things she has genuinely learned
-3. Patterns observed repeatedly in clients (anonymized — see [../03-offerings/05-case-study-strategy.md](../03-offerings/05-case-study-strategy.md))
+3. Patterns observed repeatedly in clients (anonymized - see [../03-offerings/05-case-study-strategy.md](../03-offerings/05-case-study-strategy.md))
 4. Ideas she genuinely believes
 
 Not: generic educational content or modality explanations.

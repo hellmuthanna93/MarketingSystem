@@ -1,6 +1,6 @@
 # Voice Reference (evidence-based)
 
-> Built from Anna's **real** published writing — website pages and blog posts in [Website/anna-hellmuth/](../../../Website/anna-hellmuth/). Every example below is quoted from actual copy, not invented. Use this to calibrate new writing and to ground the `practice-voice` skill.
+> Built from Anna's **real** published writing - website pages and blog posts in [Website/anna-hellmuth/](../../../Website/anna-hellmuth/). Every example below is quoted from actual copy, not invented. Use this to calibrate new writing and to ground the `practice-voice` skill.
 
 ## Source material
 
@@ -40,7 +40,7 @@ Warm, grounded reframe; no blame, no clinical coldness.
 
 > "As someone who moved from surgical medicine through my own burnout into psychology, I care about the whole picture…"
 
-Authority is shown through experience, not listed as a flex — and it comes *after* the recognition, not before.
+Authority is shown through experience, not listed as a flex - and it comes *after* the recognition, not before.
 
 ### 6. Closes with possibility + soft, optional invitation
 
@@ -59,11 +59,11 @@ Anna mixes lengths deliberately:
 - Blunt: *"Understanding is not the same as release."* (6 words)
 - Flowing: *"Psychological counseling creates space to go deeper than analysis: to process what your mind catalogued but your body still holds, to rebuild self-worth that does not depend on output…"* (long, breathing)
 
-New copy should do the same — never all-medium-length sentences (a key AI tell; see `humanizer-patterns.md`).
+New copy should do the same - never all-medium-length sentences (a key AI tell; see `humanizer-patterns.md`).
 
 ## Reusable voice prompt
 
-> Write as Anna Hellmuth. Open on the reader's real, specific experience using "you". Name the pattern precisely (concrete details they'll recognize). State one grounded reframe — change is possible, insight alone isn't enough. Speak as an equal who has been there; mention credentials only as lived story, late, never as a flex. Mix sentence lengths: at least one blunt short line and one flowing long one. End on an image or a soft, optional invitation — never pressure. No slogans, no hype, no "research shows", no emoji.
+> Write as Anna Hellmuth. Open on the reader's real, specific experience using "you". Name the pattern precisely (concrete details they'll recognize). State one grounded reframe - change is possible, insight alone isn't enough. Speak as an equal who has been there; mention credentials only as lived story, late, never as a flex. Mix sentence lengths: at least one blunt short line and one flowing long one. End on an image or a soft, optional invitation - never pressure. No slogans, no hype, no "research shows", no emoji.
 
 ## So what
 

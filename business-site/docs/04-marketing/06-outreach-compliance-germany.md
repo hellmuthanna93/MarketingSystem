@@ -6,14 +6,14 @@
 
 Anna is a medical doctor offering counseling/coaching. Three regimes apply: **UWG** (unfair competition / unsolicited contact), **HWG** (advertising for health services), and **GDPR/DSGVO** (data, especially health data). Getting these right protects the practice and the brand.
 
-## UWG §7 — unsolicited contact
+## UWG §7 - unsolicited contact
 
 - **No cold email or cold calls** to individuals without prior explicit consent (opt-in).
 - **No cold DMs** that amount to advertising to people who haven't engaged.
 - **Newsletter** requires **double opt-in** with clear consent and a working unsubscribe.
 - Warm/inbound only: people who follow, comment, message, or request contact.
 
-## HWG (Heilmittelwerbegesetz) — health advertising
+## HWG (Heilmittelwerbegesetz) - health advertising
 
 Anna's medical status raises HWG sensitivity. Avoid:
 
@@ -33,7 +33,7 @@ Do instead:
 - Market as **psychological counseling (Beratung) and coaching**, NOT Psychotherapie (a protected activity), unless the legal basis is confirmed (see [../07-finance-legal/01-legal-setup-germany.md](../07-finance-legal/01-legal-setup-germany.md)).
 - Symptom language is fine as **audience recognition** in content; copy must not promise to **treat or cure** clinical conditions.
 
-## GDPR / DSGVO — health data is special category
+## GDPR / DSGVO - health data is special category
 
 - Health data = Art. 9 special category; explicit consent + strong safeguards.
 - Tools touching client data (calendar, video, notes, payment, email) need an **Auftragsverarbeitungsvertrag (AVV/DPA)**; prefer EU-hosted / DPA-covered providers.

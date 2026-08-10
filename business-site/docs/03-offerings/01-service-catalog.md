@@ -7,22 +7,20 @@ The full ladder of what the practice offers, from free entry to flagship package
 | Rung | Offer | Format | Price | Status |
 |------|-------|--------|-------|--------|
 | 0 | Discovery call | 30 min online | Free | Live |
-| 1 | **Clarity Session** (wedge) | 90 min + written summary | €250–€300 | **Proposed / TBD** |
+| 1 | **Clarity Session** (wedge) | 90 min + written summary | €250-€300 | **Proposed / TBD** |
 | 2 | Counseling single session | 60 min | €120 | Live |
-| 2 | Coaching single session | 60 min | €180 | Live |
 | 3 | Counseling 6-pack | 6 × 60 min | €660 (€110/ea) | Live |
-| 3 | Coaching Basic Breakthrough | 6 sessions | €1,020 | Live |
-| 4 | Coaching Profound Transformation | 12 sessions | €1,920 | Live |
+| 4 | The Next Chapter | 16-week 1:1 program + written support + follow-up | €1,950 | Paid pilot |
 
 ## Scope summaries
 
 ### Discovery call (free)
 
-A 30-minute mutual fit check — not therapy. Understand the situation, decide counseling vs coaching, discuss format/frequency/pricing, and choose a next step. No obligation. Detail: [../05-sales/01-sales-process.md](../05-sales/01-sales-process.md).
+A 30-minute mutual fit check - not therapy. Understand the situation, decide counseling vs coaching, discuss format/frequency/pricing, and choose a next step. No obligation. Detail: [../05-sales/01-sales-process.md](../05-sales/01-sales-process.md).
 
 ### Clarity Session (proposed wedge)
 
-A single 90-minute session plus a 1–2 page written pattern summary delivered within 72 hours. For people who want to experience the depth and leave with a clear map before committing to a package. Full spec: [02-wedge-offer-clarity-session.md](02-wedge-offer-clarity-session.md).
+A single 90-minute session plus a 1-2 page written pattern summary delivered within 72 hours. For people who want to experience the depth and leave with a clear map before committing to a package. Full spec: [02-wedge-offer-clarity-session.md](02-wedge-offer-clarity-session.md).
 
 ### Counseling (past / emotional lane)
 
@@ -30,15 +28,21 @@ Healing-oriented work: emotional processing, regulation, attachment, shame, body
 
 ### Coaching (future / goals lane)
 
-Forward-oriented work: goals, transitions, identity change, authentic success — with tailored action plans and between-session assignments. Basic Breakthrough (6) to build momentum; Profound Transformation (12) for deep, sustained change. Tagline: *Realize your ambitious goals and ascend to new heights.*
+Forward-oriented work for international professionals facing a meaningful life
+direction or transition. The 16-week program includes 12 core sessions, weekly
+written support, live hypno-meditations during relevant sessions, a personal
+transition plan, and a follow-up one month later. It is the only coaching
+offer. The introductory paid-pilot price is €1,950. Its working public name is
+The Next Chapter, to be reviewed once more before publication.
 
 ## How clients move up the ladder
 
 ```
-Discovery call → (Clarity Session) → single or package → renewal / continued package
+Discovery call → (Clarity Session) → counseling service or coaching program
 ```
 
-Packages are recommended over singles — depth needs continuity, and the economics reward commitment (see [../01-strategy/07-pricing-and-packaging.md](../01-strategy/07-pricing-and-packaging.md)).
+The coaching program is a complete commitment rather than a menu of single
+sessions.
 
 ## So what
 

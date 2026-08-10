@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invoice (Rechnung) — Germany Template — Anna Hellmuth Business Suite</title>
+  <title>Invoice (Rechnung) - Germany Template - Anna Hellmuth Business Suite</title>
   <script>(function(){try{var t=localStorage.getItem("suite-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,9 +41,12 @@
     </div>
     <div class="suite-content-wrap">
       <article class="suite-prose">
-        <h1>Invoice (Rechnung) — Germany Template</h1>
+        <h1>Invoice (Rechnung) - Germany Template</h1>
 <blockquote>
-<p><strong>Not tax advice.</strong> A German-compliant invoice template per §14 UStG, with a §19 Kleinunternehmer variant. Confirm USt treatment per service with a Steuerberater (<a href="../07-finance-legal/01-legal-setup-germany.html">../07-finance-legal/01-legal-setup-germany.md</a>). Replace <code>{{placeholders}}</code>.</p>
+<p><strong>Not tax advice.</strong> Anna currently applies the Kleinunternehmerregelung under<br />
+§19 UStG, so block B is the working default and VAT is not added or shown<br />
+separately. Recheck the wording with a Steuerberater if her status changes.<br />
+Replace <code>{{placeholders}}</code>.</p>
 </blockquote>
 <hr />
 <h2 id="template">Template</h2>
@@ -60,7 +63,7 @@ Steuernummer: {{Steuernummer}} {{/ USt-IdNr. if applicable}}</p>
 {{Adresse}}</p>
 <p>Rechnungsnummer: {{fortlaufende Nr., z. B. 2026-014}}<br />
 Rechnungsdatum: {{TT.MM.JJJJ}}<br />
-Leistungszeitraum: {{TT.MM.JJJJ – TT.MM.JJJJ}}</p>
+Leistungszeitraum: {{TT.MM.JJJJ - TT.MM.JJJJ}}</p>
 <table>
 <thead>
 <tr>
@@ -81,14 +84,14 @@ Leistungszeitraum: {{TT.MM.JJJJ – TT.MM.JJJJ}}</p>
 </tr>
 <tr>
 <td>2</td>
-<td>{{z. B. Coaching-Sitzung, 60 Min.}}</td>
-<td>{{...}}</td>
-<td>€{{...}}</td>
-<td>€{{...}}</td>
+<td>{{16-wöchiges 1:1-Coachingprogramm}}</td>
+<td>{{1}}</td>
+<td>€{{1.950,00}}</td>
+<td>€{{1.950,00}}</td>
 </tr>
 </tbody>
 </table>
-<p>{{— Choose ONE of the following blocks —}}</p>
+<p>{{- Choose ONE of the following blocks -}}</p>
 <p><strong>A) Standard (USt-pflichtig):</strong><br />
 Nettobetrag: €{{...}}<br />
 zzgl. {{19}} % USt: €{{...}}<br />
@@ -102,6 +105,7 @@ zzgl. {{19}} % USt: €{{...}}<br />
 <hr />
 <p>Zahlbar bis {{TT.MM.JJJJ}} auf folgendes Konto:<br />
 {{Kontoinhaber}} · IBAN {{...}} · BIC {{...}}<br />
+Alternativ per Revolut-Überweisung an: {{Revolut-Zahlungsdaten}}<br />
 Verwendungszweck: {{Rechnungsnummer}}</p>
 <p>Vielen Dank für Ihr Vertrauen.</p>
 </blockquote>
@@ -115,18 +119,22 @@ Verwendungszweck: {{Rechnungsnummer}}</p>
 <li>[ ] Invoice date</li>
 <li>[ ] Service date / period</li>
 <li>[ ] Quantity + description of each service</li>
-<li>[ ] Net amount + USt rate/amount — OR §19 note — OR §4 Nr. 14 exemption note</li>
+<li>[ ] Net amount + USt rate/amount - OR §19 note - OR §4 Nr. 14 exemption note</li>
 <li>[ ] Total amount</li>
-<li>[ ] Payment terms + bank details</li>
+<li>[ ] Payment terms + bank and Revolut transfer details</li>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Which block (A/B/C) applies depends on Anna's USt status and whether a service qualifies as Heilbehandlung — <strong>confirm with a Steuerberater</strong>; therapeutic vs coaching portions may be treated differently.</li>
+<li>Block B is the current default under Anna's Kleinunternehmer status. Recheck<br />
+  if her status changes; therapeutic and coaching services may be treated<br />
+  differently.</li>
 <li>Keep invoices per German retention rules (commonly up to 10 years).</li>
 <li>Use one consistent numbering scheme.</li>
 </ul>
 <h2 id="so-what">So what</h2>
-<p>A compliant, fill-in invoice with the three USt scenarios so Anna can bill correctly once her tax status is confirmed. Part of the document set in <a href="../07-finance-legal/04-templates.html">../07-finance-legal/04-templates.md</a>.</p>
+<p>A fill-in invoice with the current §19 default and alternatives for a future<br />
+tax-status change. Part of the document set in<br />
+<a href="../07-finance-legal/04-templates.html">../07-finance-legal/04-templates.md</a>.</p>
         <footer class="suite-footer">Generated from <code>docs/09-toolkit/08-invoice-template-germany.md</code> · Anna Hellmuth business suite</footer>
       </article>
       <aside class="suite-toc" aria-label="On this page"><p class="suite-toc__title">On this page</p><ul><li class=""><a href="#template">Template</a></li><li class=""><a href="#required-fields-checklist-14-ustg">Required fields checklist (§14 UStG)</a></li><li class=""><a href="#notes">Notes</a></li><li class=""><a href="#so-what">So what</a></li></ul></aside>

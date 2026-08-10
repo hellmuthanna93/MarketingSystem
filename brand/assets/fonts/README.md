@@ -1,6 +1,6 @@
 # Fonts
 
-The marketing system uses **Source Serif 4** from [Google Fonts](https://fonts.google.com/specimen/Source+Serif+4) for all text — headings and body.
+The marketing system uses **Source Serif 4** from [Google Fonts](https://fonts.google.com/specimen/Source+Serif+4) for all text - headings and body.
 
 ## Load in HTML
 
@@ -18,7 +18,7 @@ Adjust `../` depth per folder. No Adobe Typekit or other font services are requi
 
 ## Weights
 
-Source Serif 4 variable font (**200–900**); headings **600**, buttons **400**. Semantic tokens in `brand/tokens.css` (`--font-weight-body`, `--font-weight-button`, etc.) map to these and intermediate values where needed.
+Source Serif 4 variable font (**200-900**); headings **600**, buttons **400**. Semantic tokens in `brand/tokens.css` (`--font-weight-body`, `--font-weight-button`, etc.) map to these and intermediate values where needed.
 
 ## Fallback
 

@@ -1,6 +1,6 @@
-# Anna Hellmuth — Business Suite
+# Anna Hellmuth - Business Suite
 
-A complete **business operating system** for Anna Hellmuth's online psychological counseling and life coaching practice — strategy, brand, offerings, marketing, sales, operations, finance/legal, roadmap, and a copy-paste execution toolkit.
+A complete **business operating system** for Anna Hellmuth's online psychological counseling and life coaching practice - strategy, brand, offerings, marketing, sales, operations, finance/legal, roadmap, and a copy-paste execution toolkit.
 
 This is **not** the public website (that lives in [`../Website/anna-hellmuth/`](../Website/anna-hellmuth/)). This is the internal manual for running and growing the practice.
 
@@ -62,7 +62,7 @@ Open [http://localhost:4173/business-site/site/00-overview.html](http://localhos
 ## Conventions
 
 - Facts/prices come only from `practice-profile`. Unknowns are **TBD**.
-- The **Clarity Session** wedge is **proposed/TBD** — not published until Anna confirms name, price, and promise.
+- The **Clarity Session** wedge is **proposed/TBD** - not published until Anna confirms name, price, and promise.
 - Legal/finance content is DACH-specific and **not legal advice**; confirm with a professional.
-- No brand hex in HTML — link `../brand/tokens.css`, `typography.css`, `components.css`.
-- Do not hand-edit `site/` — it is wiped and regenerated on each build.
+- No brand hex in HTML - link `../brand/tokens.css`, `typography.css`, `components.css`.
+- Do not hand-edit `site/` - it is wiped and regenerated on each build.

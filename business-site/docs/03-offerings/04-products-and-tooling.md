@@ -1,6 +1,6 @@
 # Products & Tooling
 
-> Leverage beyond 1:1 hours. These are **future / optional** — the core practice is 1:1. Build only when they serve the north star (depth + freedom), not as busywork.
+> Leverage beyond 1:1 hours. These are **future / optional** - the core practice is 1:1. Build only when they serve the north star (depth + freedom), not as busywork.
 
 ## Why consider products
 
@@ -26,7 +26,7 @@ They must never dilute the premium, depth-led brand or become a hype-y "course f
 
 - Outcome-led naming and promise (movement, not process)
 - Same voice and visual brand (`practice-voice`, `brand/*.css`)
-- Honest — no guaranteed outcomes, no hype
+- Honest - no guaranteed outcomes, no hype
 - GDPR-compliant capture (double opt-in for email; see [../04-marketing/06-outreach-compliance-germany.md](../04-marketing/06-outreach-compliance-germany.md))
 - Each product should feed the funnel (toward discovery call / wedge / package)
 

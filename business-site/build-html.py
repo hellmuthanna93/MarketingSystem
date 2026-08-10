@@ -292,7 +292,7 @@ def page_html(title: str, body: str, current_html: str, source_note: str, toc_ht
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{html.escape(title)} — Anna Hellmuth Business Suite</title>
+  <title>{html.escape(title)} - Anna Hellmuth Business Suite</title>
   <script>(function(){{try{{var t=localStorage.getItem("suite-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -392,7 +392,7 @@ def main() -> None:
         build_page(README, "readme.html")
         print("  readme.html")
 
-    # Copy dashboard index — link to site from parent; also write a site index redirect note
+    # Copy dashboard index - link to site from parent; also write a site index redirect note
     site_index = SITE / "index.html"
     dashboard_src = ROOT / "index.html"
     if dashboard_src.exists():

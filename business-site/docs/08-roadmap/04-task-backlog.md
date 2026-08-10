@@ -5,7 +5,7 @@ Consolidated, actionable checklist pulling from every section. Each task links t
 ## Offer & wedge
 
 - [ ] Confirm Clarity Session name ([../03-offerings/02-wedge-offer-clarity-session.md](../03-offerings/02-wedge-offer-clarity-session.md))
-- [ ] Confirm wedge price within €250–€300 ([../01-strategy/07-pricing-and-packaging.md](../01-strategy/07-pricing-and-packaging.md))
+- [ ] Confirm wedge price within €250-€300 ([../01-strategy/07-pricing-and-packaging.md](../01-strategy/07-pricing-and-packaging.md))
 - [ ] Decide whether wedge price credits toward a package ([../03-offerings/02-wedge-offer-clarity-session.md](../03-offerings/02-wedge-offer-clarity-session.md))
 - [ ] Build wedge intake form ([../03-offerings/02-wedge-offer-clarity-session.md](../03-offerings/02-wedge-offer-clarity-session.md))
 - [ ] Finalize wedge written-summary template ([../09-toolkit/06-wedge-deliverable-template.md](../09-toolkit/06-wedge-deliverable-template.md))
@@ -71,7 +71,7 @@ Consolidated, actionable checklist pulling from every section. Each task links t
 
 ## Growth & relationships
 
-- [ ] Nurture 1–2 referral relationships/month ([../04-marketing/07-outreach-plan.md](../04-marketing/07-outreach-plan.md))
+- [ ] Nurture 1-2 referral relationships/month ([../04-marketing/07-outreach-plan.md](../04-marketing/07-outreach-plan.md))
 - [ ] Send package renewal invitations ([../09-toolkit/05-client-emails.md](../09-toolkit/05-client-emails.md))
 - [ ] Collect opt-in anonymous testimonials ([../03-offerings/05-case-study-strategy.md](../03-offerings/05-case-study-strategy.md))
 - [ ] Quarterly warm check-in with opted-in past clients ([../04-marketing/07-outreach-plan.md](../04-marketing/07-outreach-plan.md))

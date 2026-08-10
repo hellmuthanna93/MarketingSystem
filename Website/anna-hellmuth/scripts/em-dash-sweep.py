@@ -11,48 +11,48 @@ LOCALES = ROOT / "src" / "locales"
 MANIFEST = ROOT / "src" / "pages-manifest.yaml"
 
 CITE_ATTRIBUTION = re.compile(
-    r"[—–]\s*(Former client|Ehemalige Klientin|Carl Gustav Jung|Steve Biddulph)",
+    r"[\u2013\u2014]\s*(Former client|Ehemalige Klientin|Carl Gustav Jung|Steve Biddulph)",
     re.IGNORECASE,
 )
 
 PHRASE_REPLACEMENTS = [
-    (r" — and ", ", and "),
-    (r" — but ", ", but "),
-    (r" — or ", ", or "),
-    (r" — including ", ", including "),
-    (r" — no obligation", ", no obligation"),
-    (r" — wherever ", ", wherever "),
-    (r" — typically ", ", typically "),
-    (r" — always ", ", always "),
-    (r" — not just ", ", not just "),
-    (r" — in sequence", ", in sequence"),
-    (r" — from ", ", from "),
-    (r" — auf ", ", auf "),
-    (r"Erfüllung — Angebote", "Erfüllung: Angebote"),
-    (r" — one ", ": one "),
-    (r" — a sense ", ", a sense "),
-    (r" — the sense ", ", the sense "),
-    (r" — becoming ", ": becoming "),
-    (r"potential—but", "potential, but"),
-    (r"Witnessing — the", "Witnessing: the"),
-    (r"countries — and", "countries and"),
-    (r"aligned — from", "aligned, from"),
-    (r"strength — until", "strength, until"),
-    (r"Art\. 6 — typically", "Art. 6, typically"),
-    (r"Anna Hellmuth — ", "Anna Hellmuth, "),
-    (r" \| Reach Out To Me — Anna", " | Reach Out To Me | Anna"),
-    (r"Legal Notice — Anna", "Legal Notice | Anna"),
-    (r"Privacy Policy — Anna", "Privacy Policy | Anna"),
-    (r"Datenschutzerklärung — Anna", "Datenschutzerklärung | Anna"),
-    (r"Blog \| Anna Hellmuth — ", "Blog | Anna Hellmuth | "),
-    (r" — ", ", "),
-    (r"methods—a path", "methods, a path"),
-    (r"myself—through", "myself: through"),
-    (r"badly—now", "badly, now"),
-    (r"level\)—fingers", "level). Fingers"),
+    (r" - and ", ", and "),
+    (r" - but ", ", but "),
+    (r" - or ", ", or "),
+    (r" - including ", ", including "),
+    (r" - no obligation", ", no obligation"),
+    (r" - wherever ", ", wherever "),
+    (r" - typically ", ", typically "),
+    (r" - always ", ", always "),
+    (r" - not just ", ", not just "),
+    (r" - in sequence", ", in sequence"),
+    (r" - from ", ", from "),
+    (r" - auf ", ", auf "),
+    (r"Erfüllung - Angebote", "Erfüllung: Angebote"),
+    (r" - one ", ": one "),
+    (r" - a sense ", ", a sense "),
+    (r" - the sense ", ", the sense "),
+    (r" - becoming ", ": becoming "),
+    (r"potential-but", "potential, but"),
+    (r"Witnessing - the", "Witnessing: the"),
+    (r"countries - and", "countries and"),
+    (r"aligned - from", "aligned, from"),
+    (r"strength - until", "strength, until"),
+    (r"Art\. 6 - typically", "Art. 6, typically"),
+    (r"Anna Hellmuth - ", "Anna Hellmuth, "),
+    (r" \| Reach Out To Me - Anna", " | Reach Out To Me | Anna"),
+    (r"Legal Notice - Anna", "Legal Notice | Anna"),
+    (r"Privacy Policy - Anna", "Privacy Policy | Anna"),
+    (r"Datenschutzerklärung - Anna", "Datenschutzerklärung | Anna"),
+    (r"Blog \| Anna Hellmuth - ", "Blog | Anna Hellmuth | "),
+    (r" - ", ", "),
+    (r"methods-a path", "methods, a path"),
+    (r"myself-through", "myself: through"),
+    (r"badly-now", "badly, now"),
+    (r"level\)-fingers", "level). Fingers"),
 ]
 
-EN_DASH_RANGE = re.compile(r"(\d+)–(\d+)")
+EN_DASH_RANGE = re.compile(r"(\d+)\u2013(\d+)")
 
 
 def should_skip_line(line: str) -> bool:
@@ -67,9 +67,9 @@ def replace_dashes_in_line(line: str) -> str:
     line = EN_DASH_RANGE.sub(r"\1-\2", line)
     for pattern, repl in PHRASE_REPLACEMENTS:
         line = re.sub(pattern, repl, line)
-    if "—" in line or "–" in line:
-        line = line.replace("—", ", ")
-        line = line.replace("–", ", ")
+    if "\u2014" in line or "\u2013" in line:
+        line = line.replace("\u2014", ", ")
+        line = line.replace("\u2013", ", ")
     line = re.sub(r"([^ ])  +", r"\1 ", line)
     line = re.sub(r", ,", ",", line)
     return line
@@ -123,13 +123,13 @@ def main() -> None:
         original = MANIFEST.read_text(encoding="utf-8")
         updated = original
         for pattern, repl in [
-            (r" \| Reach Out To Me — Anna", " | Reach Out To Me | Anna"),
-            (r"Legal Notice — Anna", "Legal Notice | Anna"),
-            (r"Privacy Policy — Anna", "Privacy Policy | Anna"),
-            (r"Datenschutzerklärung — Anna", "Datenschutzerklärung | Anna"),
-            (r"Blog \| Anna Hellmuth — ", "Blog | Anna Hellmuth | "),
-            (r"Політика конфіденційності — ", "Політика конфіденційності | "),
-            (r"Политика конфиденциальности — ", "Политика конфиденциальности | "),
+            (r" \| Reach Out To Me - Anna", " | Reach Out To Me | Anna"),
+            (r"Legal Notice - Anna", "Legal Notice | Anna"),
+            (r"Privacy Policy - Anna", "Privacy Policy | Anna"),
+            (r"Datenschutzerklärung - Anna", "Datenschutzerklärung | Anna"),
+            (r"Blog \| Anna Hellmuth - ", "Blog | Anna Hellmuth | "),
+            (r"Політика конфіденційності - ", "Політика конфіденційності | "),
+            (r"Политика конфиденциальности - ", "Политика конфиденциальности | "),
         ]:
             updated = re.sub(pattern, repl, updated)
         if updated != original:

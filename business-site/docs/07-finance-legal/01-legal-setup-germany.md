@@ -6,29 +6,33 @@
 
 What Anna sells must be framed precisely:
 
-- **Psychologische Beratung (counseling) and Coaching** — supportive, non-clinical work. This is what the practice markets.
+- **Psychologische Beratung (counseling) and Coaching** - supportive, non-clinical work. This is what the practice markets.
 - **NOT Psychotherapie** in the legal sense (treatment of illness with "Krankheitswert"), which is reserved for those with **Approbation** or **Heilpraktiker (eingeschränkt auf Psychotherapie)** permission under the Heilpraktikergesetz.
 
-Anna is a **medical doctor (MD)**, which changes the analysis versus a layperson — but offering psychotherapeutic *treatment* still requires the proper qualification/registration. **Action:** have a lawyer confirm exactly what Anna may call her service and offer given her MD status and training, and where the Beratung/Coaching line sits. Until confirmed, market strictly as **counseling and coaching support**, refer out for clinical treatment.
+Anna is a **medical doctor (MD)**, which changes the analysis versus a layperson - but offering psychotherapeutic *treatment* still requires the proper qualification/registration. **Action:** have a lawyer confirm exactly what Anna may call her service and offer given her MD status and training, and where the Beratung/Coaching line sits. Until confirmed, market strictly as **counseling and coaching support**, refer out for clinical treatment.
 
 ## Freiberufler vs Gewerbe
 
-- A medical doctor / psychological practitioner typically operates as a **Freiberufler** (Katalogberuf / heilkundlich-adjacent), not a Gewerbe — meaning no Gewerbesteuer and no Gewerbeanmeldung, just registration with the Finanzamt (Fragebogen zur steuerlichen Erfassung).
+- A medical doctor / psychological practitioner typically operates as a **Freiberufler** (Katalogberuf / heilkundlich-adjacent), not a Gewerbe - meaning no Gewerbesteuer and no Gewerbeanmeldung, just registration with the Finanzamt (Fragebogen zur steuerlichen Erfassung).
 - **Coaching** can be considered **gewerblich** in some cases. A mixed counseling/coaching practice may need careful classification to avoid the whole activity being treated as Gewerbe ("Abfärbetheorie"). **Action:** confirm classification with a Steuerberater.
 
 ## VAT / Umsatzsteuer
 
-- **Heilbehandlung** (medical treatment with therapeutic aim) can be **USt-befreit** under §4 Nr. 14 UStG — but pure coaching and general counseling are typically **not** exempt.
-- **Kleinunternehmerregelung (§19 UStG):** below the turnover threshold, Anna can opt out of charging USt (simpler invoicing). Above it, standard USt applies (with the Heilbehandlung exemption possibly applying to the therapeutic portion). **Action:** Steuerberater to determine which parts are exempt, whether §19 applies, and how to invoice each service.
+- **Heilbehandlung** (medical treatment with therapeutic aim) can be **USt-befreit** under §4 Nr. 14 UStG - but pure coaching and general counseling are typically **not** exempt.
+- **Current status:** Anna applies the Kleinunternehmerregelung under §19 UStG
+  and does not add or separately show VAT on her prices and invoices.
+- Recheck eligibility, invoice wording, and the price display with a
+  Steuerberater if turnover or tax status changes. The VAT treatment of any
+  therapeutic services may differ from coaching.
 
 ## Insurance
 
-- **Berufshaftpflichtversicherung** (professional liability) appropriate to counseling/coaching/medical activity — confirm coverage matches the actual services.
+- **Berufshaftpflichtversicherung** (professional liability) appropriate to counseling/coaching/medical activity - confirm coverage matches the actual services.
 - Consider business/cyber coverage given online delivery and health data.
 
 ## Data protection (DSGVO)
 
-- Health data is **Art. 9 special category** — explicit consent + safeguards.
+- Health data is **Art. 9 special category** - explicit consent + safeguards.
 - **Auftragsverarbeitungsverträge (AVV/DPA)** with every processor (video, payment, notes, email, forms).
 - A compliant **privacy policy** (Datenschutzerklärung) covering all tools, purposes, retention, and rights.
 - Secure, EU-hosted storage for notes; data minimization.
@@ -46,7 +50,8 @@ As an MD, health advertising is HWG-sensitive: no cure/guarantee claims, no fear
 
 - [ ] Lawyer: confirm Beratung/Coaching scope vs Psychotherapie given MD status
 - [ ] Steuerberater: Freiberufler vs Gewerbe classification (mixed activity)
-- [ ] Steuerberater: USt treatment per service; §19 Kleinunternehmer decision
+- [ ] Recheck §19 eligibility and USt treatment per service when turnover or
+  tax status changes
 - [ ] Fragebogen zur steuerlichen Erfassung filed / current
 - [ ] Berufshaftpflicht confirmed for actual services
 - [ ] DPAs/AVV with all processors
@@ -56,4 +61,4 @@ As an MD, health advertising is HWG-sensitive: no cure/guarantee claims, no fear
 
 ## So what
 
-The pivotal items are **scope (Beratung vs Psychotherapie)** and **tax/USt classification** — both need professional confirmation and both shape marketing and invoicing. Everything downstream (agreement, invoice, ads) follows from getting these right. Finance modeling: [02-finance-model.md](02-finance-model.md).
+The pivotal items are **scope (Beratung vs Psychotherapie)** and **tax/USt classification** - both need professional confirmation and both shape marketing and invoicing. Everything downstream (agreement, invoice, ads) follows from getting these right. Finance modeling: [02-finance-model.md](02-finance-model.md).

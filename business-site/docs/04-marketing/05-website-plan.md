@@ -7,8 +7,8 @@ The public site ([Website/anna-hellmuth/](../../../Website/anna-hellmuth/), live
 | Page | Role |
 |------|------|
 | index.html | Hero, services intro, transformation, CTA |
-| counseling.html | Counseling lane — H1 "You don't have to face this alone" |
-| lifecoaching.html | Coaching lane — H1 "You need a courageous heart…" |
+| counseling.html | Counseling lane - H1 "You don't have to face this alone" |
+| lifecoaching.html | Coaching lane - H1 "You need a courageous heart…" |
 | about.html | Trust, credentials, origin story |
 | contact.html | Contact + discovery call |
 | blog/ | Compounding content (burnout, counseling-vs-coaching, expat, signs-you-need-support) |
@@ -16,9 +16,12 @@ The public site ([Website/anna-hellmuth/](../../../Website/anna-hellmuth/), live
 
 ## Conversion checklist
 
+- [x] Remove the retired coaching offers and replace them with The Next Chapter
+  (€1,950). English source copy is live in the build; full DE, UK, and RU body
+  translation is still required.
 - [ ] Discovery call CTA visible on every page (nav + footer + in-content)
 - [ ] Counseling vs coaching self-selection is obvious within one scroll
-- [ ] Movement-first hero copy (note: legacy hero/footer still say "creative & ambitious souls" — prefer "sensitive, thoughtful souls" in new copy)
+- [ ] Movement-first hero copy (note: legacy hero/footer still say "creative & ambitious souls" - prefer "sensitive, thoughtful souls" in new copy)
 - [ ] Testimonials present, anonymous, with privacy note
 - [x] Multilingual entry/affordance (EN / DE / UK / RU) clear
 - [ ] Blog posts link to service pages + discovery call

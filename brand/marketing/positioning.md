@@ -1,4 +1,4 @@
-# Positioning — Anna Hellmuth
+# Positioning - Anna Hellmuth
 
 **Practice:** Psychological counseling & life coaching  
 **Site:** [annahellmuth.com](https://annahellmuth.com/)
@@ -10,7 +10,7 @@ Build a highly profitable online coaching and psychological counseling practice 
 ### Long-term goal (5 years)
 
 - €300,000 annual income
-- Maximum 6–7 working hours per day
+- Maximum 6-7 working hours per day
 - Two completely free days per week
 - High-quality clients rather than high volume
 - A calm, feminine, enjoyable lifestyle with time for reading, culture, relationships, dancing, and personal growth
@@ -86,16 +86,16 @@ Trust creates clients.
 
 ---
 
-## Credentials (trust context — brief)
+## Credentials (trust context - brief)
 
-Use on about pages, bios, and intake materials — not as the hook in social content.
+Use on about pages, bios, and intake materials - not as the hook in social content.
 
-- **Medical Doctor** — Bogomolets National Medical University (Ukraine); Julius Maximilian University of Würzburg (Germany)
-- **Psychologist & Coach** — Institute of Effective Psychology and Psychotherapy of Zina Shamoyan (Russia)
-- **Hypnotherapist (ongoing)** — Milton Erickson Society for Clinical Hypnosis (Germany)
+- **Medical Doctor** - Bogomolets National Medical University (Ukraine); Julius Maximilian University of Würzburg (Germany)
+- **Psychologist & Coach** - Institute of Effective Psychology and Psychotherapy of Zina Shamoyan (Russia)
+- **Hypnotherapist (ongoing)** - Milton Erickson Society for Clinical Hypnosis (Germany)
 - Online practice since 2023
 
-**Approach:** Integrative — humanistic foundation with hypnotherapy, psychodynamic therapy, CBT, and systemic constellations. Personalized to each client; therapeutic relationship prioritized over technique.
+**Approach:** Integrative - humanistic foundation with hypnotherapy, psychodynamic therapy, CBT, and systemic constellations. Personalized to each client; therapeutic relationship prioritized over technique.
 
 **Origin story (for depth, not credentials-led marketing):** Pivoted from surgery to psychology after seeing mindset matter more than medication; burnout; calling to transform lives through inner change rather than treating late-stage illness.
 

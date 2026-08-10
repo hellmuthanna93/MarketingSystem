@@ -1,10 +1,10 @@
 /**
- * Anna Hellmuth — brand tokens (from annahellmuth.com)
- * Edit here only. Sub-projects link to this file — do not duplicate hex values.
+ * Anna Hellmuth - brand tokens (from annahellmuth.com)
+ * Edit here only. Sub-projects link to this file - do not duplicate hex values.
  */
 
 :root {
-  /* Colors — semantic */
+  /* Colors - semantic */
   --color-accent: #64010d; /* accent INK: headings, links, icons on the page surface. Lightens to rose in dark mode. */
   --color-accent-hover: #4a0202; /* used for: link/secondary hover */
   --color-burgundy: #64010d; /* solid FILLS that carry light text: buttons, burgundy sections, badges. Stays dark in both themes. */
@@ -27,12 +27,12 @@
   --light-accent-hsl: 30, 80%, 98.43%;
   --dark-accent-hsl: 21, 55.56%, 92.94%;
 
-  /* Typography families — Source Serif 4 (Google Fonts) */
+  /* Typography families - Source Serif 4 (Google Fonts) */
   --font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-heading: var(--font-family);
   --font-body: var(--font-family);
 
-  /* Font weights — Source Serif 4 (variable font, 200–900) */
+  /* Font weights - Source Serif 4 (variable font, 200-900) */
   --font-weight-light: 300;       /* optional; prefer --font-weight-body (400) */
   --font-weight-regular: 400;     /* body prose, nav, buttons, default UI */
   --font-weight-medium: 500;      /* pricing figures, quote attribution */
@@ -94,7 +94,7 @@
 }
 
 /**
- * Dark theme — warm burgundy-charcoal palette.
+ * Dark theme - warm burgundy-charcoal palette.
  * Light mode stays untouched. Burgundy FILLS (--color-burgundy) keep carrying
  * light text; the accent INK (--color-accent) lightens to a readable rose so
  * the many heading/link/icon usages stay legible on the dark surface.

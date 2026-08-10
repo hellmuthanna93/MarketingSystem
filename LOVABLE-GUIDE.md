@@ -1,9 +1,9 @@
-# Lovable build guide — Anna Hellmuth
+# Lovable build guide - Anna Hellmuth
 
 **Purpose:** Single reference for rebuilding or extending [annahellmuth.com](https://annahellmuth.com) in [Lovable](https://lovable.dev) (or any React/Next app). This repo is the source of truth for brand, copy, structure, and marketing strategy.
 
 **Practice:** Online psychological counseling & life coaching  
-**Owner:** Anna Hellmuth — medical doctor, psychologist, life coach  
+**Owner:** Anna Hellmuth - medical doctor, psychologist, life coach  
 **Primary audience label:** *creative & ambitious souls*  
 **Languages:** English, German, Ukrainian, Russian (sessions and marketing)
 
@@ -38,12 +38,12 @@
 
 A calm, feminine, premium wellness practice site for **international professionals and creatives** seeking either:
 
-- **Psychological counseling** — healing, emotional processing, mental wellbeing  
-- **Life coaching** — goals, structure, ambitious life redesign  
+- **Psychological counseling** - healing, emotional processing, mental wellbeing  
+- **Life coaching** - goals, structure, ambitious life redesign  
 
 **Core conversion:** Free **30-minute discovery call** → paid counseling or coaching.
 
-**Design feel:** Burgundy + warm cream (not stark white). Serif typography. Generous whitespace. Soft cards with subtle borders. No hustle/grind aesthetic. Movement-first copy (transformation, relief, clarity — not “book a session” as the hook).
+**Design feel:** Burgundy + warm cream (not stark white). Serif typography. Generous whitespace. Soft cards with subtle borders. No hustle/grind aesthetic. Movement-first copy (transformation, relief, clarity - not “book a session” as the hook).
 
 **Tech note for Lovable:** Port CSS variables below into `globals.css` or Tailwind theme extension. Load **Source Serif 4** from Google Fonts. No Adobe Typekit.
 
@@ -51,7 +51,7 @@ A calm, feminine, premium wellness practice site for **international professiona
 
 ## 2. Brand identity
 
-### Colors (use exactly — define once in theme)
+### Colors (use exactly - define once in theme)
 
 | Token | Hex / value | Usage |
 |-------|-------------|--------|
@@ -59,8 +59,8 @@ A calm, feminine, premium wellness practice site for **international professiona
 | Accent hover | `#4a0202` | Button hover |
 | Text | `#5c020c` | Headings & body on light backgrounds |
 | Text on dark | `#ffffff` | Text on burgundy |
-| Surface light | `#fefbf6` | Hero, services, steps, blog, intake — **primary page bg** |
-| Surface cream | `#f7eae3` | Testimonials, opportunity checklist — **secondary sections** |
+| Surface light | `#fefbf6` | Hero, services, steps, blog, intake - **primary page bg** |
+| Surface cream | `#f7eae3` | Testimonials, opportunity checklist - **secondary sections** |
 | White | `#ffffff` | Cards on cream sections |
 | Border | `rgba(92, 2, 12, 0.15)` | Dividers |
 | Border card | `rgba(100, 1, 13, 0.14)` | Service & testimonial cards |
@@ -105,7 +105,7 @@ A calm, feminine, premium wellness practice site for **international professiona
 
 ## 3. Typography
 
-**Font:** [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4) — single family for headings and body.
+**Font:** [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4) - single family for headings and body.
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -124,7 +124,7 @@ Google Fonts import:
 
 | Role | Weight | Notes |
 |------|--------|--------|
-| Headings (h1–h4) | **600** semibold | Not 700 bold |
+| Headings (h1-h4) | **600** semibold | Not 700 bold |
 | Body prose | **400** regular | |
 | Nav links | **400** | |
 | Buttons | **400** regular | Intentionally not bold |
@@ -135,12 +135,12 @@ Google Fonts import:
 
 - H1 hero: `clamp(1.8rem, 4.5vw, 3rem)`
 - H2 section: `clamp(1.6rem, 4vw, 2.5rem)`
-- Body: `1rem`–`1.05rem`, line-height `1.7`–`1.8`
-- Large intro: `1.15rem`–`1.2rem`
+- Body: `1rem`-`1.05rem`, line-height `1.7`-`1.8`
+- Large intro: `1.15rem`-`1.2rem`
 - Button (in-page): `1.2rem`
 - Button (nav): `0.9rem`, padding `0.625rem 1.35rem`
 
-**Heading color on cream sections:** `#5c020c` (text color) — **not** burgundy. Burgundy is for buttons and accents only on light bg.
+**Heading color on cream sections:** `#5c020c` (text color) - **not** burgundy. Burgundy is for buttons and accents only on light bg.
 
 ---
 
@@ -160,8 +160,8 @@ Google Fonts import:
 
 - Logo centered above nav on desktop (stacked layout)
 - Nav links: **Psychological counseling** · **Life coaching** · **About** · **Blog** · **Contact**
-- Nav sentence case on live-aligned mirror (`counseling` not `Counseling` in link labels — either is acceptable; mirror uses sentence case)
-- Right CTA: **Schedule your discovery call** — compact pill button
+- Nav sentence case on live-aligned mirror (`counseling` not `Counseling` in link labels - either is acceptable; mirror uses sentence case)
+- Right CTA: **Schedule your discovery call** - compact pill button
 - Background: light cream `#fefbf6`
 
 ### Primary button `.btn-primary`
@@ -186,14 +186,14 @@ Google Fonts import:
 - White on cream section `#f7eae3`
 - Border `2px solid rgba(100, 1, 13, 0.14)`, radius `12px`
 - Padding `1.5rem 2rem`
-- Attribution: **— Former client*** with round avatar
+- Attribution: **- Former client*** with round avatar
 - Privacy note above grid: *feedback from clients is posted anonymously to protect their privacy*
 
 ### FAQ (burgundy section)
 
 - Section bg `#64010d`, h2 white
 - **Single cream panel** `#fefbf6`, radius `20px`, generous padding
-- Accordion items inside panel with dividers — **not** separate floating white cards
+- Accordion items inside panel with dividers - **not** separate floating white cards
 - Question text burgundy `#64010d`, body `#5c020c`
 
 ### Opportunity checklist
@@ -237,15 +237,15 @@ Google Fonts import:
 
 Build in this order:
 
-1. **Hero** — H1 + italic subhero + portrait image + transformation copy + CTA  
-2. **Invitation block** — “Don't wait for someday…” + “Why not give it a try and find out!”  
-3. **My services** — 2 cards (counseling + coaching)  
-4. **Testimonials** — grid of white cards (desktop: mixed 2-col layouts; mobile: shortened quotes)  
-5. **Journey steps** — 3 text steps + CTA  
-6. **Opportunity** — “A free 30-minute session with me is an opportunity for you to…” + 4 check items  
-7. **FAQ** — 7 questions, burgundy bg, cream accordion  
-8. **Get to know me** — H2, Google Calendar embed, Instagram 4×2 grid (no separate “Follow me” H2 — combined section like live site)  
-9. **Footer** — logo, nav, contact, social icons, legal links  
+1. **Hero** - H1 + italic subhero + portrait image + transformation copy + CTA  
+2. **Invitation block** - “Don't wait for someday…” + “Why not give it a try and find out!”  
+3. **My services** - 2 cards (counseling + coaching)  
+4. **Testimonials** - grid of white cards (desktop: mixed 2-col layouts; mobile: shortened quotes)  
+5. **Journey steps** - 3 text steps + CTA  
+6. **Opportunity** - “A free 30-minute session with me is an opportunity for you to…” + 4 check items  
+7. **FAQ** - 7 questions, burgundy bg, cream accordion  
+8. **Get to know me** - H2, Google Calendar embed, Instagram 4×2 grid (no separate “Follow me” H2 - combined section like live site)  
+9. **Footer** - logo, nav, contact, social icons, legal links  
 
 ---
 
@@ -287,7 +287,7 @@ Build in this order:
 
 ### CTAs (priority order)
 
-1. **Schedule your discovery call** (primary — nav, hero, sections)  
+1. **Schedule your discovery call** (primary - nav, hero, sections)  
 2. **Discover Counseling Services**  
 3. **Explore Coaching Details**  
 4. **Learn more about me**  
@@ -306,7 +306,7 @@ Build in this order:
 
 ### Tone
 
-- Warm, professional, empowering — never clinical or cold  
+- Warm, professional, empowering - never clinical or cold  
 - Validates difficulty; emphasizes support and faster progress with the right fit  
 - Honest about limits (no guaranteed outcomes)  
 - Use **you**; full sentences on web  
@@ -315,7 +315,7 @@ Build in this order:
 
 **People buy movement, not coaching.**
 
-Communicate: relief, hope, clarity, confidence, possibility, transformation — **not** the method, session format, or credential list in hooks.
+Communicate: relief, hope, clarity, confidence, possibility, transformation - **not** the method, session format, or credential list in hooks.
 
 ### Strong content formula
 
@@ -340,12 +340,12 @@ That is why Z feels so difficult.
 | transformation, clarity, relief, patterns, roadblocks | guaranteed results, miracle, fix you |
 | courageous, authentic, resonate | hustle, grind, 10x |
 | discovery call, mutual fit | limited spots, act now, guilt pressure |
-| — Former client* (anonymous) | Identifying client details |
+| - Former client* (anonymous) | Identifying client details |
 
 ### Weekly content mix
 
-- **1 counseling post/week** — shame, boundaries, attachment, regulation, childhood patterns  
-- **1 coaching post/week** — fear & action, purpose, transitions, authentic success  
+- **1 counseling post/week** - shame, boundaries, attachment, regulation, childhood patterns  
+- **1 coaching post/week** - fear & action, purpose, transitions, authentic success  
 
 ---
 
@@ -353,7 +353,7 @@ That is why Z feels so difficult.
 
 ### Who it's for
 
-Highly educated professionals, creatives, entrepreneurs — functioning externally, stuck internally.
+Highly educated professionals, creatives, entrepreneurs - functioning externally, stuck internally.
 
 **Public label:** creative & ambitious souls
 
@@ -373,18 +373,18 @@ Highly educated professionals, creatives, entrepreneurs — functioning external
 - Refuse to settle  
 - Follow intuition when something feels right  
 
-### Credentials (trust pages only — not social hooks)
+### Credentials (trust pages only - not social hooks)
 
-- MD — Bogomolets National Medical University (Ukraine); University of Würzburg (Germany)  
-- Psychologist & coach — Institute of Effective Psychology and Psychotherapy of Zina Shamoyan (Russia)  
-- Hypnotherapist (ongoing) — Milton Erickson Society for Clinical Hypnosis (Germany)  
+- MD - Bogomolets National Medical University (Ukraine); University of Würzburg (Germany)  
+- Psychologist & coach - Institute of Effective Psychology and Psychotherapy of Zina Shamoyan (Russia)  
+- Hypnotherapist (ongoing) - Milton Erickson Society for Clinical Hypnosis (Germany)  
 - Online practice since 2023  
 - Integrative: humanistic + hypnotherapy, psychodynamic, CBT, systemic constellations  
 
-### Business context (internal — tone reference)
+### Business context (internal - tone reference)
 
 - 2026 focus: consistent content, audience trust, coaching growth, calm lifestyle  
-- Long-term: profitable practice, quality clients, max ~6–7 hours/day, 2 free days/week  
+- Long-term: profitable practice, quality clients, max ~6-7 hours/day, 2 free days/week  
 
 ---
 
@@ -401,18 +401,19 @@ Payment on booking. Free cancel/reschedule **48+ hours** before; full fee within
 
 ### Life coaching
 
-| Option | Price |
-|--------|-------|
-| Single session (60 min) | €180 |
-| Basic Breakthrough (6 sessions) | €1,020 |
-| Profound Transformation (12 sessions, best value) | €1,920 |
+The 16-week 1:1 coaching program is the only coaching offer. It includes 12
+core sessions, weekly written support, live hypno-meditations during relevant
+sessions, a personal transition plan, and a follow-up one month later.
 
-Coaching includes tailored action plans and between-session assignments.
+**Price:** TBD
+
+Coaching single sessions, Basic Breakthrough, and Profound Transformation are
+retired.
 
 ### Discovery call
 
 - **Free 30 minutes**  
-- Mutual fit — not therapy  
+- Mutual fit - not therapy  
 - Clarify counseling vs coaching  
 - [Book here](https://calendar.app.google/ueKb9RbyxWyC6zfK8)
 
@@ -420,18 +421,18 @@ Coaching includes tailored action plans and between-session assignments.
 
 ## 12. Blog (SEO)
 
-**Index:** `/blog` — “Insights for creative & ambitious souls”
+**Index:** `/blog` - “Insights for creative & ambitious souls”
 
 ### Published posts (build these routes)
 
 | Slug | Title | SEO focus |
 |------|-------|-----------|
 | `counseling-vs-life-coaching` | Counseling vs life coaching: how to know what you need | counseling vs coaching, which do I need |
-| `online-counseling-for-expats` | Online counseling when you live between countries — and languages | online therapy expats, multilingual counseling |
+| `online-counseling-for-expats` | Online counseling when you live between countries - and languages | online therapy expats, multilingual counseling |
 | `burnout-when-success-feels-empty` | When success on the outside does not match how you feel inside | burnout high achievers, ambitious professionals |
 | `signs-you-need-professional-support` | Signs you are carrying more than you should have to alone | when to seek therapy, need a therapist |
 
-Each post: meta title + description, breadcrumb, movement-first dek, 600–900 words, internal links to services, discovery CTA, related posts.
+Each post: meta title + description, breadcrumb, movement-first dek, 600-900 words, internal links to services, discovery CTA, related posts.
 
 ---
 
@@ -458,14 +459,14 @@ Use on homepage (and optionally about). Seven items:
    Free reschedule/cancel 48+ hours before; full fee inside 48 hours.
 
 7. **Can we work together if I'm still figuring out what I want?**  
-   Yes — clarity itself can be the goal.
+   Yes - clarity itself can be the goal.
 
 ---
 
 ## 14. Testimonials
 
 - Long-form quotes on desktop; shortened versions on mobile  
-- Always **— Former client***  
+- Always **- Former client***  
 - Privacy: *feedback from clients is posted anonymously to protect their privacy*  
 - Themes to echo in marketing: pattern awareness, relief from first session, tailored rational explanations, deep childhood work, warmth/safety, life overhaul (divorce, career, finances, relationship)
 
@@ -491,8 +492,8 @@ Do not invent new testimonial text without client approval.
 ## 16. Legal & footer
 
 - © 2025 Anna Hellmuth. All rights reserved.  
-- **Legal Notice (Impressum)** — required for DE  
-- **Privacy Policy** — GDPR  
+- **Legal Notice (Impressum)** - required for DE  
+- **Privacy Policy** - GDPR  
 - Practice name: Anna Hellmuth Psychological Counseling and Life Coaching  
 
 ---
@@ -508,7 +509,7 @@ Do not invent new testimonial text without client approval.
 
 - One H1 per page  
 - Semantic headings (H2 for sections)  
-- Meta description 150–160 chars per page  
+- Meta description 150-160 chars per page  
 - Alt text on images (portrait, Instagram previews)  
 - Internal links between blog ↔ services ↔ discovery call  
 - `theme-color`: `#64010d`  
@@ -529,7 +530,7 @@ Do not invent new testimonial text without client approval.
 
 **In repo:** `website/anna-hellmuth/assets/images/`
 
-- `logo.png` — header/footer  
+- `logo.png` - header/footer  
 - `favicon.ico`  
 - Hero portrait: `1bc23666-cb2a-40a2-8735-5029651e0064.jpg`  
 - Testimonial avatars: `user_01a.png`, `03.png`, etc.  
@@ -594,8 +595,8 @@ python3 -m http.server 8080
 
 ## Lovable prompt starter (paste into project)
 
-> Build a responsive marketing website for Anna Hellmuth, an online psychological counselor and life coach for "creative & ambitious souls." Use burgundy `#64010d` and cream backgrounds `#fefbf6` / `#f7eae3`. Font: Source Serif 4 from Google Fonts — headings 600, body and buttons 400. Primary CTA: "Schedule your discovery call" linking to Google Calendar. Pages: Home, Counseling, Life Coaching, About, Blog (4 SEO posts), Contact, Legal, Privacy. Homepage: hero, services, testimonials, steps, opportunity checklist, FAQ on burgundy with cream accordion, calendar + Instagram grid. Tone: warm, movement-first, no hustle. Multilingual sessions: EN, DE, UK, RU. Pricing: counseling €120/session, coaching €180/session. Follow the full spec in LOVABLE-GUIDE.md.
+> Build a responsive marketing website for Anna Hellmuth, an online psychological counselor and life coach for "creative & ambitious souls." Use burgundy `#64010d` and cream backgrounds `#fefbf6` / `#f7eae3`. Font: Source Serif 4 from Google Fonts - headings 600, body and buttons 400. Primary CTA: "Schedule your discovery call" linking to Google Calendar. Pages: Home, Counseling, Life Coaching, About, Blog (4 SEO posts), Contact, Legal, Privacy. Homepage: hero, services, testimonials, steps, opportunity checklist, FAQ on burgundy with cream accordion, calendar + Instagram grid. Tone: warm, movement-first, no hustle. Multilingual sessions: EN, DE, UK, RU. Pricing: counseling €120/session, coaching €180/session. Follow the full spec in LOVABLE-GUIDE.md.
 
 ---
 
-*Last synced with MarketingSystem repo — Anna Hellmuth brand, Source Serif 4, blog, and live-site-aligned section colors.*
+*Last synced with MarketingSystem repo - Anna Hellmuth brand, Source Serif 4, blog, and live-site-aligned section colors.*

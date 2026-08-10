@@ -15,19 +15,20 @@ flowchart LR
 
 ## Steps
 
-1. **Confirmation & payment** — confirm offer (single / wedge / package), send payment details (payment on booking).
-2. **Agreement** — send the counseling/coaching agreement ([03-counseling-agreement.md](03-counseling-agreement.md)).
-3. **Intake form** — short form: current situation, what feels stuck, what they've tried, what they want, language preference.
-4. **Scheduling** — book the first (and recurring) sessions via calendar; send the video link.
-5. **Pre-session reminder** — 24h before; "nothing to prepare."
-6. **First session** — recognition-led; set expectations; begin the work.
+1. **Confirmation & payment** - confirm the service, then send bank-transfer
+   and Revolut payment details.
+2. **Agreement** - send the counseling/coaching agreement ([03-counseling-agreement.md](03-counseling-agreement.md)).
+3. **Intake form** - short form: current situation, what feels stuck, what they've tried, what they want, language preference.
+4. **Scheduling** - book the first (and recurring) sessions via calendar; send the video link.
+5. **Pre-session reminder** - 24h before; "nothing to prepare."
+6. **First session** - recognition-led; set expectations; begin the work.
 
 ## Communication norms
 
 - Channel: email for logistics; sessions on the agreed platform
-- Response time: within 24–48h on business days
+- Response time: within 24-48h on business days
 - Boundaries: sessions are the space for the work; between-session contact is limited (coaching assignments excepted)
-- Emergencies: counseling is not crisis care — clients use emergency services if at risk
+- Emergencies: counseling is not crisis care - clients use emergency services if at risk
 
 ## Access & tools
 

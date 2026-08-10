@@ -1,4 +1,4 @@
-# Design Review & Improvement Plan — annahellmuth.com
+# Design Review & Improvement Plan - annahellmuth.com
 
 Prepared as a **proposal for review**. Nothing here is applied to the live site yet. Each item is rated by priority and tied to a concrete business reason, so we can pick what to work on together.
 
@@ -16,10 +16,10 @@ Pulled from `brand/marketing/` and `brand/voice.md` so every recommendation ladd
 | **Premium, low-volume practice** (€300k goal, high-quality clients, not high-volume) | The site must *feel* expensive and trustworthy. Polish, calm, and credibility matter more than aggressive funneling. |
 | **Trust is the #1 lever** (trust → visibility → consistency → depth) | "Finally, someone understands what I'm experiencing." The design's job is to make a sensitive, discerning reader feel understood and safe. |
 | **Sell movement, not process** | Lead with relief / clarity / transformation. Credentials and methods support trust but never shout. |
-| **Audience: sensitive, self-aware professionals 25–45**, often expat / Ukrainian / Russian / German, multilingual | Calm feminine aesthetic, no hype, no pressure. Multilingual reach is a real, underused advantage. |
+| **Audience: sensitive, self-aware professionals 25-45**, often expat / Ukrainian / Russian / German, multilingual | Calm feminine aesthetic, no hype, no pressure. Multilingual reach is a real, underused advantage. |
 | **No-pressure sales** ("Why not give it a try and find out?") | Reassurance is welcome; urgency / scarcity tactics are off-brand and must be avoided. |
 
-**Design read:** A multi-page service/marketing site for a premium online psychological-counseling & life-coaching practice, for sensitive high-functioning adults, with a warm editorial language, on an established brand (burgundy `#64010d` + cream + Source Serif 4), hand-coded static HTML/CSS. This is a **Redesign – Preserve**: evolve and tighten, do not re-skin.
+**Design read:** A multi-page service/marketing site for a premium online psychological-counseling & life-coaching practice, for sensitive high-functioning adults, with a warm editorial language, on an established brand (burgundy `#64010d` + cream + Source Serif 4), hand-coded static HTML/CSS. This is a **Redesign - Preserve**: evolve and tighten, do not re-skin.
 
 **Dials (matched to the existing brand, not the skill's aggressive baseline):** `DESIGN_VARIANCE 6 · MOTION 4 · DENSITY 3`.
 
@@ -35,7 +35,7 @@ Pulled from `brand/marketing/` and `brand/voice.md` so every recommendation ladd
 | About | ● | ● | ◑ | ● | Rich and credible; very long; education/credentials could work harder as trust signals |
 | Contact | ◑ | ● | ● | ◑ | Clean; the booking embed is the real CTA but competes with email-first copy |
 | Blog | ● | ◑ | ● | ● | Best-structured template on the site; good model for the rest |
-| Legal (Impressum / Privacy) | – | ● | ● | ● | Fine |
+| Legal (Impressum / Privacy) | - | ● | ● | ● | Fine |
 
 ● solid · ◑ needs work · ○ problem
 
@@ -47,7 +47,7 @@ Pulled from `brand/marketing/` and `brand/voice.md` so every recommendation ladd
 
 Priority = business impact × confidence. Effort is rough (S < half day, M ~1 day, L multi-day).
 
-### P0 — Do first (credibility + the one conversion)
+### P0 - Do first (credibility + the one conversion)
 
 | # | Item | Why it matters to the business | Effort |
 |---|------|-------------------------------|:------:|
@@ -56,7 +56,7 @@ Priority = business impact × confidence. Effort is rough (S < half day, M ~1 da
 | 3 | **Unify CTA destination & behavior.** Today: home hero → `#intake`, nav → external Google Calendar (new tab), life-coaching hero → `contact.html`. Pick one model (recommended: every primary CTA lands on the embedded scheduler). | Predictable booking path removes friction at the exact moment of intent. New-tab hand-offs lose people. | M |
 | 4 | **Add quiet reassurance microcopy** under primary CTAs: "Free · 30 minutes · no obligation." (reassurance, not pressure) | Lowers hesitation for a cautious audience without violating the no-pressure rule. | S |
 
-### P1 — High value (trust, self-selection, scannability)
+### P1 - High value (trust, self-selection, scannability)
 
 | # | Item | Why it matters | Effort |
 |---|------|----------------|:------:|
@@ -67,7 +67,7 @@ Priority = business impact × confidence. Effort is rough (S < half day, M ~1 da
 | 9 | **Unify the hero system** across pages (home / counseling / coaching / contact currently use 4 different patterns). | Consistency = perceived quality and easier maintenance. | M |
 | 10 | **SEO & sharing:** add `ProfessionalService` + `Person` structured data, Open Graph / Twitter cards, canonical tags. | A discovery-led practice lives on being found and shared credibly. Low effort, compounding return. | M |
 
-### P2 — Polish & strategic (do after the above)
+### P2 - Polish & strategic (do after the above)
 
 | # | Item | Why it matters | Effort |
 |---|------|----------------|:------:|
@@ -86,34 +86,34 @@ Priority = business impact × confidence. Effort is rough (S < half day, M ~1 da
 - **Destination drift:** in-page anchor vs external new-tab vs contact page. → One predictable path; prefer the embedded scheduler so intent converts in place.
 - **Repetition without variation:** home repeats the identical CTA 4× in the body. Keep CTAs at natural decision points (after hero, after services, after testimonials, at the scheduler) but let the surrounding context do the persuading, not a fourth identical button.
 - **Missing reassurance:** no "free · 30 min · no obligation" near buttons. A cautious audience benefits from this; it's reassurance, not urgency.
-- **Secondary CTAs** ("Discover Counseling Services" / "Explore Coaching Details") are good and distinct — keep them, just unify wording style.
+- **Secondary CTAs** ("Discover Counseling Services" / "Explore Coaching Details") are good and distinct - keep them, just unify wording style.
 
 ### 4.2 Trust & premium positioning
-- Credentials (MD; psychologist & coach; hypnotherapy in training; online since 2023) live only deep in About. A **calm credentials strip** on home + service pages would do real work — kept factual to respect the "don't show off" voice rule.
+- Credentials (MD; psychologist & coach; hypnotherapy in training; online since 2023) live only deep in About. A **calm credentials strip** on home + service pages would do real work - kept factual to respect the "don't show off" voice rule.
 - The **Location Independent Therapists** badge and multilingual capability are trust assets that are currently quiet. Surface them.
-- Testimonials are anonymized with a privacy note — correct and on-brand. The issue is **volume and length**, not authenticity.
+- Testimonials are anonymized with a privacy note - correct and on-brand. The issue is **volume and length**, not authenticity.
 
 ### 4.3 Content & clarity
 - **Life coaching broken copy** (P0 #1): the "Do I really need a coach?" intro contains corrupted, non-grammatical text. Rewrite using `messaging.md` voice (movement-first, warm, grounded).
-- **Counseling vs coaching** is the reader's central question and is currently only answered inside an FAQ accordion. Promote it to a visible, visual chooser (table/cards) — the content already exists in `audience.md`.
-- **Public label** ("creative & ambitious souls" vs "sensitive, thoughtful souls") — align per strategy once you decide.
+- **Counseling vs coaching** is the reader's central question and is currently only answered inside an FAQ accordion. Promote it to a visible, visual chooser (table/cards) - the content already exists in `audience.md`.
+- **Public label** ("creative & ambitious souls" vs "sensitive, thoughtful souls") - align per strategy once you decide.
 
 ### 4.4 Layout, hierarchy & visual system
-- **Hero runs long** on home (H1 + subhero + divider + image + 4 paragraphs + CTA + more text + CTA) — the primary action sits well below the fold.
+- **Hero runs long** on home (H1 + subhero + divider + image + 4 paragraphs + CTA + more text + CTA) - the primary action sits well below the fold.
 - **Four different hero patterns** across pages reduce cohesion. Define one hero system with variants.
 - **Section monotony** on life coaching (many full-width centered text blocks in a row). Vary layout families and insert visual breaks.
-- **Heavy serif body** at generous measures is beautiful but tiring in long runs — constrain measure and add rhythm. (Keep Source Serif 4; this is brand.)
+- **Heavy serif body** at generous measures is beautiful but tiring in long runs - constrain measure and add rhythm. (Keep Source Serif 4; this is brand.)
 
 ### 4.5 Accessibility & technical (continues last round's dark-mode + a11y work)
 - Footer copyright year is inconsistent (2025 on home, 2026 elsewhere).
 - Client-avatar `alt="Client Avatar"` is generic; decorative avatars can use empty `alt`.
-- `lang="en"` only; no `hreflang` — relevant once multilingual pages exist.
+- `lang="en"` only; no `hreflang` - relevant once multilingual pages exist.
 - Add structured data, OG/Twitter cards, canonical (SEO/sharing).
-- Booking is a heavy third-party iframe (already lazy-loaded — good); keep an eye on it for performance.
+- Booking is a heavy third-party iframe (already lazy-loaded - good); keep an eye on it for performance.
 
 ### 4.6 What's already strong (preserve)
-- The burgundy + cream + Source Serif 4 brand is distinctive and warm — keep it.
-- Light/dark theming, reduced-motion, skip links, focus styles (from the last round) — keep.
+- The burgundy + cream + Source Serif 4 brand is distinctive and warm - keep it.
+- Light/dark theming, reduced-motion, skip links, focus styles (from the last round) - keep.
 - The **blog template** is the cleanest structure on the site; use it as the quality bar for other pages.
 - Warmth of voice and the anonymized-testimonial integrity.
 
@@ -121,11 +121,11 @@ Priority = business impact × confidence. Effort is rough (S < half day, M ~1 da
 
 ## 5. Suggested phasing
 
-- **Phase 1 (credibility + conversion, ~1–2 days):** P0 #1–4. Fix copy, unify CTA label + destination, add reassurance microcopy.
-- **Phase 2 (trust + self-selection, ~3–4 days):** P1 #5–10. Testimonial curation, trust strip, counseling-vs-coaching chooser, hero tighten + unify, SEO.
-- **Phase 3 (scale + polish, ongoing):** P2 #11–15. Multilingual, reading comfort, CSS consolidation, label decision, imagery.
+- **Phase 1 (credibility + conversion, ~1-2 days):** P0 #1-4. Fix copy, unify CTA label + destination, add reassurance microcopy.
+- **Phase 2 (trust + self-selection, ~3-4 days):** P1 #5-10. Testimonial curation, trust strip, counseling-vs-coaching chooser, hero tighten + unify, SEO.
+- **Phase 3 (scale + polish, ongoing):** P2 #11-15. Multilingual, reading comfort, CSS consolidation, label decision, imagery.
 
-Start with Phase 1 — it's small, removes the credibility leaks, and directly serves the one conversion.
+Start with Phase 1 - it's small, removes the credibility leaks, and directly serves the one conversion.
 
 ---
 
@@ -136,4 +136,4 @@ Start with Phase 1 — it's small, removes the credibility leaks, and directly s
 3. **Multilingual:** is DE / UK / RU localization in scope this year, or just signal it for now?
 4. **Copy latitude:** in the next working session, may I propose rewritten copy (life coaching especially), or keep edits visual-only?
 
-> Visual before/after examples for items #1–8 are in `design-review/index.html`.
+> Visual before/after examples for items #1-8 are in `design-review/index.html`.

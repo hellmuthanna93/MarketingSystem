@@ -2,11 +2,11 @@
 
 ## The one claim
 
-Marketing's only job is to make the right person feel *"finally, someone understands what I've been experiencing — and she clearly knows how to help."* That feeling is the entire engine. Everything else is logistics.
+Marketing's only job is to make the right person feel *"finally, someone understands what I've been experiencing - and she clearly knows how to help."* That feeling is the entire engine. Everything else is logistics.
 
 ## Strategy: positioning-led, reputation funnel
 
-Anna does not buy attention; she earns trust. The model is **inbound, depth-led, compounding** — consistent content that demonstrates how she thinks, builds recognition, and lowers acquisition cost over time. This fits the premium, low-volume, work-life-balance north star (paid acquisition and volume tactics would break it).
+Anna does not buy attention; she earns trust. The model is **inbound, depth-led, compounding** - consistent content that demonstrates how she thinks, builds recognition, and lowers acquisition cost over time. This fits the premium, low-volume, work-life-balance north star (paid acquisition and volume tactics would break it).
 
 ```mermaid
 flowchart LR

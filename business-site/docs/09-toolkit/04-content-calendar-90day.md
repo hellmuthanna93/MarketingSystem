@@ -1,6 +1,6 @@
 # 90-Day Content Calendar
 
-A week-by-week plan that guarantees the minimum rhythm — **1 counseling + 1 coaching post per week** — while introducing the practice and the wedge. Maps directly to the toolkit batches.
+A week-by-week plan that guarantees the minimum rhythm - **1 counseling + 1 coaching post per week** - while introducing the practice and the wedge. Maps directly to the toolkit batches.
 
 > Default channel mix: Instagram (primary) + LinkedIn (authority), with periodic blog and Reels/TikTok. Adapt to capacity; consistency beats volume. Posts referenced by their toolkit IDs.
 
@@ -11,10 +11,10 @@ A week-by-week plan that guarantees the minimum rhythm — **1 counseling + 1 co
 | Tue | Counseling post (IG + adapt LI) | counseling batch / launch set |
 | Thu | Coaching post (IG + adapt LI) | coaching batch / launch set |
 | (flex) | Story / behind-the-practice | improvised, warm |
-| Every 2–3 wks | Blog post + repurpose | [13-blog-post-batch.md](13-blog-post-batch.md) |
+| Every 2-3 wks | Blog post + repurpose | [13-blog-post-batch.md](13-blog-post-batch.md) |
 | Monthly | Newsletter (once live) | [12-newsletter-templates.md](12-newsletter-templates.md) |
 
-## Phase 1 — Weeks 1–4 (Foundation / launch)
+## Phase 1 - Weeks 1-4 (Foundation / launch)
 
 Lead with the launch sets ([02](02-instagram-launch-posts.md) / [03](03-linkedin-launch-posts.md)).
 
@@ -25,7 +25,7 @@ Lead with the launch sets ([02](02-instagram-launch-posts.md) / [03](03-linkedin
 | 3 | IG #5 Burnout | IG #6 Expat *(or coaching #?)* | Story: a day in the practice |
 | 4 | IG #7 Myth-bust | IG #9 Counseling vs coaching | IG #10 Discovery call |
 
-## Phase 2 — Weeks 5–8 (Visibility / convert)
+## Phase 2 - Weeks 5-8 (Visibility / convert)
 
 Move into theme batches ([09](09-instagram-posts-counseling.md) / [10](10-instagram-posts-coaching.md)); start LinkedIn cadence.
 
@@ -36,7 +36,7 @@ Move into theme batches ([09](09-instagram-posts-counseling.md) / [10](10-instag
 | 7 | Counseling #3 (regulation) | Coaching #3 (identity) | Reel from a top post |
 | 8 | Counseling #4 (body image) | Coaching #4 (transitions) | IG #11 Clarity Session *(if confirmed)* |
 
-## Phase 3 — Weeks 9–12 (Momentum / deepen)
+## Phase 3 - Weeks 9-12 (Momentum / deepen)
 
 Add multilingual + proof; keep rhythm.
 
@@ -47,7 +47,7 @@ Add multilingual + proof; keep rhythm.
 | 11 | Counseling #7 | Coaching #7 | Anonymous pattern story |
 | 12 | Counseling #8 | Coaching #8 | IG #12 soft invitation; newsletter #1 |
 
-## Phase 4 — Weeks 13+ (Sustain)
+## Phase 4 - Weeks 13+ (Sustain)
 
 Continue the Tue/Thu rhythm from the theme batches; add TikTok scripts ([11-tiktok-script-batch.md](11-tiktok-script-batch.md)); recycle top performers; introduce more multilingual ([14-multilingual-adaptations.md](14-multilingual-adaptations.md)).
 

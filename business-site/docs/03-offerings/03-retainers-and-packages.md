@@ -1,6 +1,6 @@
 # Packages
 
-> In a 1:1 practice, "retainers" are multi-session **packages** — the revenue backbone. Prices canonical in `practice-profile`.
+> In a 1:1 practice, "retainers" are multi-session **packages** - the revenue backbone. Prices canonical in `practice-profile`.
 
 ## Why packages over single sessions
 
@@ -8,7 +8,8 @@
 - **Economics:** higher revenue per client, fewer scheduling/admin cycles, more predictable income.
 - **Commitment:** a client who commits to a package is more engaged and more likely to integrate the work.
 
-Single sessions remain available for a specific issue, but packages are the recommended path.
+Counseling single sessions remain available. Coaching is offered only through
+the 16-week program.
 
 ## Counseling package
 
@@ -18,14 +19,18 @@ Single sessions remain available for a specific issue, but packages are the reco
 
 Scope: emotional processing, regulation, attachment, shame, body image, burnout recovery. Past/emotional lane.
 
-## Coaching packages
+## Coaching program
 
-| Package | Sessions | Price | Per session | Best for |
-|---------|----------|-------|-------------|----------|
-| Basic Breakthrough | 6 | €1,020 | €170 | Building momentum on a goal or transition |
-| Profound Transformation (best value) | 12 | €1,920 | €160 | Deep, sustained identity/life change |
+| Format | Sessions | Price | Best for |
+|--------|----------|-------|----------|
+| The Next Chapter | 12 core sessions + one follow-up over 16 weeks | €1,950 | Life and career transitions |
 
-Coaching includes individually tailored action plans and assignments between sessions. Future/goals lane.
+The program also includes weekly written support, individually tailored
+exercises, live hypno-meditations during relevant sessions, and a personal
+transition plan.
+
+**Retired:** coaching single session, Basic Breakthrough, and Profound
+Transformation.
 
 ## Scope boundaries
 
@@ -37,8 +42,9 @@ Coaching includes individually tailored action plans and assignments between ses
 
 ## Renewal
 
-Near the end of a package, invite continuation without pressure (see [../09-toolkit/05-client-emails.md](../09-toolkit/05-client-emails.md) renewal template). Renewal is the cheapest growth there is — an existing, trusting client.
+Near the end of a package, invite continuation without pressure (see [../09-toolkit/05-client-emails.md](../09-toolkit/05-client-emails.md) renewal template). Renewal is the cheapest growth there is - an existing, trusting client.
 
 ## So what
 
-Packages (especially coaching 12) carry the revenue. Marketing and sales should bias toward package commitment, with the wedge as the bridge in. Next: [04-products-and-tooling.md](04-products-and-tooling.md).
+The coaching program is the primary high-value coaching commitment. Next:
+[04-products-and-tooling.md](04-products-and-tooling.md).

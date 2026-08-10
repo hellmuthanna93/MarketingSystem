@@ -1,31 +1,31 @@
 # Practice Overview
 
-> Anna Hellmuth — online psychological counseling and life coaching. This document holds the mental model. Every other doc drills down. When in doubt, come back here.
+> Anna Hellmuth - online psychological counseling and life coaching. This document holds the mental model. Every other doc drills down. When in doubt, come back here.
 
 ## Thesis
 
-People do not buy counseling or coaching. They buy **movement** — relief, clarity, confidence, transformation. Anna's practice exists to help sensitive, thoughtful, high-functioning people create the lasting inner change that insight alone could never give them.
+People do not buy counseling or coaching. They buy **movement** - relief, clarity, confidence, transformation. Anna's practice exists to help sensitive, thoughtful, high-functioning people create the lasting inner change that insight alone could never give them.
 
-The unfair advantage is a combination almost no one else holds at once: **psychological depth** (medical doctor, psychologist, hypnotherapist) + **coaching practicality** + **pattern recognition** + **genuine warmth** + **lived experience**. Anna does not speak from above. She has been there — surgery, burnout, the pivot into psychology — and she names the client's experience so precisely they think *"finally, someone understands."*
+The unfair advantage is a combination almost no one else holds at once: **psychological depth** (medical doctor, psychologist, hypnotherapist) + **coaching practicality** + **pattern recognition** + **genuine warmth** + **lived experience**. Anna does not speak from above. She has been there - surgery, burnout, the pivot into psychology - and she names the client's experience so precisely they think *"finally, someone understands."*
 
 ## North star
 
-A highly profitable online practice that funds a calm, free, meaningful life — not a high-volume grind.
+A highly profitable online practice that funds a calm, free, meaningful life - not a high-volume grind.
 
 - **€300,000** annual income
-- **≤6–7** working hours per day
+- **≤6-7** working hours per day
 - **2** completely free days per week
 - **High-quality clients** over volume
 - A feminine, enjoyable lifestyle with room for reading, culture, relationships, and growth
 
-Every decision in this suite is tested against this: does it move toward depth, trust, and freedom — or toward volume and burnout?
+Every decision in this suite is tested against this: does it move toward depth, trust, and freedom - or toward volume and burnout?
 
 ## Who we serve
 
 Sensitive, deep-feeling adults who understand a lot about themselves and still feel stuck. Two overlapping lanes:
 
-- **Counseling** (past/emotional): women 25–45 and gay men; high-functioning, often with cold or absent early parenting; depression, anxiety, shame, attachment fear, body image, expat displacement. Ukrainian women abroad are one meaningful segment.
-- **Coaching** (future/goals): men and women 30–45; goal-oriented doers, often the oldest child, high-functioning but craving depth; paralysis, fear of failure/success, identity change, transitions.
+- **Counseling** (past/emotional): women 25-45 and gay men; high-functioning, often with cold or absent early parenting; depression, anxiety, shame, attachment fear, body image, expat displacement. Ukrainian women abroad are one meaningful segment.
+- **Coaching** (future/goals): men and women 30-45; goal-oriented doers, often the oldest child, high-functioning but craving depth; paralysis, fear of failure/success, identity change, transitions.
 
 Full profiles: [01-strategy/03-ideal-client-profile.md](01-strategy/03-ideal-client-profile.md).
 
@@ -34,11 +34,10 @@ Full profiles: [01-strategy/03-ideal-client-profile.md](01-strategy/03-ideal-cli
 | Stage | Offer | Price |
 |-------|-------|-------|
 | Entry (free) | 30-min discovery call | Free |
-| **Wedge (proposed, TBD)** | **Clarity Session** — 90 min + written pattern summary | €250–€300 |
-| Single | Counseling / coaching session | €120 / €180 |
+| **Wedge (proposed, TBD)** | **Clarity Session** - 90 min + written pattern summary | €250-€300 |
+| Single | Counseling session | €120 |
 | Package | Counseling 6-pack | €660 |
-| Package | Coaching Basic Breakthrough (6) | €1,020 |
-| Package | Coaching Profound Transformation (12) | €1,920 |
+| Program | The Next Chapter - 16-week 1:1 coaching program | €1,950 |
 
 Details: [03-offerings/](03-offerings/). Prices are canonical in the `practice-profile` skill.
 

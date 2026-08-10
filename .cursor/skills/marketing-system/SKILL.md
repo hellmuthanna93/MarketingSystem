@@ -7,15 +7,15 @@ description: >-
   mentions burgundy/cream brand, or Source Serif 4.
 ---
 
-# Marketing system — Anna Hellmuth
+# Marketing system - Anna Hellmuth
 
 ## First step
 
-Read **[brand/DESIGN.md](brand/DESIGN.md)** — compact styling reference. Do not re-scrape or re-audit the live site unless the user requests a sync.
+Read **[brand/DESIGN.md](brand/DESIGN.md)** - compact styling reference. Do not re-scrape or re-audit the live site unless the user requests a sync.
 
 ## Non-negotiables
 
-- **Tokens:** `brand/tokens.css` only — no duplicate hex in sub-projects
+- **Tokens:** `brand/tokens.css` only - no duplicate hex in sub-projects
 - **Imports:** `tokens.css` + `typography.css` + `components.css`; add `website/css/site.css` for site chrome
 - **Fonts:** Source Serif 4 (Google Fonts via `brand/typography.css`)
 - **Legacy:** `projects/table/` orange palette is **not** the website brand
@@ -34,21 +34,21 @@ Read **[brand/DESIGN.md](brand/DESIGN.md)** — compact styling reference. Do no
 
 ## Key components
 
-- `.btn-primary` — burgundy pill
-- `.services-card` + `.services-button` — white cards, full-width CTA
-- `.testimonial-card` on `.section--burgundy` — white quote cards, grid layout
-- `.section--cream` | `--white` | `--burgundy` — section backgrounds
+- `.btn-primary` - burgundy pill
+- `.services-card` + `.services-button` - white cards, full-width CTA
+- `.testimonial-card` on `.section--burgundy` - white quote cards, grid layout
+- `.section--cream` | `--white` | `--burgundy` - section backgrounds
 
 ## Repo
 
-- `index.html` — **marketing center** (root hub — start here)
-- `brand/index.html` — brand & marketing guides (all-in-one)
-- `design-system/` — **component library** (all base UI components)
-- `styleguide/` — visual brand preview + [marketing-guide.html](styleguide/marketing-guide.html)
-- `website/` — static mirror; rebuild via `website/scripts/build-website.py`
-- `brand/voice.md` — surface copy & CTAs
-- `brand/marketing/` — positioning, audience, content, sales, messaging
-- `brand/layouts.md` — 1080×1080, A4, etc.
+- `index.html` - **marketing center** (root hub - start here)
+- `brand/index.html` - brand & marketing guides (all-in-one)
+- `design-system/` - **component library** (all base UI components)
+- `styleguide/` - visual brand preview + [marketing-guide.html](styleguide/marketing-guide.html)
+- `website/` - static mirror; rebuild via `website/scripts/build-website.py`
+- `brand/voice.md` - surface copy & CTAs
+- `brand/marketing/` - positioning, audience, content, sales, messaging
+- `brand/layouts.md` - 1080×1080, A4, etc.
 
 ## Marketing vs visual brand
 
@@ -62,4 +62,4 @@ Read **[brand/DESIGN.md](brand/DESIGN.md)** — compact styling reference. Do no
 
 ## When unsure
 
-Open `styleguide/index.html` in browser or grep `brand/tokens.css` — do not invent new colors.
+Open `styleguide/index.html` in browser or grep `brand/tokens.css` - do not invent new colors.

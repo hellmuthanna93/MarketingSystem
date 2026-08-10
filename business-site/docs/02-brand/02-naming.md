@@ -2,7 +2,7 @@
 
 ## Decision
 
-The practice operates under the founder's own name: **Anna Hellmuth — Psychological Counseling and Life Coaching**. This is settled; no rebrand is planned.
+The practice operates under the founder's own name: **Anna Hellmuth - Psychological Counseling and Life Coaching**. This is settled; no rebrand is planned.
 
 ## Rationale
 
@@ -25,9 +25,11 @@ The practice operates under the founder's own name: **Anna Hellmuth — Psycholo
 Offers get descriptive, outcome-flavored names, not clever ones:
 
 - Discovery call (free)
-- **Clarity Session** (proposed wedge — working title; alternatives parked: "Pattern Mapping Session", "Inner Map Session")
-- Basic Breakthrough (coaching 6-pack)
-- Profound Transformation (coaching 12-pack)
+- **Clarity Session** (proposed wedge - working title; alternatives parked: "Pattern Mapping Session", "Inner Map Session")
+- **The Next Chapter** - A 16-week coaching program for life and career
+  transitions. Working public name; review once more before publication.
+
+**Retired names:** Basic Breakthrough and Profound Transformation.
 
 ## Parking lot / decision log
 

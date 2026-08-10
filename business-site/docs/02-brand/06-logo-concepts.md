@@ -24,4 +24,4 @@
 
 ## So what
 
-The visual identity is settled — the logo is an asset to place correctly, not redesign. For all other visual rules, see [03-visual-identity.md](03-visual-identity.md) and [brand/DESIGN.md](../../../brand/DESIGN.md).
+The visual identity is settled - the logo is an asset to place correctly, not redesign. For all other visual rules, see [03-visual-identity.md](03-visual-identity.md) and [brand/DESIGN.md](../../../brand/DESIGN.md).

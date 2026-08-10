@@ -6,19 +6,19 @@ Where Anna shows up, and the role each channel plays. Handles are canonical in `
 
 | Channel | Handle | Role | Priority |
 |---------|--------|------|----------|
-| Instagram | @anna_hellmuth.md | Primary visual channel — intimacy + reach | 1 |
+| Instagram | @anna_hellmuth.md | Primary visual channel - intimacy + reach | 1 |
 | LinkedIn | Anna Hellmuth | Authority; professional ICP | 2 |
 | Blog / SEO | annahellmuth.com/blog | Compounding search trust | 3 |
 | Newsletter | TBD | Owned audience, nurture, conversion | 4 (build) |
 | TikTok | @anna_hellmuth.md | Experimental short-form reach | 5 |
 | Facebook | drhellmuthanna | Legacy reach | 6 |
-| Directory | Location Independent Therapists | Passive inbound, credibility | — |
+| Directory | Location Independent Therapists | Passive inbound, credibility | - |
 
 ## Instagram (primary)
 
 - Feed posts and carousels in brand template (1080×1080; see [brand/layouts.md](../../../brand/layouts.md))
 - Stories for behind-the-practice warmth and soft invitations
-- Reels for reach; repurpose insights into 30–60s scripts
+- Reels for reach; repurpose insights into 30-60s scripts
 - Bilingual where it fits (EN primary; DE / UK / RU for resonance)
 - CTA: discovery call link in bio; soft invitations only
 
@@ -26,7 +26,7 @@ Where Anna shows up, and the role each channel plays. Handles are canonical in `
 
 - Same insights, slightly longer development
 - Professional ICP (high-functioning, burnout-prone)
-- Authority without posturing — lived perspective, not credential flexing
+- Authority without posturing - lived perspective, not credential flexing
 
 ## Blog / SEO
 
@@ -34,10 +34,10 @@ Where Anna shows up, and the role each channel plays. Handles are canonical in `
 - Movement-first openings; internal links to service pages and discovery call
 - Seeds the repurposing pipeline (see [02-content-engine.md](02-content-engine.md))
 
-## Newsletter (to build — TBD)
+## Newsletter (to build - TBD)
 
 - Owned audience insulates against algorithm risk
-- Double opt-in required (GDPR — see [06-outreach-compliance-germany.md](06-outreach-compliance-germany.md))
+- Double opt-in required (GDPR - see [06-outreach-compliance-germany.md](06-outreach-compliance-germany.md))
 - One theme per issue; personal lens; soft CTA
 - Templates: [../09-toolkit/12-newsletter-templates.md](../09-toolkit/12-newsletter-templates.md)
 

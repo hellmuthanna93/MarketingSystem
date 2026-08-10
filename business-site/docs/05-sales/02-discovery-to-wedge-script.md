@@ -33,14 +33,15 @@ flowchart TD
 
 | Signal | Offer |
 |--------|-------|
-| Decisive, understands depth takes continuity | Package (6-pack / coaching 6 or 12) |
+| Decisive counseling fit | Counseling 6-pack |
+| Decisive coaching fit | The Next Chapter |
 | Interested but hesitant to commit to many sessions | Clarity Session wedge (TBD) |
-| Wants help with one concrete thing | Single session |
+| Wants help with one concrete counseling issue | Counseling single session |
 | Needs time | Send recommendation + link; no pressure |
 
 ## How to present the wedge (when confirmed)
 
-> "If you'd like to experience how I work and leave with a clear map before committing to a longer package, there's a single Clarity Session — 90 minutes plus a written summary of the pattern we find. Some people start there; others go straight into a package. Both are completely fine."
+> "If you'd like to experience how I work and leave with a clear map before committing to a longer package, there's a single Clarity Session - 90 minutes plus a written summary of the pattern we find. Some people start there; others go straight into a package. Both are completely fine."
 
 ## The close (no pressure)
 
@@ -50,4 +51,4 @@ flowchart TD
 
 ## So what
 
-The recommendation is a clear fork: refer out, single, wedge, or package — chosen by lane + commitment, delivered without pressure. The wedge is the bridge for the hesitant-but-interested. Full wording: [../09-toolkit/01-discovery-call-script.md](../09-toolkit/01-discovery-call-script.md).
+The recommendation is a clear fork: refer out, single, wedge, or package - chosen by lane + commitment, delivered without pressure. The wedge is the bridge for the hesitant-but-interested. Full wording: [../09-toolkit/01-discovery-call-script.md](../09-toolkit/01-discovery-call-script.md).

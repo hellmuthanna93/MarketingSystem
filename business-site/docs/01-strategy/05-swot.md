@@ -4,7 +4,7 @@
 
 - Rare credential combination: Medical Doctor + psychologist + coach + hypnotherapist (ongoing)
 - Genuine psychological **depth** paired with coaching **practicality**
-- Lived experience (surgery → burnout → psychology) — authentic, non-performative authority
+- Lived experience (surgery → burnout → psychology) - authentic, non-performative authority
 - Multilingual: EN / DE / UK / RU with real migration experience and cultural fit
 - Precise, warm voice that makes the right client feel instantly understood
 - Location-independent, low-overhead online model
@@ -12,7 +12,7 @@
 
 ## Weaknesses
 
-- Solo capacity ceiling — depth model limits sessions/day
+- Solo capacity ceiling - depth model limits sessions/day
 - Inbound/reputation funnel is slow to compound; little paid acceleration
 - Single-founder dependency (all delivery + marketing on Anna)
 - Wedge offer (Clarity Session) not yet validated or live
@@ -37,7 +37,7 @@
 - Burnout risk if growth chases volume instead of price/packaging
 - Economic downturn reducing discretionary spend on premium self-pay services
 
-## TOWS — cross strategies
+## TOWS - cross strategies
 
 | | Opportunities | Threats |
 |---|---------------|---------|
@@ -46,4 +46,4 @@
 
 ## So what
 
-The dominant move is **SO**: productize the wedge, build owned audience, and let multilingual depth content compound — while **WT** discipline (price up, systematize, protect free days) keeps the practice sustainable. Feeds [06-business-model.md](06-business-model.md) and [../08-roadmap/01-90-day-launch.md](../08-roadmap/01-90-day-launch.md).
+The dominant move is **SO**: productize the wedge, build owned audience, and let multilingual depth content compound - while **WT** discipline (price up, systematize, protect free days) keeps the practice sustainable. Feeds [06-business-model.md](06-business-model.md) and [../08-roadmap/01-90-day-launch.md](../08-roadmap/01-90-day-launch.md).

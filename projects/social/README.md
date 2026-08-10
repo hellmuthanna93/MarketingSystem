@@ -6,8 +6,8 @@ HTML templates at fixed sizes (1080×1080, etc.).
 
 | File | Size | Use |
 |------|------|-----|
-| [templates/post-counseling.html](templates/post-counseling.html) | 1080×1080 | Counseling post — cream background, X→Y→Z formula |
-| [templates/post-coaching.html](templates/post-coaching.html) | 1080×1080 | Coaching post — burgundy background, X→Y→Z formula |
+| [templates/post-counseling.html](templates/post-counseling.html) | 1080×1080 | Counseling post - cream background, X→Y→Z formula |
+| [templates/post-coaching.html](templates/post-coaching.html) | 1080×1080 | Coaching post - burgundy background, X→Y→Z formula |
 | [templates/post-quote.html](templates/post-quote.html) | 1080×1080 | Testimonial-style quote card |
 
 **Before building or editing:**

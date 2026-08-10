@@ -109,7 +109,7 @@ Everything written for Anna (web, social, blog, email) must read like a thoughtf
 
 ### Hard rules
 
-- **Never use em dashes or en dashes (`—` `–`).** This is the single most reliable AI tell. Replace each one with a period (start a new sentence), a comma (a tight aside), a colon (before an explanation), or parentheses, or just restructure. Also avoid spaced hyphens used as a dash (` - `, ` -- `); write a real clause instead. Scan every draft for `—` and `–` before it ships.
+- **Use regular hyphens only.** Never use the Unicode em dash (U+2014) or en dash (U+2013). When a dash is useful, write a regular hyphen (`-`). A period, comma, colon, parentheses, or a restructured sentence is also welcome when it reads more naturally. Scan every draft for Unicode dash characters before it ships.
 - **No emojis** unless explicitly requested.
 - Straight quotes/apostrophes in markdown and code. The website's curly quotes are a fine typographic choice (curly quotes on their own are not an AI tell).
 

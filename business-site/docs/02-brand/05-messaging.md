@@ -1,13 +1,13 @@
 # Messaging & Core Copy
 
-> **Pointer doc.** Approved, canonical copy lives in [brand/marketing/messaging.md](../../../brand/marketing/messaging.md). Never invent new headlines — pull from there or mark TBD. This doc collects the ready-to-paste blocks for convenience.
+> **Pointer doc.** Approved, canonical copy lives in [brand/marketing/messaging.md](../../../brand/marketing/messaging.md). Never invent new headlines - pull from there or mark TBD. This doc collects the ready-to-paste blocks for convenience.
 
 ## Message hierarchy
 
-1. **Recognition** — name the stuck inner experience
-2. **Bridge** — understanding alone hasn't been enough
-3. **Possibility** — and it can change, with the right support
-4. **Invitation** — a calm, no-pressure next step
+1. **Recognition** - name the stuck inner experience
+2. **Bridge** - understanding alone hasn't been enough
+3. **Possibility** - and it can change, with the right support
+4. **Invitation** - a calm, no-pressure next step
 
 ## Headlines & taglines (from live site)
 
@@ -28,7 +28,7 @@
 
 ## Elevator pitch (use/adapt, keep facts true)
 
-> I help sensitive, thoughtful people who understand themselves well — and still feel stuck — finally move. I combine psychological depth with practical coaching and genuine warmth, online, in English, German, Ukrainian, or Russian.
+> I help sensitive, thoughtful people who understand themselves well - and still feel stuck - finally move. I combine psychological depth with practical coaching and genuine warmth, online, in English, German, Ukrainian, or Russian.
 
 ## Bios
 
@@ -41,10 +41,10 @@ Pull approved bio facts from `practice-profile`. Keep credentials on trust pages
 
 | Objection | Response (soft, honest) |
 |-----------|--------------------------|
-| "I already understand my problem." | Understanding isn't the same as release — that's exactly where deeper work begins. |
+| "I already understand my problem." | Understanding isn't the same as release - that's exactly where deeper work begins. |
 | "Will this actually work?" | I can't promise outcomes, but I'm confident in the process and what becomes possible with engaged work. |
 | "Is it worth the price?" | The work creates lasting change; you're free to decide what that's worth to you. |
-| "Counseling or coaching?" | The discovery call helps us decide together — clarity itself can be the goal. |
+| "Counseling or coaching?" | The discovery call helps us decide together - clarity itself can be the goal. |
 
 ## Words to prefer / avoid
 

@@ -23,11 +23,11 @@ Per §14 UStG (and §19 note if Kleinunternehmer):
 - [ ] Invoice date and a unique sequential invoice number
 - [ ] Quantity and description of the service (e.g. "Psychologische Beratung, 60 Min.")
 - [ ] Date/period of service
-- [ ] Net amount, USt rate and amount — **or** the §19 UStG small-business note if applicable (no USt shown)
+- [ ] Net amount, USt rate and amount - **or** the §19 UStG small-business note if applicable (no USt shown)
 - [ ] Total amount
 - [ ] Payment terms / reference
 
-Confirm USt handling per service with a Steuerberater ([01-legal-setup-germany.md](01-legal-setup-germany.md)) — therapeutic vs coaching portions may differ.
+Confirm USt handling per service with a Steuerberater ([01-legal-setup-germany.md](01-legal-setup-germany.md)) - therapeutic vs coaching portions may differ.
 
 ## Retention
 
@@ -35,4 +35,4 @@ Keep invoices and tax-relevant documents per German retention rules (commonly up
 
 ## So what
 
-A short, complete document set — invoice, agreement, intake, privacy, Impressum, DPAs — covers the practice's legal/financial paperwork. Templates make them repeatable; a professional review makes them safe. Projections: [05-financial-projections.md](05-financial-projections.md).
+A short, complete document set - invoice, agreement, intake, privacy, Impressum, DPAs - covers the practice's legal/financial paperwork. Templates make them repeatable; a professional review makes them safe. Projections: [05-financial-projections.md](05-financial-projections.md).

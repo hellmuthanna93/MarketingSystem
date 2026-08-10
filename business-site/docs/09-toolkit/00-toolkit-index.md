@@ -1,13 +1,13 @@
 # Toolkit Index
 
-The execution layer — **full copy, not outlines**. Posts, scripts, emails, and templates ready to use or adapt. Strategy lives in sections 01–08; this is where it becomes action.
+The execution layer - **full copy, not outlines**. Posts, scripts, emails, and templates ready to use or adapt. Strategy lives in sections 01-08; this is where it becomes action.
 
 ## Usage rules
 
 1. **Voice first.** Read the `practice-voice` skill + `humanizer-patterns.md` before publishing anything. Run the humanizer pass.
 2. **Facts from `practice-profile`.** Never change a price or claim here without updating the profile.
 3. **Compliance.** For any health claim, testimonial, or outreach, check `dach-mental-health-compliance`.
-4. **Placeholders.** `{{like_this}}` — replace before sending.
+4. **Placeholders.** `{{like_this}}` - replace before sending.
 5. **Wedge is TBD.** Anything referencing the Clarity Session is draft until Anna confirms name/price/promise.
 6. **Soft CTAs only.** Primary: Schedule your discovery call → https://calendar.app.google/ueKb9RbyxWyC6zfK8
 

@@ -1,4 +1,4 @@
-# Counseling & Coaching Agreement — Template
+# Counseling & Coaching Agreement - Template
 
 > **Not legal advice. Draft for lawyer review.** A fill-in Beratung/coaching agreement reflecting the scope and rules in [../05-sales/03-counseling-agreement.md](../05-sales/03-counseling-agreement.md) and [../07-finance-legal/01-legal-setup-germany.md](../07-finance-legal/01-legal-setup-germany.md). Replace `{{placeholders}}`; have a Rechtsanwalt review before use.
 
@@ -33,12 +33,12 @@ Sessions are held online via {{platform}}. Counseling/coaching sessions are 60 m
 |---------|-----|
 | {{Counseling single}} | €120 |
 | {{Counseling 6-pack}} | €660 |
-| {{Coaching single}} | €180 |
-| {{Coaching Basic Breakthrough}} | €1,020 |
-| {{Coaching Profound Transformation}} | €1,920 |
-| {{Clarity Session — TBD}} | €{{TBD}} |
+| The Next Chapter - 16-week coaching program | €1,950 |
+| {{Clarity Session - TBD}} | €{{TBD}} |
 
-Payment is due upon booking. {{USt / §19 UStG note per Steuerberater.}}
+Payment is made by direct bank transfer or Revolut transfer. For the coaching
+program, choose either one payment of €1,950 or three monthly payments of €650.
+No VAT is added under Anna's current Kleinunternehmer status (§19 UStG).
 
 ### 5. Cancellation
 

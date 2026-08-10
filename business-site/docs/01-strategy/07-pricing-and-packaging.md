@@ -4,7 +4,8 @@
 
 ## Current price list
 
-Payment upon booking. Free cancel/reschedule up to 48h before; full fee within 48h.
+Payment, or the first agreed installment, is due upon booking. Free
+cancel/reschedule up to 48h before; full fee within 48h.
 
 ### Psychological counseling
 
@@ -15,34 +16,39 @@ Payment upon booking. Free cancel/reschedule up to 48h before; full fee within 4
 
 ### Life coaching
 
-| Option | Price | Per session |
-|--------|-------|-------------|
-| Single session (60 min) | €180 | €180 |
-| Basic Breakthrough (6 sessions) | €1,020 | €170 |
-| Profound Transformation (12 sessions, best value) | €1,920 | €160 |
+| Option | Price |
+|--------|-------|
+| The Next Chapter - 16-week 1:1 coaching program | €1,950 |
 
-Coaching includes individually tailored action plans and assignments between sessions.
+The program contains 12 core sessions, weekly written support, live
+hypno-meditations during relevant sessions, a personal transition plan, and one
+follow-up. It is the only coaching offer.
 
-### Clarity Session (proposed wedge — TBD)
+Payment is either €1,950 in full or three monthly installments of €650. No VAT
+is added while Anna applies the Kleinunternehmerregelung under §19 UStG.
+Payment is made by direct bank transfer or Revolut transfer.
+
+### Clarity Session (proposed wedge - TBD)
 
 | Option | Price | Notes |
 |--------|-------|-------|
-| Clarity Session (90 min + written summary) | €250–€300 (TBD) | Premium one-off; bridges to packages |
+| Clarity Session (90 min + written summary) | €250-€300 (TBD) | Premium one-off; bridges to packages |
 
 **Status:** proposed; not live until Anna confirms name, price, and promise. See [../03-offerings/02-wedge-offer-clarity-session.md](../03-offerings/02-wedge-offer-clarity-session.md).
 
 ## Packaging logic
 
-- **Bias to packages.** Single sessions exist, but packages are recommended — they produce better outcomes (depth needs continuity) *and* better economics. The per-session discount rewards commitment, not haggling.
-- **Coaching priced above counseling.** Coaching carries between-session work and goal accountability; the price reflects scope, and coaching clients are a 2026 growth priority.
-- **The 12-session "best value" anchor.** Profound Transformation anchors the coaching ladder and makes the 6-pack feel accessible.
-- **The wedge fills the gap.** Between a free call and a €660–€1,920 package sits a large commitment leap. The Clarity Session (€250–€300) lets a prospect experience the depth at a premium price point before committing.
+- **Counseling keeps singles and a package.**
+- **Coaching has one complete program.** No coaching singles or alternate
+  packages.
+- **The wedge may fill the gap.** The proposed Clarity Session can let a
+  prospect experience the depth before committing.
 
 ## Price ladder (ascending)
 
 ```
-Free discovery call  →  Single session (€120 / €180)  →  Clarity Session wedge (€250–€300, TBD)
-   →  Counseling 6-pack (€660)  →  Coaching 6-pack (€1,020)  →  Coaching 12-pack (€1,920)
+Free discovery call → counseling single (€120) / counseling 6-pack (€660)
+   → proposed Clarity Session (€250-€300, TBD) → The Next Chapter (€1,950)
 ```
 
 ## Pricing mindset (from sales.md)

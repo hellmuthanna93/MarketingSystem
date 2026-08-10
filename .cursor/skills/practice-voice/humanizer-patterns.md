@@ -1,6 +1,6 @@
-# Humanizer patterns — anti-AI pass
+# Humanizer patterns - anti-AI pass
 
-Run this pass on every draft before it ships. The goal: copy that reads like Anna actually wrote it — warm, specific, slightly imperfect — not like a polished AI template.
+Run this pass on every draft before it ships. The goal: copy that reads like Anna actually wrote it - warm, specific, slightly imperfect - not like a polished AI template.
 
 ## Tells to remove
 
@@ -11,9 +11,9 @@ Run this pass on every draft before it ships. The goal: copy that reads like Ann
 | "Whether you're X or Y…" framing | Pick the real reader; stop hedging both ways. |
 | Rule-of-three everywhere ("clarity, calm, and confidence") | Vary rhythm; sometimes one word, sometimes a full sentence. |
 | "Unlock", "elevate", "empower", "embark on a journey", "dive deep" | Replace with plain verbs: see, name, release, move, change. |
-| "Studies show" / "research suggests" with no source | Cut — Anna speaks from experience, not citations, in social. |
+| "Studies show" / "research suggests" with no source | Cut - Anna speaks from experience, not citations, in social. |
 | Perfectly balanced paragraphs of equal length | Break it. Use a one-line paragraph for emphasis. |
-| Em-dash overload in every sentence | Keep one or two; vary punctuation. |
+| Unicode dashes in a draft | Replace them with regular hyphens, or choose punctuation that reads more naturally. |
 | Summary sentence that restates the whole post | End on an image, a question, or a soft invitation instead. |
 | "I hope this helps" / "Remember:" / "At the end of the day" | Cut filler closers. |
 | Emoji garnish (✨🌿💫) | None unless Anna explicitly asks. |
@@ -22,7 +22,7 @@ Run this pass on every draft before it ships. The goal: copy that reads like Ann
 
 - **One concrete, specific detail** the reader recognizes ("the quiet Sunday that fills you with dread", "answering emails at midnight", "irritability toward people you love, followed by shame").
 - **A short sentence** for rhythm. Then a longer one that breathes.
-- **Direct address** — "you", not "people" or "one".
+- **Direct address** - "you", not "people" or "one".
 - **A felt truth**, not a tip. Name what it actually feels like from the inside.
 
 ## Rhythm test

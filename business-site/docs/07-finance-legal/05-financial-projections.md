@@ -5,7 +5,7 @@
 ## Assumptions
 
 - Prices per [../01-strategy/07-pricing-and-packaging.md](../01-strategy/07-pricing-and-packaging.md)
-- Wedge (€250–€300) live from Year 1, TBD-confirmed
+- Wedge (€250-€300) live from Year 1, TBD-confirmed
 - Low overhead; lean tool stack
 - Growth from price + mix + wedge conversion, not added hours
 - Sustainable session cap maintained throughout
@@ -18,7 +18,7 @@
 | Base | stabilizing | growing pipeline + wedge | approaching mid-range | Wedge converts; first price increase |
 | Ambitious | stabilizing | strong pipeline | trending toward €300k goal | Premium pricing, coaching-12 mix, owned audience, leverage |
 
-The €300k north star is a **5-year** target; Years 1–3 are about building the predictable, premium pipeline that makes it reachable without volume.
+The €300k north star is a **5-year** target; Years 1-3 are about building the predictable, premium pipeline that makes it reachable without volume.
 
 ## What moves each scenario up
 
@@ -34,10 +34,10 @@ flowchart LR
 
 ## Sensitivity (the few things that matter most)
 
-1. **Discovery calls/month** — the master input (see KPIs)
-2. **Discovery → package conversion** — recommendation quality + wedge
-3. **Average price** — package mix + price increases over time
-4. **Retention/renewal** — cheapest revenue there is
+1. **Discovery calls/month** - the master input (see KPIs)
+2. **Discovery → package conversion** - recommendation quality + wedge
+3. **Average price** - package mix + price increases over time
+4. **Retention/renewal** - cheapest revenue there is
 
 Small improvements in these compound; chasing volume does not.
 
@@ -47,4 +47,4 @@ Revisit projections quarterly against actuals; adjust prices and mix as reputati
 
 ## So what
 
-Years 1–3 build a premium, predictable pipeline; the €300k goal is a 5-year outcome of price + mix + conversion + retention — never more hours. Track the four sensitivities in [../08-roadmap/03-milestones-and-kpis.md](../08-roadmap/03-milestones-and-kpis.md).
+Years 1-3 build a premium, predictable pipeline; the €300k goal is a 5-year outcome of price + mix + conversion + retention - never more hours. Track the four sensitivities in [../08-roadmap/03-milestones-and-kpis.md](../08-roadmap/03-milestones-and-kpis.md).

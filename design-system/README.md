@@ -1,4 +1,4 @@
-# Design system — Anna Hellmuth
+# Design system - Anna Hellmuth
 
 Static HTML/CSS/JS component library extracted from [annahellmuth.com](https://annahellmuth.com/) patterns.
 
@@ -59,11 +59,11 @@ Source Serif 4 loads via `brand/typography.css` (Google Fonts). See [brand/asset
 ## Rules
 
 - Edit colors only in `brand/tokens.css`
-- Class names match the website mirror where possible — drop-in compatible
+- Class names match the website mirror where possible - drop-in compatible
 - All interactive patterns use native HTML first (`<details>`, `aria-*`, keyboard support)
 
 ## Related
 
-- [brand/DESIGN.md](../brand/DESIGN.md) — token cheat sheet
-- [styleguide/index.html](../styleguide/index.html) — compact visual reference
-- [brand/index.html](../brand/index.html) — marketing & brand hub
+- [brand/DESIGN.md](../brand/DESIGN.md) - token cheat sheet
+- [styleguide/index.html](../styleguide/index.html) - compact visual reference
+- [brand/index.html](../brand/index.html) - marketing & brand hub

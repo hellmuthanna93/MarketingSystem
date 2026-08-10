@@ -1,4 +1,4 @@
-# Approved messaging — Anna Hellmuth
+# Approved messaging - Anna Hellmuth
 
 Canonical copy from [annahellmuth.com](https://annahellmuth.com/). Use these phrases consistently across web, social, and print.
 
@@ -54,7 +54,7 @@ For strategic framing (movement over process), see [positioning.md](positioning.
 
 ---
 
-## Emotional hooks (website — reusable in content)
+## Emotional hooks (website - reusable in content)
 
 - *The thought of a life unlived is a potent call to action*
 - *We are our own toughest critics, our own most persistent roadblocks*
@@ -75,9 +75,9 @@ When writing content, mirror what clients actually experience:
 | Transformation speed | "Accelerate my healing process … everything in my life is better than I expected" |
 | Childhood / deep work | "Learned to process emotions constructively instead of suppressing them" |
 | Warmth & safety | "I felt heard, understood, in a non-judgmental space" |
-| Life overhaul | "Divorce, career pivot, finances, relationship — I learned to trust myself" |
+| Life overhaul | "Divorce, career pivot, finances, relationship - I learned to trust myself" |
 
-Always attribute testimonials as *— Former client* with privacy note when published.
+Always attribute testimonials as *- Former client* with privacy note when published.
 
 ---
 
@@ -115,5 +115,5 @@ Always attribute testimonials as *— Former client* with privacy note when publ
 ## Legal / footer (always include on web)
 
 - Anna Hellmuth Psychological Counseling and Life Coaching
-- Impressum – Legal Notice · Privacy Policy
+- Impressum - Legal Notice · Privacy Policy
 - *Feedback from clients is posted anonymously to protect their privacy*

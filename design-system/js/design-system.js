@@ -1,5 +1,5 @@
 /**
- * Anna Hellmuth design system — interactive components
+ * Anna Hellmuth design system - interactive components
  */
 document.addEventListener('DOMContentLoaded', () => {
   setupStickyHeader();

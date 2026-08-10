@@ -1,6 +1,6 @@
 # Lead Generation
 
-How interest becomes a booked discovery call — inbound-first, no pressure, fully compliant.
+How interest becomes a booked discovery call - inbound-first, no pressure, fully compliant.
 
 ## Philosophy
 

@@ -1,6 +1,6 @@
 # Sales Process
 
-> Sales here means a respectful, consultative conversation — never persuasion or pressure. Philosophy: do not convince, do not push. Help people understand their situation, show a possible future, name what keeps them stuck, invite the next step. People should feel respected and free.
+> Sales here means a respectful, consultative conversation - never persuasion or pressure. Philosophy: do not convince, do not push. Help people understand their situation, show a possible future, name what keeps them stuck, invite the next step. People should feel respected and free.
 
 ## Pipeline stages
 
@@ -24,7 +24,7 @@ Use the listen-fors from the `discovery-calls` skill:
 
 ## Timing
 
-- Respond to warm inbound within 24–48h
+- Respond to warm inbound within 24-48h
 - Discovery call: 30 minutes, free
 - After the call: send a short follow-up with the recommendation + link (same day or next)
 - Wedge → package: day-7 follow-up email

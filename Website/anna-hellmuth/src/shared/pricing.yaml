@@ -7,6 +7,16 @@ counseling:
     sessions: 6
     per_session: 110
 coaching:
+  program:
+    name: The Next Chapter
+    amount: 1950
+    installments: 3
+    installment_amount: 650
+    core_sessions: 12
+    follow_up_sessions: 1
+    duration_weeks: 16
+  # Retired values remain temporarily for untranslated legacy source bodies.
+  # Do not publish these as current offers.
   single:
     amount: 180
     period_key: per_60min

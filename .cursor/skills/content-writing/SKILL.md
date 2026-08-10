@@ -7,7 +7,7 @@ description: >-
   for content that sounds like Anna Hellmuth.
 ---
 
-# Content writing — Anna Hellmuth
+# Content writing - Anna Hellmuth
 
 ## First step
 
@@ -25,7 +25,7 @@ For CTAs and the humanized-writing rules: **[brand/voice.md](brand/voice.md)**.
 6. **Sources:** lived experience, genuine learnings, anonymized client patterns, not generic self-help
 7. **CTAs:** soft invitation only; primary = "Schedule your discovery call". No guilt or urgency.
 8. **HTML social posts:** use `projects/social/templates/` + `brand/*.css` (no hardcoded hex)
-9. **Humanize every draft.** Follow the "Humanized writing (no AI tells)" rules in `brand/voice.md`. Hardest rule: **never use em dashes or en dashes (`—` `–`)**; use a period, comma, colon, or parentheses instead. Also cut AI vocabulary (delve, tapestry, underscore, showcase, foster), forced rule-of-three, "not just X but Y" parallelisms, "serves as / stands as" copula avoidance, signposting ("let's dive in"), and generic upbeat conclusions. Scan for `—` and `–` before publishing.
+9. **Humanize every draft.** Follow the "Humanized writing (no AI tells)" rules in `brand/voice.md`. Hardest rule: **use regular hyphens only.** Never use Unicode em or en dash characters. Use a regular hyphen (`-`) when a dash is helpful, or choose a period, comma, colon, parentheses, or a restructured sentence. Also cut AI vocabulary (delve, tapestry, underscore, showcase, foster), forced rule-of-three, "not just X but Y" parallelisms, "serves as / stands as" copula avoidance, signposting ("let's dive in"), and generic upbeat conclusions. Scan for Unicode dash characters before publishing.
 
 ## Anna's personal content principles
 

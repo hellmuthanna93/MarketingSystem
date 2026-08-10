@@ -105,7 +105,7 @@ class SiteBuilder:
         for loc in all_locales:
             self.site_configs[loc] = load_yaml(LOCALES_DIR / loc / "site.yaml")
         self.env = Environment(
-            loader=FileSystemLoader(str(TEMPLATES)),
+            loader=FileSystemLoader([str(TEMPLATES), str(SRC)]),
             autoescape=select_autoescape(["html", "xml", "j2"]),
         )
         self.env.globals["site_url"] = SITE_URL
@@ -215,6 +215,7 @@ class SiteBuilder:
             "asset": asset,
             "page_url": page_url,
             "current_key": page.translation_key,
+            "canonical": self.canonical(page, locale),
         }
 
     def template_name(self, page: PageDef) -> str:

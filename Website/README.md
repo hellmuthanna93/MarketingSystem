@@ -1,4 +1,4 @@
-# Website — annahellmuth.com (static, multilingual)
+# Website - annahellmuth.com (static, multilingual)
 
 Static site for [annahellmuth.com](https://annahellmuth.com/), built from `src/` into locale folders `en/`, `de/`, `uk/`, `ru/`.
 

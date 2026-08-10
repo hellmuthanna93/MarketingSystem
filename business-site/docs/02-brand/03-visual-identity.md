@@ -1,6 +1,6 @@
 # Visual Identity Direction
 
-> **Pointer doc.** The visual identity source of truth is [brand/DESIGN.md](../../../brand/DESIGN.md), with tokens in [brand/tokens.css](../../../brand/tokens.css). Do not duplicate hex values here or anywhere — link the brand CSS.
+> **Pointer doc.** The visual identity source of truth is [brand/DESIGN.md](../../../brand/DESIGN.md), with tokens in [brand/tokens.css](../../../brand/tokens.css). Do not duplicate hex values here or anywhere - link the brand CSS.
 
 ## At a glance
 
@@ -15,7 +15,7 @@
 
 ## Typography
 
-**Source Serif 4** for everything — headings and body (variable font, 200–900, via Google Fonts in [brand/typography.css](../../../brand/typography.css)).
+**Source Serif 4** for everything - headings and body (variable font, 200-900, via Google Fonts in [brand/typography.css](../../../brand/typography.css)).
 
 - Headings: weight 600
 - Body: 400
@@ -33,7 +33,7 @@
 ## Photography / illustration direction
 
 - Calm, warm, human; natural light; uncluttered
-- Feminine, grounded, premium — never stocky "happy business people" or clinical sterility
+- Feminine, grounded, premium - never stocky "happy business people" or clinical sterility
 - Burgundy/cream palette harmony in any custom graphics
 - The logo and existing site imagery set the reference
 

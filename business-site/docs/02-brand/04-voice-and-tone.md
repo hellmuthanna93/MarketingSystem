@@ -4,13 +4,13 @@
 
 ## Voice in one line
 
-Warm and understanding, **and** unmistakably confident that inner states can change — a specialist who names the reader's experience precisely, has been there too, and stays grounded as the one who can help them move.
+Warm and understanding, **and** unmistakably confident that inner states can change - a specialist who names the reader's experience precisely, has been there too, and stays grounded as the one who can help them move.
 
 ## Core attributes
 
 - Felt inner strength and compassion (firmness + care)
-- Not separate from the struggle — known from the inside
-- Precise recognition — *"this is written about me"*
+- Not separate from the struggle - known from the inside
+- Precise recognition - *"this is written about me"*
 - Grounded certainty, not hype
 - Respects intelligent adults
 - Honest about limits
@@ -40,4 +40,4 @@ Full never-list and quick-check: `practice-voice` skill.
 
 ## So what
 
-Voice is the brand's heaviest-lifting asset — it's what makes the right client feel understood. Keep it identical in spirit across channels; only the length and intimacy shift. Evidence from real writing: [07-voice-reference.md](07-voice-reference.md).
+Voice is the brand's heaviest-lifting asset - it's what makes the right client feel understood. Keep it identical in spirit across channels; only the length and intimacy shift. Evidence from real writing: [07-voice-reference.md](07-voice-reference.md).

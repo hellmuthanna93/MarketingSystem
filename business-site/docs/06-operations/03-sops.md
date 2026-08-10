@@ -1,6 +1,6 @@
 # SOPs & Templates Index
 
-Standard operating procedures so the practice runs the same way every time — freeing Anna's attention for the actual work. Each SOP links to its template where one exists.
+Standard operating procedures so the practice runs the same way every time - freeing Anna's attention for the actual work. Each SOP links to its template where one exists.
 
 ## SOP index
 
@@ -10,8 +10,8 @@ Standard operating procedures so the practice runs the same way every time — f
 | Recommendation follow-up | [../05-sales/02-discovery-to-wedge-script.md](../05-sales/02-discovery-to-wedge-script.md) | [../09-toolkit/05-client-emails.md](../09-toolkit/05-client-emails.md) |
 | Onboarding | [../05-sales/04-onboarding.md](../05-sales/04-onboarding.md) | [../09-toolkit/05-client-emails.md](../09-toolkit/05-client-emails.md) |
 | Clarity Session delivery | [../03-offerings/02-wedge-offer-clarity-session.md](../03-offerings/02-wedge-offer-clarity-session.md) | [../09-toolkit/06-wedge-deliverable-template.md](../09-toolkit/06-wedge-deliverable-template.md) |
-| Per-session loop | [02-delivery-workflow.md](02-delivery-workflow.md) | — |
-| Post-session notes | [02-delivery-workflow.md](02-delivery-workflow.md) | — |
+| Per-session loop | [02-delivery-workflow.md](02-delivery-workflow.md) | - |
+| Post-session notes | [02-delivery-workflow.md](02-delivery-workflow.md) | - |
 | Invoicing | [../07-finance-legal/04-templates.md](../07-finance-legal/04-templates.md) | [../09-toolkit/08-invoice-template-germany.md](../09-toolkit/08-invoice-template-germany.md) |
 | Renewal invitation | [../05-sales/04-onboarding.md](../05-sales/04-onboarding.md) | [../09-toolkit/05-client-emails.md](../09-toolkit/05-client-emails.md) |
 | Testimonial request | [../03-offerings/05-case-study-strategy.md](../03-offerings/05-case-study-strategy.md) | [../09-toolkit/05-client-emails.md](../09-toolkit/05-client-emails.md) |
@@ -27,7 +27,7 @@ Standard operating procedures so the practice runs the same way every time — f
 ## Weekly operating rhythm
 
 - **Mon:** plan week; confirm sessions; batch content
-- **Tue–Thu:** sessions + delivery (within hour limit)
+- **Tue-Thu:** sessions + delivery (within hour limit)
 - **Fri:** notes, summaries, follow-ups, admin/invoicing; weekly review
 - **2 days:** free (protected)
 

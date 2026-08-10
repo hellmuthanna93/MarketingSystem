@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta name="theme-color" content="#64010d">
-  <title>Анна Гельмут | Психологическое консультирование и лайф-коучинг</title>
+  <title>Анна Хельмут | Психологическое консультирование и лайф-коучинг</title>
   <meta name="description" content="Онлайн психологическое консультирование и лайф-коучинг на английском, немецком, украинском и русском языках.">
   <link rel="canonical" href="https://annahellmuth.com/ru/index.html">
   
@@ -34,7 +34,7 @@
     <header>
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <img src="../assets/images/logo.png" alt="Логотип Анны Гельмут">
+        <img src="../assets/images/logo.png" alt="Логотип Анны Хельмут">
       </a>
       <nav class="nav-links" aria-label="Психологическое консультирование">
         <a href="psihologicheskoe-konsultirovanie.html">Психологическое консультирование</a>
@@ -178,6 +178,337 @@
  </div>
  </section>
 
+<!-- Support Quiz -->
+
+<section class="quiz-hero quiz-hero--embedded">
+  <div class="container quiz-hero__inner">
+    <p class="quiz-eyebrow">Counseling or coaching?</p>
+    
+    <h2>What kind of support do I need right now?</h2>
+    
+    <p>
+      This short quiz can help you understand which kind of support may fit
+      your needs best right now.
+    </p>
+  </div>
+</section>
+
+<section class="quiz-section">
+  <div class="container">
+    <div class="quiz-shell" data-support-quiz>
+      <div class="quiz-progress" aria-hidden="true">
+        <div class="quiz-progress__bar" data-quiz-progress></div>
+      </div>
+
+      <div class="quiz-card" data-quiz-card>
+        <p class="quiz-step" data-quiz-step>Question 1</p>
+        <h2 data-quiz-question>What is the main reason you are here?</h2>
+        <p class="quiz-help" data-quiz-help>Choose the answer that feels closest. You do not need to be perfectly sure.</p>
+        <div class="quiz-options" data-quiz-options></div>
+      </div>
+
+      <div class="quiz-result" data-quiz-result hidden></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const calendarUrl = "https://calendar.app.google/ueKb9RbyxWyC6zfK8";
+
+  const questions = {
+    start: {
+      question: "What is the main reason you are here?",
+      help: "Choose the answer that feels closest. You do not need to be perfectly sure.",
+      options: [
+        {
+          label: "I feel emotionally overwhelmed, anxious, numb, exhausted, frustrated, or sad. I want to feel better.",
+          next: "lifeAreaEmotional",
+          score: { counseling: 2 }
+        },
+        {
+          label: "I know something needs to change in my career, business, or life direction. I want clarity and a concrete next step.",
+          next: "lifeAreaEmotional",
+          score: { coaching: 4 }
+        },
+        {
+          label: "Both are true.",
+          next: "lifeAreaEmotional",
+          score: {}
+        },
+        {
+          label: "I am in a complete crisis, unable to navigate my life on my own, and have a feeling I need immediate support.",
+          result: "outside",
+          score: { outside: 5 }
+        }
+      ]
+    },
+    lifeAreaEmotional: {
+      question: "What is the main area in your life that leaves you unsatisfied?",
+      help: "",
+      options: [
+        {
+          label: "Relationship. I feel unhappy in my current relationship, lonely, or unable to build a stable relationship.",
+          next: "mixedPrimary",
+          score: { counseling: 3 }
+        },
+        {
+          label: "Career, self-realisation, and money. I am unsatisfied with my job or business. It does not feel like a good fit, feels too stressful, does not bring me joy, or I feel stuck.",
+          next: "mixedPrimary",
+          score: { coaching: 3 }
+        },
+        {
+          label: "Myself. I criticise myself, do not like my body, how I look, or my personality traits. I do not enjoy being myself.",
+          next: "mixedPrimary",
+          score: { counseling: 3 }
+        },
+        {
+          label: "All areas of my life do not look the way I would like them to. Everything does not feel right.",
+          next: "mixedPrimary",
+          score: { counseling: 2 }
+        },
+        {
+          label: "Something else.",
+          next: "mixedPrimary",
+          score: { counseling: 1 }
+        }
+      ]
+    },
+    mixedPrimary: {
+      question: "How much energy do you have right now and how do you feel most of the time?",
+      help: "",
+      options: [
+        {
+          label: "I am mostly stable and able to navigate my day-to-day life.",
+          next: "outcomeNeed",
+          score: {},
+          scoreWhenLeading: {
+            coaching: { coaching: 2 },
+            counseling: { counseling: 1 }
+          }
+        },
+        {
+          label: "I am functioning, but I have to force myself a lot. Everything costs a lot of energy and feels like Groundhog Day.",
+          next: "outcomeNeed",
+          score: {},
+          scoreWhenLeading: {
+            coaching: { coaching: 2 },
+            counseling: { counseling: 1 }
+          }
+        },
+        {
+          label: "I am able to do only the most necessary things, and they leave me exhausted. A lot of my days are filled with worries and unpleasant feelings.",
+          next: "outcomeNeed",
+          score: { counseling: 2 }
+        },
+        {
+          label: "Most of my day is filled with anxiety, sadness, and desperation. I am unable to accomplish my daily tasks and feel like a failure.",
+          next: "outcomeNeed",
+          score: { counseling: 3 }
+        }
+      ]
+    },
+    outcomeNeed: {
+      question: "What outcome would feel most useful right now?",
+      help: "",
+      options: [
+        {
+          label: "I want to feel emotionally lighter and more stable.",
+          next: "actionReadiness",
+          score: { counseling: 2 }
+        },
+        {
+          label: "I want to understand myself and my patterns better.",
+          next: "actionReadiness",
+          score: { counseling: 2 }
+        },
+        {
+          label: "I want clear direction for my next chapter in life.",
+          next: "actionReadiness",
+          score: { coaching: 1 }
+        },
+        {
+          label: "I want to start taking real steps in my career, business, or life.",
+          next: "actionReadiness",
+          score: { coaching: 2 }
+        },
+        {
+          label: "I am not even sure what I want.",
+          next: "actionReadiness",
+          score: { counseling: 1 }
+        }
+      ]
+    },
+    actionReadiness: {
+      question: "How much capacity do you have for action between sessions?",
+      help: "",
+      options: [
+        {
+          label: "I can take small steps if I have support and structure.",
+          result: "auto",
+          score: {}
+        },
+        {
+          label: "I can reflect, but practical action feels difficult right now.",
+          result: "auto",
+          score: { counseling: 1 }
+        },
+        {
+          label: "I want homework, experiments, and accountability.",
+          result: "auto",
+          score: { coaching: 1 }
+        },
+        {
+          label: "I mostly need space to process and stabilize.",
+          result: "auto",
+          score: { counseling: 1 }
+        },
+        {
+          label: "I am not sure yet.",
+          result: "auto",
+          score: {}
+        }
+      ]
+    }
+  };
+
+  const results = {
+    counseling: {
+      eyebrow: "Your answers point toward",
+      title: "Psychological counseling",
+      text: "Your answers suggest that psychological counseling could be the right choice for your needs right now. It offers a confidential space to understand what you are going through, process it at your own pace, and build more emotional stability.",
+      ctas: [
+        { label: "Explore counseling", href: "psihologicheskoe-konsultirovanie.html", className: "btn-secondary" },
+        { label: "Schedule your discovery call", href: calendarUrl, className: "btn-primary", external: true }
+      ]
+    },
+    coaching: {
+      eyebrow: "Your answers point toward",
+      title: "The Next Chapter coaching",
+      text: "Your answers suggest that my coaching program could be exactly the right fit for you. The Next Chapter is a structured program that helps you move to a new level in your career, business, or wider life direction with confidence and alignment with yourself.",
+      ctas: [
+        { label: "Explore coaching", href: "layf-kouching.html", className: "btn-secondary" },
+        { label: "Schedule your discovery call", href: calendarUrl, className: "btn-primary", external: true }
+      ]
+    },
+    mixed: {
+      eyebrow: "Your answers are mixed",
+      title: "A discovery call is the best next step",
+      text: "The best way to determine what fits you best is to schedule a discovery call. Together, we will clarify whether counseling, coaching, or another kind of support fits best right now.",
+      cta: "Schedule your discovery call",
+      href: calendarUrl
+    },
+    outside: {
+      eyebrow: "You need more intense care",
+      title: "Please seek local or emergency support",
+      text: "Online counseling or coaching may not be the most suitable first step right now. It may be important to reach out to someone who can support you more intensively - for example, a doctor, emergency service, crisis hotline, psychiatric service, local psychotherapist, or a trusted person nearby. Do not stay in this alone. Ask for help."
+    }
+  };
+
+  const quiz = document.querySelector("[data-support-quiz]");
+  if (!quiz) return;
+
+  const questionEl = quiz.querySelector("[data-quiz-question]");
+  const helpEl = quiz.querySelector("[data-quiz-help]");
+  const stepEl = quiz.querySelector("[data-quiz-step]");
+  const optionsEl = quiz.querySelector("[data-quiz-options]");
+  const progressEl = quiz.querySelector("[data-quiz-progress]");
+  const cardEl = quiz.querySelector("[data-quiz-card]");
+  const resultEl = quiz.querySelector("[data-quiz-result]");
+
+  let current = "start";
+  let history = [];
+  let scores = { counseling: 0, coaching: 0, mixed: 0, outside: 0 };
+
+  function addScore(score = {}, direction = 1) {
+    Object.entries(score).forEach(([key, value]) => {
+      scores[key] = (scores[key] || 0) + value * direction;
+    });
+  }
+
+  function scoreLeader() {
+    const counseling = scores.counseling || 0;
+    const coaching = scores.coaching || 0;
+    if (coaching > counseling) return "coaching";
+    if (counseling > coaching) return "counseling";
+    return "tie";
+  }
+
+  function getAppliedScore(option) {
+    const appliedScore = { ...(option.score || {}) };
+    const conditionalScore = option.scoreWhenLeading?.[scoreLeader()] || {};
+    Object.entries(conditionalScore).forEach(([key, value]) => {
+      appliedScore[key] = (appliedScore[key] || 0) + value;
+    });
+    return appliedScore;
+  }
+
+  function chooseResult(explicit) {
+    if (explicit && explicit !== "auto") return explicit;
+    if (scores.outside > 0) return "outside";
+    const counseling = scores.counseling || 0;
+    const coaching = scores.coaching || 0;
+    const mixed = scores.mixed || 0;
+    if (counseling > coaching) return "counseling";
+    if (coaching > counseling) return "coaching";
+    return "mixed";
+  }
+
+  function renderQuestion(id) {
+    const question = questions[id];
+    current = id;
+    resultEl.hidden = true;
+    resultEl.innerHTML = "";
+    cardEl.hidden = false;
+    stepEl.textContent = `Question ${history.length + 1}`;
+    questionEl.textContent = question.question;
+    const help = question.help.trim();
+    helpEl.hidden = !help;
+    helpEl.textContent = help;
+    progressEl.style.width = `${Math.min(92, 12 + history.length * 14)}%`;
+    optionsEl.innerHTML = "";
+
+    question.options.forEach((option) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "quiz-option";
+      button.textContent = option.label;
+      button.addEventListener("click", () => {
+        const appliedScore = getAppliedScore(option);
+        addScore(appliedScore);
+        history.push({ id, option, appliedScore });
+        if (option.result) {
+          renderResult(chooseResult(option.result));
+        } else {
+          renderQuestion(option.next);
+        }
+      });
+      optionsEl.appendChild(button);
+    });
+  }
+
+  function renderResult(type) {
+    const result = results[type];
+    const ctas = result.ctas || (result.cta && result.href ? [{ label: result.cta, href: result.href, className: "btn-primary", external: true }] : []);
+    const resultCtas = ctas.length
+      ? `<div class="quiz-result__actions">${ctas.map((cta) => `<a class="${cta.className} quiz-result__cta" href="${cta.href}"${cta.external ? ' target="_blank" rel="noopener"' : ''}>${cta.label}</a>`).join("")}</div>`
+      : "";
+    cardEl.hidden = true;
+    progressEl.style.width = "100%";
+    resultEl.hidden = false;
+    resultEl.innerHTML = `
+      <p class="quiz-result__eyebrow">${result.eyebrow}</p>
+      <h2>${result.title}</h2>
+      <p>${result.text}</p>
+      ${resultCtas}
+    `;
+  }
+
+  renderQuestion(current);
+})();
+</script>
+
+
  <!-- Testimonials Grid (Dual Structure to match desktop/mobile Squarespace display) -->
   <section class="bg-secondary" id="testimonials">
     <div class="container">
@@ -192,22 +523,22 @@
           <div class="testimonial-card">
             <div>
               <p>“Through our work together, I became aware of my negative patterns and inappropriate reactions, and I learned how to improve and regulate myself better, adopting a more mature approach to life. The best part is that, with your guidance, I was finally able to work deeply with my inner self, uncover and resolve many difficult emotions, and accelerate my healing process.</p>
-              <p><strong><em>Now, everything in my life is better than I ever expected—my relationship with myself, my mom, my family, my romantic connection, and my friends.</em></strong> Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my 'saviour.'”</p>
+              <p><strong><em>Now, everything in my life is better than I ever expected-my relationship with myself, my mom, my family, my romantic connection, and my friends.</em></strong> Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my 'saviour.'”</p>
             </div>
             <div class="client-info">
               <img src="../assets/images/user_01a.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
 
           <div class="testimonial-card">
             <div>
-              <p>“Turning to Anna was a lifesaver at a time when I felt like I was drowning and couldn’t cope on my own. From the very first session, I experienced a sense of relief, and with each new meeting, things became easier. Through tears, memories, and deep inner work, <strong><em>I finally reached what I had been longing for—inner lightness and emotional stability.</em></strong></p>
+              <p>“Turning to Anna was a lifesaver at a time when I felt like I was drowning and couldn’t cope on my own. From the very first session, I experienced a sense of relief, and with each new meeting, things became easier. Through tears, memories, and deep inner work, <strong><em>I finally reached what I had been longing for-inner lightness and emotional stability.</em></strong></p>
               <p>Anna is a compassionate, attentive, and highly professional specialist who creates a safe space for processing even the most difficult experiences. I am sincerely grateful for her support and guidance and highly recommend her to anyone seeking a path to self-understanding and emotional balance.”</p>
             </div>
             <div class="client-info">
               <img src="../assets/images/03.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
         </div>
@@ -220,7 +551,7 @@
             </div>
             <div class="client-info">
               <img src="../assets/images/user_04c.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
         </div>
@@ -228,24 +559,24 @@
         <div class="testimonial-container grid-2-4-8" style="margin-bottom: 2.5rem;">
           <div class="testimonial-card">
             <div>
-              <p>“Thank you for our work together and for everything you do—for your professional approach, the safe space you create, and the knowledge you provide.</p>
+              <p>“Thank you for our work together and for everything you do-for your professional approach, the safe space you create, and the knowledge you provide.</p>
               <p><strong><em>You've been there with me every step of the way, supporting my transformations and making them so much smoother and faster.</em></strong> The importance of all this for me and for those around me cannot be overstated.”</p>
             </div>
             <div class="client-info">
               <img src="../assets/images/01.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
 
           <div class="testimonial-card">
             <div>
-              <p>“At first, I was skeptical—I had already tried therapy before and thought, What could I possibly learn that I don’t already know? But with Anna, I was able to talk about things I had never shared with my mother, my family, or even my closest friends. For the first time, I truly felt heard and understood.</p>
+              <p>“At first, I was skeptical-I had already tried therapy before and thought, What could I possibly learn that I don’t already know? But with Anna, I was able to talk about things I had never shared with my mother, my family, or even my closest friends. For the first time, I truly felt heard and understood.</p>
               <p>Through our work together, I was able to process childhood traumas that had been affecting me throughout my adult life. These wounds were holding me back from moving forward and being happy. <strong><em>After a year of active, consistent therapy, I have changed tremendously.</em></strong> Of course, I still face difficult situations, stress, and unpleasant people, but now I know how to respond, how to process my emotions, and how to channel negative feelings constructively.</p>
-              <p><strong><em>Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings—and others have noticed this transformation as well.”</em></strong></p>
+              <p><strong><em>Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings-and others have noticed this transformation as well.”</em></strong></p>
             </div>
             <div class="client-info">
               <img src="../assets/images/04.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
         </div>
@@ -257,7 +588,7 @@
             </div>
             <div class="client-info">
               <img src="../assets/images/02.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
         </div>
@@ -269,17 +600,17 @@
               <ul>
                 <li>freeing myself from dysfunctional relationships and going through a peaceful divorce;</li>
                 <li>fully separating from my parents, especially my mother, while at the same time healing our relationship;</li>
-                <li>realizing that the career path I had been chasing was actually harming me, accepting that, and finding a new one—leading to a job that finally feels right;</li>
+                <li>realizing that the career path I had been chasing was actually harming me, accepting that, and finding a new one-leading to a job that finally feels right;</li>
                 <li>learning to see my own worth, ask for a fair salary, and completely changing my approach to finances;</li>
                 <li>gradually and fully coming off antidepressants after nearly three years of taking them;</li>
                 <li>experiencing, for the first time, a truly healthy romantic relationship.</li>
               </ul>
-              <p><strong><em>But the most valuable thing is that I have learned to listen to myself—my emotions, my feelings, my true desires.</em></strong> To notice changes within me and respond to them. To stand my ground, to walk away from situations that don’t feel right, to do things for myself simply because I want to, not because someone else expects it. And to do all this without feeling shame or guilt. <strong><em>I no longer need external praise or validation like I once did. And this allows me to not only live my own life in harmony but also to raise my daughter in kindness, peace, and confidence.</em></strong> And I see Anna’s role in all of this as immense. She guided me, explained things, and answered every question.</p>
+              <p><strong><em>But the most valuable thing is that I have learned to listen to myself-my emotions, my feelings, my true desires.</em></strong> To notice changes within me and respond to them. To stand my ground, to walk away from situations that don’t feel right, to do things for myself simply because I want to, not because someone else expects it. And to do all this without feeling shame or guilt. <strong><em>I no longer need external praise or validation like I once did. And this allows me to not only live my own life in harmony but also to raise my daughter in kindness, peace, and confidence.</em></strong> And I see Anna’s role in all of this as immense. She guided me, explained things, and answered every question.</p>
               <p>Our sessions are always warm and genuine. It’s a space free of judgment, where no word or expression feels out of place. A place of absolute acceptance and real, tangible help.”</p>
             </div>
             <div class="client-info">
               <img src="../assets/images/06.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
         </div>
@@ -289,18 +620,18 @@
       <div class="hide-desktop">
         <div class="testimonial-container grid-1" style="display: flex; flex-direction: column; gap: 1.5rem;">
           <div class="testimonial-card">
-            <p>“Now, everything in my life is better than I ever expected—my relationship with myself, my mom, my family, my romantic connection, and my friends. Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my ‘saviour‘.”</p>
+            <p>“Now, everything in my life is better than I ever expected-my relationship with myself, my mom, my family, my romantic connection, and my friends. Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my ‘saviour‘.”</p>
             <div class="client-info">
               <img src="../assets/images/user_01a.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
 
           <div class="testimonial-card">
-            <p>“From the very first session, I experienced a sense of relief, and with each new meeting, things became easier. Through tears, memories, and deep inner work, I finally reached what I had been longing for—inner lightness and emotional stability.”</p>
+            <p>“From the very first session, I experienced a sense of relief, and with each new meeting, things became easier. Through tears, memories, and deep inner work, I finally reached what I had been longing for-inner lightness and emotional stability.”</p>
             <div class="client-info">
               <img src="../assets/images/03.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
 
@@ -308,15 +639,15 @@
             <p>“Anna gave me the best result a therapist could give in the short time we had because she found a method that would work best specifically for me. Something clicked in my head, and not only did she help me work through a major traumatic event in my life, but I also just happened to find my soulmate within weeks after her therapy. (Go figure!) And I'm sure the seeds that she planted in my head will keep bearing fruit for years to come. I absolutely can't recommend her enough.”</p>
             <div class="client-info">
               <img src="../assets/images/user_04c.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
 
           <div class="testimonial-card">
-            <p>“After a year of active, consistent therapy, I have changed tremendously….Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings—and others have noticed this transformation as well.”</p>
+            <p>“After a year of active, consistent therapy, I have changed tremendously….Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings-and others have noticed this transformation as well.”</p>
             <div class="client-info">
               <img src="../assets/images/01.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
 
@@ -324,15 +655,15 @@
             <p>“Anna is amazing at giving room for self-reflection and helping me explore my thoughts and feelings in a deeper way. We’ve had some truly eye-opening conversations and I always look forward to our next sessions.”</p>
             <div class="client-info">
               <img src="../assets/images/04.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
 
           <div class="testimonial-card">
-            <p>“But the most valuable thing is that I have learned to listen to myself—my emotions, my feelings, my true desires. I no longer need external praise or validation like I once did. And this allows me to not only live my own life in harmony but also to raise my daughter in kindness, peace, and confidence. And I see Anna’s role in all of this as immense. She guided me, explained things, and answered every question. Our sessions are always warm and genuine. It’s a space free of judgment, where no word or expression feels out of place. A place of absolute acceptance and real, tangible help.”</p>
+            <p>“But the most valuable thing is that I have learned to listen to myself-my emotions, my feelings, my true desires. I no longer need external praise or validation like I once did. And this allows me to not only live my own life in harmony but also to raise my daughter in kindness, peace, and confidence. And I see Anna’s role in all of this as immense. She guided me, explained things, and answered every question. Our sessions are always warm and genuine. It’s a space free of judgment, where no word or expression feels out of place. A place of absolute acceptance and real, tangible help.”</p>
             <div class="client-info">
               <img src="../assets/images/06.png" alt="Client Avatar">
-              <span>— Former client*</span>
+              <span>- Former client*</span>
             </div>
           </div>
         </div>
@@ -544,7 +875,7 @@
       <div class="footer-grid">
         <div class="footer-info">
           <a href="index.html" class="logo">
-            <img src="../assets/images/logo.png" alt="Логотип Анны Гельмут" style="height: 40px; margin-bottom: 1.5rem;">
+            <img src="../assets/images/logo.png" alt="Логотип Анны Хельмут" style="height: 40px; margin-bottom: 1.5rem;">
           </a>
           <p>Онлайн психологическое консультирование и лайф-коучинг. Для чувствительных, вдумчивых людей, которые ищут внутреннее благополучие и личную целостность.</p>
           <div style="margin: 1.5rem 0;">
@@ -598,7 +929,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Анна Гельмут. Все права защищены.</p>
+        <p>© 2026 Анна Хельмут. Все права защищены.</p>
         <div class="footer-legal-links">
           <a href="impressum.html">Правовая информация (Impressum)</a>
           <a href="politika-konfidentsialnosti.html">Политика конфиденциальности</a>

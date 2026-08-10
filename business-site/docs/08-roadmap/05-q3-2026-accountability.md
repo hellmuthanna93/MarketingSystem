@@ -40,33 +40,56 @@ These are indicators, not controllable goals.
 - [ ] Publish the new website by July 30.
 - [ ] Create the blog page.
 - [ ] Write and publish the first English blog article.
-- [ ] Publish three posts each on Instagram, LinkedIn, Threads, and Telegram.
-- [ ] Spend six hours commenting on Threads.
-- [ ] Schedule social content for the July vacation.
 
-## July 2–3
+Social media is intentionally deferred until August so July can focus on finishing the website first.
 
-- [ ] Define the ideal client for the coaching program.
-- [ ] Define the specific problem and desired outcome.
-- [ ] Decide the program structure and duration.
-- [ ] Define what the program includes.
-- [ ] Confirm the price and payment structure.
-- [ ] Write a one-page coaching offer brief.
-- [ ] Create the coaching webpage outline.
+## July 2-3
 
-## July 6–10
+- [x] Define the ideal client for the coaching program.
+- [x] Define the specific problem and desired outcome.
+- [x] Decide the program structure and duration.
+- [x] Define what the program includes.
+- [x] Confirm the price and payment structure.
+- [x] Write a one-page coaching offer brief.
+- [x] Create the coaching webpage outline.
 
+## July 6-10
+
+- [x] Build a general website quiz to help visitors determine whether counseling or coaching is needed.
+- [ ] Build the counseling quiz.
+- [ ] Build the coaching quiz.
 - [ ] Finalize the coaching program.
-- [ ] Write the English coaching-page copy.
+- [x] Write the English coaching-page copy.
 - [ ] Select the Hostinger template and establish the website style.
 - [ ] Build the main English website pages.
 - [ ] Add clear discovery-call booking links.
 - [ ] Prepare the master content for translation.
 - [ ] Outline the four introductory videos.
-- [ ] Publish one post on Instagram, LinkedIn, Threads, and Telegram.
-- [ ] Prepare and schedule one vacation post for each platform.
-- [ ] Spend two hours commenting on Threads.
 - [ ] Check the completed website pages on mobile.
+
+## August 1-17: Website migration priority
+
+**Primary outcome:** A working website in English, German, Ukrainian, and Russian is live and migrated away from Squarespace before the subscription ends on August 17.
+
+- [ ] Complete the English website pages.
+- [ ] Add the German, Ukrainian, and Russian website versions.
+- [ ] Add and verify all discovery-call booking links.
+- [ ] Complete mobile, SEO, legal, and functional checks.
+- [ ] Migrate the website from Squarespace to Hostinger.
+- [ ] Move the domain away from Squarespace.
+- [ ] Move Google Workspace away from Squarespace.
+- [ ] Verify that the website, domain, and email continue working after migration.
+
+## After the website migration
+
+- [ ] Create the blog page.
+- [ ] Write and publish the first English blog article.
+- [ ] Outline and record the four introductory videos.
+- [ ] Decide when to build the separate counseling and coaching quizzes.
+
+## Social media: start only after website migration
+
+No publishing or commenting quota is scheduled until the website is working and migrated. Once the website is live, set a realistic social-media rhythm for the remaining weeks of August.
 
 ## Weekly reviews
 

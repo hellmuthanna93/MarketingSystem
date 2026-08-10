@@ -1,6 +1,6 @@
 # Milestones & KPIs
 
-Measurable success criteria by phase. Keep the metric set small — depth practices die from vanity-metric chasing.
+Measurable success criteria by phase. Keep the metric set small - depth practices die from vanity-metric chasing.
 
 ## Guiding metric
 

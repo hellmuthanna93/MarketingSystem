@@ -2,13 +2,13 @@
 
 A phased, executable plan to consistently fill the practice and validate the wedge. Printable version: [../../render/08-roadmap-01-90-day.html](../../render/08-roadmap-01-90-day.html). Tasks roll up into [04-task-backlog.md](04-task-backlog.md).
 
-> This is a growth/consistency plan for an already-operating practice (online since 2023) — not a from-zero launch.
+> This is a growth/consistency plan for an already-operating practice (online since 2023) - not a from-zero launch.
 
-## Phase 1 — Foundation (Days 1–30): consistency + wedge design
+## Phase 1 - Foundation (Days 1-30): consistency + wedge design
 
 **Goal:** a reliable content rhythm and a confirmed wedge offer.
 
-- [ ] Confirm the Clarity Session wedge: name, price (€250–€300), promise ([../03-offerings/02-wedge-offer-clarity-session.md](../03-offerings/02-wedge-offer-clarity-session.md))
+- [ ] Confirm the Clarity Session wedge: name, price (€250-€300), promise ([../03-offerings/02-wedge-offer-clarity-session.md](../03-offerings/02-wedge-offer-clarity-session.md))
 - [ ] Set up the wedge: intake form, summary template, booking + payment
 - [ ] Establish content rhythm: 1 counseling + 1 coaching post/week ([../04-marketing/02-content-engine.md](../04-marketing/02-content-engine.md))
 - [ ] Batch-write and schedule the 12 IG launch posts ([../09-toolkit/02-instagram-launch-posts.md](../09-toolkit/02-instagram-launch-posts.md))
@@ -17,7 +17,7 @@ A phased, executable plan to consistently fill the practice and validate the wed
 
 **Exit:** posting consistently; wedge ready to sell; CTAs frictionless.
 
-## Phase 2 — Visibility (Days 31–60): show up + convert
+## Phase 2 - Visibility (Days 31-60): show up + convert
 
 **Goal:** steady discovery calls from compounding content.
 
@@ -30,16 +30,16 @@ A phased, executable plan to consistently fill the practice and validate the wed
 
 **Exit:** discovery calls happening weekly; first wedge clients delivered.
 
-## Phase 3 — Momentum (Days 61–90): systematize + deepen
+## Phase 3 - Momentum (Days 61-90): systematize + deepen
 
 **Goal:** repeatable systems and the first compounding signs.
 
-- [ ] Nurture 1–2 referral relationships ([../04-marketing/07-outreach-plan.md](../04-marketing/07-outreach-plan.md))
+- [ ] Nurture 1-2 referral relationships ([../04-marketing/07-outreach-plan.md](../04-marketing/07-outreach-plan.md))
 - [ ] Send renewal invitations to package clients nearing completion
-- [ ] Collect 1–2 anonymous, opt-in testimonials ([../03-offerings/05-case-study-strategy.md](../03-offerings/05-case-study-strategy.md))
+- [ ] Collect 1-2 anonymous, opt-in testimonials ([../03-offerings/05-case-study-strategy.md](../03-offerings/05-case-study-strategy.md))
 - [ ] Publish the first multilingual posts (DE / UK / RU) ([../09-toolkit/14-multilingual-adaptations.md](../09-toolkit/14-multilingual-adaptations.md))
 - [ ] Review KPIs and adjust ([03-milestones-and-kpis.md](03-milestones-and-kpis.md))
-- [ ] Protect the 2 free days/week — confirm the rhythm is sustainable
+- [ ] Protect the 2 free days/week - confirm the rhythm is sustainable
 
 **Exit:** systems in place; wedge validated; content compounding; sustainable rhythm held.
 
@@ -53,4 +53,4 @@ A phased, executable plan to consistently fill the practice and validate the wed
 
 ## So what
 
-Three phases — get consistent, get visible, get systematic — each ending in shippable proof. Granular tasks: [04-task-backlog.md](04-task-backlog.md). Metrics: [03-milestones-and-kpis.md](03-milestones-and-kpis.md).
+Three phases - get consistent, get visible, get systematic - each ending in shippable proof. Granular tasks: [04-task-backlog.md](04-task-backlog.md). Metrics: [03-milestones-and-kpis.md](03-milestones-and-kpis.md).

@@ -4,7 +4,7 @@ A concise formal plan for the practice. Figures are targets and assumptions, not
 
 ## 1. Executive summary
 
-Anna Hellmuth runs a premium online psychological counseling and life coaching practice serving sensitive, high-functioning, often international clients in EN / DE / UK / RU. The differentiator is a rare blend of medical and psychological depth with coaching practicality and lived experience. The plan: grow inbound reputation, launch a productized Clarity Session wedge, and convert depth-led trust into multi-session packages — reaching €300k/year at low volume while protecting a sustainable lifestyle.
+Anna Hellmuth runs a premium online psychological counseling and life coaching practice serving sensitive, high-functioning, often international clients in EN / DE / UK / RU. The differentiator is a rare blend of medical and psychological depth with coaching practicality and lived experience. The plan: grow inbound reputation, launch a productized Clarity Session wedge, and convert depth-led trust into multi-session packages - reaching €300k/year at low volume while protecting a sustainable lifestyle.
 
 ## 2. Practice & offering
 
@@ -16,11 +16,11 @@ Online DACH + international/expat market; large underserved multilingual segment
 
 ## 4. Positioning & differentiation
 
-"You understand yourself and you're still stuck — I'm the bridge." Depth + forward movement + warmth + lived experience + multilingual fit. Detail: [02-positioning-and-niche.md](02-positioning-and-niche.md).
+"You understand yourself and you're still stuck - I'm the bridge." Depth + forward movement + warmth + lived experience + multilingual fit. Detail: [02-positioning-and-niche.md](02-positioning-and-niche.md).
 
 ## 5. Ideal clients
 
-Two lanes — counseling (past/emotional) and coaching (future/goals) — sharing one inner pattern: insight-rich but stuck. Detail: [03-ideal-client-profile.md](03-ideal-client-profile.md).
+Two lanes - counseling (past/emotional) and coaching (future/goals) - sharing one inner pattern: insight-rich but stuck. Detail: [03-ideal-client-profile.md](03-ideal-client-profile.md).
 
 ## 6. Go-to-market
 
@@ -37,7 +37,7 @@ Lean online stack (calendar, video, payment, notes, content tools), standardized
 ## 9. Financials (targets)
 
 - **Near-term:** stabilize consistent client flow; validate the wedge.
-- **5-year target:** €300,000/year at ≤6–7 hrs/day, 2 free days/week.
+- **5-year target:** €300,000/year at ≤6-7 hrs/day, 2 free days/week.
 - Revenue driven by package mix and price, not session volume. Scenarios: [../07-finance-legal/05-financial-projections.md](../07-finance-legal/05-financial-projections.md).
 
 ## 10. Legal & risk

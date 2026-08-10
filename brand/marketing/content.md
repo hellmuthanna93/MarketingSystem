@@ -1,4 +1,4 @@
-# Content guidelines — Anna Hellmuth
+# Content guidelines - Anna Hellmuth
 
 ## Content philosophy
 
@@ -171,7 +171,7 @@ That is why Z feels so difficult.
 
 **Minimum:**
 
-### Counseling — 1 post per week
+### Counseling - 1 post per week
 
 Topics:
 
@@ -183,7 +183,7 @@ Topics:
 - Childhood conditioning
 - Internal conflicts
 
-### Coaching — 1 post per week
+### Coaching - 1 post per week
 
 Topics:
 
@@ -194,6 +194,12 @@ Topics:
 - Authentic success
 - Growth obstacles
 - Self-leadership
+
+### Emotional-deficit themes across both lanes
+
+Use the detailed [emotional-deficit client insight guide](emotional-deficit-client-insights.md) when a post speaks to unstable self-worth, high-functioning exhaustion, harsh self-criticism, fear of visibility, difficulty receiving support, or achievements that do not satisfy. Describe the reader's experience without assigning diagnostic or personality labels.
+
+Choose the lane deliberately: counseling for emotional pain, shame, relationships, and old survival patterns; coaching for decisions, purpose, visibility, aligned goals, and sustainable action.
 
 Consistency matters more than volume.
 

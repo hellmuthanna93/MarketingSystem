@@ -10,8 +10,8 @@ pages:
     titles:
       en: "Anna Hellmuth | Psychological Counseling & Life Coaching"
       de: "Anna Hellmuth | Psychologische Beratung & Life Coaching"
-      uk: "Анна Гельмут | Психологічне консультування та лайф-коучинг"
-      ru: "Анна Гельмут | Психологическое консультирование и лайф-коучинг"
+      uk: "Анна Хельмут | Психологічне консультування та лайф-коучинг"
+      ru: "Анна Хельмут | Психологическое консультирование и лайф-коучинг"
 
   - translation_key: counseling
     category: page
@@ -23,8 +23,10 @@ pages:
     titles:
       en: "Psychological Counseling | Anna Hellmuth"
       de: "Psychologische Beratung | Anna Hellmuth"
-      uk: "Психологічне консультування | Анна Гельмут"
-      ru: "Психологическое консультирование | Анна Гельмут"
+      uk: "Психологічне консультування | Анна Хельмут"
+      ru: "Психологическое консультирование | Анна Хельмут"
+    descriptions:
+      en: "Online psychological counseling for when understanding your problem does not help, and you still feel anxious, lonely, stuck, or exhausted."
 
   - translation_key: lifecoaching
     category: page
@@ -34,10 +36,15 @@ pages:
       uk: layf-kouching
       ru: layf-kouching
     titles:
-      en: "Life Coaching | Anna Hellmuth"
-      de: "Life Coaching | Anna Hellmuth"
-      uk: "Лайф-коучинг | Анна Гельмут"
-      ru: "Лайф-коучинг | Анна Гельмут"
+      en: "Life and Career Transition Coaching | The Next Chapter"
+      de: "Coaching für Lebens- und Karriereübergänge | The Next Chapter"
+      uk: "Коучинг життєвих і кар'єрних переходів | The Next Chapter"
+      ru: "Коучинг жизненных и карьерных переходов | The Next Chapter"
+    descriptions:
+      en: "A 16-week private coaching program for life and career transitions, when the life you built no longer feels like yours."
+      de: "Ein 16-wöchiges privates Coachingprogramm für Menschen, die in einem Lebens- oder Karriereübergang feststecken und eine stimmige Richtung wählen möchten."
+      uk: "16-тижнева індивідуальна коучингова програма для тих, хто застряг у життєвому чи кар'єрному переході та хоче обрати напрямок, якому довіряє."
+      ru: "16-недельная индивидуальная коучинговая программа для тех, кто застрял в жизненном или карьерном переходе и хочет выбрать направление, которому доверяет."
 
   - translation_key: about
     category: page
@@ -49,8 +56,8 @@ pages:
     titles:
       en: "About | Anna Hellmuth"
       de: "Über mich | Anna Hellmuth"
-      uk: "Про мене | Анна Гельмут"
-      ru: "Обо мне | Анна Гельмут"
+      uk: "Про мене | Анна Хельмут"
+      ru: "Обо мне | Анна Хельмут"
 
   - translation_key: contact
     category: page
@@ -62,8 +69,23 @@ pages:
     titles:
       en: "Contact | Reach Out To Me | Anna Hellmuth"
       de: "Kontakt | Anna Hellmuth"
-      uk: "Контакт | Анна Гельмут"
-      ru: "Контакт | Анна Гельмут"
+      uk: "Контакт | Анна Хельмут"
+      ru: "Контакт | Анна Хельмут"
+
+  - translation_key: support-quiz
+    category: page
+    slugs:
+      en: support-quiz
+      de: support-quiz
+      uk: support-quiz
+      ru: support-quiz
+    titles:
+      en: "Counseling or Coaching Quiz | Anna Hellmuth"
+      de: "Counseling or Coaching Quiz | Anna Hellmuth"
+      uk: "Counseling or Coaching Quiz | Anna Hellmuth"
+      ru: "Counseling or Coaching Quiz | Anna Hellmuth"
+    descriptions:
+      en: "A short quiz to understand whether psychological counseling, The Next Chapter coaching, or a discovery call may fit best right now."
 
   - translation_key: impressum
     category: legal
@@ -75,8 +97,8 @@ pages:
     titles:
       en: "Impressum | Legal Notice | Anna Hellmuth"
       de: "Impressum | Anna Hellmuth"
-      uk: "Impressum | Анна Гельмут"
-      ru: "Impressum | Анна Гельмут"
+      uk: "Impressum | Анна Хельмут"
+      ru: "Impressum | Анна Хельмут"
 
   - translation_key: privacy-policy
     category: legal
@@ -88,8 +110,8 @@ pages:
     titles:
       en: "Privacy Policy | Anna Hellmuth"
       de: "Datenschutzerklärung | Anna Hellmuth"
-      uk: "Політика конфіденційності | Анна Гельмут"
-      ru: "Политика конфиденциальности | Анна Гельмут"
+      uk: "Політика конфіденційності | Анна Хельмут"
+      ru: "Политика конфиденциальности | Анна Хельмут"
 
   - translation_key: blog
     category: blog-index
@@ -101,8 +123,8 @@ pages:
     titles:
       en: "Blog | Anna Hellmuth | Counseling & Coaching Insights"
       de: "Blog | Anna Hellmuth | Beratung & Coaching"
-      uk: "Блог | Анна Гельмут"
-      ru: "Блог | Анна Гельмут"
+      uk: "Блог | Анна Хельмут"
+      ru: "Блог | Анна Хельмут"
 
   - translation_key: blog-counseling-vs-coaching
     category: blog
@@ -114,8 +136,8 @@ pages:
     titles:
       en: "Counseling vs life coaching | Anna Hellmuth"
       de: "Beratung vs. Life Coaching | Anna Hellmuth"
-      uk: "Консультування чи лайф-коучинг | Анна Гельмут"
-      ru: "Консультирование или лайф-коучинг | Анна Гельмут"
+      uk: "Консультування чи лайф-коучинг | Анна Хельмут"
+      ru: "Консультирование или лайф-коучинг | Анна Хельмут"
 
   - translation_key: blog-expats
     category: blog
@@ -127,8 +149,8 @@ pages:
     titles:
       en: "Online counseling for expats | Anna Hellmuth"
       de: "Online-Beratung für Expats | Anna Hellmuth"
-      uk: "Онлайн-консультування для експатів | Анна Гельмут"
-      ru: "Онлайн-консультирование для экспатов | Анна Гельмут"
+      uk: "Онлайн-консультування для експатів | Анна Хельмут"
+      ru: "Онлайн-консультирование для экспатов | Анна Хельмут"
 
   - translation_key: blog-burnout
     category: blog
@@ -140,8 +162,8 @@ pages:
     titles:
       en: "Burnout when success feels empty | Anna Hellmuth"
       de: "Burnout, wenn Erfolg leer fühlt | Anna Hellmuth"
-      uk: "Вигорання, коли успіх порожній | Анна Гельмут"
-      ru: "Выгорание, когда успех пустой | Анна Гельмут"
+      uk: "Вигорання, коли успіх порожній | Анна Хельмут"
+      ru: "Выгорание, когда успех пустой | Анна Хельмут"
 
   - translation_key: blog-signs
     category: blog
@@ -153,8 +175,8 @@ pages:
     titles:
       en: "Signs you need professional support | Anna Hellmuth"
       de: "Anzeichen für professionelle Unterstützung | Anna Hellmuth"
-      uk: "Ознаки, що вам потрібна підтримка | Анна Гельмут"
-      ru: "Признаки, что вам нужна поддержка | Анна Гельмут"
+      uk: "Ознаки, що вам потрібна підтримка | Анна Хельмут"
+      ru: "Признаки, что вам нужна поддержка | Анна Хельмут"
 
 locales:
   - en

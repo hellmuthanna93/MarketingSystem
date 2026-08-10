@@ -24,8 +24,8 @@ Anna serves clients beyond Germany and in four languages. This doc covers multil
 ## Non-DACH compliance notes
 
 - The DACH compliance rules ([06-outreach-compliance-germany.md](06-outreach-compliance-germany.md)) are the strict baseline; most other jurisdictions are not stricter on these points, but:
-- **GDPR applies** to EU residents regardless of where Anna markets — keep the high bar everywhere.
-- For clients in other countries, be aware that **scope-of-practice** and **health-advertising** rules vary; the safe default is counseling/coaching framing, no treatment/cure claims, no guarantees — which already satisfies most regimes.
+- **GDPR applies** to EU residents regardless of where Anna markets - keep the high bar everywhere.
+- For clients in other countries, be aware that **scope-of-practice** and **health-advertising** rules vary; the safe default is counseling/coaching framing, no treatment/cure claims, no guarantees - which already satisfies most regimes.
 - Cross-border online delivery: keep the framing as counseling/coaching support; refer out for acute clinical needs.
 
 ## Practical content approach

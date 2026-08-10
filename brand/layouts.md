@@ -1,4 +1,4 @@
-# Layout specs — marketing formats
+# Layout specs - marketing formats
 
 Use brand tokens from `tokens.css` for all dimensions below. Safe zones assume text and logos stay **inset 48px** from edges unless noted.
 

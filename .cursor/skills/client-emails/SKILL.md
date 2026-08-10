@@ -1,13 +1,13 @@
 ---
 name: client-emails
 description: >-
-  Email templates for Anna Hellmuth's client lifecycle — intake confirmation,
+  Email templates for Anna Hellmuth's client lifecycle - intake confirmation,
   pre-session reminder, post-session check-in, package renewal, no-show
   follow-up, testimonial ask, and wedge-to-package follow-up. Use when drafting
   or editing any client-facing email. Warm, brief, no pressure.
 ---
 
-# Client emails — Anna Hellmuth
+# Client emails - Anna Hellmuth
 
 Lifecycle emails in Anna's voice: warm, brief, grounded, never pushy. Read `practice-voice` and `practice-profile` first. Full template set: `business-site/docs/09-toolkit/05-client-emails.md`.
 

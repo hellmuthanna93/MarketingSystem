@@ -1,4 +1,4 @@
-# Sales & client attraction — Anna Hellmuth
+# Sales & client attraction - Anna Hellmuth
 
 ## Sales philosophy
 
@@ -68,7 +68,7 @@ One powerful post can create more clients than twenty generic posts.
 
 ## Discovery flow
 
-1. **Free 30-minute intake call** — not therapy; mutual fit check
+1. **Free 30-minute intake call** - not therapy; mutual fit check
 2. Ask questions, check resonance
 3. Begin working together only if both agree
 
@@ -82,7 +82,8 @@ What the intake offers:
 
 ## Pricing
 
-Payment upon booking. Free cancel or reschedule up to 48 hours before appointment; full fee within 48 hours.
+Payment, or the first agreed installment, is due upon booking. Free cancel or
+reschedule up to 48 hours before appointment; full fee within 48 hours.
 
 ### Psychological counseling
 
@@ -91,15 +92,26 @@ Payment upon booking. Free cancel or reschedule up to 48 hours before appointmen
 | Single session (60 min) | €120 |
 | 6-session package (recommended) | €660 (€110/session) |
 
-### Life coaching
+### Life coaching - The Next Chapter
 
-| Option | Price |
+**The Next Chapter** is the only coaching offer.
+
+Descriptor: **A 16-week coaching program for life and career transitions.**
+
+| Format | Price |
 |--------|-------|
-| Single session (60 min) | €180 |
-| Basic Breakthrough (6 sessions) | €1,020 |
-| Profound Transformation (12 sessions, best value) | €1,920 |
+| 12 × 60-minute core sessions + weekly written support + one 60-minute follow-up | **€1,950** |
 
-Coaching includes individually tailored action plans and assignments between sessions.
+The first eight sessions are weekly; the final four are every two weeks. The
+follow-up takes place one month after the core program. Coaching includes
+individually tailored exercises, live hypno-meditations during relevant
+sessions, and a personal transition plan.
+
+Payment is either €1,950 in full or three monthly installments of €650. Payment
+is made by direct bank transfer or Revolut transfer.
+
+**Retired:** coaching single session, Basic Breakthrough, and Profound
+Transformation.
 
 ---
 

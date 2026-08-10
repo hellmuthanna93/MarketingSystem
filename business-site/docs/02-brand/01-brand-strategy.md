@@ -2,11 +2,11 @@
 
 ## Brand idea
 
-**Depth that moves you forward.** Anna is the rare guide who combines psychological depth with the practical momentum to actually change — held in genuine warmth.
+**Depth that moves you forward.** Anna is the rare guide who combines psychological depth with the practical momentum to actually change - held in genuine warmth.
 
 ## Brand promise
 
-You will feel precisely understood, and you will move. Not motivation that fades, not analysis that never lands — the bridge between understanding yourself and finally changing.
+You will feel precisely understood, and you will move. Not motivation that fades, not analysis that never lands - the bridge between understanding yourself and finally changing.
 
 ## Brand pillars
 
@@ -14,7 +14,7 @@ You will feel precisely understood, and you will move. Not motivation that fades
 |--------|---------|
 | **Depth** | We go beneath symptoms and advice to the pattern underneath |
 | **Movement** | Understanding is the start, not the destination; we sell the change |
-| **Warmth with backbone** | Compassion and grounded certainty at once — never pity, never cold |
+| **Warmth with backbone** | Compassion and grounded certainty at once - never pity, never cold |
 | **Lived authority** | Spoken from experience, as an equal; no posturing |
 | **Precision** | We name the inner experience so exactly the client feels seen |
 
@@ -30,7 +30,7 @@ Warm, grounded, intelligent, calm, quietly confident, feminine. A specialist who
 
 (Full strategic positioning: [../01-strategy/02-positioning-and-niche.md](../01-strategy/02-positioning-and-niche.md).)
 
-## Brand expression — where to look
+## Brand expression - where to look
 
 | Element | Source of truth |
 |---------|-----------------|
@@ -42,4 +42,4 @@ Warm, grounded, intelligent, calm, quietly confident, feminine. A specialist who
 
 ## So what
 
-The brand is a personal brand built on a precise promise: depth that actually moves you. Every surface — web, social, email, deliverables — should make the right person feel understood and confident that Anna can help. Voice carries most of that weight; see [04-voice-and-tone.md](04-voice-and-tone.md).
+The brand is a personal brand built on a precise promise: depth that actually moves you. Every surface - web, social, email, deliverables - should make the right person feel understood and confident that Anna can help. Voice carries most of that weight; see [04-voice-and-tone.md](04-voice-and-tone.md).

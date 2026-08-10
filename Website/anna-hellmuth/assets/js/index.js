@@ -57,7 +57,7 @@ function setupThemeToggle() {
     try {
       localStorage.setItem('theme', next);
     } catch (e) {
-      /* storage unavailable — toggle still applies for this session */
+      /* storage unavailable - toggle still applies for this session */
     }
     syncLabel();
   });
@@ -76,19 +76,19 @@ function setupThemeToggle() {
  */
 function setupStickyHeader() {
   const header = document.querySelector('header');
-  const scrollThreshold = 50;
+  if (!header) return;
 
-  function checkScroll() {
-    if (window.scrollY > scrollThreshold) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  }
+  const sentinel = document.createElement('span');
+  sentinel.className = 'header-scroll-sentinel';
+  sentinel.setAttribute('aria-hidden', 'true');
+  document.body.prepend(sentinel);
 
-  // Initial check
-  checkScroll();
-  window.addEventListener('scroll', checkScroll);
+  const observer = new IntersectionObserver(
+    ([entry]) => header.classList.toggle('scrolled', !entry.isIntersecting),
+    { threshold: 0 }
+  );
+
+  observer.observe(sentinel);
 }
 
 /**
@@ -267,7 +267,12 @@ function setupScrollReveal() {
     '.contact-prompt',
     '.assessment-panel',
     '.opportunity-card',
-    '.opportunity-list li'
+    '.opportunity-list li',
+    '.chapter-result',
+    '.chapter-stage',
+    '.chapter-support-panel',
+    '.next-chapter-fit-item',
+    '.chapter-faq'
   ].join(', ');
 
   const sections = main.querySelectorAll('section');
