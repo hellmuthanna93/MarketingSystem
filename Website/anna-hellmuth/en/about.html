@@ -21,11 +21,11 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../../../brand/tokens.css">
-  <link rel="stylesheet" href="../../../brand/typography.css">
-  <link rel="stylesheet" href="../../../brand/components.css">
+  <link rel="stylesheet" href="../brand/tokens.css">
+  <link rel="stylesheet" href="../brand/typography.css">
+  <link rel="stylesheet" href="../brand/components.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/index.css?v=20260814-2">
   
 </head>
 <body data-locale="en" data-theme-label-light="Switch to light theme" data-theme-label-dark="Switch to dark theme" data-nav-label="Toggle navigation">
@@ -38,7 +38,7 @@
       </a>
       <nav class="nav-links" aria-label="Psychological counseling">
         <a href="counseling.html">Psychological counseling</a>
-        <a href="lifecoaching.html">Life coaching</a>
+        <a href="lifecoaching.html">Career &amp; Life Coaching</a>
         <a href="about.html" class="active">About</a>
         <a href="blog/index.html">Blog</a>
         <a href="contact.html">Contact</a>
@@ -70,10 +70,10 @@
       </button>
     </div>
   </header>
-    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-modal="false" tabindex="-1" aria-label="Mobile navigation" aria-hidden="true">
     <nav class="mobile-menu-links">
       <a href="counseling.html">Psychological counseling</a>
-      <a href="lifecoaching.html">Life coaching</a>
+      <a href="lifecoaching.html">Career &amp; Life Coaching</a>
       <a href="about.html">About</a>
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
@@ -106,9 +106,9 @@
   <!-- Biography Section (Restored 4 paragraphs and Education block) -->
  <section class="page-intro-offset">
  <div class="container">
- <div class="split-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4.5rem; align-items: start;">
+ <div class="split-grid split-grid--about">
  <div>
- <h1 style="margin-bottom: 1.5rem; font-family: var(--font-serif); color: var(--color-accent); font-weight: var(--font-weight-heading);">About me</h1>
+ <h1 class="page-title--accent">About me</h1>
  <p class="large" style="font-weight: var(--font-weight-semibold); margin-bottom: 1.5rem; color: var(--color-text-primary); line-height: 1.6;">
  My name is Anna Hellmuth. I'm a medical doctor, psychologist, and life coach.
  </p>
@@ -116,7 +116,7 @@
  I empower individuals to achieve greater well-being through transformative journeys, integrating medical and psychological expertise.
  </p>
  
- <div style="display: flex; flex-direction: column; gap: 1.25rem; color: var(--color-text-secondary); font-weight: var(--font-weight-body); line-height: 1.8; font-size: 1.05rem;">
+ <div class="stack-prose">
  <p>My lifelong fascination with the human body and mind began in my earliest memories. So I resolved to become a surgeon, eager to delve into the intricacies of human beings, and invested immense effort in that ambition. But, as often happens, life had other plans for me.</p>
  <p>Throughout my medical training and subsequent career, I repeatedly witnessed patients facing preventable health crises with life-altering consequences. It became increasingly clearerto me that mindset played a more significant role in their well-being than the medications we prescribed, leaving me deeply dissatisfied. This internal struggle culminated in a debilitating burnout.</p>
  <p>As I sought my own resolution, my profound interest in psychology and psychotherapeutic tools reached a new level. This pursuit led me to formally study psychology, resulting in both my personal healing and the discovery of my true calling: <em>to transform people's lives and health through profound changes in their inner world. I wanted to shift from treating late-stage illnesses to proactively contributing to well-being.</em></p>
@@ -124,36 +124,36 @@
  </div>
  </div>
  <div class="hero-image" style="padding-top: 1rem;">
- <div class="hero-image-wrapper" style="border-radius: 12px; overflow: hidden; aspect-ratio: 0.75; border: 1px solid var(--color-border); box-shadow: 0 15px 35px var(--color-shadow-neutral-03);">
- <img src="../assets/images/f17894af-fa26-42ec-bc43-880b7fa3afc0.jpg" alt="Anna Hellmuth M.D." style="width: 100%; height: 100%; object-fit: cover;">
+ <div class="hero-image-wrapper media-frame">
+ <img src="../assets/images/f17894af-fa26-42ec-bc43-880b7fa3afc0.jpg" alt="Portrait of Anna Hellmuth" class="media-cover" loading="lazy">
  </div>
  </div>
  </div>
 
- <hr style="border: 0; border-top: 1px solid var(--color-border); margin: 4rem 0;">
+ <hr class="rule-divider">
 
  <!-- Education Section -->
- <div style="max-width: 900px; margin: 0 auto; background-color: var(--color-bg-secondary); border-radius: 16px; padding: 3rem; border: 1px solid var(--color-border);">
- <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-accent); margin-bottom: 2rem; font-weight: var(--font-weight-heading);">My Education</h3>
- <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem;">
- <li style="position: relative; padding-left: 1.75rem; font-size: 1.1rem; line-height: 1.6; color: var(--color-text-primary);">
- <span style="position: absolute; left: 0; color: var(--color-gold); font-size: 1.3rem;">✓</span>
+ <div class="panel-card">
+ <h3 class="panel-card__title">My Education</h3>
+ <ul class="check-list">
+ <li class="check-list__item">
+ <span class="check-list__mark" aria-hidden="true">✓</span>
  <strong>Medical Doctor</strong> - Bogomolets National Medical University, Ukraine
  </li>
- <li style="position: relative; padding-left: 1.75rem; font-size: 1.1rem; line-height: 1.6; color: var(--color-text-primary);">
- <span style="position: absolute; left: 0; color: var(--color-gold); font-size: 1.3rem;">✓</span>
+ <li class="check-list__item">
+ <span class="check-list__mark" aria-hidden="true">✓</span>
  <strong>Medical Doctor</strong> - Julius Maximilian University of Würzburg, Germany
  </li>
- <li style="position: relative; padding-left: 1.75rem; font-size: 1.1rem; line-height: 1.6; color: var(--color-text-primary);">
- <span style="position: absolute; left: 0; color: var(--color-gold); font-size: 1.3rem;">✓</span>
+ <li class="check-list__item">
+ <span class="check-list__mark" aria-hidden="true">✓</span>
  <strong>Psychologist</strong> - Institute of Effective Psychology and Psychotherapy of Zina Shamoyan, Russia
  </li>
- <li style="position: relative; padding-left: 1.75rem; font-size: 1.1rem; line-height: 1.6; color: var(--color-text-primary);">
- <span style="position: absolute; left: 0; color: var(--color-gold); font-size: 1.3rem;">✓</span>
+ <li class="check-list__item">
+ <span class="check-list__mark" aria-hidden="true">✓</span>
  <strong>Coach</strong> - Institute of Effective Psychology and Psychotherapy of Zina Shamoyan, Russia
  </li>
- <li style="position: relative; padding-left: 1.75rem; font-size: 1.1rem; line-height: 1.6; color: var(--color-text-primary);">
- <span style="position: absolute; left: 0; color: var(--color-gold); font-size: 1.3rem;">✓</span>
+ <li class="check-list__item">
+ <span class="check-list__mark" aria-hidden="true">✓</span>
  <strong>Hypnotherapist</strong> (ongoing) - Milton Erickson Society for Clinical Hypnosis, Germany.
  </li>
  </ul>
@@ -175,37 +175,37 @@
  <div class="about-grid-6">
  <!-- Card 1 -->
  <div class="about-card" style="border-radius: 12px; border: 1px solid var(--color-border);">
- <img class="about-card-icon" src="../assets/images/integrity.png" alt="Integrative Icon">
+ <img class="about-card-icon" src="../assets/images/integrity.png" alt="">
  <h4>1. Integrative Approach</h4>
  <p>I draw from various psychological theories to customize my methods. My foundation is humanistic, often enhanced with hypnotherapy, psychodynamic therapy, CBT, or systemic constellations.</p>
  </div>
  <!-- Card 2 -->
  <div class="about-card" style="border-radius: 12px; border: 1px solid var(--color-border);">
- <img class="about-card-icon" src="../assets/images/personalized.png" alt="Personalized Care Icon">
+ <img class="about-card-icon" src="../assets/images/personalized.png" alt="">
  <h4>2. Personalized Care</h4>
  <p>I forgo rigid templates. Each client's journey is unique. My sessions are entirely focused on what you need, right here, right now, rather than fitting you into a pre-determined schema.</p>
  </div>
  <!-- Card 3 -->
  <div class="about-card" style="border-radius: 12px; border: 1px solid var(--color-border);">
- <img class="about-card-icon" src="../assets/images/resourcefulness.png" alt="Resourcefulness Icon">
+ <img class="about-card-icon" src="../assets/images/resourcefulness.png" alt="">
  <h4>3. Priority on Resourcefulness</h4>
  <p>I manage my weekly schedule carefully, limiting sessions to remain fully present. I prioritize my own supervision and growth to understand the therapeutic process from both sides.</p>
  </div>
  <!-- Card 4 -->
  <div class="about-card" style="border-radius: 12px; border: 1px solid var(--color-border);">
- <img class="about-card-icon" src="../assets/images/holistic.png" alt="Holistic Icon">
+ <img class="about-card-icon" src="../assets/images/holistic.png" alt="">
  <h4>4. Holistic Perspective</h4>
  <p>My medical training gives me a profound understanding of physiology, neurology, and the endocrine system, allowing me to address the deep connections between body and mind.</p>
  </div>
  <!-- Card 5 -->
  <div class="about-card" style="border-radius: 12px; border: 1px solid var(--color-border);">
- <img class="about-card-icon" src="../assets/images/growth.png" alt="Tenacity Icon">
+ <img class="about-card-icon" src="../assets/images/growth.png" alt="">
  <h4>5. Tenacity &amp; Empathy</h4>
  <p>Every person has an innate desire for growth. My work is built on empathy, creativity, and determination, gently guiding you toward a pivotal point of resilience.</p>
  </div>
  <!-- Card 6 -->
  <div class="about-card" style="border-radius: 12px; border: 1px solid var(--color-border);">
- <img class="about-card-icon" src="../assets/images/pain.png" alt="Pain Icon">
+ <img class="about-card-icon" src="../assets/images/pain.png" alt="">
  <h4>6. Deep Understanding of Pain</h4>
  <p>I've walked that path myself: through burnout, a major career change, losing and finding myself, and the pain of war in my homeland. I know how to help you find a way out.</p>
  </div>
@@ -262,7 +262,7 @@
  <!-- Item 1 -->
  <div class="eye-card">
  <div class="eye-circle-wrapper">
- <img src="../assets/images/unsplash-image-opwghqbpni0.jpg" alt="Eye Detail 1">
+ <img src="../assets/images/unsplash-image-opwghqbpni0.jpg" alt="">
  </div>
  <h4 style="font-family: var(--font-serif); font-weight: var(--font-weight-heading);">You understand growth requires effort</h4>
  <p>You're willing to actively participate, investing your time and energy, and you recognize that integrating new perspectives is key to progress.</p>
@@ -270,7 +270,7 @@
  <!-- Item 2 -->
  <div class="eye-card">
  <div class="eye-circle-wrapper">
- <img src="../assets/images/pexels-arun-350214906-15520327.jpg" alt="Eye Detail 2">
+ <img src="../assets/images/pexels-arun-350214906-15520327.jpg" alt="">
  </div>
  <h4 style="font-family: var(--font-serif); font-weight: var(--font-weight-heading);">You embrace depth</h4>
  <p>You're driven to gain insight into the fundamental cause-and-effect of your experiences. You seek to understand what lies beneath the surface.</p>
@@ -278,7 +278,7 @@
  <!-- Item 3 -->
  <div class="eye-card">
  <div class="eye-circle-wrapper">
- <img src="../assets/images/pexels-slukasboldrin-9409695.jpg" alt="Eye Detail 3">
+ <img src="../assets/images/pexels-slukasboldrin-9409695.jpg" alt="">
  </div>
  <h4 style="font-family: var(--font-serif); font-weight: var(--font-weight-heading);">You are open-minded &amp; curious</h4>
  <p>You welcome new experiences and aim to leverage them. You understand that achieving varied outcomes necessitates experimentation.</p>
@@ -286,7 +286,7 @@
  <!-- Item 4 -->
  <div class="eye-card">
  <div class="eye-circle-wrapper">
- <img src="../assets/images/pexels-wojtekpaczes-3594720.jpg" alt="Eye Detail 4">
+ <img src="../assets/images/pexels-wojtekpaczes-3594720.jpg" alt="">
  </div>
  <h4 style="font-family: var(--font-serif); font-weight: var(--font-weight-heading);">You refuse to settle for less</h4>
  <p>You prioritize being surrounded by like-minded individuals, pursuing a career that aligns with your true self, and living an authentic life.</p>
@@ -294,7 +294,7 @@
  <!-- Item 5 -->
  <div class="eye-card">
  <div class="eye-circle-wrapper">
- <img src="../assets/images/pexels-samerdaboul-1210016.jpg" alt="Eye Detail 5">
+ <img src="../assets/images/pexels-samerdaboul-1210016.jpg" alt="">
  </div>
  <h4 style="font-family: var(--font-serif); font-weight: var(--font-weight-heading);">You follow your intuition</h4>
  <p>Many of my clients are highly intuitive. If working together feels right, trust it. Finding the right specialist is essential for everyone.</p>
@@ -456,16 +456,16 @@
  
  <div class="personal-gallery">
  <div class="personal-gallery-img">
- <img src="../assets/images/1a5c01bd-645f-42ae-88fd-7d41bf738f4c.jpg" alt="Personal World Image 1">
+ <img src="../assets/images/1a5c01bd-645f-42ae-88fd-7d41bf738f4c.jpg" alt="Anna Hellmuth in a studio portrait, wearing a floral dress">
  </div>
  <div class="personal-gallery-img">
- <img src="../assets/images/fa428171-b2d7-49ff-b495-c4bca225a842.jpg" alt="Personal World Image 2">
+ <img src="../assets/images/fa428171-b2d7-49ff-b495-c4bca225a842.jpg" alt="Anna viewing paintings in an art gallery">
  </div>
  <div class="personal-gallery-img">
- <img src="../assets/images/7e93d36a-50f9-4116-93a5-2ae0e31d04c9.jpg" alt="Personal World Image 3">
+ <img src="../assets/images/7e93d36a-50f9-4116-93a5-2ae0e31d04c9.jpg" alt="Anna in athletic wear at the gym">
  </div>
  <div class="personal-gallery-img">
- <img src="../assets/images/4948da8a-c4ea-4ee8-8990-714efda55fc5.jpg" alt="Personal World Image 4">
+ <img src="../assets/images/4948da8a-c4ea-4ee8-8990-714efda55fc5.jpg" alt="Anna ballroom dancing in a green dress">
  </div>
  </div>
  </div>
@@ -648,6 +648,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/index.js"></script>
+  <script src="../assets/js/index.js?v=20260814-program-dialogs"></script>
 </body>
 </html>

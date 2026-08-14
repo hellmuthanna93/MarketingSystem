@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupStickyHeader();
   setupMobileMenu();
   setupAboutSlider();
+  setupChapterSupportDialogs();
   setupScrollReveal();
 });
 
@@ -104,12 +105,33 @@ function setupMobileMenu() {
   const navLabel = document.body.dataset.navLabel || 'Toggle navigation';
   navToggle.setAttribute('aria-label', navLabel);
 
+  let lastFocused = null;
+
+  function getFocusable() {
+    return Array.from(
+      mobileMenu.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    ).filter((el) => !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true');
+  }
+
   function setMenuOpen(isOpen) {
     mobileMenu.classList.toggle('open', isOpen);
     navToggle.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
     mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    mobileMenu.setAttribute('aria-modal', String(isOpen));
     document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    if (isOpen) {
+      lastFocused = document.activeElement;
+      const focusables = getFocusable();
+      const target = focusables[0] || mobileMenu;
+      requestAnimationFrame(() => target.focus());
+    } else if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+      lastFocused = null;
+    }
   }
 
   function toggleMenu() {
@@ -119,9 +141,33 @@ function setupMobileMenu() {
   navToggle.addEventListener('click', toggleMenu);
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+    if (!mobileMenu.classList.contains('open')) return;
+
+    if (event.key === 'Escape') {
       setMenuOpen(false);
       navToggle.focus();
+      return;
+    }
+
+    if (event.key !== 'Tab') return;
+
+    const focusables = getFocusable();
+    if (focusables.length === 0) {
+      event.preventDefault();
+      mobileMenu.focus();
+      return;
+    }
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    const active = document.activeElement;
+
+    if (event.shiftKey && (active === first || active === mobileMenu)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && active === last) {
+      event.preventDefault();
+      first.focus();
     }
   });
 
@@ -193,27 +239,41 @@ function setupAboutSlider() {
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
-  // Auto slide option (runs every 8 seconds)
-  let autoSlideTimer = setInterval(nextSlide, 8000);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let autoSlideTimer = null;
 
   const stopAutoSlide = () => {
+    if (!autoSlideTimer) return;
     clearInterval(autoSlideTimer);
-    autoSlideTimer = setInterval(nextSlide, 12000);
+    autoSlideTimer = null;
   };
 
-  if (nextBtn) nextBtn.addEventListener('click', stopAutoSlide);
-  if (prevBtn) prevBtn.addEventListener('click', stopAutoSlide);
-  dots.forEach(dot => dot.addEventListener('click', stopAutoSlide));
+  const startAutoSlide = (intervalMs) => {
+    if (prefersReducedMotion) return;
+    stopAutoSlide();
+    autoSlideTimer = setInterval(nextSlide, intervalMs);
+  };
+
+  const deferAutoSlide = () => {
+    if (prefersReducedMotion) return;
+    startAutoSlide(12000);
+  };
+
+  startAutoSlide(8000);
+
+  if (nextBtn) nextBtn.addEventListener('click', deferAutoSlide);
+  if (prevBtn) prevBtn.addEventListener('click', deferAutoSlide);
+  dots.forEach(dot => dot.addEventListener('click', deferAutoSlide));
 
   slider.setAttribute('tabindex', '0');
   slider.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') {
       event.preventDefault();
-      stopAutoSlide();
+      deferAutoSlide();
       nextSlide();
     } else if (event.key === 'ArrowLeft') {
       event.preventDefault();
-      stopAutoSlide();
+      deferAutoSlide();
       prevSlide();
     }
   });
@@ -236,7 +296,7 @@ function setupAboutSlider() {
     const swipeThreshold = 50; // pixels
 
     if (Math.abs(diff) > swipeThreshold) {
-      stopAutoSlide();
+      deferAutoSlide();
       if (diff > 0) {
         nextSlide();
       } else {
@@ -244,6 +304,66 @@ function setupAboutSlider() {
       }
     }
   }
+}
+
+/**
+ * Program detail dialogs on The Next Chapter page.
+ */
+function setupChapterSupportDialogs() {
+  const dialog = document.getElementById('chapter-support-dialog');
+  if (!dialog) return;
+
+  const openButtons = document.querySelectorAll('.chapter-support-panel__open');
+  const closeButton = dialog.querySelector('.chapter-support-dialog__close');
+  const title = dialog.querySelector('#chapter-support-dialog-title');
+  const body = dialog.querySelector('.chapter-support-dialog__body');
+  let activeTrigger = null;
+
+  function openDialog(button) {
+    const templateId = button.dataset.dialogTemplate;
+    const template = document.getElementById(templateId);
+    if (!template || !title || !body) return;
+
+    activeTrigger = button;
+    title.textContent = button.dataset.dialogTitle || '';
+    body.replaceChildren(template.content.cloneNode(true));
+    document.body.classList.add('has-open-dialog');
+
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute('open', '');
+    }
+
+    requestAnimationFrame(() => closeButton?.focus());
+  }
+
+  function closeDialog() {
+    if (typeof dialog.close === 'function' && dialog.open) {
+      dialog.close();
+    } else {
+      dialog.removeAttribute('open');
+      document.body.classList.remove('has-open-dialog');
+      activeTrigger?.focus();
+      activeTrigger = null;
+    }
+  }
+
+  openButtons.forEach((button) => {
+    button.addEventListener('click', () => openDialog(button));
+  });
+
+  closeButton?.addEventListener('click', closeDialog);
+
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) closeDialog();
+  });
+
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('has-open-dialog');
+    activeTrigger?.focus();
+    activeTrigger = null;
+  });
 }
 
 /**

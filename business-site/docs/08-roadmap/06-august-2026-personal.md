@@ -14,8 +14,8 @@ This is a private, non-work list for Anna's weekly check-in.
 ## Personal goals and plans
 
 - [ ] Reach 60 kg.
-  - Latest check-in: 62.2 kg on 2026-08-10.
-  - Goal progress: 62.2 kg [current] ───────── 60.0 kg [goal]
-  - Remaining to goal: 2.2 kg.
+  - Latest check-in: 62.05 kg on 2026-08-14.
+  - Goal progress: 62.05 kg [current] ───────── 60.0 kg [goal]
+  - Remaining to goal: 2.05 kg.
 - [ ] Plan a picnic.
-- [ ] Go to Vintys Vintage shop.
+- [x] Go to Vintys Vintage shop.

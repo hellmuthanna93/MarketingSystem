@@ -21,11 +21,11 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../../../brand/tokens.css">
-  <link rel="stylesheet" href="../../../brand/typography.css">
-  <link rel="stylesheet" href="../../../brand/components.css">
+  <link rel="stylesheet" href="../brand/tokens.css">
+  <link rel="stylesheet" href="../brand/typography.css">
+  <link rel="stylesheet" href="../brand/components.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/index.css?v=20260814-2">
   
 </head>
 <body data-locale="ru" data-theme-label-light="Включить светлую тему" data-theme-label-dark="Включить тёмную тему" data-nav-label="Переключить навигацию">
@@ -70,7 +70,7 @@
       </button>
     </div>
   </header>
-    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-label="Мобильная навигация" aria-hidden="true">
+    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-modal="false" tabindex="-1" aria-label="Мобильная навигация" aria-hidden="true">
     <nav class="mobile-menu-links">
       <a href="psihologicheskoe-konsultirovanie.html">Психологическое консультирование</a>
       <a href="layf-kouching.html">Лайф-коучинг</a>
@@ -116,11 +116,14 @@
  <div class="hero-grid hero-grid--split">
  <div class="hero-image">
  <div class="hero-image-wrapper">
- <img src="../assets/images/1bc23666-cb2a-40a2-8735-5029651e0064.jpg" alt="Anna Hellmuth Portrait" width="820" height="1000" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover;">
+  <picture>
+ <source type="image/webp" srcset="{ asset('images/1bc23666-cb2a-40a2-8735-5029651e0064-800w.webp') } 800w, { asset('images/1bc23666-cb2a-40a2-8735-5029651e0064.webp') } 1600w" sizes="(max-width: 900px) 92vw, 45vw">
+ <img src="{ asset('images/1bc23666-cb2a-40a2-8735-5029651e0064.jpg') }" srcset="{ asset('images/1bc23666-cb2a-40a2-8735-5029651e0064-800w.jpg') } 800w, { asset('images/1bc23666-cb2a-40a2-8735-5029651e0064.jpg') } 1600w" sizes="(max-width: 900px) 92vw, 45vw" alt="Портрет Анны Хельмут" width="820" height="1000" fetchpriority="high" class="media-cover">
+ </picture>
  </div>
  </div>
  <div class="hero-content" style="padding-top: 1rem;">
- <blockquote style="font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.5; font-style: italic; color: var(--color-accent); border-left: 3px solid var(--color-accent); padding-left: 1.5rem; margin: 0 0 1.5rem 0; font-weight: var(--font-weight-body);">
+ <blockquote class="hero-pullquote">
  “I know myself and my typical patterns. I understand my struggles. Actually, I should know better and be able to act differently.”
  </blockquote>
  <p style="margin-bottom: 1.5rem; font-weight: var(--font-weight-body); line-height: 1.8; color: var(--color-text-secondary);">
@@ -196,9 +199,18 @@
 <section class="quiz-section">
   <div class="container">
     <div class="quiz-shell" data-support-quiz>
-      <div class="quiz-progress" aria-hidden="true">
+      <div
+        class="quiz-progress"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="12"
+        aria-label="Quiz progress"
+        data-quiz-progress-root
+      >
         <div class="quiz-progress__bar" data-quiz-progress></div>
       </div>
+      <p class="visually-hidden" data-quiz-status aria-live="polite"></p>
 
       <div class="quiz-card" data-quiz-card>
         <p class="quiz-step" data-quiz-step>Question 1</p>
@@ -413,12 +425,25 @@
   const stepEl = quiz.querySelector("[data-quiz-step]");
   const optionsEl = quiz.querySelector("[data-quiz-options]");
   const progressEl = quiz.querySelector("[data-quiz-progress]");
+  const progressRoot = quiz.querySelector("[data-quiz-progress-root]");
+  const statusEl = quiz.querySelector("[data-quiz-status]");
   const cardEl = quiz.querySelector("[data-quiz-card]");
   const resultEl = quiz.querySelector("[data-quiz-result]");
 
   let current = "start";
   let history = [];
   let scores = { counseling: 0, coaching: 0, mixed: 0, outside: 0 };
+
+  function setProgress(percent, statusText) {
+    const value = Math.max(0, Math.min(100, Math.round(percent)));
+    progressEl.style.transform = `scaleX(${value / 100})`;
+    if (progressRoot) {
+      progressRoot.setAttribute("aria-valuenow", String(value));
+    }
+    if (statusEl && statusText) {
+      statusEl.textContent = statusText;
+    }
+  }
 
   function addScore(score = {}, direction = 1) {
     Object.entries(score).forEach(([key, value]) => {
@@ -465,7 +490,10 @@
     const help = question.help.trim();
     helpEl.hidden = !help;
     helpEl.textContent = help;
-    progressEl.style.transform = `scaleX(${Math.min(92, 12 + history.length * 14) / 100})`;
+    setProgress(
+      Math.min(92, 12 + history.length * 14),
+      `Question ${history.length + 1}. ${question.question}`
+    );
     optionsEl.innerHTML = "";
 
     question.options.forEach((option) => {
@@ -501,7 +529,7 @@
       ? `<div class="quiz-result__actions">${ctas.map((cta) => `<a class="${cta.className} quiz-result__cta" href="${cta.href}"${cta.external ? ' target="_blank" rel="noopener"' : ''}>${cta.label}</a>`).join("")}</div>`
       : "";
     cardEl.hidden = true;
-    progressEl.style.transform = "scaleX(1)";
+    setProgress(100, `${result.title}. ${result.text}`);
     resultEl.hidden = false;
     resultEl.innerHTML = `
       <p class="quiz-result__eyebrow">${result.eyebrow}</p>
@@ -533,7 +561,7 @@
               <p><strong><em>Now, everything in my life is better than I ever expected-my relationship with myself, my mom, my family, my romantic connection, and my friends.</em></strong> Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my 'saviour.'”</p>
             </div>
             <div class="client-info">
-              <img src="../assets/images/user_01a.png" alt="Client Avatar">
+              <img src="../assets/images/user_01a.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -544,7 +572,7 @@
               <p>Anna is a compassionate, attentive, and highly professional specialist who creates a safe space for processing even the most difficult experiences. I am sincerely grateful for her support and guidance and highly recommend her to anyone seeking a path to self-understanding and emotional balance.”</p>
             </div>
             <div class="client-info">
-              <img src="../assets/images/03.png" alt="Client Avatar">
+              <img src="../assets/images/03.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -557,7 +585,7 @@
               <p>She was so correct! <strong><em>Something clicked in my head, and not only did she help me work through a major traumatic event in my life, but I also just happened to find my soulmate within weeks after her therapy. (Go figure!)</em></strong> And I'm sure the seeds that she planted in my head will keep bearing fruit for years to come. I absolutely can't recommend her enough.”</p>
             </div>
             <div class="client-info">
-              <img src="../assets/images/user_04c.png" alt="Client Avatar">
+              <img src="../assets/images/user_04c.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -570,7 +598,7 @@
               <p><strong><em>You've been there with me every step of the way, supporting my transformations and making them so much smoother and faster.</em></strong> The importance of all this for me and for those around me cannot be overstated.”</p>
             </div>
             <div class="client-info">
-              <img src="../assets/images/01.png" alt="Client Avatar">
+              <img src="../assets/images/01.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -582,7 +610,7 @@
               <p><strong><em>Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings-and others have noticed this transformation as well.”</em></strong></p>
             </div>
             <div class="client-info">
-              <img src="../assets/images/04.png" alt="Client Avatar">
+              <img src="../assets/images/04.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -594,7 +622,7 @@
               <p>“I highly recommend Anna as an incredibly warm, knowledgeable and empathetic therapist. From the very first session, she made me feel completely safe and understood. She takes the time to really listen, asks thoughtful questions, and creates a space where I can be completely honest without any fear of judgment. She’s amazing at giving room for self-reflection and helping me explore my thoughts and feelings in a deeper way. We’ve had some truly eye-opening conversations and I always look forward to our next sessions.”</p>
             </div>
             <div class="client-info">
-              <img src="../assets/images/02.png" alt="Client Avatar">
+              <img src="../assets/images/02.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -616,7 +644,7 @@
               <p>Our sessions are always warm and genuine. It’s a space free of judgment, where no word or expression feels out of place. A place of absolute acceptance and real, tangible help.”</p>
             </div>
             <div class="client-info">
-              <img src="../assets/images/06.png" alt="Client Avatar">
+              <img src="../assets/images/06.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -629,7 +657,7 @@
           <div class="testimonial-card">
             <p>“Now, everything in my life is better than I ever expected-my relationship with myself, my mom, my family, my romantic connection, and my friends. Of course, maintaining this will be a lifelong journey, but I am deeply grateful to have worked with you. You were my ‘saviour‘.”</p>
             <div class="client-info">
-              <img src="../assets/images/user_01a.png" alt="Client Avatar">
+              <img src="../assets/images/user_01a.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -637,7 +665,7 @@
           <div class="testimonial-card">
             <p>“From the very first session, I experienced a sense of relief, and with each new meeting, things became easier. Through tears, memories, and deep inner work, I finally reached what I had been longing for-inner lightness and emotional stability.”</p>
             <div class="client-info">
-              <img src="../assets/images/03.png" alt="Client Avatar">
+              <img src="../assets/images/03.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -645,7 +673,7 @@
           <div class="testimonial-card">
             <p>“Anna gave me the best result a therapist could give in the short time we had because she found a method that would work best specifically for me. Something clicked in my head, and not only did she help me work through a major traumatic event in my life, but I also just happened to find my soulmate within weeks after her therapy. (Go figure!) And I'm sure the seeds that she planted in my head will keep bearing fruit for years to come. I absolutely can't recommend her enough.”</p>
             <div class="client-info">
-              <img src="../assets/images/user_04c.png" alt="Client Avatar">
+              <img src="../assets/images/user_04c.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -653,7 +681,7 @@
           <div class="testimonial-card">
             <p>“After a year of active, consistent therapy, I have changed tremendously….Most importantly, I have learned how to find sources of love and positive energy within myself and my surroundings-and others have noticed this transformation as well.”</p>
             <div class="client-info">
-              <img src="../assets/images/01.png" alt="Client Avatar">
+              <img src="../assets/images/01.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -661,7 +689,7 @@
           <div class="testimonial-card">
             <p>“Anna is amazing at giving room for self-reflection and helping me explore my thoughts and feelings in a deeper way. We’ve had some truly eye-opening conversations and I always look forward to our next sessions.”</p>
             <div class="client-info">
-              <img src="../assets/images/04.png" alt="Client Avatar">
+              <img src="../assets/images/04.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -669,7 +697,7 @@
           <div class="testimonial-card">
             <p>“But the most valuable thing is that I have learned to listen to myself-my emotions, my feelings, my true desires. I no longer need external praise or validation like I once did. And this allows me to not only live my own life in harmony but also to raise my daughter in kindness, peace, and confidence. And I see Anna’s role in all of this as immense. She guided me, explained things, and answered every question. Our sessions are always warm and genuine. It’s a space free of judgment, where no word or expression feels out of place. A place of absolute acceptance and real, tangible help.”</p>
             <div class="client-info">
-              <img src="../assets/images/06.png" alt="Client Avatar">
+              <img src="../assets/images/06.png" alt="">
               <span>- Former client*</span>
             </div>
           </div>
@@ -944,6 +972,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/index.js"></script>
+  <script src="../assets/js/index.js?v=20260814-program-dialogs"></script>
 </body>
 </html>

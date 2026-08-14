@@ -19,7 +19,7 @@ Read **[brand/DESIGN.md](brand/DESIGN.md)** for colors, type, components, and re
 | Component library | [design-system/index.html](design-system/index.html) |
 | Brand & marketing hub (HTML) | [brand/index.html](brand/index.html) |
 | Marketing guide (HTML) | [styleguide/marketing-guide.html](styleguide/marketing-guide.html) |
-| Static website | [website/anna-hellmuth/](Website/anna-hellmuth/) - build: `python3 Website/anna-hellmuth/build-website.py` |
+| Static website | [Website/anna-hellmuth/](Website/anna-hellmuth/) - build: `python3 Website/anna-hellmuth/build-website.py` (copies current brand CSS into its deployable `brand/` directory) · preview: `python3 -m http.server 8080 --directory Website/anna-hellmuth` → `http://localhost:8080/en/index.html` |
 | Re-scrape live site | `python3 website/scripts/build-website.py` (legacy scraper; site is now src-driven) |
 
 ## Hard rules
@@ -27,6 +27,9 @@ Read **[brand/DESIGN.md](brand/DESIGN.md)** for colors, type, components, and re
 1. **Never** hardcode brand hex in `projects/` or `website/` - use `brand/*.css` variables/classes.
 2. **Only** edit palette in `brand/tokens.css`.
 3. `projects/table/` uses a **legacy** orange palette; not the website brand until Phase 2.
+4. **Website preview & deployment:** run the website build before previewing or uploading. It copies the shared brand CSS into `Website/anna-hellmuth/brand/`, so the `Website/anna-hellmuth/` folder can be served or uploaded as a self-contained site; preview `/en/index.html` from that folder.
+5. **Website CSS references:** every generated website page must load the deployable, relative files from `src/templates/partials/head.html`: `../brand/tokens.css`, `../brand/typography.css`, `../brand/components.css`, and `../assets/css/index.css` for a top-level locale page. Do not link pages to the repository-root `brand/` directory. Keep the `<head>` partial as the single source of truth, then rebuild the site.
+6. **Local preview URL:** serve `Website/anna-hellmuth/` itself and open `http://localhost:8080/en/...`. Do not preview the site through a repository-root URL such as `/website/anna-hellmuth/...`; that duplicate path can make it unclear whether the generated CSS and assets are current.
 
 ## Cursor skills
 

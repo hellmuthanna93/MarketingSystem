@@ -1,0 +1,114 @@
+/**
+ * Typography - Source Serif 4 (Google Fonts) for headings and body.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  font-weight: var(--font-weight-body);
+  line-height: var(--text-body-line);
+  letter-spacing: var(--letter-spacing-body);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+p,
+li {
+  font-weight: var(--font-weight-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+}
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display-size);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--text-display-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.text-h2,
+h2.brand-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2-size);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--text-h2-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.text-h3,
+h3.brand-h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3-size);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--text-h3-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-sm);
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  font-weight: var(--font-weight-body);
+  line-height: var(--text-body-line);
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.text-body--regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.text-body--semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-small,
+.text-caption {
+  font-family: var(--font-body);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-line);
+  color: var(--color-text);
+  font-weight: var(--font-weight-body);
+}
+
+.text-on-dark {
+  color: var(--color-text-on-dark);
+}
+
+.text-muted {
+  opacity: 0.85;
+}
+
+a.brand-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: color var(--transition-fast);
+  font-weight: inherit;
+}
+
+a.brand-link:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Cyrillic-friendly: Source Serif 4 supports extended Latin and Cyrillic */
+[lang="ru"],
+[lang="uk"] {
+  font-feature-settings: "kern" 1;
+}

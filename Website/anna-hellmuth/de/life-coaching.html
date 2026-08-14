@@ -21,11 +21,11 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../../../brand/tokens.css">
-  <link rel="stylesheet" href="../../../brand/typography.css">
-  <link rel="stylesheet" href="../../../brand/components.css">
+  <link rel="stylesheet" href="../brand/tokens.css">
+  <link rel="stylesheet" href="../brand/typography.css">
+  <link rel="stylesheet" href="../brand/components.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/index.css?v=20260814-2">
   
 </head>
 <body data-locale="de" data-theme-label-light="Zum hellen Modus wechseln" data-theme-label-dark="Zum dunklen Modus wechseln" data-nav-label="Navigation umschalten">
@@ -70,7 +70,7 @@
       </button>
     </div>
   </header>
-    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-modal="false" tabindex="-1" aria-label="Mobile Navigation" aria-hidden="true">
     <nav class="mobile-menu-links">
       <a href="psychologische-beratung.html">Psychologische Beratung</a>
       <a href="life-coaching.html">Life Coaching</a>
@@ -103,46 +103,176 @@
   </div>
 
   <main id="main-content">
-  <article class="next-chapter-page">
+  <style>
+  /* Client outcomes use completion markers; professional proof uses evidence markers. */
+  .next-chapter-outcomes__grid ul li {
+    position: relative;
+    padding-inline-start: 3rem;
+  }
+
+  .next-chapter-outcomes__grid ul li::before {
+    content: "✓";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 50%;
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  .next-chapter-professional__proof-list {
+    counter-reset: professional-proof;
+  }
+
+  .next-chapter-professional__proof-list li {
+    counter-increment: professional-proof;
+    position: relative;
+    padding-inline-start: 3.5rem;
+  }
+
+  .next-chapter-professional__proof-list li::before {
+    content: counter(professional-proof, decimal-leading-zero);
+    position: absolute;
+    inset-inline-start: 0;
+    top: 50%;
+    display: grid;
+    width: 2.35rem;
+    height: 2.35rem;
+    place-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 600px) {
+    .next-chapter-outcomes__grid ul li {
+      padding-inline-start: 2.75rem;
+    }
+
+    .next-chapter-professional__proof-list li {
+      padding-inline-start: 3.15rem;
+    }
+  }
+</style>
+
+<article class="next-chapter-page">
   <section class="next-chapter-hero">
     <div class="container next-chapter-hero__grid">
       <div class="next-chapter-hero__content">
-        <p class="next-chapter-eyebrow">Life and career transition coaching</p>
         <h1>The Next Chapter</h1>
-        <p class="next-chapter-hero__lead">Choose a direction you trust and begin building a life that fits who you are now.</p>
+        <p class="next-chapter-hero__lead">A 16-week structured coaching program for changing direction in your career, business, or life - with psychological support, proven techniques, and a practical plan.</p>
         <div class="next-chapter-actions">
           <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-primary">Vereinbaren Sie Ihr kostenloses Erstgespräch</a>
-          <a href="#is-this-you" class="btn-secondary">See if this fits</a>
         </div>
       </div>
       <figure class="next-chapter-hero__visual">
-        <img
-          src="../assets/images/the-next-chapter-hero.png"
-          alt="A thoughtful professional standing beside an open doorway and looking into the daylight"
-          width="1122"
-          height="1402"
-          fetchpriority="high">
+        <picture>
+          <source type="image/webp" srcset="../assets/images/the-next-chapter-hero-doorway-v2-800w.webp 800w, ../assets/images/the-next-chapter-hero-doorway-v2.webp 1536w" sizes="(max-width: 900px) 92vw, 40vw">
+          <img src="../assets/images/the-next-chapter-hero-doorway-v2.jpg" srcset="../assets/images/the-next-chapter-hero-doorway-v2-800w.jpg 800w, ../assets/images/the-next-chapter-hero-doorway-v2.jpg 1536w" sizes="(max-width: 900px) 92vw, 40vw" alt="A professional standing at an open doorway and looking toward the light" width="1536" height="1024" fetchpriority="high">
+        </picture>
       </figure>
     </div>
   </section>
 
   <section id="is-this-you" class="next-chapter-recognition">
-    <div class="container next-chapter-recognition__grid">
-      <div class="next-chapter-recognition__main">
-        <h2>Your life still works. It just no longer feels like yours.</h2>
-        <p class="next-chapter-large-copy">You have built something stable and respectable. From the outside, leaving it may make little sense. From the inside, continuing in the same way has become painful.</p>
-        <blockquote>
-          "I cannot keep living in the old way, but I do not know how to live differently."
-        </blockquote>
+    <div class="container">
+      <div class="next-chapter-recognition__direct-grid">
+        <div class="next-chapter-recognition__intro">
+          <h2>You want something to change, but you keep postponing it.</h2>
+          <p class="next-chapter-large-copy">Your current life still works. It just no longer inspires you.</p>
+        </div>
+        <ul class="next-chapter-recognition__direct-list">
+          <li>You want a new career, business, project, or direction.</li>
+          <li>You have ideas, but every option creates more doubt.</li>
+          <li>You are afraid of losing what you worked hard to build.</li>
+          <li>You keep preparing instead of beginning.</li>
+          <li>You want to be visible, but you fear being judged.</li>
+          <li>You know you have potential, but you are unsure whether you can go all the way.</li>
+        </ul>
       </div>
-      <div class="next-chapter-fit-list" aria-label="Situations this coaching program can support">
-        <p class="next-chapter-fit-intro">You may be thinking about:</p>
-        <div class="next-chapter-fit-item">Leaving or changing a respected career</div>
-        <div class="next-chapter-fit-item">Starting a business or side project</div>
-        <div class="next-chapter-fit-item">Moving abroad or returning to education</div>
-        <div class="next-chapter-fit-item">Becoming more visible in your current work</div>
-        <div class="next-chapter-fit-item">Rebuilding life after burnout</div>
-        <div class="next-chapter-fit-item">Redefining success on your own terms</div>
+      <p class="next-chapter-recognition__conclusion"><strong>You do not lack ambition or intelligence. You are caught between the life you have built and the life you want next. And changing this by yourself is not easy.</strong></p>
+    </div>
+  </section>
+
+  <section class="next-chapter-relief">
+    <div class="container">
+      <div class="next-chapter-relief__inner">
+        <div class="next-chapter-relief__heading">
+          <h2>Why does struggling alone keep you in the same place?</h2>
+          <p>You can understand your situation and still remain stuck. Information is not the missing piece.</p>
+        </div>
+        <ol class="next-chapter-relief__reasons">
+          <li>
+            <span class="next-chapter-relief__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M5 24s7-10 19-10 19 10 19 10-7 10-19 10S5 24 5 24Z" />
+                <circle cx="24" cy="24" r="4.5" />
+              </svg>
+            </span>
+            <div class="next-chapter-relief__reason-copy">
+              <h3>You cannot see the whole situation from inside it.</h3>
+              <p>Your fears, responsibilities, expectations, and old assumptions all feel like facts.</p>
+            </div>
+          </li>
+          <li>
+            <span class="next-chapter-relief__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M36.5 18A14 14 0 0 0 12 16" />
+                <path d="m12 10v6h6" />
+                <path d="M11.5 30A14 14 0 0 0 36 32" />
+                <path d="m36 38v-6h-6" />
+              </svg>
+            </span>
+            <div class="next-chapter-relief__reason-copy">
+              <h3>Understanding a pattern does not change it.</h3>
+              <p>You can know exactly why you procrastinate and still feel unable to act.</p>
+            </div>
+          </li>
+          <li>
+            <span class="next-chapter-relief__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <path d="M8 35h11V13H8" />
+                <path d="M25 24h15" />
+                <path d="m34 18 6 6-6 6" />
+              </svg>
+            </span>
+            <div class="next-chapter-relief__reason-copy">
+              <h3>Fear returns when action becomes real.</h3>
+              <p>Research feels safe. Making a visible decision creates emotional risk.</p>
+            </div>
+          </li>
+          <li>
+            <span class="next-chapter-relief__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false">
+                <rect x="8" y="11" width="32" height="29" rx="3" />
+                <path d="M15 7v8M33 7v8M8 20h32" />
+                <path d="m17 30 4 4 10-10" />
+              </svg>
+            </span>
+            <div class="next-chapter-relief__reason-copy">
+              <h3>Without structure, daily life takes over.</h3>
+              <p>The decision gets postponed until later, and months or years pass.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="next-chapter-relief__closing">
+          <p><strong>More information is often not the answer. You need a process that changes both your inner patterns and your actions.</strong></p>
+          <p class="next-chapter-relief__invitation">The Next Chapter gives you that process. It is a structured 16-week coaching program designed to help you move through change with support, clarity, and practical action.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -150,141 +280,180 @@
   <section class="next-chapter-pattern">
     <div class="container next-chapter-pattern__grid">
       <figure class="next-chapter-pattern__visual">
-        <img
-          src="../assets/images/the-next-chapter-reflection.png"
-          alt="A professional reflecting in a notebook beside a window"
-          width="1536"
-          height="1024"
-          loading="lazy">
+        <picture>
+          <img src="../assets/images/the-next-chapter-online-coaching.jpg" srcset="../assets/images/the-next-chapter-online-coaching-800w.jpg 800w, ../assets/images/the-next-chapter-online-coaching.jpg 1536w" sizes="(max-width: 900px) 92vw, 45vw" alt="Illustration of a private and collaborative online coaching session" width="1536" height="1024" loading="lazy">
+        </picture>
       </figure>
       <div class="next-chapter-pattern__content">
-        <h2>A new plan cannot help if the old pattern still makes every decision.</h2>
-        <p>You may already understand why you are unhappy. You may have researched other careers, drafted plans, or promised yourself that you will decide soon.</p>
-        <p>Then the same fears return. What if you lose stability? What will people think? What if the life you want is not possible?</p>
-        <p>This is why insight alone often leaves intelligent, self-aware people stuck. The work is not only to find a better option. It is to recognize what has been shaping your choices, build a different relationship with uncertainty, and make the next decision from a steadier place.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="next-chapter-relief">
-    <div class="container">
-      <div class="next-chapter-relief__inner">
-        <h2>There is a reason you arrived here.</h2>
-        <p>The choices that built your current life once protected something important. We begin by understanding them, without blame. When the old chapter makes sense, you can stop fighting yourself and choose what comes next with calm.</p>
+        <h2>What do we actually do together?</h2>
+        <ol class="next-chapter-pattern__reasons">
+          <li>
+            <h3>Find what keeps you stuck.</h3>
+            <p>We identify the fears, beliefs, emotional reactions, and expectations influencing your decisions.</p>
+          </li>
+          <li>
+            <h3>Clarify what you genuinely want.</h3>
+            <p>We separate your own goals from what looks sensible, impressive, or expected of you.</p>
+          </li>
+          <li>
+            <h3>Change the patterns behind your decisions.</h3>
+            <p>We work with perfectionism, fear of failure, emotional avoidance, and the need to feel completely ready.</p>
+          </li>
+          <li>
+            <h3>Start acting in real life.</h3>
+            <p>We turn change into realistic decisions, experiments, and steps that fit your work, finances, energy, and responsibilities.</p>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
   <section class="next-chapter-outcomes">
     <div class="container">
-      <div class="next-chapter-section-heading">
-        <h2>What you can leave with</h2>
-        <p>The goal is a direction you can trust, a decision that has moved forward, and a transition that has already begun.</p>
+      <div class="next-chapter-outcomes__grid">
+        <div>
+          <h2>By the end of the program, you will get:</h2>
+        </div>
+        <ul>
+          <li>A clearer understanding of who you are now</li>
+          <li>A direction that feels genuinely yours</li>
+          <li>A realistic plan for the next stage</li>
+          <li>New ways of responding to fear, doubt, and perfectionism</li>
+          <li>Concrete steps already taken toward your goal</li>
+        </ul>
       </div>
-      <div class="next-chapter-results">
-        <article class="chapter-result chapter-result--primary">
-          <h3>A direction that feels like yours</h3>
-          <p>You know what matters to you now and what kind of life fits. You make or meaningfully advance an important decision.</p>
-          <ul class="chapter-result-details">
-            <li>Your own definition of success</li>
-            <li>Clear criteria for an important decision</li>
-            <li>A chosen direction or a deliberate exploration path</li>
-            <li>A transition plan without an artificial deadline</li>
-          </ul>
-        </article>
-        <article class="chapter-result">
-          <h3>Distinguish fear from a genuine mismatch</h3>
-          <p>You can recognize an old anxiety pattern and tell it apart from a genuine sign that something does not fit.</p>
-        </article>
-        <article class="chapter-result">
-          <h3>A transition already in motion</h3>
-          <p>You take concrete first steps and leave with a realistic plan that can unfold at your own pace.</p>
-        </article>
-      </div>
+      <figure class="next-chapter-outcomes__visual">
+        <picture>
+          <source media="(max-width: 800px)" srcset="../assets/images/coaching-program-outcome-stairs-business-casual-800w.webp" type="image/webp">
+          <source media="(max-width: 800px)" srcset="../assets/images/coaching-program-outcome-stairs-business-casual-800w.jpg" type="image/jpeg">
+          <source srcset="../assets/images/coaching-program-outcome-stairs-business-casual.webp" type="image/webp">
+          <img src="../assets/images/coaching-program-outcome-stairs-business-casual.jpg" alt="A person in business-casual clothing walking upward toward the light" width="1536" height="1024" loading="lazy">
+        </picture>
+      </figure>
     </div>
   </section>
 
-  <section class="next-chapter-process">
-    <div class="container">
-      <p class="next-chapter-eyebrow">How the work unfolds</p>
-      <h2>From understanding the old chapter to living the new one</h2>
-      <div class="next-chapter-stages">
-        <article class="chapter-stage">
-          <h3>Understand the old chapter</h3>
-          <p>We look at the life you built, the choices behind it, and the patterns that kept it in place. Understanding creates self-compassion and makes a calm goodbye possible.</p>
-        </article>
-        <article class="chapter-stage">
-          <h3>Choose the new direction</h3>
-          <p>We clarify your values, needs, strengths, and personal definition of success. You explore real possibilities and choose a direction, or a deliberate path of exploration.</p>
-        </article>
-        <article class="chapter-stage">
-          <h3>Grow into your future self</h3>
-          <p>You practice new responses to uncertainty, visibility, responsibility, and other people's expectations. Live hypno-meditations may help the new inner state feel more familiar.</p>
-        </article>
-        <article class="chapter-stage">
-          <h3>Become stable and take first steps</h3>
-          <p>You test the direction in real life, meet old patterns without automatically returning to them, and learn to adapt without abandoning yourself.</p>
-        </article>
+  <section class="next-chapter-professional">
+    <div class="container next-chapter-professional__grid">
+      <header class="next-chapter-professional__header">
+        <p class="next-chapter-recognition__eyebrow">Why work with me?</p>
+        <h2>Psychological depth and practical action</h2>
+      </header>
+      <div class="next-chapter-professional__content">
+        <ul class="next-chapter-professional__proof-list">
+          <li>Medical doctor, psychologist, life coach, and entrepreneur</li>
+          <li>Experience helping many clients work through the emotional patterns behind difficult career and life changes</li>
+          <li>Psychological work combined with decisions and action in real life</li>
+          <li>Personal experience of moving countries and changing professional direction</li>
+        </ul>
+        <div class="next-chapter-story-card">
+          <h3>I have made a major career change too.</h3>
+          <p>I moved countries and changed the professional path I had planned and followed for years. I know the uncertainty, fear, and identity questions involved from the inside.</p>
+          <a href="https://www.instagram.com/p/DPgoOMZCIaG/?img_index=1" class="btn-secondary" target="_blank" rel="noopener noreferrer">Read my story</a>
+        </div>
+        <nav class="next-chapter-professional__links" aria-label="More about Anna Hellmuth">
+          <a href="ueber-mich.html" class="btn-secondary">Learn more about me</a>
+          <a href="index.html#testimonials" class="btn-secondary">What my clients say about our work together</a>
+        </nav>
       </div>
+      <figure class="next-chapter-professional__visual">
+        <img src="../assets/images/anna-hellmuth-coaching-portrait.jpg" alt="Anna Hellmuth, medical doctor, psychologist, and coach" width="1200" height="1800" loading="lazy">
+      </figure>
     </div>
   </section>
 
   <section class="next-chapter-support">
     <div class="container">
       <div class="next-chapter-section-heading">
-        <h2>Built for change that has to meet real life</h2>
-        <p>This is a private coaching process with enough continuity to support action, reflection, and adjustment between sessions.</p>
+        <h2>The complete 16-week program</h2>
       </div>
       <div class="next-chapter-support__grid">
-        <article class="chapter-support-panel chapter-support-panel--rhythm">
-          <h3>Your 16-week rhythm</h3>
+        <article class="chapter-support-panel chapter-support-panel--sessions">
           <p class="chapter-support-panel__number">12</p>
-          <p>Private online sessions of 60 minutes. We meet weekly for the first eight weeks, then every two weeks in weeks 10, 12, 14, and 16.</p>
+          <h3>Private sessions</h3>
+          <button class="chapter-support-panel__open" type="button" aria-haspopup="dialog" aria-controls="chapter-support-dialog" data-dialog-title="12 private sessions" data-dialog-template="chapter-support-sessions">
+            <span class="visually-hidden">Read about the private sessions</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <template id="chapter-support-sessions">
+            <p>Each online session lasts 60 minutes.</p>
+          </template>
+        </article>
+        <article class="chapter-support-panel chapter-support-panel--sessions">
+          <p class="chapter-support-panel__number">16</p>
+          <h3>Weeks</h3>
+          <button class="chapter-support-panel__open" type="button" aria-haspopup="dialog" aria-controls="chapter-support-dialog" data-dialog-title="16 weeks for lasting change" data-dialog-template="chapter-support-duration">
+            <span class="visually-hidden">Read why the program lasts 16 weeks</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <template id="chapter-support-duration">
+            <p>A 16-week commitment gives us enough time to work through both the highs and the lows of change. You can experience new ways of thinking and acting in different situations, so the change becomes part of your identity rather than a short burst of motivation.</p>
+          </template>
         </article>
         <article class="chapter-support-panel">
-          <h3>Between sessions</h3>
-          <p>You may write once per week. I reply within two business days. Reflections, exercises, and decision experiments are chosen for your situation.</p>
+          <h3>A structured program for real change</h3>
+          <button class="chapter-support-panel__open" type="button" aria-haspopup="dialog" aria-controls="chapter-support-dialog" data-dialog-title="A structured program for real change" data-dialog-template="chapter-support-structure">
+            <span class="visually-hidden">Read about the program structure</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <template id="chapter-support-structure">
+            <p>We meet weekly for the first eight weeks, then every two weeks in weeks 10, 12, 14, and 16. This rhythm respects the natural stages of growth and change, giving you time to act, reflect, and integrate.</p>
+          </template>
         </article>
         <article class="chapter-support-panel">
-          <h3>After completion</h3>
-          <p>You receive one complimentary 60-minute follow-up session one month later to review what happened in real life and adjust your plan.</p>
+          <h3>Support between sessions</h3>
+          <button class="chapter-support-panel__open" type="button" aria-haspopup="dialog" aria-controls="chapter-support-dialog" data-dialog-title="Support between sessions" data-dialog-template="chapter-support-between">
+            <span class="visually-hidden">Read about support between sessions</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <template id="chapter-support-between">
+            <p>In between sessions, you can write to me once a week, and I reply within two business days, so you do not have to hold important questions until our next session.</p>
+          </template>
+        </article>
+        <article class="chapter-support-panel">
+          <h3>Techniques tailored to you</h3>
+          <button class="chapter-support-panel__open" type="button" aria-haspopup="dialog" aria-controls="chapter-support-dialog" data-dialog-title="Techniques tailored to you" data-dialog-template="chapter-support-techniques">
+            <span class="visually-hidden">Read about the techniques used in the program</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <template id="chapter-support-techniques">
+            <p>Our work includes reflections, written exercises, hypnotherapeutic techniques, and meditations - a flexible mix refined through years of my work.</p>
+          </template>
+        </article>
+        <article class="chapter-support-panel chapter-support-panel--bonus">
+          <p class="chapter-support-panel__bonus-label">Bonus</p>
+          <h3>A success session - my gift to you</h3>
+          <button class="chapter-support-panel__open" type="button" aria-haspopup="dialog" aria-controls="chapter-support-dialog" data-dialog-title="A success session - my gift to you" data-dialog-template="chapter-support-bonus">
+            <span class="visually-hidden">Read about the bonus success session</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <template id="chapter-support-bonus">
+            <p>When you complete the program, I gift you an additional 60-minute session one month later. We use it to consolidate your progress, celebrate what has changed, and strengthen the next steps that will help your success continue.</p>
+          </template>
         </article>
       </div>
-      <p class="next-chapter-support__note">Paid assessments such as CliftonStrengths may be recommended when useful. They are optional, purchased separately, and never used to decide who you are.</p>
-    </div>
-  </section>
-
-  <section class="next-chapter-professional">
-    <div class="container next-chapter-professional__grid">
-      <div class="next-chapter-professional__content">
-        <h2>Professional support for the part a plan cannot solve</h2>
-        <p>I am Anna Hellmuth, a medical doctor, psychologist, and coach. My work combines psychological depth with practical movement toward your future.</p>
-        <p>I do not make the decision for you. I help you understand what keeps pulling you back, hear what is genuinely yours, and build the inner capacity to act on it.</p>
-        <p>We can work in English, German, Ukrainian, Russian, or a mix of them. Sessions are online, so you can continue the process wherever your transition takes you.</p>
-        <a href="ueber-mich.html" class="btn-secondary">Learn more about me</a>
-      </div>
-      <figure class="next-chapter-professional__visual">
-        <img
-          src="../assets/images/f17894af-fa26-42ec-bc43-880b7fa3afc0.jpg"
-          alt="Anna Hellmuth, medical doctor, psychologist, and coach"
-          width="2500"
-          height="3750"
-          loading="lazy">
-      </figure>
-    </div>
-  </section>
-
-  <section class="next-chapter-investment">
-    <div class="container next-chapter-investment__grid">
-      <div class="next-chapter-investment__intro">
-        <h2>Your investment</h2>
-        <p>The Next Chapter is one complete 16-week coaching program, not a collection of separate sessions.</p>
-      </div>
-      <div class="next-chapter-price">
-        <p class="next-chapter-price__amount">€1,950</p>
-        <p>Pay in full or in three monthly installments of €650.</p>
-        <p>Payment is by direct bank transfer or Revolut transfer.</p>
-        <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-primary">Vereinbaren Sie Ihr kostenloses Erstgespräch</a>
+      <dialog class="chapter-support-dialog" id="chapter-support-dialog" aria-labelledby="chapter-support-dialog-title">
+        <div class="chapter-support-dialog__surface">
+          <button class="chapter-support-dialog__close" type="button" aria-label="Close program details">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </button>
+          <h2 id="chapter-support-dialog-title"></h2>
+          <div class="chapter-support-dialog__body"></div>
+        </div>
+      </dialog>
+      <div class="next-chapter-program-investment">
+        <div>
+          <h3>Your investment</h3>
+        </div>
+        <div class="next-chapter-price next-chapter-price--compact">
+          <p class="next-chapter-price__amount">€1,950</p>
+          <p>Pay in full or in three monthly installments of €650.</p>
+          <div class="next-chapter-actions next-chapter-price__actions">
+            <a href="mailto:contact@annahellmuth.com?subject=Booking%20The%20Next%20Chapter%20coaching%20program" class="btn-primary">Book your program</a>
+            <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-secondary">Schedule your free discovery call</a>
+          </div>
+          <p class="next-chapter-price__reassurance">The free call is not a commitment. It is your space to ask questions and clarify anything you feel uncertain about.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -292,29 +461,33 @@
   <section class="next-chapter-faq">
     <div class="container next-chapter-faq__grid">
       <div>
-        <h2>Questions you may still have</h2>
-        <p>The discovery call is also a place to ask what is specific to your situation.</p>
+        <h2>Questions before you decide</h2>
+        <p>If you do not find the answer you need here, feel free to book a free discovery call.</p>
       </div>
       <div class="next-chapter-faq__items">
         <details class="chapter-faq">
-          <summary>What if I do not know what career or direction I want?</summary>
-          <p>You do not need to arrive with the answer. Part of the work is learning what matters to you now, exploring realistic possibilities, and creating enough clarity to choose or test a direction.</p>
+          <summary>What if I do not know what direction I want?</summary>
+          <p>You do not need to arrive with the answer. Clarifying what matters now, exploring realistic possibilities, and creating criteria for a decision are central parts of the work.</p>
         </details>
         <details class="chapter-faq">
-          <summary>What if I am afraid to lose financial stability?</summary>
-          <p>The program does not push you toward a dramatic leap. We look honestly at what needs protection, what fear may be exaggerating, and how a transition can be tested through grounded first steps.</p>
+          <summary>Why does the program last 16 weeks?</summary>
+          <p>The first eight weekly sessions create continuity and momentum. The later two-week gaps give you room to test decisions and new responses in real life, then return to reflect and adjust.</p>
+        </details>
+        <details class="chapter-faq">
+          <summary>Can I do this alongside a demanding job?</summary>
+          <p>Yes, if you have some capacity for reflection and small practical steps. The work is tailored to your actual energy, responsibilities, and pace rather than built around a fixed amount of homework.</p>
         </details>
         <details class="chapter-faq">
           <summary>Is this career advice or job-search support?</summary>
           <p>No. This is coaching for the decisions, patterns, and inner change behind a life or career transition. It does not include recruitment, CV writing, or job placement.</p>
         </details>
         <details class="chapter-faq">
-          <summary>How is coaching different from psychological counseling?</summary>
-          <p>This program is future-focused and fits best when you are ready to make decisions and take action. If your main need is emotional stabilization, treatment, or processing the past, psychological counseling or another form of care may fit better.</p>
+          <summary>What happens during the discovery call?</summary>
+          <p>We use 30 minutes to understand what you want support with, consider whether coaching fits, and see how it feels to speak together. You do not need to decide or commit during the call.</p>
         </details>
         <details class="chapter-faq">
-          <summary>Do I have to use a personality or strengths assessment?</summary>
-          <p>No. Assessments are optional conversation tools. They may support reflection, but they do not define you and they do not make the decision for you.</p>
+          <summary>Is the discovery call free?</summary>
+          <p>Yes. The 30-minute discovery call is free and does not commit you to the program.</p>
         </details>
       </div>
     </div>
@@ -322,9 +495,9 @@
 
   <section class="next-chapter-closing">
     <div class="container next-chapter-closing__inner">
-      <h2>You do not need to know the whole path before you ask for support.</h2>
-      <p>A free 30-minute discovery call is a calm place to understand what is happening, decide whether coaching fits, and see how it feels to speak with me.</p>
-      <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-primary">Vereinbaren Sie Ihr kostenloses Erstgespräch</a>
+      <h2>Not sure whether the program fits your situation?</h2>
+      <p>Use the free 30-minute discovery call to ask your questions and find out whether working together makes sense.</p>
+      <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-primary">Schedule your free discovery call</a>
     </div>
   </section>
 </article>
@@ -334,7 +507,7 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "The Next Chapter",
-  "description": "A 16-week coaching program for life and career transitions.",
+  "description": "A 16-week structured coaching program for changing direction in your career, business, or life - with psychological support, proven techniques, and a practical plan.",
   "provider": {
     "@type": "Person",
     "name": "Anna Hellmuth",
@@ -419,6 +592,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/index.js"></script>
+  <script src="../assets/js/index.js?v=20260814-program-dialogs"></script>
 </body>
 </html>

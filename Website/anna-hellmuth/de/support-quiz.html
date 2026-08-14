@@ -21,11 +21,11 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../../../brand/tokens.css">
-  <link rel="stylesheet" href="../../../brand/typography.css">
-  <link rel="stylesheet" href="../../../brand/components.css">
+  <link rel="stylesheet" href="../brand/tokens.css">
+  <link rel="stylesheet" href="../brand/typography.css">
+  <link rel="stylesheet" href="../brand/components.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/index.css?v=20260814-2">
   
 </head>
 <body data-locale="de" data-theme-label-light="Zum hellen Modus wechseln" data-theme-label-dark="Zum dunklen Modus wechseln" data-nav-label="Navigation umschalten">
@@ -70,7 +70,7 @@
       </button>
     </div>
   </header>
-    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-menu" id="mobile-navigation" role="dialog" aria-modal="false" tabindex="-1" aria-label="Mobile Navigation" aria-hidden="true">
     <nav class="mobile-menu-links">
       <a href="psychologische-beratung.html">Psychologische Beratung</a>
       <a href="life-coaching.html">Life Coaching</a>
@@ -119,9 +119,18 @@
 <section class="quiz-section">
   <div class="container">
     <div class="quiz-shell" data-support-quiz>
-      <div class="quiz-progress" aria-hidden="true">
+      <div
+        class="quiz-progress"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="12"
+        aria-label="Quiz progress"
+        data-quiz-progress-root
+      >
         <div class="quiz-progress__bar" data-quiz-progress></div>
       </div>
+      <p class="visually-hidden" data-quiz-status aria-live="polite"></p>
 
       <div class="quiz-card" data-quiz-card>
         <p class="quiz-step" data-quiz-step>Question 1</p>
@@ -336,12 +345,25 @@
   const stepEl = quiz.querySelector("[data-quiz-step]");
   const optionsEl = quiz.querySelector("[data-quiz-options]");
   const progressEl = quiz.querySelector("[data-quiz-progress]");
+  const progressRoot = quiz.querySelector("[data-quiz-progress-root]");
+  const statusEl = quiz.querySelector("[data-quiz-status]");
   const cardEl = quiz.querySelector("[data-quiz-card]");
   const resultEl = quiz.querySelector("[data-quiz-result]");
 
   let current = "start";
   let history = [];
   let scores = { counseling: 0, coaching: 0, mixed: 0, outside: 0 };
+
+  function setProgress(percent, statusText) {
+    const value = Math.max(0, Math.min(100, Math.round(percent)));
+    progressEl.style.transform = `scaleX(${value / 100})`;
+    if (progressRoot) {
+      progressRoot.setAttribute("aria-valuenow", String(value));
+    }
+    if (statusEl && statusText) {
+      statusEl.textContent = statusText;
+    }
+  }
 
   function addScore(score = {}, direction = 1) {
     Object.entries(score).forEach(([key, value]) => {
@@ -388,7 +410,10 @@
     const help = question.help.trim();
     helpEl.hidden = !help;
     helpEl.textContent = help;
-    progressEl.style.transform = `scaleX(${Math.min(92, 12 + history.length * 14) / 100})`;
+    setProgress(
+      Math.min(92, 12 + history.length * 14),
+      `Question ${history.length + 1}. ${question.question}`
+    );
     optionsEl.innerHTML = "";
 
     question.options.forEach((option) => {
@@ -424,7 +449,7 @@
       ? `<div class="quiz-result__actions">${ctas.map((cta) => `<a class="${cta.className} quiz-result__cta" href="${cta.href}"${cta.external ? ' target="_blank" rel="noopener"' : ''}>${cta.label}</a>`).join("")}</div>`
       : "";
     cardEl.hidden = true;
-    progressEl.style.transform = "scaleX(1)";
+    setProgress(100, `${result.title}. ${result.text}`);
     resultEl.hidden = false;
     resultEl.innerHTML = `
       <p class="quiz-result__eyebrow">${result.eyebrow}</p>
@@ -506,6 +531,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/index.js"></script>
+  <script src="../assets/js/index.js?v=20260814-program-dialogs"></script>
 </body>
 </html>

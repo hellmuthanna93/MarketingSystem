@@ -10,7 +10,7 @@ Rewards are earned for completed, controllable actions, not for other people's d
 | English counseling page | €5-12 Vinted small item |
 | English coaching page | €5-12 Vinted small item |
 | English about page | €5-12 Vinted small item |
-| Launch the complete English Hostinger website | Solo Florence trip, €850 |
+| Complete English website version and launch it on Hostinger | Memo Paris Marfa, €150 target |
 | German website version | €25-45 Vinted special item |
 | Ukrainian website version | €25-45 Vinted special item |
 | Russian website version | €25-45 Vinted special item |
@@ -25,7 +25,7 @@ Rewards are earned for completed, controllable actions, not for other people's d
 | Design, print, and distribute flyers in Nürnberg | Les Néréides necklace or Memo Paris Marfa |
 | Reach 30 working hours in one week | €12-25 Vinted item |
 | Build the €2,250 safety buffer | Marshall speaker only |
-| Earn €20,000 in one year | Florence trip |
+| Earn €20,000 in one year | Florence trip, €850 |
 | Build the counseling quiz | €5-12 Vinted small item |
 | Build the coaching quiz | €5-12 Vinted small item |
 | Audit social media from a client's perspective | €5-12 Vinted small item |

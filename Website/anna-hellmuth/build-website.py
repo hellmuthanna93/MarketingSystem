@@ -6,7 +6,7 @@ Usage:
   python3 build-website.py
   python3 build-website.py --locale en
 
-Source: src/  ·  Output: en/, de/, uk/, ru/ (+ root index.html, sitemap.xml)
+Source: src/  ·  Output: en/, de/, uk/, ru/, brand/ (+ root index.html, sitemap.xml)
 Do not hand-edit generated HTML.
 """
 
@@ -23,10 +23,14 @@ import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = Path(__file__).resolve().parent
+REPOSITORY_ROOT = ROOT.parent.parent
 SRC = ROOT / "src"
 TEMPLATES = SRC / "templates"
 LOCALES_DIR = SRC / "locales"
 MANIFEST_PATH = SRC / "pages-manifest.yaml"
+BRAND_SOURCE = REPOSITORY_ROOT / "brand"
+BRAND_OUTPUT = ROOT / "brand"
+BRAND_FILES = ("tokens.css", "typography.css", "components.css")
 SITE_URL = "https://annahellmuth.com"
 PAGE_KEY_ALIASES = {
     "index": "home",
@@ -122,10 +126,15 @@ class SiteBuilder:
         return self._rel(page, "assets", path)
 
     def brand(self, page: PageDef, path: str) -> str:
-        # locale dir (+1) + repo root from anna-hellmuth (+1) => depth + 3
-        depth = self._depth(page)
-        prefix = "../" * (depth + 3)
-        return prefix + "brand/" + path
+        """Path to the deployment-local copy of the shared brand stylesheet."""
+        return self._rel(page, "brand", path)
+
+    def copy_brand_assets(self) -> None:
+        """Keep the deployable site self-contained while preserving one source of truth."""
+        BRAND_OUTPUT.mkdir(exist_ok=True)
+        for filename in BRAND_FILES:
+            shutil.copy2(BRAND_SOURCE / filename, BRAND_OUTPUT / filename)
+            print(f"Copied brand/{filename}")
 
     def page_url(self, page: PageDef, locale: str, key: str) -> str:
         anchor = ""
@@ -327,6 +336,7 @@ class SiteBuilder:
 
     def build(self) -> None:
         self.clean_outputs()
+        self.copy_brand_assets()
         for locale in self.locales:
             for page in self.pages:
                 out = self.output_path(locale, page)
