@@ -13,3 +13,4 @@ Short record of completed work and decisions for this project.
 - Added seven life-coaching FAQs covering service fit, repeated stuckness, decision fear, changing goals, life transitions, between-session support, and outgrown achievement strategies.
 - Clarified the life-coaching program introduction: inner change comes before new decisions and actions.
 - Updated the life-coaching closing question to focus on whether the program will help.
+- Updated the life-coaching closing text to clarify the discovery call's purpose.
