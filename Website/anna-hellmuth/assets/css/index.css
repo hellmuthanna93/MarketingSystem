@@ -55,6 +55,7 @@ body {
   font-family: var(--font-sans);
   font-size: 1.05rem;
   line-height: 1.7;
+  text-wrap: pretty;
   font-weight: var(--font-weight-body);
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
@@ -62,6 +63,10 @@ body {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
   -webkit-tap-highlight-color: var(--color-tap-highlight);
+}
+
+:where(body *) {
+  text-wrap: pretty;
 }
 
 .header-scroll-sentinel {
@@ -2271,70 +2276,6 @@ footer {
   }
 }
 
-/* --- Theme toggle (light / dark) --- */
-.theme-toggle {
-  position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  z-index: 150;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-card-bg);
-  color: var(--color-accent);
-  border: 1px solid var(--color-border-card);
-  box-shadow: var(--shadow-soft);
-  cursor: pointer;
-  transition: var(--transition-smooth);
-}
-
-.theme-toggle:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-border-emphasis);
-}
-
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-}
-
-.theme-toggle svg {
-  width: 20px;
-  height: 20px;
-}
-
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-
-:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-}
-
-@media (max-width: 768px) {
-  .theme-toggle {
-    bottom: 1rem;
-    right: 1rem;
-    width: 44px;
-    height: 44px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-toggle {
-    transition: none;
-  }
-  .theme-toggle:hover {
-    transform: none;
-  }
-}
-
 /* Footer email sits on the burgundy footer in both themes - keep it legible
    (the inline accent color was burgundy-on-burgundy). */
 footer .footer-contact a[href^="mailto:"] {
@@ -2343,19 +2284,6 @@ footer .footer-contact a[href^="mailto:"] {
 
 footer .footer-contact a[href^="mailto:"]:hover {
   color: var(--color-text-on-dark);
-}
-
-/* Dark mode: the brand logo has a solid cream background. Let it read as a
-   deliberate light "chip" on the dark header with softened corners rather than
-   a hard-edged square. Footer stays burgundy in both themes, so leave it. */
-:root[data-theme="dark"] body > header .logo img {
-  border-radius: 8px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) body > header .logo img {
-    border-radius: 8px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -2427,7 +2355,6 @@ footer .footer-contact a[href^="mailto:"]:hover {
 }
 
 .next-chapter-hero h1 {
-  max-width: 10ch;
   margin-bottom: 1.25rem;
   font-size: clamp(3rem, 6vw, 5.6rem);
   line-height: 1.02;
@@ -3106,9 +3033,9 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
 
 .chapter-support-panel {
   position: relative;
-  min-height: 11rem;
-  padding: clamp(1.5rem, 3vw, 2.25rem);
-  padding-right: clamp(4.75rem, 8vw, 6rem);
+  min-height: 10.5rem;
+  padding: 1.5rem;
+  padding-right: 5rem;
   border: 1px solid var(--color-border-card);
   border-radius: 16px;
   background: var(--color-card-bg);
@@ -3119,8 +3046,20 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-height: 14rem;
+  min-height: 10.5rem;
   text-align: left;
+}
+
+.chapter-support-panel--sessions {
+  flex-direction: row !important;
+  gap: 0.75rem;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.chapter-support-panel--sessions .chapter-support-panel__number,
+.chapter-support-panel--sessions h3 {
+  margin: 0;
 }
 
 .chapter-support-panel h3 {
@@ -3137,14 +3076,25 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
 
 .chapter-support-panel--bonus {
   display: grid;
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(7rem, 0.3fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-column: auto;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.5rem;
   align-items: center;
-  background: var(--color-bg-dark);
-  color: var(--color-text-light);
-  border: 0;
-  box-shadow: var(--shadow-card);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border-card);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 701px) {
+  .next-chapter-support__grid {
+    grid-auto-rows: 1fr;
+  }
+
+  .chapter-support-panel {
+    height: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .chapter-support-panel--bonus h3,
@@ -3158,7 +3108,7 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
 
 .chapter-support-panel__bonus-label {
   margin: 0;
-  color: var(--color-gold-on-dark) !important;
+  color: var(--color-accent) !important;
   font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: var(--font-weight-semibold);
   line-height: 1;
@@ -3181,8 +3131,38 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
 
 .chapter-support-panel__open {
   position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: var(--color-accent);
+  transform: none;
+}
+
+.chapter-support-panel:not(.chapter-support-panel--bonus) .chapter-support-panel__open {
+  inset: -1px;
+}
+
+.chapter-support-panel__open::before {
+  content: "";
+  position: absolute;
   right: 1.25rem;
   bottom: 1.25rem;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--color-border-card);
+  border-radius: 50%;
+  background: var(--color-bg-primary);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.chapter-support-panel__open svg {
+  position: absolute;
+  right: 2.075rem;
+  bottom: 2.075rem;
+  z-index: 1;
 }
 
 .chapter-support-panel__open svg,
@@ -3202,15 +3182,38 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
   transform: translateY(-2px);
 }
 
-.chapter-support-panel--bonus .chapter-support-panel__open {
-  border-color: var(--color-text-on-dark-soft);
+.chapter-support-panel__open:hover {
   background: transparent;
   color: var(--color-text-on-dark);
+  transform: none;
+}
+
+.chapter-support-panel__open:hover::before {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.chapter-support-panel__open:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.chapter-support-panel--bonus .chapter-support-panel__open {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.chapter-support-panel--bonus .chapter-support-panel__open::before {
+  border-color: var(--color-border-card);
+  background: var(--color-surface-light);
+}
+
+.chapter-support-panel--bonus .chapter-support-panel__open:hover::before {
+  background: var(--color-accent);
 }
 
 .chapter-support-panel--bonus .chapter-support-panel__open:hover {
-  background: var(--color-text-on-dark);
-  color: var(--color-accent);
+  color: var(--color-text-on-dark);
 }
 
 .has-open-dialog {
@@ -3300,6 +3303,22 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
 
 .next-chapter-program-investment h3 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.next-chapter-program-investment__intro {
+  max-width: 32rem;
+}
+
+.next-chapter-program-investment__context {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.next-chapter-program-investment__context p {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  line-height: 1.65;
 }
 
 .next-chapter-price--compact {
@@ -3447,7 +3466,7 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 36%;
+    object-position: 50% 32%;
   }
 }
 
@@ -3607,6 +3626,17 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
   max-width: 42rem;
   margin: 0 auto 2rem;
   font-size: 1.15rem;
+}
+
+/* Centered copy can use more of the desktop canvas without changing its mobile measure. */
+@media (min-width: 901px) {
+  .next-chapter-closing__inner {
+    max-width: 58rem;
+  }
+
+  .next-chapter-closing p {
+    max-width: 52rem;
+  }
 }
 
 @media (max-width: 900px) {

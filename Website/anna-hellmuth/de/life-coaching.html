@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta name="theme-color" content="#64010d">
   <title>Coaching für Lebens- und Karriereübergänge | The Next Chapter</title>
   <meta name="description" content="Ein 16-wöchiges privates Coachingprogramm für Menschen, die in einem Lebens- oder Karriereübergang feststecken und eine stimmige Richtung wählen möchten.">
@@ -21,14 +20,14 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../brand/tokens.css">
+  <link rel="stylesheet" href="../brand/tokens.css?v=20260827-1">
   <link rel="stylesheet" href="../brand/typography.css">
   <link rel="stylesheet" href="../brand/components.css">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  <link rel="stylesheet" href="../assets/css/index.css?v=20260814-2">
+  <link rel="stylesheet" href="../assets/css/index.css?v=20260827-1">
   
 </head>
-<body data-locale="de" data-theme-label-light="Zum hellen Modus wechseln" data-theme-label-dark="Zum dunklen Modus wechseln" data-nav-label="Navigation umschalten">
+<body data-locale="de" data-nav-label="Navigation umschalten">
 
   <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
     <header>
@@ -104,7 +103,104 @@
 
   <main id="main-content">
   <style>
-  /* Client outcomes use completion markers; professional proof uses evidence markers. */
+  .next-chapter-page :is(.btn-primary, .btn-secondary, button) {
+    transition:
+      transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 220ms ease,
+      border-color 220ms ease,
+      color 220ms ease,
+      box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .next-chapter-page :is(.btn-primary, .btn-secondary, button):hover,
+  .next-chapter-page :is(.btn-primary, .btn-secondary, button):focus-visible {
+    transform: scale(1.04);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .next-chapter-page :is(.btn-primary, .btn-secondary, button) {
+      transition: none;
+    }
+
+    .next-chapter-at-glance__facts > div {
+      transition: none;
+    }
+
+    .next-chapter-page :is(.btn-primary, .btn-secondary, button):hover,
+    .next-chapter-page :is(.btn-primary, .btn-secondary, button):focus-visible {
+      transform: none;
+    }
+  }
+
+  .next-chapter-at-glance {
+    background: var(--color-surface-light);
+  }
+
+  .next-chapter-at-glance__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+
+  .next-chapter-at-glance h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+  }
+
+  .next-chapter-at-glance__intro p {
+    max-width: 32rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+  }
+
+  .next-chapter-at-glance__facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .next-chapter-at-glance__facts > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 10rem;
+    padding: 1.75rem;
+    background: var(--color-surface-light);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition:
+      transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 220ms ease,
+      box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .next-chapter-at-glance__facts > div:hover {
+      z-index: 1;
+      border-color: var(--color-burgundy);
+      box-shadow: var(--shadow-soft);
+      transform: scale(1.025);
+    }
+  }
+
+  .next-chapter-at-glance dt {
+    margin-bottom: 0.25rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .next-chapter-at-glance dd {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  /* Client outcomes use completion markers; professional proof uses point markers. */
   .next-chapter-outcomes__grid ul li {
     position: relative;
     padding-inline-start: 3rem;
@@ -121,70 +217,1105 @@
     place-items: center;
     border: 1px solid currentColor;
     border-radius: 50%;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-semibold);
     line-height: 1;
     transform: translateY(-50%);
   }
 
   .next-chapter-professional__proof-list {
-    counter-reset: professional-proof;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   .next-chapter-professional__proof-list li {
-    counter-increment: professional-proof;
     position: relative;
-    padding-inline-start: 3.5rem;
+    display: flex;
+    align-items: center;
+    min-height: 10rem;
+    padding: 1.75rem;
+    background: var(--color-surface-light);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: clamp(1.1rem, 1.45vw, 1.25rem);
+    line-height: 1.5;
   }
 
   .next-chapter-professional__proof-list li::before {
-    content: counter(professional-proof, decimal-leading-zero);
-    position: absolute;
-    inset-inline-start: 0;
-    top: 50%;
-    display: grid;
-    width: 2.35rem;
-    height: 2.35rem;
-    place-items: center;
-    border: 1px solid currentColor;
-    border-radius: 50%;
-    font-family: Arial, sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: 0.04em;
-    line-height: 1;
-    transform: translateY(-50%);
+    display: none;
+  }
+
+  .next-chapter-professional__proof-list li::after {
+    display: none;
+  }
+
+  .next-chapter-professional__personal-note {
+    max-width: 38rem;
+    margin: 1.25rem 0 1.5rem;
+    font-size: 1.15rem;
+    line-height: 1.65;
+  }
+
+  .next-chapter-professional__proof-list li,
+  .next-chapter-professional .next-chapter-story-card,
+  .next-chapter-professional .btn-secondary {
+    transition:
+      transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 220ms ease,
+      border-color 220ms ease,
+      box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1),
+      color 220ms ease;
+  }
+
+  .next-chapter-professional__proof-list li:hover,
+  .next-chapter-professional__proof-list li:focus-within {
+    z-index: 1;
+    border-color: var(--color-burgundy);
+    box-shadow: var(--shadow-soft);
+    transform: scale(1.025);
+  }
+
+  .next-chapter-professional .next-chapter-story-card:hover,
+  .next-chapter-professional .next-chapter-story-card:focus-within {
+    border-color: var(--color-burgundy);
+    box-shadow: var(--shadow-soft);
+    transform: scale(1.0125);
+  }
+
+  .next-chapter-professional .btn-secondary:hover,
+  .next-chapter-professional .btn-secondary:focus-visible {
+    color: var(--color-text-on-dark);
+    background: var(--color-burgundy);
+    border-color: var(--color-burgundy);
+    box-shadow: var(--shadow-soft);
+    transform: scale(1.05);
+  }
+
+  .next-chapter-professional .btn-secondary {
+    min-height: 3.75rem;
+    padding: 0.95rem 1.8rem;
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+  }
+
+  .next-chapter-professional__header .btn-secondary {
+    color: var(--color-text-on-dark);
+    background: var(--color-burgundy);
+    border-color: var(--color-burgundy);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .next-chapter-professional__proof-list li,
+    .next-chapter-professional .next-chapter-story-card,
+    .next-chapter-professional .btn-secondary {
+      transition: none;
+    }
+
+    .next-chapter-professional__proof-list li:hover,
+    .next-chapter-professional__proof-list li:focus-within,
+    .next-chapter-professional .next-chapter-story-card:hover,
+    .next-chapter-professional .next-chapter-story-card:focus-within,
+    .next-chapter-professional .btn-secondary:hover,
+    .next-chapter-professional .btn-secondary:focus-visible {
+      transform: none;
+    }
+  }
+
+  @media (min-width: 901px) {
+    .next-chapter-page .next-chapter-professional__grid {
+      grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.08fr);
+      grid-template-areas:
+        "visual header"
+        "visual content"
+        "links links";
+      grid-template-rows: auto auto auto;
+    }
+
+    .next-chapter-page .next-chapter-professional__visual {
+      grid-area: 1 / 1 / 3 / 2;
+      align-self: stretch;
+      justify-self: stretch;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      aspect-ratio: auto;
+      position: relative;
+    }
+
+    .next-chapter-page .next-chapter-professional__visual img {
+      position: absolute;
+      inset: 0;
+    }
+
+    .next-chapter-page .next-chapter-professional__proof-list {
+      margin-bottom: 0;
+    }
+
+    .next-chapter-page .next-chapter-professional__links {
+      grid-area: links;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
   }
 
   @media (max-width: 600px) {
+    .next-chapter-at-glance__inner,
+    .next-chapter-at-glance__facts {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .next-chapter-at-glance__facts > div {
+      min-height: 0;
+      padding: 1.5rem;
+    }
+
     .next-chapter-outcomes__grid ul li {
       padding-inline-start: 2.75rem;
     }
 
-    .next-chapter-professional__proof-list li {
-      padding-inline-start: 3.15rem;
+  }
+
+  @media (max-width: 720px) {
+    .next-chapter-professional__proof-list {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.75rem;
     }
+
+    .next-chapter-professional__proof-list li {
+      min-height: 9rem;
+      padding: 1.5rem;
+      font-size: clamp(1.1rem, 4vw, 1.2rem);
+    }
+
+    .next-chapter-professional__links .btn-secondary {
+      display: flex;
+      min-height: 3.75rem;
+      padding: 0.85rem 1rem;
+      font-size: clamp(1.1rem, 4.5vw, 1.25rem);
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .next-chapter-professional .next-chapter-story-card .btn-secondary {
+      display: flex;
+      width: fit-content;
+      margin-inline: auto;
+    }
+  }
+
+  .next-chapter-page .next-chapter-transition {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    min-height: clamp(30rem, 48vw, 43rem);
+    color: var(--color-text);
+    background-image: var(--next-chapter-transition-image);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .next-chapter-page .next-chapter-transition::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: linear-gradient(90deg, transparent 37%, color-mix(in srgb, var(--color-surface-light) 76%, transparent) 59%, color-mix(in srgb, var(--color-surface-light) 94%, transparent) 100%);
+  }
+
+  /* Keep the notebook composition balanced at laptop widths without altering the wide-desktop crop. */
+  @media (min-width: 901px) and (max-width: 1400px) {
+    .next-chapter-page .next-chapter-why .next-chapter-transition {
+      background-position: 42% center;
+    }
+  }
+
+  .next-chapter-page .next-chapter-transition__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(21rem, 0.78fr);
+    align-items: center;
+    width: 100%;
+    min-height: inherit;
+  }
+
+  .next-chapter-page .next-chapter-transition__copy {
+    grid-column: 2;
+    max-width: 40rem;
+    padding: clamp(2rem, 4vw, 4.5rem) 0;
+  }
+
+  .next-chapter-page .next-chapter-transition__copy p {
+    margin: 0;
+  }
+
+  .next-chapter-page .next-chapter-transition__core {
+    max-width: 20ch;
+    font-size: clamp(1.9rem, 3.6vw, 3rem);
+    font-weight: var(--font-weight-heading);
+    line-height: 1.18;
+    text-wrap: pretty;
+  }
+
+  .next-chapter-page .next-chapter-transition__close {
+    max-width: 32rem;
+    margin-top: clamp(1.25rem, 2.5vw, 2rem) !important;
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    line-height: 1.55;
+  }
+
+  .next-chapter-page .next-chapter-why {
+    padding-bottom: 0;
+    background: var(--color-bg-secondary);
+  }
+
+  .next-chapter-page .next-chapter-why > .container:first-child {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    padding-inline: clamp(1.5rem, 5vw, 5rem);
+  }
+
+  .next-chapter-page .next-chapter-why .next-chapter-relief__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    width: 100%;
+    margin: 0 auto clamp(3.5rem, 6vw, 6.5rem);
+    padding: 0;
+    background: transparent;
+    text-align: center;
+  }
+
+  .next-chapter-page .next-chapter-why .next-chapter-relief__heading h2 {
+    max-width: none;
+    margin: 0;
+    color: var(--color-text);
+  }
+
+  .next-chapter-page .next-chapter-transition__intro {
+    max-width: none;
+    margin: 0 0 clamp(1.5rem, 3vw, 2.5rem) !important;
+    color: var(--color-text);
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    line-height: 1.65;
+  }
+
+  .next-chapter-page .next-chapter-transition .next-chapter-relief__reasons {
+    text-align: left;
+  }
+
+  .next-chapter-page .next-chapter-outcomes {
+    position: relative;
+    isolation: isolate;
+    min-height: clamp(33rem, 50vw, 45rem);
+    background-image: var(--next-chapter-outcomes-image);
+    background-position: 24% center;
+    background-size: cover;
+  }
+
+  .next-chapter-page .next-chapter-outcomes::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: linear-gradient(90deg, transparent 30%, color-mix(in srgb, var(--color-surface-light) 72%, transparent) 55%, color-mix(in srgb, var(--color-surface-light) 94%, transparent) 100%);
+  }
+
+  .next-chapter-page .next-chapter-outcomes > .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.82fr);
+    align-items: center;
+    min-height: inherit;
+  }
+
+  .next-chapter-page .next-chapter-outcomes__grid {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .next-chapter-page .next-chapter-outcomes h2,
+  .next-chapter-page .next-chapter-outcomes li {
+    color: var(--color-text);
+  }
+
+  .next-chapter-page .next-chapter-outcomes h2 {
+    max-width: 16ch;
+  }
+
+  .next-chapter-page .next-chapter-outcomes li {
+    border-bottom-color: var(--color-border);
+  }
+
+  .next-chapter-page .next-chapter-relief {
+    background: var(--color-surface-light);
+    color: var(--color-text);
+  }
+
+  .next-chapter-page .next-chapter-relief__diagnosis {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.78fr) minmax(0, 1.22fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: stretch;
+  }
+
+  .next-chapter-page .next-chapter-relief__closing {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+    column-gap: clamp(2rem, 5vw, 4.5rem);
+    row-gap: 0;
+    max-width: none;
+    margin: clamp(2.5rem, 5vw, 4.5rem) 0 0;
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
+    color: var(--color-text);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-align: left;
+    transform-origin: center;
+    transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1), border-color 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .next-chapter-page .next-chapter-relief__closing::before {
+    display: none;
+  }
+
+  .next-chapter-page .next-chapter-relief__closing-copy {
+    align-self: center;
+    max-width: 26rem;
+  }
+
+  .next-chapter-page .next-chapter-relief__closing-cta {
+    color: var(--color-text);
+    border-left: 1px solid var(--color-border);
+    padding-left: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .next-chapter-page .next-chapter-relief__closing p {
+    margin: 0;
+    font-size: inherit;
+    line-height: 1.45;
+    transform-origin: left center;
+    transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .next-chapter-page .next-chapter-relief__closing .next-chapter-relief__insight {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 32rem;
+    margin: 0 0 clamp(0.5rem, 1vw, 1rem);
+    color: var(--color-burgundy);
+    font-size: clamp(1.35rem, 2.1vw, 1.6rem);
+    font-weight: var(--font-weight-heading);
+    line-height: 1.28;
+    text-align: center;
+  }
+
+  .next-chapter-page .next-chapter-relief__closing .next-chapter-relief__subtitle {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 48rem;
+    margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--color-text);
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .next-chapter-page .next-chapter-relief__closing .next-chapter-relief__need {
+    margin-bottom: 1.75rem;
+    color: var(--color-text);
+    font-size: clamp(1.35rem, 2.1vw, 1.6rem);
+    font-weight: var(--font-weight-body);
+    line-height: 1.6;
+  }
+
+  .next-chapter-page .next-chapter-relief__closing .next-chapter-relief__invitation {
+    margin: 0;
+    color: var(--color-text);
+    font-size: clamp(1.35rem, 2.1vw, 1.6rem);
+    font-weight: var(--font-weight-body);
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .next-chapter-page .next-chapter-relief__closing > .btn-secondary {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 0.5rem;
+    color: var(--color-text-on-dark);
+    background: var(--color-burgundy);
+    border-color: var(--color-burgundy);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+  }
+
+  .next-chapter-page .next-chapter-relief__closing > .btn-secondary:hover {
+    color: var(--color-text-on-dark);
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+  }
+
+  .next-chapter-page .next-chapter-information {
+    position: relative;
+    padding: clamp(4rem, 9vw, 8rem) 0;
+    background-color: var(--color-burgundy);
+    background-image: linear-gradient(
+      color-mix(in srgb, var(--color-burgundy) 25%, transparent),
+      color-mix(in srgb, var(--color-burgundy) 25%, transparent)
+    ), url("../assets/images/information-not-answer-books.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .next-chapter-page .next-chapter-information .next-chapter-relief__closing {
+    max-width: 70rem;
+    margin: 0 auto;
+    background: color-mix(in srgb, var(--color-surface-light) 91%, transparent);
+    border-color: color-mix(in srgb, var(--color-text-on-dark) 50%, transparent);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(14px) saturate(112%);
+    -webkit-backdrop-filter: blur(14px) saturate(112%);
+  }
+
+  .next-chapter-page .next-chapter-information .next-chapter-relief__closing:hover {
+    border-color: var(--color-text-on-dark);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .next-chapter-page .next-chapter-relief__closing:hover {
+      border-color: var(--color-accent);
+      transform: scale(1.015);
+    }
+
+    .next-chapter-page .next-chapter-relief__closing:hover .next-chapter-relief__insight,
+    .next-chapter-page .next-chapter-relief__closing:hover .next-chapter-relief__need,
+    .next-chapter-page .next-chapter-relief__closing:hover .next-chapter-relief__invitation {
+      transform: scale(1.03);
+    }
+  }
+
+  .next-chapter-page .next-chapter-relief__inner {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 56.25rem) {
+    .next-chapter-page .next-chapter-pattern__grid {
+      grid-template-columns: minmax(17rem, 0.6fr) minmax(0, 1.4fr);
+      grid-template-areas:
+        "title title"
+        "visual content";
+      gap: clamp(2.5rem, 5vw, 4.5rem);
+      align-items: stretch;
+    }
+
+    .next-chapter-page .next-chapter-pattern__title {
+      grid-area: title;
+      justify-self: center;
+      text-align: center;
+    }
+
+    .next-chapter-page .next-chapter-pattern__visual {
+      grid-area: visual;
+      min-height: 100%;
+      aspect-ratio: auto;
+    }
+
+    .next-chapter-page .next-chapter-pattern__visual picture {
+      display: block;
+      height: 100%;
+    }
+
+    .next-chapter-page .next-chapter-pattern__content {
+      grid-area: content;
+    }
+
+  }
+
+  .next-chapter-page .next-chapter-relief__heading {
+    align-self: stretch;
+    max-width: none;
+    margin: 0;
+    padding: clamp(2rem, 4vw, 3.25rem);
+    color: var(--color-text-on-dark);
+    background: var(--color-burgundy);
+    border-radius: var(--radius-md);
+    text-align: left;
+  }
+
+  .next-chapter-page .next-chapter-pattern__title {
+    max-width: 46rem;
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    line-height: 1.15;
+  }
+
+  .next-chapter-page .next-chapter-relief__heading h2 {
+    max-width: 14ch;
+    margin: 0 0 1.25rem;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    line-height: 1.12;
+    text-wrap: pretty;
+  }
+
+  .next-chapter-page .next-chapter-relief__heading p {
+    max-width: 27rem;
+    margin: 0;
+    color: var(--color-text-on-dark-subtle);
+    font-size: clamp(1.2rem, 2.1vw, 1.5rem);
+    line-height: 1.55;
+  }
+
+  @media (min-width: 901px) {
+    .next-chapter-at-glance h2 {
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+    }
+
+    .next-chapter-at-glance__intro p {
+      font-size: 1.2rem;
+    }
+
+    .next-chapter-at-glance__intro .brand-link {
+      font-size: 1.2rem;
+    }
+
+    .next-chapter-at-glance dt {
+      font-size: 0.95rem;
+    }
+
+    .next-chapter-at-glance dd {
+      font-size: 1.2rem;
+    }
+
+    .next-chapter-page .next-chapter-relief__heading {
+      align-self: center;
+    }
+
+    .next-chapter-page .next-chapter-story-card h3,
+    .next-chapter-page .next-chapter-story-card p {
+      max-width: 56rem;
+    }
+
+    .next-chapter-page .next-chapter-pattern__title {
+      max-width: 54rem;
+    }
+
+    .next-chapter-page .next-chapter-relief__closing .next-chapter-relief__insight {
+      max-width: 38rem;
+    }
+  }
+
+  @media (min-width: 44rem) {
+    .next-chapter-page .next-chapter-relief__heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .next-chapter-page .next-chapter-relief__reasons,
+  .next-chapter-page ol.next-chapter-relief__reasons {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    margin: 0;
+  }
+
+  .next-chapter-page .next-chapter-relief__reasons li,
+  .next-chapter-page ol.next-chapter-relief__reasons > li {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+    padding: clamp(1.5rem, 2.6vw, 2.25rem) 0;
+    color: var(--color-text);
+    border: 0;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0;
+    background: transparent;
+    transition: border-color 240ms ease, transform 240ms ease;
+  }
+
+  .next-chapter-page .next-chapter-relief__icon,
+  .next-chapter-page .next-chapter-relief__reasons li > :first-child,
+  .next-chapter-page ol.next-chapter-relief__reasons > li > :first-child {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 0;
+    color: var(--color-accent);
+    border-color: var(--color-border-card);
+    border-width: 2px;
+  }
+
+  .next-chapter-page .next-chapter-relief__icon svg,
+  .next-chapter-page .next-chapter-relief__reasons li > :first-child svg,
+  .next-chapter-page ol.next-chapter-relief__reasons > li > :first-child svg {
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 2.5;
+  }
+
+  .next-chapter-page .next-chapter-relief__icon--path svg {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .next-chapter-page .next-chapter-relief__reasons li:hover {
+    border-color: var(--color-accent);
+    transform: translateX(0.25rem);
+  }
+
+  @media (max-width: 900px) {
+    .next-chapter-page .next-chapter-relief__reasons li,
+    .next-chapter-page ol.next-chapter-relief__reasons > li {
+      grid-template-columns: 3.25rem minmax(0, 1fr);
+      gap: 1rem 1.1rem;
+      padding: 1.4rem 0;
+    }
+
+    .next-chapter-page .next-chapter-relief__icon,
+    .next-chapter-page .next-chapter-relief__reasons li > :first-child,
+    .next-chapter-page ol.next-chapter-relief__reasons > li > :first-child {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
+
+    .next-chapter-page .next-chapter-relief__icon svg,
+    .next-chapter-page .next-chapter-relief__reasons li > :first-child svg,
+    .next-chapter-page ol.next-chapter-relief__reasons > li > :first-child svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .next-chapter-page .next-chapter-relief__icon--path svg {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+
+  .next-chapter-page .next-chapter-relief__reasons h3 {
+    margin: 0 0 0.6rem;
+    color: var(--color-text);
+    font-size: clamp(1.5rem, 2.35vw, 1.75rem);
+    line-height: 1.28;
+    text-wrap: pretty;
+  }
+
+  .next-chapter-page .next-chapter-relief__reasons p {
+    max-width: 34rem;
+    color: var(--color-text);
+    font-size: clamp(1.05rem, 1.55vw, 1.2rem);
+    line-height: 1.62;
+  }
+
+  .next-chapter-page .next-chapter-pattern__reasons li {
+    transition:
+      transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 220ms ease,
+      border-color 220ms ease,
+      box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .next-chapter-page .next-chapter-pattern__reasons li:hover {
+      z-index: 1;
+      background: var(--color-surface-light);
+      border-color: var(--color-burgundy);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      transform: scale(1.015);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .next-chapter-page .next-chapter-pattern__reasons li {
+      transition: none;
+    }
+
+    .next-chapter-page .next-chapter-pattern__reasons li:hover {
+      transform: none;
+    }
+  }
+
+  .next-chapter-page .next-chapter-outcomes__grid ul li {
+    transition:
+      transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 220ms ease,
+      border-color 220ms ease,
+      box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .next-chapter-page .next-chapter-outcomes__grid ul li:hover {
+      z-index: 1;
+      background: color-mix(in srgb, var(--color-surface-light) 82%, transparent);
+      border-color: var(--color-burgundy);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      transform: scale(1.018);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .next-chapter-page .next-chapter-outcomes__grid ul li {
+      transition: none;
+    }
+
+    .next-chapter-page .next-chapter-outcomes__grid ul li:hover {
+      transform: none;
+    }
+  }
+
+  .next-chapter-page .next-chapter-relief__insight {
+    max-width: 16em;
+  }
+
+  @media (max-width: 43.9375rem) {
+    .next-chapter-page .next-chapter-relief__diagnosis {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    .next-chapter-page .next-chapter-relief__heading {
+      position: static;
+      align-self: auto;
+    }
+
+    .next-chapter-page .next-chapter-transition {
+      min-height: 0;
+      background-position: 28% center;
+    }
+
+    .next-chapter-page .next-chapter-transition::before {
+      background: color-mix(in srgb, var(--color-surface-light) 78%, transparent);
+    }
+
+    .next-chapter-page .next-chapter-transition__inner {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .next-chapter-page .next-chapter-transition__copy {
+      grid-column: 1;
+      max-width: 34rem;
+      margin-inline: auto;
+      padding-block: clamp(5rem, 18vw, 8rem);
+      text-align: center;
+    }
+
+    .next-chapter-page .next-chapter-transition__copy .next-chapter-transition__core {
+      max-width: 23ch;
+      margin-inline: auto;
+    }
+
+    .next-chapter-page .next-chapter-transition__copy .next-chapter-transition__close {
+      margin-inline: auto;
+    }
+
+    .next-chapter-page .next-chapter-outcomes {
+      min-height: 0;
+      background-position: 40% center;
+    }
+
+    .next-chapter-page .next-chapter-outcomes::before {
+      background: color-mix(in srgb, var(--color-surface-light) 82%, transparent);
+    }
+
+    .next-chapter-page .next-chapter-outcomes > .container {
+      grid-template-columns: minmax(0, 1fr);
+      padding-block: clamp(5rem, 18vw, 8rem);
+    }
+
+    .next-chapter-page .next-chapter-outcomes__grid {
+      grid-column: 1;
+    }
+
+    .next-chapter-page .next-chapter-relief__closing {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.75rem;
+    }
+
+    .next-chapter-page .next-chapter-relief__closing-cta {
+      border-top: 1px solid var(--color-border);
+      border-left: 0;
+      padding-top: 1.5rem;
+      padding-left: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .next-chapter-page .next-chapter-relief__reasons li,
+    .next-chapter-page .next-chapter-relief__closing,
+    .next-chapter-page .next-chapter-relief__closing p {
+      transition: none;
+    }
+
+    .next-chapter-page .next-chapter-relief__closing:hover {
+      transform: none;
+    }
+  }
+
+  .next-chapter-page .next-chapter-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: min(44rem, calc(100dvh - var(--header-height)));
+    color: var(--color-text-on-dark);
+  }
+
+  .next-chapter-page .next-chapter-hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-burgundy) 62%, transparent) 0%,
+      color-mix(in srgb, var(--color-burgundy) 46%, transparent) 26%,
+      color-mix(in srgb, var(--color-burgundy) 22%, transparent) 48%,
+      transparent 68%
+    );
+  }
+
+  .next-chapter-page .next-chapter-hero__grid {
+    display: block;
+  }
+
+  .next-chapter-page .next-chapter-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 36rem;
+  }
+
+  .next-chapter-page .next-chapter-hero h1,
+  .next-chapter-page .next-chapter-hero__lead,
+  .next-chapter-page .next-chapter-hero__intro {
+    color: var(--color-text-on-dark);
+  }
+
+  .next-chapter-page .next-chapter-hero__intro {
+    max-width: 32rem;
+    margin: 0 0 2rem;
+    font-size: var(--text-body-size);
+    line-height: 1.6;
+  }
+
+  .next-chapter-page .next-chapter-hero__visual {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .next-chapter-page .next-chapter-hero__visual::before {
+    display: none;
+  }
+
+  .next-chapter-page .next-chapter-hero__visual,
+  .next-chapter-page .next-chapter-hero__visual picture,
+  .next-chapter-page .next-chapter-hero__visual img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .next-chapter-page .next-chapter-hero__visual img {
+    object-position: center 52%;
+  }
+
+  .next-chapter-page .next-chapter-hero__visual--portrait img {
+    object-position: center center;
+  }
+
+  @media (min-width: 901px) {
+    .next-chapter-page .next-chapter-hero__intro {
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+    }
+
+    .next-chapter-page .next-chapter-hero__visual img {
+      object-position: left center;
+      transform: translateX(10%) scale(1.2);
+    }
+
+    .next-chapter-page .next-chapter-hero__visual--portrait img {
+      object-position: center 25%;
+      transform: none;
+    }
+  }
+
+  .next-chapter-page .next-chapter-hero .btn-primary,
+  .next-chapter-page .next-chapter-hero .btn-secondary {
+    width: 100%;
+    padding: var(--button-padding-y) var(--button-padding-x);
+    font-size: var(--text-button-size);
+    line-height: 1.2;
+    color: var(--color-burgundy);
+    background: var(--color-text-on-dark);
+    border-color: var(--color-text-on-dark);
+    text-align: center;
+  }
+
+  .next-chapter-page .next-chapter-hero .next-chapter-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .next-chapter-page .next-chapter-hero .btn-primary:hover,
+  .next-chapter-page .next-chapter-hero .btn-secondary:hover,
+  .next-chapter-page .next-chapter-hero .btn-primary:focus-visible,
+  .next-chapter-page .next-chapter-hero .btn-secondary:focus-visible {
+    color: var(--color-burgundy);
+    background: var(--color-surface-light);
+    border-color: var(--color-text-on-dark);
+  }
+
+  @media (max-width: 900px) {
+    .next-chapter-page .next-chapter-transition__copy {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .next-chapter-page .next-chapter-transition__copy .next-chapter-transition__core,
+    .next-chapter-page .next-chapter-transition__copy .next-chapter-transition__close {
+      margin-inline: auto;
+    }
+
+    .next-chapter-page .next-chapter-hero {
+      min-height: min(42rem, calc(100dvh - var(--header-height)));
+    }
+
+    .next-chapter-page .next-chapter-hero__visual {
+      max-width: none;
+    }
+
+    .next-chapter-page .next-chapter-hero__visual img {
+      object-position: 26% 52%;
+    }
+
+    .next-chapter-page .next-chapter-hero__visual--portrait img {
+      object-position: 78% 25%;
+    }
+  }
+
+  /* A single editorial type scale keeps the long-form coaching page calm and easy to scan. */
+  .next-chapter-page {
+    --next-chapter-type-display: clamp(2.2rem, 4vw, 3.6rem);
+    --next-chapter-type-title: clamp(1.25rem, 3vw, 1.75rem);
+    --next-chapter-type-lead: clamp(1.15rem, 2vw, 1.35rem);
+    --next-chapter-type-body: 1.1rem;
+  }
+
+  .next-chapter-page :is(
+    .next-chapter-at-glance h2,
+    .next-chapter-why h2,
+    .next-chapter-pattern__title,
+    .next-chapter-outcomes h2,
+    .next-chapter-professional h2,
+    .next-chapter-support > .container > .next-chapter-section-heading h2
+  ) {
+    font-size: var(--next-chapter-type-display);
+    line-height: 1.15;
+  }
+
+  .next-chapter-page :is(
+    .next-chapter-relief__reasons h3,
+    .next-chapter-pattern__reasons h3,
+    .chapter-support-panel h3
+  ) {
+    font-size: var(--next-chapter-type-title);
+    line-height: 1.35;
+  }
+
+  .next-chapter-page :is(
+    .next-chapter-at-glance__intro p,
+    .next-chapter-at-glance dd,
+    .next-chapter-professional__personal-note,
+    .next-chapter-relief__subtitle,
+    .next-chapter-relief__need,
+    .next-chapter-relief__invitation
+  ) {
+    font-size: var(--next-chapter-type-lead) !important;
+    line-height: 1.7;
+  }
+
+  .next-chapter-page :is(
+    .next-chapter-relief__reasons p,
+    .next-chapter-pattern__reasons p
+  ) {
+    font-size: var(--next-chapter-type-body);
+    line-height: 1.7;
+  }
+
+  .next-chapter-page .chapter-support-panel--sessions {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.75rem;
+  }
+
+  .next-chapter-page .chapter-support-panel--sessions .chapter-support-panel__number,
+  .next-chapter-page .chapter-support-panel--sessions h3 {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  .next-chapter-page .chapter-support-panel--sessions h3 {
+    white-space: nowrap;
+  }
+
+  .next-chapter-page .next-chapter-outcomes__grid ul li {
+    font-size: var(--next-chapter-type-lead);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.55;
   }
 </style>
 
 <article class="next-chapter-page">
   <section class="next-chapter-hero">
+    <figure class="next-chapter-hero__visual next-chapter-hero__visual--portrait" aria-hidden="true">
+      <img src="../assets/images/next-chapter-hero-portrait.png" alt="" width="2560" height="1468" fetchpriority="high">
+    </figure>
     <div class="container next-chapter-hero__grid">
       <div class="next-chapter-hero__content">
         <h1>The Next Chapter</h1>
         <p class="next-chapter-hero__lead">A 16-week structured coaching program for changing direction in your career, business, or life - with psychological support, proven techniques, and a practical plan.</p>
+        <p class="next-chapter-hero__intro">I’m Anna Hellmuth - a life coach, medical doctor, psychologist, and entrepreneur. I bring both psychological depth and real-world experience to the changes you want to make.</p>
         <div class="next-chapter-actions">
           <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-primary">Vereinbaren Sie Ihr kostenloses Erstgespräch</a>
         </div>
       </div>
-      <figure class="next-chapter-hero__visual">
-        <picture>
-          <source type="image/webp" srcset="../assets/images/the-next-chapter-hero-doorway-v2-800w.webp 800w, ../assets/images/the-next-chapter-hero-doorway-v2.webp 1536w" sizes="(max-width: 900px) 92vw, 40vw">
-          <img src="../assets/images/the-next-chapter-hero-doorway-v2.jpg" srcset="../assets/images/the-next-chapter-hero-doorway-v2-800w.jpg 800w, ../assets/images/the-next-chapter-hero-doorway-v2.jpg 1536w" sizes="(max-width: 900px) 92vw, 40vw" alt="A professional standing at an open doorway and looking toward the light" width="1536" height="1024" fetchpriority="high">
-        </picture>
-      </figure>
+    </div>
+  </section>
+
+  <section class="next-chapter-at-glance" aria-labelledby="program-at-a-glance">
+    <div class="container next-chapter-at-glance__inner">
+      <div class="next-chapter-at-glance__intro">
+        <h2 id="program-at-a-glance">The essentials about the program</h2>
+        <p>A coaching program that helps you make that change: first inner change, then new decisions and actions. It is not job-search, CV, or recruitment support.</p>
+        <a href="#program-details" class="brand-link">Explore the full program details</a>
+      </div>
+      <dl class="next-chapter-at-glance__facts">
+        <div>
+          <dt>Format</dt>
+          <dd>16-week online program</dd>
+        </div>
+        <div>
+          <dt>Sessions</dt>
+          <dd>12 private 60-minute sessions</dd>
+        </div>
+        <div>
+          <dt>Between sessions</dt>
+          <dd>Weekly written support</dd>
+        </div>
+        <div>
+          <dt>Investment</dt>
+          <dd>€1,950 or three instalments of €650</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
@@ -192,7 +1323,7 @@
     <div class="container">
       <div class="next-chapter-recognition__direct-grid">
         <div class="next-chapter-recognition__intro">
-          <h2>You want something to change, but you keep postponing it.</h2>
+          <h2>You know it's time for a change, but you keep postponing it.</h2>
           <p class="next-chapter-large-copy">Your current life still works. It just no longer inspires you.</p>
         </div>
         <ul class="next-chapter-recognition__direct-list">
@@ -202,57 +1333,59 @@
           <li>You keep preparing instead of beginning.</li>
           <li>You want to be visible, but you fear being judged.</li>
           <li>You know you have potential, but you are unsure whether you can go all the way.</li>
+          <li>You stay where you are because of the doubt, the fear, and the uncertainty.</li>
         </ul>
       </div>
-      <p class="next-chapter-recognition__conclusion"><strong>You do not lack ambition or intelligence. You are caught between the life you have built and the life you want next. And changing this by yourself is not easy.</strong></p>
     </div>
   </section>
 
-  <section class="next-chapter-relief">
+  <section class="next-chapter-why">
     <div class="container">
-      <div class="next-chapter-relief__inner">
-        <div class="next-chapter-relief__heading">
-          <h2>Why does struggling alone keep you in the same place?</h2>
-          <p>You can understand your situation and still remain stuck. Information is not the missing piece.</p>
-        </div>
+      <div class="next-chapter-relief__heading">
+        <h2>Why does struggling alone keep you in the same place?</h2>
+      </div>
+    </div>
+    <div class="next-chapter-transition" style="--next-chapter-transition-image: url('../assets/images/changing-life-transition-background-enhanced.png');">
+      <div class="container next-chapter-transition__inner">
+        <div class="next-chapter-transition__copy">
         <ol class="next-chapter-relief__reasons">
           <li>
             <span class="next-chapter-relief__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" focusable="false">
                 <path d="M5 24s7-10 19-10 19 10 19 10-7 10-19 10S5 24 5 24Z" />
                 <circle cx="24" cy="24" r="4.5" />
+                <path d="M9 11l30 26" />
               </svg>
             </span>
             <div class="next-chapter-relief__reason-copy">
-              <h3>You cannot see the whole situation from inside it.</h3>
-              <p>Your fears, responsibilities, expectations, and old assumptions all feel like facts.</p>
+              <h3>You cannot see the whole situation objectively.</h3>
+              <p>Your fears, responsibilities, expectations, and old assumptions all feel like facts. You need a fresh, nonjudgmental look at yourself and your situation before anything can change.</p>
             </div>
           </li>
           <li>
-            <span class="next-chapter-relief__icon" aria-hidden="true">
+            <span class="next-chapter-relief__icon next-chapter-relief__icon--path" aria-hidden="true">
               <svg viewBox="0 0 48 48" focusable="false">
-                <path d="M36.5 18A14 14 0 0 0 12 16" />
-                <path d="m12 10v6h6" />
-                <path d="M11.5 30A14 14 0 0 0 36 32" />
-                <path d="m36 38v-6h-6" />
+                <path d="M24 5c-8 0-14.5 6.4-14.5 14.4 0 5.1 2.7 8.1 5.5 10.9 2.2 2.2 3.3 4.2 3.3 7.2h11.4c0-3 1.1-5 3.3-7.2 2.8-2.8 5.5-5.8 5.5-10.9C38.5 11.4 32 5 24 5Z" />
+                <path d="M18.5 37.5h11M18.5 42h11" />
+                <path d="M20.5 20.5 27.5 13.5M27.5 20.5 20.5 13.5" />
               </svg>
             </span>
             <div class="next-chapter-relief__reason-copy">
               <h3>Understanding a pattern does not change it.</h3>
-              <p>You can know exactly why you procrastinate and still feel unable to act.</p>
+              <p>You can know exactly why you procrastinate and still feel unable to act. Knowledge by itself is just the first step.</p>
             </div>
           </li>
           <li>
             <span class="next-chapter-relief__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" focusable="false">
-                <path d="M8 35h11V13H8" />
-                <path d="M25 24h15" />
-                <path d="m34 18 6 6-6 6" />
+                <path d="M12 20H8v18h32V20h-4" />
+                <path d="M17 10v20M12.5 25.5 17 30l4.5-4.5" />
+                <path d="M31 30V10M26.5 14.5 31 10l4.5 4.5" />
               </svg>
             </span>
             <div class="next-chapter-relief__reason-copy">
-              <h3>Fear returns when action becomes real.</h3>
-              <p>Research feels safe. Making a visible decision creates emotional risk.</p>
+              <h3>To get a new output, you need a new input.</h3>
+              <p>Your usual emotional and mental patterns built the life you have now. To begin a new chapter, those patterns and inner states need to change. That does not happen automatically.</p>
             </div>
           </li>
           <li>
@@ -265,71 +1398,76 @@
             </span>
             <div class="next-chapter-relief__reason-copy">
               <h3>Without structure, daily life takes over.</h3>
-              <p>The decision gets postponed until later, and months or years pass.</p>
+              <p>The decision keeps getting postponed, and months or years pass. Accountability in a program changes how you approach change.</p>
             </div>
           </li>
         </ol>
-        <div class="next-chapter-relief__closing">
-          <p><strong>More information is often not the answer. You need a process that changes both your inner patterns and your actions.</strong></p>
-          <p class="next-chapter-relief__invitation">The Next Chapter gives you that process. It is a structured 16-week coaching program designed to help you move through change with support, clarity, and practical action.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="next-chapter-information">
+    <div class="container">
+      <div class="next-chapter-relief__closing">
+        <p class="next-chapter-relief__insight">More information is often not the answer.</p>
+        <p class="next-chapter-relief__subtitle">You can be a very self-reliant person, understand your situation well, and still remain stuck.</p>
+        <div class="next-chapter-relief__closing-copy">
+          <p class="next-chapter-relief__need">You need a process that changes both your inner patterns and your actions, and that supports you along the way in good times and hard ones.</p>
         </div>
+        <div class="next-chapter-relief__closing-cta">
+          <p class="next-chapter-relief__invitation">The Next Chapter gives you that process. It is a structured 16-week coaching program that helps you move through change with my expertise, support, and practical action.</p>
+        </div>
+        <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-secondary">Schedule your discovery call</a>
       </div>
     </div>
   </section>
 
   <section class="next-chapter-pattern">
     <div class="container next-chapter-pattern__grid">
+      <h2 class="next-chapter-pattern__title">What do we actually do together in this coaching program?</h2>
       <figure class="next-chapter-pattern__visual">
         <picture>
-          <img src="../assets/images/the-next-chapter-online-coaching.jpg" srcset="../assets/images/the-next-chapter-online-coaching-800w.jpg 800w, ../assets/images/the-next-chapter-online-coaching.jpg 1536w" sizes="(max-width: 900px) 92vw, 45vw" alt="Illustration of a private and collaborative online coaching session" width="1536" height="1024" loading="lazy">
+          <img src="../assets/images/coaching-program-session-notebook.png" alt="Notebook prepared for the first coaching-program session" width="1024" height="1535" loading="lazy">
         </picture>
       </figure>
       <div class="next-chapter-pattern__content">
-        <h2>What do we actually do together?</h2>
         <ol class="next-chapter-pattern__reasons">
           <li>
             <h3>Find what keeps you stuck.</h3>
-            <p>We identify the fears, beliefs, emotional reactions, and expectations influencing your decisions.</p>
+            <p>We identify the fears, beliefs, emotional reactions, and expectations influencing your decisions. It is not as obvious as you might think. Our brains can be really sly.</p>
           </li>
           <li>
             <h3>Clarify what you genuinely want.</h3>
-            <p>We separate your own goals from what looks sensible, impressive, or expected of you.</p>
+            <p>We separate your own goals from what looks sensible, impressive, or expected of you. Your own goals are the ones you can actually work toward. Societal expectations often set you up to fail.</p>
           </li>
           <li>
             <h3>Change the patterns behind your decisions.</h3>
-            <p>We work with perfectionism, fear of failure, emotional avoidance, and the need to feel completely ready.</p>
+            <p>We work with perfectionism, fear of failure, emotional avoidance, and the need to feel completely ready. We clear what no longer serves you and replace it with patterns that will.</p>
           </li>
           <li>
             <h3>Start acting in real life.</h3>
-            <p>We turn change into realistic decisions, experiments, and steps that fit your work, finances, energy, and responsibilities.</p>
+            <p>We turn change into realistic decisions, experiments, and steps that fit your work, finances, energy, and responsibilities. You grow into a different way of acting, naturally and without force.</p>
           </li>
         </ol>
       </div>
     </div>
   </section>
 
-  <section class="next-chapter-outcomes">
+  <section class="next-chapter-outcomes" style="--next-chapter-outcomes-image: url('../assets/images/coaching-program-outcome-stairs-business-casual.jpg');">
     <div class="container">
       <div class="next-chapter-outcomes__grid">
         <div>
-          <h2>By the end of the program, you will get:</h2>
+          <h2>By the end of the program, you will have:</h2>
         </div>
         <ul>
-          <li>A clearer understanding of who you are now</li>
+          <li>A clearer understanding of who you are</li>
           <li>A direction that feels genuinely yours</li>
           <li>A realistic plan for the next stage</li>
           <li>New ways of responding to fear, doubt, and perfectionism</li>
           <li>Concrete steps already taken toward your goal</li>
         </ul>
       </div>
-      <figure class="next-chapter-outcomes__visual">
-        <picture>
-          <source media="(max-width: 800px)" srcset="../assets/images/coaching-program-outcome-stairs-business-casual-800w.webp" type="image/webp">
-          <source media="(max-width: 800px)" srcset="../assets/images/coaching-program-outcome-stairs-business-casual-800w.jpg" type="image/jpeg">
-          <source srcset="../assets/images/coaching-program-outcome-stairs-business-casual.webp" type="image/webp">
-          <img src="../assets/images/coaching-program-outcome-stairs-business-casual.jpg" alt="A person in business-casual clothing walking upward toward the light" width="1536" height="1024" loading="lazy">
-        </picture>
-      </figure>
     </div>
   </section>
 
@@ -337,35 +1475,33 @@
     <div class="container next-chapter-professional__grid">
       <header class="next-chapter-professional__header">
         <p class="next-chapter-recognition__eyebrow">Why work with me?</p>
-        <h2>Psychological depth and practical action</h2>
+        <h2>I have made a major career change too.</h2>
+        <p class="next-chapter-professional__personal-note">Hi, I’m Anna, a life coach, medical doctor, psychologist, and entrepreneur who runs an online practice supporting people around the world.</p>
+        <p class="next-chapter-professional__personal-note">Changing the professional path I had planned and followed for years taught me about uncertainty, fear, and identity questions from the inside. That experience now helps me guide others through change, too.</p>
+        <a href="https://www.instagram.com/p/DPgoOMZCIaG/?img_index=1" class="btn-secondary" target="_blank" rel="noopener noreferrer">Read my story</a>
       </header>
       <div class="next-chapter-professional__content">
         <ul class="next-chapter-professional__proof-list">
-          <li>Medical doctor, psychologist, life coach, and entrepreneur</li>
-          <li>Experience helping many clients work through the emotional patterns behind difficult career and life changes</li>
-          <li>Psychological work combined with decisions and action in real life</li>
-          <li>Personal experience of moving countries and changing professional direction</li>
+          <li>I am a medical doctor, psychologist, life coach, and entrepreneur</li>
+          <li>I have helped many clients work through exactly this process of major life crises and career changes</li>
+          <li>It is my mission to help people free themselves from beliefs and baggage that get in the way of acting true to their nature and living their potential.</li>
+          <li>I have moved countries and changed professional direction firsthand</li>
         </ul>
-        <div class="next-chapter-story-card">
-          <h3>I have made a major career change too.</h3>
-          <p>I moved countries and changed the professional path I had planned and followed for years. I know the uncertainty, fear, and identity questions involved from the inside.</p>
-          <a href="https://www.instagram.com/p/DPgoOMZCIaG/?img_index=1" class="btn-secondary" target="_blank" rel="noopener noreferrer">Read my story</a>
-        </div>
-        <nav class="next-chapter-professional__links" aria-label="More about Anna Hellmuth">
-          <a href="ueber-mich.html" class="btn-secondary">Learn more about me</a>
-          <a href="index.html#testimonials" class="btn-secondary">What my clients say about our work together</a>
-        </nav>
       </div>
       <figure class="next-chapter-professional__visual">
-        <img src="../assets/images/anna-hellmuth-coaching-portrait.jpg" alt="Anna Hellmuth, medical doctor, psychologist, and coach" width="1200" height="1800" loading="lazy">
+        <img src="../assets/images/anna-hellmuth-why-work-with-me.jpg" alt="Anna Hellmuth, medical doctor, psychologist, and coach" width="1280" height="1920" loading="lazy">
       </figure>
+      <nav class="next-chapter-professional__links" aria-label="More about me">
+        <a href="ueber-mich.html" class="btn-secondary">Learn more about me</a>
+        <a href="index.html#testimonials" class="btn-secondary">What my clients say about our work together</a>
+      </nav>
     </div>
   </section>
 
-  <section class="next-chapter-support">
+  <section id="program-details" class="next-chapter-support">
     <div class="container">
       <div class="next-chapter-section-heading">
-        <h2>The complete 16-week program</h2>
+        <h2>The Next Chapter coaching program</h2>
       </div>
       <div class="next-chapter-support__grid">
         <article class="chapter-support-panel chapter-support-panel--sessions">
@@ -387,7 +1523,7 @@
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
           </button>
           <template id="chapter-support-duration">
-            <p>A 16-week commitment gives us enough time to work through both the highs and the lows of change. You can experience new ways of thinking and acting in different situations, so the change becomes part of your identity rather than a short burst of motivation.</p>
+            <p>A 16-week commitment gives us enough time to work through both the highs and the lows of change. We meet weekly for the first eight weeks, then every two weeks in weeks 10, 12, 14, and 16. You can experience new ways of thinking and acting in different situations, so the change becomes part of your identity rather than a short burst of motivation.</p>
           </template>
         </article>
         <article class="chapter-support-panel">
@@ -397,7 +1533,7 @@
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
           </button>
           <template id="chapter-support-structure">
-            <p>We meet weekly for the first eight weeks, then every two weeks in weeks 10, 12, 14, and 16. This rhythm respects the natural stages of growth and change, giving you time to act, reflect, and integrate.</p>
+            <p>Identity change has specific stages that all of us go through. I designed this program with those stages in mind, so we move through them with real support.</p>
           </template>
         </article>
         <article class="chapter-support-panel">
@@ -417,7 +1553,7 @@
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
           </button>
           <template id="chapter-support-techniques">
-            <p>Our work includes reflections, written exercises, hypnotherapeutic techniques, and meditations - a flexible mix refined through years of my work.</p>
+            <p>Different kinds of inner blocks need different methods to work with. Our work includes reflections, written exercises, hypnotherapeutic techniques, and meditations - a flexible mix refined over years of practice.</p>
           </template>
         </article>
         <article class="chapter-support-panel chapter-support-panel--bonus">
@@ -428,7 +1564,7 @@
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
           </button>
           <template id="chapter-support-bonus">
-            <p>When you complete the program, I gift you an additional 60-minute session one month later. We use it to consolidate your progress, celebrate what has changed, and strengthen the next steps that will help your success continue.</p>
+            <p>When you complete the program, I gift you an additional 60-minute session one month later. We use it to consolidate your progress, celebrate what has changed, and strengthen the next steps so the change can keep going.</p>
           </template>
         </article>
       </div>
@@ -442,8 +1578,12 @@
         </div>
       </dialog>
       <div class="next-chapter-program-investment">
-        <div>
+        <div class="next-chapter-program-investment__intro">
           <h3>Your investment</h3>
+          <div class="next-chapter-program-investment__context">
+            <p>Sometimes we spend money on things that help us feel better for a moment - and there is nothing wrong with that. But sometimes what we truly need is the time, space, and support to understand why we feel stuck in the first place.</p>
+            <p>The Next Chapter is an investment in yourself: in greater clarity, more conscious choices, and the courage to take steps you may have been postponing for a long time.</p>
+          </div>
         </div>
         <div class="next-chapter-price next-chapter-price--compact">
           <p class="next-chapter-price__amount">€1,950</p>
@@ -466,28 +1606,52 @@
       </div>
       <div class="next-chapter-faq__items">
         <details class="chapter-faq">
-          <summary>What if I do not know what direction I want?</summary>
-          <p>You do not need to arrive with the answer. Clarifying what matters now, exploring realistic possibilities, and creating criteria for a decision are central parts of the work.</p>
+          <summary>What if I do not know what direction I want or I am afraid of making the wrong decision?</summary>
+          <p>You do not need to arrive with the answer. Fear of making the wrong decision can make it even harder to see what you want. I will not tell you what to choose. We work to understand what the fear is protecting, clarify what matters now, and create criteria for a decision that fits you.</p>
         </details>
         <details class="chapter-faq">
           <summary>Why does the program last 16 weeks?</summary>
-          <p>The first eight weekly sessions create continuity and momentum. The later two-week gaps give you room to test decisions and new responses in real life, then return to reflect and adjust.</p>
+          <p>The first eight weekly sessions create continuity and momentum. The later two-week gaps give you room to test decisions and new responses in real life, then return to reflect and adjust. In my experience with clients, 16 weeks is usually enough for a change to become stable, so you can feel and act differently without my support.</p>
         </details>
         <details class="chapter-faq">
           <summary>Can I do this alongside a demanding job?</summary>
-          <p>Yes, if you have some capacity for reflection and small practical steps. The work is tailored to your actual energy, responsibilities, and pace rather than built around a fixed amount of homework.</p>
+          <p>Yes, if you have about an hour a week for a session and homework, and some capacity for reflection and small practical steps.</p>
+        </details>
+        <details class="chapter-faq">
+          <summary>I work 9 to 5. Can I book evening or weekend appointments?</summary>
+          <p>I do offer some limited evening and weekend slots. Contact me for that.</p>
         </details>
         <details class="chapter-faq">
           <summary>Is this career advice or job-search support?</summary>
-          <p>No. This is coaching for the decisions, patterns, and inner change behind a life or career transition. It does not include recruitment, CV writing, or job placement.</p>
+          <p>No. This is coaching for the decisions, patterns, and inner change behind a life or career transition. It does not include recruitment, CV writing, or job placement. I work with inner state and identity change, and that is the first step for all other practical actions.</p>
+        </details>
+        <details class="chapter-faq">
+          <summary>How do I know whether I need coaching or counseling?</summary>
+          <p>Coaching is for the part of you that wants to move forward: a decision, a transition, a goal, or a life that no longer feels right. Counseling is more suitable when emotional pain, the past, or mental health difficulties need healing and support first. If you are not sure, we can clarify this in the discovery call.</p>
+        </details>
+        <details class="chapter-faq">
+          <summary>Can online coaching really be as deep and effective as meeting in person?</summary>
+          <p>Yes. You can do deep work online. What matters most is the quality of attention, the relationship, and your willingness to engage. Online sessions also let you work from the place where your real life happens.</p>
+        </details>
+        <details class="chapter-faq">
+          <summary>What if I have already read books, watched videos, or tried therapy or coaching, but I still feel stuck?</summary>
+          <p>Then you probably do not need more information. Often, we get stuck not because we do not know enough, but because emotional patterns are stronger than our good intentions. Together, we look at what keeps repeating in your own life and find the steps that are right for you.</p>
+        </details>
+        <details class="chapter-faq">
+          <summary>What happens between sessions? Will I have homework?</summary>
+          <p>Yes, there are exercises, reflections, and practical steps between sessions. They are chosen for you, not given as a fixed amount of homework. You will also have weekly written support throughout the program, so the work can continue when real life happens.</p>
+        </details>
+        <details class="chapter-faq">
+          <summary>How do I know you are the right coach for me?</summary>
+          <p>You have to listen to your feelings. It is important that you feel comfortable and safe with your coach. Trust your gut. If you are unsure, read the information on this site and ask me the questions that matter to you. The discovery call exists exactly for that reason: so we can get a first feeling of whether working together is right for you.</p>
         </details>
         <details class="chapter-faq">
           <summary>What happens during the discovery call?</summary>
-          <p>We use 30 minutes to understand what you want support with, consider whether coaching fits, and see how it feels to speak together. You do not need to decide or commit during the call.</p>
+          <p>We use 30 minutes to understand what you want support with, consider whether The Next Chapter coaching program fits, and see how it feels to speak together. You do not need to decide or commit during the call.</p>
         </details>
         <details class="chapter-faq">
           <summary>Is the discovery call free?</summary>
-          <p>Yes. The 30-minute discovery call is free and does not commit you to the program.</p>
+          <p>Yes. The 30-minute discovery call is free and does not commit you to the program. The point of the call is to answer your questions, not to make a sale.</p>
         </details>
       </div>
     </div>
@@ -495,8 +1659,8 @@
 
   <section class="next-chapter-closing">
     <div class="container next-chapter-closing__inner">
-      <h2>Not sure whether the program fits your situation?</h2>
-      <p>Use the free 30-minute discovery call to ask your questions and find out whether working together makes sense.</p>
+      <h2>Not sure whether the program will help in your situation?</h2>
+      <p>Use the free 30-minute discovery call to ask your questions and find out whether this program is what you are looking for.</p>
       <a href="https://calendar.app.google/ueKb9RbyxWyC6zfK8" target="_blank" rel="noopener" class="btn-primary">Schedule your free discovery call</a>
     </div>
   </section>
@@ -532,12 +1696,7 @@
           <a href="index.html" class="logo">
             <img src="../assets/images/logo.png" alt="Anna Hellmuth Logo" style="height: 40px; margin-bottom: 1.5rem;">
           </a>
-          <p>Online psychologische Beratung und Life Coaching. Für sensible, nachdenkliche Menschen, die inneres Wohlbefinden und persönliche Ausrichtung suchen.</p>
-          <div style="margin: 1.5rem 0;">
-            <a href="https://locationindependenttherapists.com/therapists/anna-hellmuth/" target="_blank" rel="noopener" class="footer-badge">
-              <img src="../assets/images/location-independent-therapists.png" alt="Location Independent Therapists" width="180" height="60" loading="lazy">
-            </a>
-          </div>
+          <p>Online psychologische Beratung und Karriere-/Life-Coaching. Damit Sie Ihr Potenzial entfalten können.</p>
           <div class="social-links">
             <a href="https://www.instagram.com/anna_hellmuth.md/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
               <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -579,7 +1738,6 @@
         <div class="footer-contact">
           <h4>Kontakt &amp; Büro</h4>
           <p style="margin-bottom: 0.5rem;"><strong>E-Mail:</strong> <a href="mailto:contact@annahellmuth.com" style="color: var(--color-accent);">contact@annahellmuth.com</a></p>
-          <p style="margin-bottom: 0.5rem;"><strong>Büro:</strong> Erhardstraße 13, 90482 Nürnberg, Deutschland</p>
           <p><strong>Sprachen:</strong> Englisch, Deutsch, Ukrainisch, Russisch</p>
         </div>
       </div>
@@ -592,6 +1750,6 @@
       </div>
     </div>
   </footer>
-  <script src="../assets/js/index.js?v=20260814-program-dialogs"></script>
+  <script src="../assets/js/index.js?v=20260825-light-only"></script>
 </body>
 </html>
