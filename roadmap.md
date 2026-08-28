@@ -14,3 +14,4 @@ Short record of completed work and decisions for this project.
 - Clarified the life-coaching program introduction: inner change comes before new decisions and actions.
 - Updated the life-coaching closing question to focus on whether the program will help.
 - Updated the life-coaching closing text to clarify the discovery call's purpose.
+- Verified that the life-coaching closing text includes “free 30-minute discovery call”; no further copy change was needed.
