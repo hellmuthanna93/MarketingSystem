@@ -16,3 +16,4 @@ Short record of completed work and decisions for this project.
 - Updated the life-coaching closing text to clarify the discovery call's purpose.
 - Verified that the life-coaching closing text includes “free 30-minute discovery call”; no further copy change was needed.
 - Clarified that the counseling discovery call is free in the next-step text.
+- Vertically centered the secondary email action in the counseling next-step section.
