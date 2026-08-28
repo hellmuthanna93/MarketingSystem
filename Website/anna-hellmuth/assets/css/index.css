@@ -55,7 +55,6 @@ body {
   font-family: var(--font-sans);
   font-size: 1.05rem;
   line-height: 1.7;
-  text-wrap: pretty;
   font-weight: var(--font-weight-body);
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
@@ -63,10 +62,6 @@ body {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
   -webkit-tap-highlight-color: var(--color-tap-highlight);
-}
-
-:where(body *) {
-  text-wrap: pretty;
 }
 
 .header-scroll-sentinel {
@@ -3303,22 +3298,6 @@ ol.next-chapter-relief__reasons > li > :first-child svg {
 
 .next-chapter-program-investment h3 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
-}
-
-.next-chapter-program-investment__intro {
-  max-width: 32rem;
-}
-
-.next-chapter-program-investment__context {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.next-chapter-program-investment__context p {
-  margin: 0;
-  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
-  line-height: 1.65;
 }
 
 .next-chapter-price--compact {
