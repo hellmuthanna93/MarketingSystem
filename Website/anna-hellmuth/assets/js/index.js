@@ -346,20 +346,17 @@ function setupCounselingOutcomesExpansion() {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
-      entry.target.classList.add('is-expanded');
+      entry.target.classList.add('is-outcome-expanded');
       observer.unobserve(entry.target);
     });
   }, {
-    threshold: 0.18,
+    threshold: 0.3,
     rootMargin: '0px 0px -8% 0px'
   });
 
   lists.forEach((list) => {
-    list.querySelectorAll('li').forEach((item, index) => {
-      item.style.setProperty('--outcome-delay', `${Math.min(index * 70, 420)}ms`);
-    });
     list.classList.add('is-expansion-ready');
-    observer.observe(list);
+    list.querySelectorAll('li').forEach((item) => observer.observe(item));
   });
 }
 
