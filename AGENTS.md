@@ -30,7 +30,7 @@ Read **[brand/DESIGN.md](brand/DESIGN.md)** for colors, type, components, and re
 4. **Website preview & deployment:** run the website build before previewing or uploading. It copies the shared brand CSS into `Website/anna-hellmuth/brand/`, so the `Website/anna-hellmuth/` folder can be served or uploaded as a self-contained site; preview `/en/index.html` from that folder.
 5. **Website CSS references:** every generated website page must load the deployable, relative files from `src/templates/partials/head.html`: `../brand/tokens.css`, `../brand/typography.css`, `../brand/components.css`, and `../assets/css/index.css` for a top-level locale page. Do not link pages to the repository-root `brand/` directory. Keep the `<head>` partial as the single source of truth, then rebuild the site.
 6. **Local preview URL:** serve `Website/anna-hellmuth/` itself and open `http://localhost:8080/en/...`. Do not preview the site through a repository-root URL such as `/website/anna-hellmuth/...`; that duplicate path can make it unclear whether the generated CSS and assets are current.
-7. **GitHub commits:** after each completed change, commit the files changed for that task with a clear commit message and push the commit to `origin`. Never include unrelated pre-existing worktree changes in that commit.
+7. **GitHub commits (automatic):** after each completed change, commit the files changed for that task with a clear commit message and push to `origin` on the current branch. Do not wait for the user to ask. Never include unrelated pre-existing worktree changes. See `.cursor/rules/auto-commit-github.mdc`.
 
 ## Cursor skills
 

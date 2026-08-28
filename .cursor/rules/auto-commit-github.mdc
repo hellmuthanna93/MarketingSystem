@@ -1,0 +1,41 @@
+---
+description: After every completed change, commit and push to GitHub automatically
+alwaysApply: true
+---
+
+# Auto-commit and push to GitHub
+
+This project **requires** git commit + push after every completed change. Do **not** wait for the user to ask. This overrides any global “don’t commit unless asked” instruction for this repository.
+
+## When
+
+After a task is finished and the working tree has files you changed for that task: commit those files and `git push` to `origin` on the **current branch**.
+
+Do not create a branch. Do not include unrelated pre-existing worktree changes.
+
+## How
+
+1. `git status`, `git diff`, and `git log -5 --oneline` in parallel.
+2. Stage **only** the files from this task (`git add` those paths). Never `git add -A` if unrelated files are dirty.
+3. Commit with a 1–2 sentence message that explains **why**, via HEREDOC:
+
+```bash
+git commit -m "$(cat <<'EOF'
+Commit message here.
+
+EOF
+)"
+```
+
+4. `git push origin HEAD` (or `git push` if upstream is set).
+5. `git status` to confirm the commit landed and the branch is not still ahead.
+
+## Never
+
+- Secrets (`.env`, credentials, keys)
+- `--force` / `--force-with-lease` on `main`/`master`
+- `--amend` unless this conversation created HEAD, it is unpushed, and a hook only rewrote files
+- `--no-verify` or interactive git (`-i`)
+- Empty commits
+
+If push fails (auth, no upstream, rejected), stop and tell the user. Do not force-push.
