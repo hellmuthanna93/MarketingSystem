@@ -74,6 +74,7 @@
   <section class="counseling-about"><div class="container counseling-about__grid">
     <header class="counseling-about__header"><h2>Who am I?</h2>
       <p class="counseling-about__personal-note">Hi, I’m Anna, a medical doctor and psychologist who runs an online practice supporting people around the world.</p>
+      <a href="https://www.instagram.com/p/DPgoOMZCIaG/?img_index=1" class="btn-secondary counseling-about__story" target="_blank" rel="noopener noreferrer">Read my story</a>
     </header>
     <div class="counseling-about__content">
       <ul class="counseling-about__proof-list">
@@ -84,7 +85,7 @@
       </ul>
     </div>
     <figure class="counseling-about__image"><img src="{{ asset('images/anna-hellmuth-career-change-v2.jpg') }}" alt="Anna Hellmuth" width="978" height="1468" loading="lazy"></figure>
-    <nav class="counseling-about__links" aria-label="More about Anna Hellmuth"><a href="https://www.instagram.com/p/DPgoOMZCIaG/?img_index=1" class="btn-secondary" target="_blank" rel="noopener noreferrer">Read my story</a><a href="{{ page_url('about') }}" class="btn-secondary">Read more about me</a><a href="{{ page_url('home') }}#testimonials" class="btn-secondary">What my clients say about our work</a></nav>
+    <nav class="counseling-about__links" aria-label="More about Anna Hellmuth"><a href="{{ page_url('about') }}" class="btn-secondary">Read more about me</a><a href="{{ page_url('home') }}#testimonials" class="btn-secondary">What my clients say about our work</a></nav>
   </div></section>
 
   <section class="counseling-investment"><div class="container">
@@ -215,6 +216,7 @@
   .counseling-about__header { grid-area: header; }
   .counseling-about__header h2 { margin: 0; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 1.12; }
   .counseling-about__personal-note { max-width: 38rem; margin: 1.25rem 0; font-size: 1.15rem; line-height: 1.65; }
+  .counseling-about__story { margin-top: .25rem; }
   .counseling-about__content { grid-area: content; }
   .counseling-about__proof-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
   .counseling-about__proof-list li { display: flex; align-items: center; min-height: 8rem; padding: 1.5rem; background: var(--color-surface-light); border: 1px solid var(--color-border); border-radius: var(--radius-md); font-size: 1.1rem; line-height: 1.5; }
