@@ -9,3 +9,4 @@ Short record of completed work and decisions for this project.
 - Added a health-pattern support point and a self-knowledge FAQ to the counseling page.
 - Added the right-coach FAQ to the life-coaching page.
 - Simplified the demanding-job FAQ answer on the life-coaching page.
+- Reviewed the life-coaching FAQ against the ideal client profile; identified gaps around exhaustion, decision fear, values, and coaching versus counseling.
