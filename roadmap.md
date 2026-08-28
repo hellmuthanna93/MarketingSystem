@@ -8,3 +8,4 @@ Short record of completed work and decisions for this project.
 - Added a counseling FAQ about limited evening and weekend appointments.
 - Added a health-pattern support point and a self-knowledge FAQ to the counseling page.
 - Added the right-coach FAQ to the life-coaching page.
+- Simplified the demanding-job FAQ answer on the life-coaching page.
