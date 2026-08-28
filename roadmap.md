@@ -11,3 +11,4 @@ Short record of completed work and decisions for this project.
 - Simplified the demanding-job FAQ answer on the life-coaching page.
 - Reviewed the life-coaching FAQ against the ideal client profile; identified gaps around exhaustion, decision fear, values, and coaching versus counseling.
 - Added seven life-coaching FAQs covering service fit, repeated stuckness, decision fear, changing goals, life transitions, between-session support, and outgrown achievement strategies.
+- Clarified the life-coaching program introduction: inner change comes before new decisions and actions.
